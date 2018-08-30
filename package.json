@@ -1,0 +1,43 @@
+{
+  "name": "@mybit/ui",
+  "version": "0.1.0",
+  "description": "MyBit UI Kit",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "neutrino build",
+    "start": "neutrino start",
+    "lint": "neutrino lint",
+    "lint:fix": "neutrino lint --fix",
+    "test": "neutrino test"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "build/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MyBitFoundation/MyBit-UI.website.git"
+  },
+  "author": "MyBit Foundation <info@mybit.io>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MyBitFoundation/MyBit-UI.website/issues"
+  },
+  "homepage": "https://github.com/MyBitFoundation/MyBit-UI.website#readme",
+  "devDependencies": {
+    "@neutrinojs/airbnb": "^8.3.0",
+    "@neutrinojs/jest": "^8.3.0",
+    "@neutrinojs/react-components": "^8.3.0",
+    "enzyme": "^3.5.0",
+    "enzyme-adapter-react-16": "^1.3.0",
+    "neutrino": "^8.3.0"
+  },
+  "dependencies": {
+    "antd": "^3.8.4",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "styled-components": "^3.4.5"
+  }
+}
