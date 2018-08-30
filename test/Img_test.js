@@ -2,25 +2,25 @@ import React from 'react'
 import Enzyme, { mount } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16';
 
-import MyBitButton from '../src/components/Button';
-import { theme } from '../src/components/theme';
+import Img from '../src/components/Img';
 
 const setup = () => {
   const props = {
-    styling: theme,
-    children: 'This is a button',
+    alt: 'Image description',
+    src: "/link-to-image"
   }
+
   Enzyme.configure({ adapter: new Adapter() })
-  const enzymeWrapper = mount(<MyBitButton {...props} />)
+  const enzymeWrapper = mount(<Img {...props}/>)
 
   return {
     enzymeWrapper
   }
 }
 
-describe('MyBitButton', () => {
+describe('Img', () => {
   it('should render self', () => {
     const { enzymeWrapper } = setup()
-    expect(enzymeWrapper.find('button'));
+    expect(enzymeWrapper.find('img'));
   })
 })

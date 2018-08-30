@@ -2,25 +2,23 @@ import React from 'react'
 import Enzyme, { mount } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16';
 
-import MyBitButton from '../src/components/Button';
-import { theme } from '../src/components/theme';
+import MyBitParagraph from '../src/components/Paragraph';
 
 const setup = () => {
   const props = {
-    styling: theme,
-    children: 'This is a button',
+    children: 'This is a paragraph',
   }
   Enzyme.configure({ adapter: new Adapter() })
-  const enzymeWrapper = mount(<MyBitButton {...props} />)
+  const enzymeWrapper = mount(<MyBitParagraph {...props} />)
 
   return {
     enzymeWrapper
   }
 }
 
-describe('MyBitButton', () => {
+describe('MyBitParagraph', () => {
   it('should render self', () => {
     const { enzymeWrapper } = setup()
-    expect(enzymeWrapper.find('button'));
+    expect(enzymeWrapper.find('p'));
   })
 })
