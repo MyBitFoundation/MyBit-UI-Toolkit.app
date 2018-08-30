@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const MyBitHeadingStyle = styled.div`
   h1, h2, h3,
   h4, h5, h6{
-    font-family: 'Gilroy';
+    font-family: 'Gilroy', 'Roboto';
     font-weight: 700;
     font-style: normal;
     font-stretch: normal;
