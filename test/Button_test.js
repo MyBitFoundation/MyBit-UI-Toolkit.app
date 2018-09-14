@@ -3,11 +3,11 @@ import Enzyme, { mount } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16';
 
 import MyBitButton from '../src/components/Button';
-import { theme } from '../src/components/theme';
+import { Theme } from '../src/components';
 
 const setup = () => {
   const props = {
-    styling: theme,
+    styling: Theme.buttons.primary.blue,
     children: 'This is a button',
   }
   Enzyme.configure({ adapter: new Adapter() })
