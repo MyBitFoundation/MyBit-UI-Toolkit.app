@@ -1,0 +1,1 @@
+export DocumentedButton from './button';

@@ -1,13 +1,83 @@
 const blue = '#1890ff';
+const lightBlue = '#e6f7ff';
 const blueHover = '#40a9ff';
 const blueActive = '#096dd9';
 const green = '#00F281';
 const greenHover = '#55EAA5';
 const greenActive = '#00C368';
 
-export const theme = { // eslint-disable-line import/prefer-default-export
+const Theme = {
   colors: {
-    backgroundGradient: 'linear-gradient(62deg, #001358, #125ac4);',
+    backgroundGradientHorizontal: 'linear-gradient(62deg, #001358, #125ac4);',
+    backgroundGradientVertical: 'linear-gradient(to top, #001358, #125ac4);',
+  },
+  spin: {
+    color: blue,
+  },
+  footer: {
+    maxWidth: '1200px',
+    backgroundColor: 'linear-gradient(114deg, #001358, #125ac4);',
+    padding: '40px',
+    titleColor: '#ffffff',
+    linkColor: 'rgba(255,255,255,0.8)',
+    linkColorHover: blue,
+    textColor: 'rgba(255,255,255,0.8)',
+    breakAt: '900px',
+    titleSize: '18px',
+    linkSize: '16px',
+    textSize: '16px',
+  },
+  pagination: {
+    color: 'rgba(0, 0, 0, 0.65)',
+    borderColor: '#d9d9d9',
+    backgroundColor: '#ffffff',
+    itemActiveBorderColor: blue,
+    itemHoverBorderColor: blue,
+    disabledItemBorderColor: '#d9d9d9',
+    disabledItemColor: 'rgba(0, 0, 0, 0.25)',
+  },
+  menu: {
+    backgroundColor: 'transparent',
+    color: '#ffffff',
+    itemHoverColor: blue,
+    itemSelectedColor: blue,
+    borderBottom: `2px solid ${blue}`,
+    backgroundColorItem: lightBlue,
+  },
+  dropdown: {
+    submenu: {
+      colorHover: lightBlue,
+    },
+    trigger: {
+      color: blue,
+      colorHover: blueHover,
+    },
+  },
+  filters: {
+    checkedState: {
+      color: blue,
+      backgroundColor: lightBlue,
+      borderColor: '#91d5ff',
+    },
+    uncheckedState: {
+      backgroundColor: 'transparent',
+      borderColor: 'transparent',
+      color: 'rgba(0, 0, 0, 0.65)',
+    },
+    hoverState: {
+      color: blue,
+    },
+  },
+  switch: {
+    checked: {
+      backgroundColor: blue,
+    },
+    unchecked: {
+      backgroundColor: 'rgba(0, 0, 0, 0.25)',
+    },
+  },
+  heading: {
+    color: 'black',
   },
   buttons: {
     primary: {
@@ -59,24 +129,6 @@ export const theme = { // eslint-disable-line import/prefer-default-export
       },
     },
   },
-  paragraphs: {
-    homePage: {
-      fontSize: '20px',
-      textAlign: 'center',
-    },
-  },
-  createNewContainer: {
-    maxWidth: '326px',
-  },
-  functions: {
-    shortenAddress: (address, leftSide = 15, rightSide = 8) => {
-      const size = address.length;
-      const splitAddress = [address.slice(0, leftSide), address.slice(size - rightSide, size)];
-      return `${splitAddress[0]}...${splitAddress[1]}`;
-    },
-  },
-  knownNetworks: [
-    'ropsten',
-    'main',
-  ],
 };
+
+export default Theme;
