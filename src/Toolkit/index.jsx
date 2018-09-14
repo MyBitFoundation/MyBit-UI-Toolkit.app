@@ -17,6 +17,7 @@ const StyledDoc = styled.div`
   padding: 10px 40px;
   border-radius: 23px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 12px 0px;
+  min-width: 400px;
 
   h1{
     font-size: 30px;
