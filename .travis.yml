@@ -8,7 +8,6 @@ yarn: true
 before_script:
   - yarn test
   - yarn build
-  - yarn export
 script:
   - GIT_HASH=$(git rev-parse --short HEAD)
   - echo ${GIT_HASH} > build/version
