@@ -5,6 +5,10 @@ import PropTypes from 'prop-types';
 const StyledNavBar = styled.div`
   height: 100vh;
 
+  .active{
+    text-decoration: none;
+  }
+
   h1{
     font-family: 'Roboto';
     font-weight: 600;
@@ -24,7 +28,6 @@ const StyledNavBar = styled.div`
 
     .active{
       color: #1890ff;
-      text-decoration: none;
       position: relative;
       font-weight: bold;
     }
