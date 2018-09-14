@@ -4,6 +4,9 @@ import PropTypes from 'prop-types';
 
 const StyledNavBar = styled.div`
   height: 100vh;
+  position: absolute;
+  width: 192px;
+  background-color: white;
 
   .active{
     text-decoration: none;

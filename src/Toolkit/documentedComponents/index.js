@@ -7,6 +7,15 @@ export const NavBar = {
   examples: [
     <p>todo...</p>,
   ],
+  usage: '//TODO',
+  theming: '//TODO',
+  antReferences: [{
+    name: 'Button',
+    url: 'https://ant.design/components/button/',
+  }, {
+    name: 'Dropdown',
+    url: 'https://ant.design/components/button/',
+  }],
 };
 
 export const Header = NavBar;

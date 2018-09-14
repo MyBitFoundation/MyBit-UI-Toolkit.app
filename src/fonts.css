@@ -2,4 +2,7 @@
 
 body{
 	font-family: 'Roboto';
+  -moz-font-feature-settings: 'kern';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

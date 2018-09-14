@@ -1,7 +1,8 @@
-import { Library, Example, Detail } from '@compositor/kit';
+import { Library, Example } from '@compositor/kit';
 import styled from 'styled-components';
 import NavBar from './NavBar';
 import Components from './components';
+import References from './StyledReferences';
 
 const StyledView = styled.div`
   display: flex;
@@ -14,6 +15,8 @@ const StyledView = styled.div`
 
 const StyledDoc = styled.div`
   padding: 10px 40px;
+  border-radius: 23px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 12px 0px;
 
   h1{
     font-size: 30px;
@@ -27,8 +30,18 @@ const StyledDoc = styled.div`
     h2{
       font-weight: 400;
       color: #4a4a4a;
+      margin-bottom: 20px;
     }
   }
+`;
+
+const StyledMarkdown = styled.div`
+    width: 100%;
+    padding: 0px 20px 6px 20px;
+    font-size: 16px;
+    background-color: rgb(249, 249, 249);
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
 `;
 
 const StyledExamples = styled.div`
@@ -56,7 +69,7 @@ const Toolkit = () => (
         <StyledView>
           {details.component}
         </StyledView>
-        <Detail>
+        <div style={{ padding: '15px' }}>
           <StyledDoc>
             <h1>{name}</h1>
             <section>
@@ -66,10 +79,36 @@ const Toolkit = () => (
               </StyledExamples>
             </section>
             <section>
-              <h2>API</h2>
+              <h2>Usage</h2>
+              <StyledMarkdown>
+                <pre>
+                  <code>
+                    {details.usage}
+                  </code>
+                </pre>
+              </StyledMarkdown>
+            </section>
+            <section>
+              <h2>Theming</h2>
+              <StyledMarkdown>
+                <pre>
+                  <code>
+                    {details.theming}
+                  </code>
+                </pre>
+              </StyledMarkdown>
+            </section>
+            <section>
+              <h2>Props</h2>
+            </section>
+            <section>
+              <h2 style={{ textAlign: 'right' }}>Ant References</h2>
+              <References
+                references={details.antReferences}
+              />
             </section>
           </StyledDoc>
-        </Detail>
+        </div>
       </Example>
     ))
   }
