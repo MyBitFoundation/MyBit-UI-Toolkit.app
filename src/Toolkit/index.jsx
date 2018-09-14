@@ -22,10 +22,12 @@ const StyledDoc = styled.div`
     font-size: 30px;
     color: #4a4a4a;
     font-weight: 700;
+    margin-top: 40px;
   }
 
   section{
     margin-top: 50px;
+    padding-left: 10px;
 
     h2{
       font-weight: 400;
@@ -37,7 +39,7 @@ const StyledDoc = styled.div`
 
 const StyledMarkdown = styled.div`
     width: 100%;
-    padding: 0px 20px 6px 20px;
+    padding: 0px 20px;
     font-size: 16px;
     background-color: rgb(249, 249, 249);
     border-radius: 20px;
