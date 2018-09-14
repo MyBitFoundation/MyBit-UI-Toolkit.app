@@ -28,18 +28,14 @@ const MyBitButtonStyle = styled.div`
   }
 `;
 
-const MyBitButton = ({
-  children, styling, size, isActive, handleRoute, disabled,
-}) => (
+const MyBitButton = props => (
   <div>
-    <MyBitButtonStyle styling={styling}>
+    <MyBitButtonStyle styling={props.styling}>
       <Button
-        size={size}
-        className={isActive ? 'ant-btn--is-active' : ''}
-        onClick={handleRoute}
-        disabled={disabled}
+        className={props.active ? 'ant-btn--is-active' : ''}
+        {...props}
       >
-        {children}
+        {props.children}
       </Button>
     </MyBitButtonStyle>
   </div>
@@ -47,18 +43,12 @@ const MyBitButton = ({
 
 MyBitButton.propTypes = {
   styling: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
+  active: PropTypes.bool,
   children: PropTypes.node.isRequired,
-  disabled: PropTypes.bool,
-  handleRoute: PropTypes.func,
-  size: PropTypes.string,
-  isActive: PropTypes.bool,
 };
 
 MyBitButton.defaultProps = {
-  handleRoute: () => {},
-  size: 'small',
-  disabled: false,
-  isActive: false,
+  active: false,
 };
 
 export default MyBitButton;

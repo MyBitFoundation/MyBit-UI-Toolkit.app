@@ -9,32 +9,45 @@ const DocumentedButton = {
       This is our button
     </Button>
   ),
-  examples: [
-    <Button
-      styling={Theme.buttons.primary.green}
-      size="small"
-    >
+  examples: {
+    styling: `
+      div{
+        margin: 5px;
+      }
+    `,
+    content: [
+      <Button
+        styling={Theme.buttons.primary.green}
+        size="small"
+      >
         Small button
-    </Button>,
-    <Button
-      styling={Theme.buttons.primary.blue}
-      size="large"
-    >
+      </Button>,
+      <Button
+        styling={Theme.buttons.primary.blue}
+        size="large"
+      >
         Large button
-    </Button>,
-    <Button
-      styling={Theme.buttons.secondary}
-      disabled
-    >
+      </Button>,
+      <Button
+        styling={Theme.buttons.secondary}
+        disabled
+      >
         Disabled button
-    </Button>,
-    <Button
-      styling={Theme.buttons.primary.blue}
-      isActive
-    >
+      </Button>,
+      <Button
+        styling={Theme.buttons.primary.blue}
+        active
+      >
         Active button
-    </Button>,
-  ],
+      </Button>,
+      <Button
+        styling={Theme.buttons.primary.green}
+        type="primary"
+        shape="circle"
+        icon="search"
+      />,
+    ],
+  },
   usage:
     `
   <Button

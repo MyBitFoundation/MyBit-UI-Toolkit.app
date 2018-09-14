@@ -50,7 +50,59 @@ const StyledExamples = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  flex-wrap: wrap;
+  ${props => (props ? props.styling : '')};
 `;
+
+const getExamples = details => (
+  <section>
+    <h2>Examples</h2>
+    <StyledExamples styling={details.examples.styling}>
+      {details.examples.content}
+    </StyledExamples>
+  </section>
+);
+
+const getUsage = details => (
+  <section>
+    <h2>Usage</h2>
+    <StyledMarkdown>
+      <pre>
+        <code>
+          {details.usage}
+        </code>
+      </pre>
+    </StyledMarkdown>
+  </section>
+);
+
+const getTheming = details => (
+  <section>
+    <h2>Theming</h2>
+    <StyledMarkdown>
+      <pre>
+        <code>
+          {details.theming}
+        </code>
+      </pre>
+    </StyledMarkdown>
+  </section>
+);
+
+const getProps = () => (
+  <section>
+    <h2>Props</h2>
+  </section>
+);
+
+const getReferences = details => (
+  <section>
+    <h2 style={{ textAlign: 'right' }}>Ant References</h2>
+    <References
+      references={details.antReferences}
+    />
+  </section>
+);
 
 const Toolkit = () => (
   <Library
@@ -74,41 +126,11 @@ const Toolkit = () => (
         <div style={{ padding: '15px' }}>
           <StyledDoc>
             <h1>{name}</h1>
-            <section>
-              <h2>Examples</h2>
-              <StyledExamples>
-                {details.examples}
-              </StyledExamples>
-            </section>
-            <section>
-              <h2>Usage</h2>
-              <StyledMarkdown>
-                <pre>
-                  <code>
-                    {details.usage}
-                  </code>
-                </pre>
-              </StyledMarkdown>
-            </section>
-            <section>
-              <h2>Theming</h2>
-              <StyledMarkdown>
-                <pre>
-                  <code>
-                    {details.theming}
-                  </code>
-                </pre>
-              </StyledMarkdown>
-            </section>
-            <section>
-              <h2>Props</h2>
-            </section>
-            <section>
-              <h2 style={{ textAlign: 'right' }}>Ant References</h2>
-              <References
-                references={details.antReferences}
-              />
-            </section>
+            {getExamples(details)}
+            {getUsage(details)}
+            {getTheming(details)}
+            {getProps(details)}
+            {getReferences(details)}
           </StyledDoc>
         </div>
       </Example>
