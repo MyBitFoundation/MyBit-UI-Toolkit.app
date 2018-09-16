@@ -9,6 +9,13 @@ export const NavBar = {
   ],
   usage: '//TODO',
   theming: '//TODO',
+  sources: [{
+    command: 'npm i --save @mybit-ui/button',
+    name: 'npm',
+  }, {
+    command: 'bit i --save @mybit-ui/button',
+    name: 'bitsrc',
+  }],
   antReferences: [{
     name: 'Button',
     url: 'https://ant.design/components/button/',
