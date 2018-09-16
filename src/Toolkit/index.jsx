@@ -7,6 +7,7 @@ import StyledMenuButton from './StyledMenuButton';
 import HandleMobile from './HandleMobile';
 import StyledDocumentation from './StyledDocumentation';
 import Sources from './Sources';
+import StyledMarkdown from './StyledMarkdown';
 import Components from './components';
 
 const StyledView = styled.div`
@@ -16,15 +17,6 @@ const StyledView = styled.div`
   height: 192px;
   position: relative;
   top: -8px;
-`;
-
-const StyledMarkdown = styled.div`
-    width: 100%;
-    padding: 0px 20px;
-    font-size: 16px;
-    background-color: rgb(249, 249, 249);
-    border-radius: 20px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
 `;
 
 const StyledExamples = styled.div`
