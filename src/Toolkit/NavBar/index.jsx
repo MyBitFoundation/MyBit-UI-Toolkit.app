@@ -18,6 +18,10 @@ const StyledNavBar = styled.div`
     color: rgba(0,0,0,.65);
     margin-top: 20px;
     display: block;
+
+    &:focus{
+      text-decoration: none;
+    }
   }
 
   li{
