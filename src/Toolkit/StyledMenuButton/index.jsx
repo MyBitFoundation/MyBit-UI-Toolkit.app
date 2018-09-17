@@ -4,8 +4,8 @@ const StyledMenuButton = styled.a`
   width: 20px;
   height: 20px;
   position: fixed;
-  right: 30px;
-  top: 30px;
+  right: 20px;
+  top: 20px;
   transition: all 0.2s;
   transition-delay: 0.1s;
   z-index: 1000;

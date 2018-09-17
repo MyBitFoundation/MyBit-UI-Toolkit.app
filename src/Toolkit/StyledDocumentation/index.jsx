@@ -15,7 +15,7 @@ const StyledDocumentation = styled.div`
 
   @media(max-width: 768px) {
     box-shadow: none;
-    padding: 0px 20px;
+    padding: 0px 0px;
   }
 
   h1{
