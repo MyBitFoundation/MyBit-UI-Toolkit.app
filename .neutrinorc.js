@@ -7,7 +7,6 @@ module.exports = {
         }
       }
     }],
-    '@neutrinojs/react-components',
     '@neutrinojs/jest',
     ['@neutrinojs/react', {
       html: {
