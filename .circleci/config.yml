@@ -10,12 +10,10 @@ jobs:
       - checkout
 
       - run: yarn install
-      
+
       - run: yarn test
-      
+
       - run: yarn build
-      
-      - run: yarn export
 
       - deploy:
           name: Deploy to Now
