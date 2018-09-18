@@ -26,6 +26,7 @@ const References = ({ references }) => (
           href={reference.url}
           target="_blank"
           rel="noopener noreferrer"
+          key={reference.url}
         >
           {reference.name}
         </a>
@@ -35,7 +36,10 @@ const References = ({ references }) => (
 );
 
 References.propTypes = {
-  references: PropTypes.string.isRequired,
+  references: PropTypes.arrayOf(PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired,
+  })).isRequired,
 };
 
 export default References;

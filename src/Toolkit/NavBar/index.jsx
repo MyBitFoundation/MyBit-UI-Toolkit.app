@@ -4,19 +4,24 @@ import PropTypes from 'prop-types';
 
 const StyledNavBar = styled.div`
   height: 100vh;
-  position: absolute;
-  width: 192px;
   background-color: white;
 
   .active{
     text-decoration: none;
   }
 
-  h1{
+  h1 a{
     font-family: 'Roboto';
     font-weight: 600;
     padding: 20px;
     font-size: 25px;
+    color: rgba(0,0,0,.65);
+    margin-top: 20px;
+    display: block;
+
+    &:focus{
+      text-decoration: none;
+    }
   }
 
   li{
@@ -37,13 +42,13 @@ const StyledNavBar = styled.div`
   }
 `;
 
-const NavBar = ({ title, examples }) => (
+const NavBar = ({ title, examples, handleMobileMenu }) => (
   <StyledNavBar>
     <NavLink to="/"><h1>{title}</h1></NavLink>
     <ul>
       {examples.map(example => (
         <li key={example.name}>
-          <NavLink to={`/${example.name}`}>
+          <NavLink to={`/${example.name}`} onClick={handleMobileMenu}>
             {example.name}
           </NavLink>
         </li>
@@ -55,6 +60,7 @@ const NavBar = ({ title, examples }) => (
 NavBar.propTypes = {
   examples: PropTypes.node.isRequired,
   title: PropTypes.string.isRequired,
+  handleMobileMenu: PropTypes.func.isRequired,
 };
 
 export default NavBar;
