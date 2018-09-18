@@ -1,4 +1,7 @@
 export { default as Button } from './button';
+export { default as Input } from './input';
+export { default as Heading } from './heading';
+export { default as Tooltip } from './tooltip';
 
 export const NavBar = {
   component: (
@@ -24,7 +27,6 @@ export const NavBar = {
     url: 'https://ant.design/components/button/',
   }],
 };
-
 export const Header = NavBar;
 export const Menu = NavBar;
 export const Footer = NavBar;

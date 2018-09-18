@@ -44,11 +44,12 @@ const MyBitButton = props => (
 MyBitButton.propTypes = {
   styling: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
   active: PropTypes.bool,
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
 };
 
 MyBitButton.defaultProps = {
   active: false,
+  children: '',
 };
 
 export default MyBitButton;

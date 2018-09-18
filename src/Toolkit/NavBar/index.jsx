@@ -58,7 +58,7 @@ const NavBar = ({ title, examples, handleMobileMenu }) => (
 );
 
 NavBar.propTypes = {
-  examples: PropTypes.node.isRequired,
+  examples: PropTypes.arrayOf(PropTypes.object).isRequired,
   title: PropTypes.string.isRequired,
   handleMobileMenu: PropTypes.func.isRequired,
 };

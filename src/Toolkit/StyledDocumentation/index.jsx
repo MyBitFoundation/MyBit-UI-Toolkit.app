@@ -29,7 +29,7 @@ const StyledDocumentation = styled.div`
     margin-top: 50px;
     padding-left: 10px;
 
-    h2{
+    > h2{
       font-weight: 400;
       color: #4a4a4a;
       margin-bottom: 20px;
