@@ -13,8 +13,8 @@ const StyledNavBar = styled.div`
   h1 a{
     font-family: 'Roboto';
     font-weight: 600;
-    padding: 20px;
-    font-size: 25px;
+    padding: 10px;
+    font-size: 16px;
     color: rgba(0,0,0,.65);
     margin-top: 20px;
     display: block;
@@ -26,8 +26,8 @@ const StyledNavBar = styled.div`
 
   li{
     list-style-type: none;
-    font-size: 18px;
-    padding: 12px 0px;
+    font-size: 14px;
+    padding: 7px 0px;
     position: relative;
 
     & a{
@@ -36,6 +36,8 @@ const StyledNavBar = styled.div`
 
     .active{
       color: #1890ff;
+      padding-left: 5px;
+      border-left: 3px solid #1890ff;
       position: relative;
       font-weight: bold;
     }

@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 
 const HandleMobile = createGlobalStyle`
   #root>div>div>div:nth-child(1){
-    width: 192px;
+    width: 250px;
     transition: all 0.2s;
     border-right: none;
 
