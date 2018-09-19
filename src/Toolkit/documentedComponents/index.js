@@ -13,7 +13,11 @@ export { default as Dropdown } from './dropdown';
 export { default as Spin } from './spin';
 export { default as Filter } from './filter';
 export { default as ExchangeRate } from './exchangeRate';
-export { default as PortfolioRevenueItem } from './portfolioRevenueItem';
+export { default as PortfolioRevenueItem } from './portfolioRevenueItem'
+export { default as PortfolioValueItem } from './portfolioValueItem'
+export { default as Address } from './address'
+export { default as AccountInfo } from './accountInfo'
+export { default as Logo } from './logo'
 
 export const NavBar = {
   component: (

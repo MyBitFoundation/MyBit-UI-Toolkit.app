@@ -32,8 +32,8 @@ const ExchangeRate = ({ mybitPrice, USD_MYB_SYMBOL }) => (
 );
 
 ExchangeRate.defaultProps = {
-  mybitPrice: undefined,
-  USD_MYB_SYMBOL: 'MYB/USD',
+    mybitPrice: undefined,
+    USD_MYB_SYMBOL: "USD/MYB"
 };
 
 ExchangeRate.propTypes = {

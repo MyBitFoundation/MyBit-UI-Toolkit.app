@@ -42,6 +42,7 @@
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
     "react-hot-loader": "^4.3.7",
+    "react-jazzicon": "^0.1.2",
     "react-placeholder": "^3.0.1",
     "react-router-dom": "^4.3.1",
     "react-syntax-highlighter": "^8.0.1",
