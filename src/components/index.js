@@ -18,3 +18,6 @@ export { default as MenuItem } from './MenuItem';
 export { default as Dropdown } from './Dropdown';
 export { default as Spin } from './Spin';
 export { default as Filter } from './Filter';
+export { default as ExchangeRate } from './ExchangeRate';
+export { default as PortfolioRevenueItem } from './PortfolioRevenueItem';
+

@@ -12,6 +12,8 @@ export { default as Menu } from './menu';
 export { default as Dropdown } from './dropdown';
 export { default as Spin } from './spin';
 export { default as Filter } from './filter';
+export { default as ExchangeRate } from './exchangeRate';
+export { default as PortfolioRevenueItem } from './portfolioRevenueItem';
 
 export const NavBar = {
   component: (
