@@ -45,6 +45,7 @@
     "react-placeholder": "^3.0.1",
     "react-router-dom": "^4.3.1",
     "react-syntax-highlighter": "^8.0.1",
-    "styled-components": "^4.0.0-beta.5"
+    "styled-components": "^4.0.0-beta.5",
+    "web3": "^1.0.0-beta2"
   }
 }
