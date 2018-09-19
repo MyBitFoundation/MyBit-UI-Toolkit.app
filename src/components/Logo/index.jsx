@@ -1,10 +1,14 @@
-import Img from '../Img';
-import Logo from './logo.svg';
+import React from 'react';
+import PropTypes from 'prop-types';
+import logo from './logo.svg';
 
-const MyBitLogo = () =>
-  (<Img
-    src={Logo}
-    alt="Mybit's logo"
-  />);
+const Logo = ({ className }) => (
+  <img alt="MyBit Logo" className={className} src={logo} />
+);
 
-export default MyBitLogo;
+Logo.propTypes = {
+  className: PropTypes.string.isRequired,
+};
+
+export default Logo;
+

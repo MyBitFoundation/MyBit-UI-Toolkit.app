@@ -2,19 +2,19 @@ import { ExchangeRate } from '../../components/';
 
 const DocumentedExchangeRate = {
   component: (
-    <ExchangeRate mybitPrice={0.321} USD_MYB_SYMBOL={"MYB/USD"} />
+    <ExchangeRate mybitPrice={0.321} USD_MYB_SYMBOL={"USD/MYB"} />
   ),
   examples: {
     content: [
-        <ExchangeRate mybitPrice={0.321} USD_MYB_SYMBOL={"MYB/USD"} />,
+        <ExchangeRate mybitPrice={0.321} USD_MYB_SYMBOL={"USD/MYB"} />,
         <ExchangeRate />
     ],
   },
   usage: `
   With all props:
-  <ExchangeRate mybitPrice={0.321} USD_MYB_SYMBOL={"MYB/USD"} />
+  <ExchangeRate mybitPrice={0.321} USD_MYB_SYMBOL={"USD/MYB"} />
 
-  USD_MYB_SYMBOL is "MYB/USD" by default:
+  USD_MYB_SYMBOL is "USD/MYB" by default:
   <ExchangeRate mybitPrice={0.321} />
 
   If mybitPrice is not passed, it will render a spinner instead:
