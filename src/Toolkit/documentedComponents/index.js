@@ -2,6 +2,9 @@ export { default as Button } from './button';
 export { default as Input } from './input';
 export { default as Heading } from './heading';
 export { default as Tooltip } from './tooltip';
+export { default as ConnectionStatus } from './connectionStatus';
+export { default as Switch } from './switch';
+export { default as Icon } from './icon';
 
 export const NavBar = {
   component: (

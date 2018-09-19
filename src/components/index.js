@@ -1,8 +1,11 @@
 export { default as Theme } from './theme';
 export { default as Button } from './Button';
+export { default as ConnectionStatus } from './ConnectionStatus';
 export { default as Input } from './Input';
+export { default as Switch } from './Switch';
 export { default as Heading } from './Heading';
 export { default as Tooltip } from './Tooltip';
 export { default as Paragraph } from './Paragraph';
 export { default as Logo } from './Logo';
+export { default as Icon } from './Icon';
 export { default as Img } from './Img';

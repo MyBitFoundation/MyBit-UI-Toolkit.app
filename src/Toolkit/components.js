@@ -1,9 +1,18 @@
-import { Button, Input, Tooltip, Heading, NavBar, Header, Menu, Footer, Card } from './documentedComponents';
+import { Button, Switch, Icon, ConnectionStatus, Input, Tooltip, Heading, NavBar, Header, Menu, Footer, Card } from './documentedComponents';
 
 const Components = [
   {
     name: 'Input',
     details: Input,
+  }, {
+    name: 'ConnectionStatus',
+    details: ConnectionStatus,
+  }, {
+    name: 'Switch',
+    details: Switch,
+  }, {
+    name: 'Icon',
+    details: Icon,
   }, {
     name: 'Button',
     details: Button,
