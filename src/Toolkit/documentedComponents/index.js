@@ -8,6 +8,10 @@ export { default as Icon } from './icon';
 export { default as Pagination } from './pagination';
 export { default as StatCard } from './statCard';
 export { default as Stats } from './stats';
+export { default as Menu } from './menu';
+export { default as Dropdown } from './dropdown';
+export { default as Spin } from './spin';
+export { default as Filter } from './filter';
 
 export const NavBar = {
   component: (
@@ -34,6 +38,5 @@ export const NavBar = {
   }],
 };
 export const Header = NavBar;
-export const Menu = NavBar;
 export const Footer = NavBar;
 export const Card = NavBar;
