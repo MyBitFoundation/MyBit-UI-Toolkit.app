@@ -12,3 +12,5 @@ export { default as Img } from './Img';
 export { default as Pagination } from './Pagination';
 export { default as StatCard } from './StatCard';
 export { default as Stats } from './Stats';
+export { default as ExchangeRate } from './ExchangeRate';
+export { default as PortfolioRevenueItem } from './PortfolioRevenueItem'

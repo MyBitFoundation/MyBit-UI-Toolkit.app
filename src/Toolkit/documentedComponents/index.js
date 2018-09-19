@@ -8,6 +8,8 @@ export { default as Icon } from './icon';
 export { default as Pagination } from './pagination';
 export { default as StatCard } from './statCard';
 export { default as Stats } from './stats';
+export { default as ExchangeRate } from './exchangeRate';
+export { default as PortfolioRevenueItem } from './portfolioRevenueItem'
 
 export const NavBar = {
   component: (

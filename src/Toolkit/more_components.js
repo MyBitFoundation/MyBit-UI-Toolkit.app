@@ -1,8 +1,14 @@
-import { Header } from './documentedComponents';
+import { ExchangeRate, PortfolioRevenueItem } from './documentedComponents';
 
-const MoreComponents = [{
-  name: 'MoreComp',
-  details: Header,
-}];
+const MoreComponents = [
+  {
+    name: 'ExchangeRate',
+    details: ExchangeRate,
+  },
+  {
+    name: 'PortfolioRevenueItem',
+    details: PortfolioRevenueItem,
+  }
+];
 
 export default MoreComponents;

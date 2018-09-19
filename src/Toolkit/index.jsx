@@ -62,9 +62,16 @@ const getTheming = details => (
   </section>
 );
 
-const getProps = () => (
+const getProps = details => (
   <section>
     <h2>Props</h2>
+    <StyledMarkdown>
+      <pre>
+        <code>
+          {details.props}
+        </code>
+      </pre>
+    </StyledMarkdown>
   </section>
 );
 
