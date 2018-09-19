@@ -1,6 +1,6 @@
-import { Button, Switch, Icon, ConnectionStatus, Input, Tooltip, Heading, NavBar, Header, Menu, Footer, Card } from './documentedComponents';
+import { Button, Switch, Stats, StatCard, Pagination, Icon, ConnectionStatus, Input, Tooltip, Heading, NavBar, Header, Menu, Footer, Card } from './documentedComponents';
 
-import MoreComponents from './more_components'
+import MoreComponents from './more_components';
 
 const Components = [...MoreComponents,
   {
@@ -12,6 +12,15 @@ const Components = [...MoreComponents,
   }, {
     name: 'Switch',
     details: Switch,
+  }, {
+    name: 'Stats',
+    details: Stats,
+  }, {
+    name: 'StatCard',
+    details: StatCard,
+  }, {
+    name: 'Pagination',
+    details: Pagination,
   }, {
     name: 'Icon',
     details: Icon,

@@ -5,6 +5,9 @@ export { default as Tooltip } from './tooltip';
 export { default as ConnectionStatus } from './connectionStatus';
 export { default as Switch } from './switch';
 export { default as Icon } from './icon';
+export { default as Pagination } from './pagination';
+export { default as StatCard } from './statCard';
+export { default as Stats } from './stats';
 
 export const NavBar = {
   component: (

@@ -8867,6 +8867,12 @@ react-live@^1.10.1:
     prop-types "^15.5.8"
     unescape "^0.2.0"
 
+react-placeholder@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/react-placeholder/-/react-placeholder-3.0.1.tgz#fa6e915f41ce8da66eb10a4aa6d87d31e50aeaaa"
+  dependencies:
+    prop-types "^15.6.0"
+
 react-proxy@^3.0.0-alpha.0:
   version "3.0.0-alpha.1"
   resolved "https://registry.yarnpkg.com/react-proxy/-/react-proxy-3.0.0-alpha.1.tgz#4400426bcfa80caa6724c7755695315209fa4b07"

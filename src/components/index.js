@@ -9,3 +9,6 @@ export { default as Paragraph } from './Paragraph';
 export { default as Logo } from './Logo';
 export { default as Icon } from './Icon';
 export { default as Img } from './Img';
+export { default as Pagination } from './Pagination';
+export { default as StatCard } from './StatCard';
+export { default as Stats } from './Stats';
