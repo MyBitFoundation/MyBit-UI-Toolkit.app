@@ -19,7 +19,7 @@ export { default as Dropdown } from './Dropdown';
 export { default as Spin } from './Spin';
 export { default as Filter } from './Filter';
 export { default as ExchangeRate } from './ExchangeRate';
-export { default as PortfolioRevenueItem } from './PortfolioRevenueItem'
-export { default as PortfolioValueItem } from './PortfolioValueItem'
-export { default as Address } from './Address'
-export { default as AccountInfo } from './AccountInfo'
+export { default as PortfolioRevenueItem } from './PortfolioRevenueItem';
+export { default as PortfolioValueItem } from './PortfolioValueItem';
+export { default as Address } from './Address';
+export { default as AccountInfo } from './AccountInfo';

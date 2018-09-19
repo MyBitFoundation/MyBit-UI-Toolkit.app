@@ -6,8 +6,8 @@ const DocumentedAddress = {
   ),
   examples: {
     content: [
-        <Address userName="0xA91BDAF22" className="classname" />,
-        <Address className="classname" />
+      <Address userName="0xA91BDAF22" className="classname" />,
+      <Address className="classname" />,
     ],
   },
   usage: `

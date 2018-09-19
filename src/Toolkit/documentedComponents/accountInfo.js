@@ -6,10 +6,10 @@ const DocumentedAccountInfo = {
   ),
   examples: {
     content: [
-        <AccountInfo myBitBalance="20" ethBalance="8" userName="0xDA2F8123" />,
-        <AccountInfo myBitBalance="20" ethBalance="8" />,
-        <AccountInfo myBitBalance="20" userName="0xDA2F8123" />,
-        <AccountInfo />
+      <AccountInfo myBitBalance="20" ethBalance="8" userName="0xDA2F8123" />,
+      <AccountInfo myBitBalance="20" ethBalance="8" />,
+      <AccountInfo myBitBalance="20" userName="0xDA2F8123" />,
+      <AccountInfo />,
     ],
   },
   usage: `

@@ -2,11 +2,11 @@ import { Logo } from '../../components/';
 
 const DocumentedLogo = {
   component: (
-    <div style={{backgroundColor: 'black', width: '200px'}}><Logo className="classname" /></div>
+    <div style={{ backgroundColor: 'black', width: '200px' }}><Logo className="classname" /></div>
   ),
   examples: {
     content: [
-        <div style={{backgroundColor: 'black', width: '200px'}}><Logo className="classname" /></div>
+      <div style={{ backgroundColor: 'black', width: '200px' }}><Logo className="classname" /></div>,
     ],
   },
   usage: `

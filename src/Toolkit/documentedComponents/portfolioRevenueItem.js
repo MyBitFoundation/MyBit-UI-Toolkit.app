@@ -3,8 +3,8 @@ import { PortfolioRevenueItem } from '../../components/';
 const DocumentedPortfolioRevenueItem = {
   component: (
     <PortfolioRevenueItem
-      assetID={"bitcoin-atm-revenue"}
-      name={"Bitcoin ATM"}
+      assetID="bitcoin-atm-revenue"
+      name="Bitcoin ATM"
       totalRevenue={1392.54}
       monthlyRevenue={96.68}
     />
@@ -12,11 +12,11 @@ const DocumentedPortfolioRevenueItem = {
   examples: {
     content: [
       <PortfolioRevenueItem
-        assetID={"asset-title-revenue"}
-        name={"Asset Title"}
+        assetID="asset-title-revenue"
+        name="Asset Title"
         totalRevenue={1392.54}
         monthlyRevenue={96.68}
-      />
+      />,
     ],
   },
   usage: `

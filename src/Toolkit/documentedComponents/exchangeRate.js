@@ -2,12 +2,12 @@ import { ExchangeRate } from '../../components/';
 
 const DocumentedExchangeRate = {
   component: (
-    <ExchangeRate mybitPrice={0.321} USD_MYB_SYMBOL={"USD/MYB"} />
+    <ExchangeRate mybitPrice={0.321} USD_MYB_SYMBOL="USD/MYB" />
   ),
   examples: {
     content: [
-        <ExchangeRate mybitPrice={0.321} USD_MYB_SYMBOL={"USD/MYB"} />,
-        <ExchangeRate />
+      <ExchangeRate mybitPrice={0.321} USD_MYB_SYMBOL="USD/MYB" />,
+      <ExchangeRate />,
     ],
   },
   usage: `

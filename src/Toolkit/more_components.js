@@ -1,10 +1,10 @@
-import { 
-  ExchangeRate, 
-  PortfolioRevenueItem, 
-  PortfolioValueItem, 
+import {
+  ExchangeRate,
+  PortfolioRevenueItem,
+  PortfolioValueItem,
   Address,
   AccountInfo,
-  Logo
+  Logo,
 } from './documentedComponents';
 
 const MoreComponents = [
@@ -31,7 +31,7 @@ const MoreComponents = [
   {
     name: 'Logo',
     details: Logo,
-  }
+  },
 ];
 
 export default MoreComponents;
