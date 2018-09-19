@@ -39,7 +39,6 @@ const StyledNavBar = styled.div`
       padding-left: 5px;
       border-left: 3px solid #1890ff;
       position: relative;
-      font-weight: bold;
     }
   }
 `;
