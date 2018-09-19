@@ -1,6 +1,8 @@
 import { Button, Switch, Icon, ConnectionStatus, Input, Tooltip, Heading, NavBar, Header, Menu, Footer, Card } from './documentedComponents';
 
-const Components = [
+import MoreComponents from './more_components'
+
+const Components = [...MoreComponents,
   {
     name: 'Input',
     details: Input,
