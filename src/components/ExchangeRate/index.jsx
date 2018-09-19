@@ -17,18 +17,18 @@ const StyledLoader = styled(Spin)`
         position: relative;
         font-size: 24px;
     }
-`
+`;
 
 const ExchangeRate = ({ mybitPrice, USD_MYB_SYMBOL }) => (
-    <div>
-        {!mybitPrice && (
-            <StyledLoader indicator={antIcon} />
+  <div>
+    {!mybitPrice && (
+    <StyledLoader indicator={antIcon} />
         )}
-        <ExchangeRateSpan>
-            {mybitPrice && `$${mybitPrice}`}{' '}
-            <b>{USD_MYB_SYMBOL}</b>
-        </ExchangeRateSpan>
-    </div>
+    <ExchangeRateSpan>
+      {mybitPrice && `$${mybitPrice}`}{' '}
+      <b>{USD_MYB_SYMBOL}</b>
+    </ExchangeRateSpan>
+  </div>
 );
 
 ExchangeRate.defaultProps = {
@@ -37,8 +37,8 @@ ExchangeRate.defaultProps = {
 };
 
 ExchangeRate.propTypes = {
-    mybitPrice: PropTypes.number,
-    USD_MYB_SYMBOL: PropTypes.string
+  mybitPrice: PropTypes.number,
+  USD_MYB_SYMBOL: PropTypes.string,
 };
 
 export default ExchangeRate;

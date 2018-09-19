@@ -11,7 +11,8 @@ const DocumentedStatCard = {
       }
     `,
     content: [
-      <StatCard key="StatCard-example-1" stat={{ name: 'Sample', value: 'Sample value' }} />,
+      <StatCard key="StatCard-example-1" stat={{ name: 'Statistic...', value: '...with value' }} />,
+      <StatCard key="StatCard-example-2" stat={{ name: 'Stat without value' }} />,
     ],
   },
   usage: '<StatCard stat={{ name: "Sample", value: "Sample value" }} />',

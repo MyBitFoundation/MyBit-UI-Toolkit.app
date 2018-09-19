@@ -1,4 +1,4 @@
-import { Button, Switch, Stats, StatCard, Pagination, Icon, ConnectionStatus, Input, Tooltip, Heading, NavBar, Header, Menu, Footer, Card } from './documentedComponents';
+import { Button, Filter, Switch, Spin, Menu, Dropdown, Stats, StatCard, Pagination, Icon, ConnectionStatus, Input, Tooltip, Heading, NavBar, Header, Footer, Card } from './documentedComponents';
 
 import MoreComponents from './more_components';
 
@@ -12,6 +12,18 @@ const Components = [...MoreComponents,
   }, {
     name: 'Switch',
     details: Switch,
+  }, {
+    name: 'Spin',
+    details: Spin,
+  }, {
+    name: 'Filter',
+    details: Filter,
+  }, {
+    name: 'Dropdown',
+    details: Dropdown,
+  }, {
+    name: 'Menu',
+    details: Menu,
   }, {
     name: 'Stats',
     details: Stats,
@@ -39,9 +51,6 @@ const Components = [...MoreComponents,
   }, {
     name: 'Header',
     details: Header,
-  }, {
-    name: 'Menu',
-    details: Menu,
   }, {
     name: 'Footer',
     details: Footer,

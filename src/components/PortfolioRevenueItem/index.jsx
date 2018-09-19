@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import LineChart from '../../images/chart-line.png';
 import styled from 'styled-components';
+import LineChart from '../../images/chart-line.png';
 
 const PortfolioTile = styled.div`
   height: 78px;
@@ -9,23 +9,23 @@ const PortfolioTile = styled.div`
   justify-content: space-evenly;
   align-items: center;
   width: 283px;
-`
+`;
 const StyledChildDiv = styled.div`
   width: 70%;
-`
+`;
 const PortfolioTileImg = styled.img`
   height: 27px;
   width: 30px;
-`
+`;
 const RevenueB = styled.b`
   color: #2db84b;
-`
+`;
 const RevenueP = styled.p`
   padding: 2px 0px;
   margin: 0px 0px;
   color: #575757;
   line-height: 0.9;
-`
+`;
 
 const PortfolioRevenueItem = ({
   assetID,
@@ -33,19 +33,19 @@ const PortfolioRevenueItem = ({
   totalRevenue,
   monthlyRevenue,
 }) => (
-    <PortfolioTile key={assetID} >
-      <PortfolioTileImg src={LineChart} alt="Line chart" />
-      <StyledChildDiv>
-        <RevenueP>{name}</RevenueP>
-        <RevenueP>
+  <PortfolioTile key={assetID} >
+    <PortfolioTileImg src={LineChart} alt="Line chart" />
+    <StyledChildDiv>
+      <RevenueP>{name}</RevenueP>
+      <RevenueP>
           Total Revenue: <RevenueB>${totalRevenue}</RevenueB>
-        </RevenueP>
-        <RevenueP>
+      </RevenueP>
+      <RevenueP>
           Monthly Revenue: <RevenueB>${monthlyRevenue}</RevenueB>
-        </RevenueP>
-      </StyledChildDiv>
-    </PortfolioTile>
-  );
+      </RevenueP>
+    </StyledChildDiv>
+  </PortfolioTile>
+);
 
 PortfolioRevenueItem.propTypes = {
   assetID: PropTypes.string.isRequired,
