@@ -24,3 +24,5 @@ export { default as PortfolioValueItem } from './PortfolioValueItem';
 export { default as Address } from './Address';
 export { default as AccountInfo } from './AccountInfo';
 export { default as Alert } from './Alert';
+export { default as MyBitGoHeader } from './MyBitGoHeader';
+export { default as TotalPortfolioRevenue } from './TotalPortfolioRevenue';
