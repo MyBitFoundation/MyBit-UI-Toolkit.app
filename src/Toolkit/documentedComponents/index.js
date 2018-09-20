@@ -18,6 +18,7 @@ export { default as PortfolioValueItem } from './portfolioValueItem';
 export { default as Address } from './address';
 export { default as AccountInfo } from './accountInfo';
 export { default as Logo } from './logo';
+export { default as Alert } from './alert';
 
 export const NavBar = {
   component: (

@@ -23,3 +23,4 @@ export { default as PortfolioRevenueItem } from './PortfolioRevenueItem';
 export { default as PortfolioValueItem } from './PortfolioValueItem';
 export { default as Address } from './Address';
 export { default as AccountInfo } from './AccountInfo';
+export { default as Alert } from './Alert';
