@@ -1,21 +1,20 @@
-import { ProgressBar } from '../../components/';
-import { Progress } from 'antd';
 import 'antd/dist/antd.css';
+import { ProgressBar } from '../../components/';
 
 const DocumentedProgressBar = {
   component: (
-    <div style={{ width: '60%'}}>
-     <ProgressBar percent={30} status={"active"}  />
+    <div style={{ width: '60%' }}>
+      <ProgressBar percent={30} status="active" />
     </div>
   ),
   examples: {
     content: [
-        <div style={{width: '60%'}} key={"example"}>
-            <ProgressBar percent={100} status={"success"}  />
-            <ProgressBar percent={32} status={"exception"}  />
-            <ProgressBar percent={80} status={"active"}  />
-            <ProgressBar percent={100} status={"success"} showInfo={false} />
-        </div>
+      <div style={{ width: '60%' }} key="example">
+        <ProgressBar percent={100} status="success" />
+        <ProgressBar percent={32} status="exception" />
+        <ProgressBar percent={80} status="active" />
+        <ProgressBar percent={100} status="success" showInfo={false} />
+      </div>,
     ],
   },
   usage: `

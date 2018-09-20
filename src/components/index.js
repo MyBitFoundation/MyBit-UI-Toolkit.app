@@ -23,8 +23,8 @@ export { default as PortfolioRevenueItem } from './PortfolioRevenueItem';
 export { default as PortfolioValueItem } from './PortfolioValueItem';
 export { default as Address } from './Address';
 export { default as AccountInfo } from './AccountInfo';
-export { default as MyBitGoHeader } from './MyBitGoHeader'
-export { default as TotalPortfolioRevenue } from './TotalPortfolioRevenue'
-export { default as TotalPortfolioValue } from './TotalPortfolioValue'
-export { default as ProgressBar } from './ProgressBar'
+export { default as MyBitGoHeader } from './MyBitGoHeader';
+export { default as TotalPortfolioRevenue } from './TotalPortfolioRevenue';
+export { default as TotalPortfolioValue } from './TotalPortfolioValue';
+export { default as ProgressBar } from './ProgressBar';
 export { default as Alert } from './Alert';

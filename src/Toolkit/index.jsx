@@ -1,6 +1,7 @@
 import React from 'react';
 import { Library, Example } from '@compositor/kit';
 import styled from 'styled-components';
+import 'antd/dist/antd.css';
 import NavBar from './NavBar';
 // import References from './StyledReferences';
 import StyledMenuButton from './StyledMenuButton';
@@ -9,7 +10,6 @@ import StyledDocumentation from './StyledDocumentation';
 import Sources from './Sources';
 import StyledMarkdown from './StyledMarkdown';
 import Components from './components';
-import 'antd/dist/antd.css';
 
 const StyledView = styled.div`
   display: flex;
@@ -134,7 +134,6 @@ class Toolkit extends React.Component {
               key={name}
             >
               <StyledView>
-                {() => { console.log(details.component.propTypes); }}
                 {details.component}
               </StyledView>
               <div style={{ padding: '15px' }}>
