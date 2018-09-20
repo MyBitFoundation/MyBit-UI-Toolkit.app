@@ -46,7 +46,6 @@ const EmptyP = styled.p`
     padding-right: 31px !important;
 `
 
-
 const ValueHeader = (totalRevenue) => (
     <PortfolioTile>
         <PortfolioTileImg src={PieChart} alt="Pie chart" />

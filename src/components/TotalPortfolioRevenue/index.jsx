@@ -47,6 +47,16 @@ const EmptyP = styled.p`
     padding-right: 31px !important;
 `;
 
+const RevenueHeader = (totalRevenue) => (
+    <PortfolioTile>
+        <PortfolioTileImg src={BarChart} alt="Bar chart" />
+        <StyledChildDiv>
+            <RevenueP>Total Asset Revenue:</RevenueP>
+            <RevenueB>${totalRevenue}</RevenueB>
+        </StyledChildDiv>
+    </PortfolioTile>
+)
+
 const TotalPortfolioRevenue = ({
     totalPortfolioRevenue,
     portfolioRevenueAssets,
