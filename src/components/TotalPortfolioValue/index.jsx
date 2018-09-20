@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import PieChart from '../../images/chart-pie.png';
-import PortfolioValueItem from '../PortfolioValueItem';
 import { Collapse } from 'antd';
 import styled from 'styled-components';
+import PieChart from '../../images/chart-pie.png';
+import PortfolioValueItem from '../PortfolioValueItem';
 
 const { Panel } = Collapse;
 
 function callback(key) {
-    console.log(key);
+  console.log(key); //eslint-disable-line
 }
 
 const PortfolioTile = styled.div`
@@ -44,48 +44,52 @@ const EmptyP = styled.p`
     padding-top: 22px !important;
     padding-bottom: 22px !important;
     padding-right: 31px !important;
-`
+`;
 
-const ValueHeader = (totalRevenue) => (
-    <PortfolioTile>
-        <PortfolioTileImg src={PieChart} alt="Pie chart" />
-        <StyledChildDiv>
-            <ValueP>Total Portfolio Value:</ValueP>
-            <ValueB>${totalRevenue}</ValueB>
-        </StyledChildDiv>
-    </PortfolioTile>
-)
+const ValueHeader = props => (
+  <PortfolioTile>
+    <PortfolioTileImg src={PieChart} alt="Pie chart" />
+    <StyledChildDiv>
+      <ValueP>Total Portfolio Value:</ValueP>
+      <ValueB>${props.totalRevenue}</ValueB>
+    </StyledChildDiv>
+  </PortfolioTile>
+);
+
+ValueHeader.propTypes = {
+  totalRevenue: PropTypes.string.isRequired,
+};
 
 const TotalPortfolioValue = ({ totalPortfolioValue, portfolioValueAssets }) => (
-    <Collapse onChange={callback}>
-        <Panel header={ValueHeader(totalPortfolioValue)} key={"1"}>
-            {portfolioValueAssets.length === 0 && (
-                <EmptyP>
+  <Collapse onChange={callback}>
+    <Panel header={<ValueHeader totalRevenue={totalPortfolioValue} />} key="1">
+      {portfolioValueAssets.length === 0 && (
+        <EmptyP>
                     You do not have any<br />
                     investments right now.
-            </EmptyP>
+        </EmptyP>
             )}
-            {portfolioValueAssets.map(asset => (
-                <PortfolioValueItem
-                    key={asset.assetID}
-                    assetID={asset.assetID}
-                    name={asset.name}
-                    ownership={asset.ownership}
-                    value={asset.value}
-                />
+      {portfolioValueAssets.map(asset => (
+        <PortfolioValueItem
+          key={asset.assetID}
+          assetID={asset.assetID}
+          name={asset.name}
+          ownership={asset.ownership}
+          value={asset.value}
+        />
             ))}
-        </Panel>
-    </Collapse>
+    </Panel>
+  </Collapse>
 );
 
 TotalPortfolioValue.propTypes = {
-    totalPortfolioValue: PropTypes.string.isRequired,
-    portfolioValueAssets: PropTypes.arrayOf(PropTypes.shape({
-        assetID: PropTypes.string.isRequired,
-        name: PropTypes.string.isRequired,
-        ownership: PropTypes.string.isRequired,
-        value: PropTypes.string.isRequired,
-    })).isRequired,
+  totalPortfolioValue: PropTypes.string.isRequired,
+  portfolioValueAssets: PropTypes.arrayOf(PropTypes.shape({
+    assetID: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    ownership: PropTypes.string.isRequired,
+    value: PropTypes.string.isRequired,
+  })).isRequired,
 };
 
 export default TotalPortfolioValue;

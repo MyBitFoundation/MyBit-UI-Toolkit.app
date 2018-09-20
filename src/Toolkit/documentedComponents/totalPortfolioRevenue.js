@@ -1,34 +1,34 @@
 import { TotalPortfolioRevenue } from '../../components/';
 
 const assets = [
-    {
-        assetID: 'asset-id-1',
-        name: 'Example Asset',
-        monthlyRevenue: '500.92',
-        totalRevenue: '14081.25'
-    },
-    {
-        assetID: 'asset-id-2',
-        name: 'Example Asset 2',
-        monthlyRevenue: '10.92',
-        totalRevenue: '181.36'
-    },
-    {
-        assetID: 'asset-id-3',
-        name: 'Example Asset 3',
-        monthlyRevenue: '12.42',
-        totalRevenue: '81.16'
-    },
-]
+  {
+    assetID: 'asset-id-1',
+    name: 'Example Asset',
+    monthlyRevenue: '500.92',
+    totalRevenue: '14081.25',
+  },
+  {
+    assetID: 'asset-id-2',
+    name: 'Example Asset 2',
+    monthlyRevenue: '10.92',
+    totalRevenue: '181.36',
+  },
+  {
+    assetID: 'asset-id-3',
+    name: 'Example Asset 3',
+    monthlyRevenue: '12.42',
+    totalRevenue: '81.16',
+  },
+];
 
 const DocumentedTotalPortfolioRevenue = {
   component: (
-    <TotalPortfolioRevenue totalPortfolioRevenue={"1234"} portfolioRevenueAssets={assets} />
+    <TotalPortfolioRevenue totalPortfolioRevenue="1234" portfolioRevenueAssets={assets} />
   ),
   examples: {
     content: [
-        <TotalPortfolioRevenue totalPortfolioRevenue={"0"} portfolioRevenueAssets={[]} />,
-        <TotalPortfolioRevenue totalPortfolioRevenue={"12234"} portfolioRevenueAssets={assets} />,
+      <TotalPortfolioRevenue totalPortfolioRevenue="0" portfolioRevenueAssets={[]} />,
+      <TotalPortfolioRevenue totalPortfolioRevenue="12234" portfolioRevenueAssets={assets} />,
     ],
   },
   usage: `

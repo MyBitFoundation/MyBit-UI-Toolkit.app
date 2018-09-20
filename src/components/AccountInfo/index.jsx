@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import Address from '../Address';
 
 const antIcon = <Icon type="loading" spin />;
-const IS_DAPP_VERSION_ONE = true;
+// const IS_DAPP_VERSION_ONE = true;
 
 const StyledAccountInfo = styled.div`
     display: flex;
@@ -32,11 +32,11 @@ padding-right: 10px;
 const AccountInfo = ({
   myBitBalance, ethBalance, userName, addressClassName,
 }) => (
-    <StyledAccountInfo>
-      <Balance>
-        <BalanceHeader>Balance</BalanceHeader>
-        {!ethBalance || !myBitBalance ? (
-          <Spin indicator={antIcon} />
+  <StyledAccountInfo>
+    <Balance>
+      <BalanceHeader>Balance</BalanceHeader>
+      {!ethBalance || !myBitBalance ? (
+        <Spin indicator={antIcon} />
         ) : (
           <BalanceInfo>
             {myBitBalance}{' '}
@@ -45,9 +45,9 @@ const AccountInfo = ({
             <b>ETH</b>
           </BalanceInfo>
         )}
-      </Balance>
-      <Address className={addressClassName} userName={userName} />
-    </StyledAccountInfo>
+    </Balance>
+    <Address className={addressClassName} userName={userName} />
+  </StyledAccountInfo>
 );
 
 AccountInfo.defaultProps = {

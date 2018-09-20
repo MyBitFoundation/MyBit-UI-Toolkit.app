@@ -9,7 +9,7 @@ import PortfolioRevenueItem from '../PortfolioRevenueItem';
 const { Panel } = Collapse;
 
 function callback(key) {
-  console.log(key);
+  console.log(key); // eslint-disable-line
 }
 
 const PortfolioTile = styled.div`
@@ -47,24 +47,28 @@ const EmptyP = styled.p`
     padding-right: 31px !important;
 `;
 
-const RevenueHeader = (totalRevenue) => (
-    <PortfolioTile>
-        <PortfolioTileImg src={BarChart} alt="Bar chart" />
-        <StyledChildDiv>
-            <RevenueP>Total Asset Revenue:</RevenueP>
-            <RevenueB>${totalRevenue}</RevenueB>
-        </StyledChildDiv>
-    </PortfolioTile>
-)
+const RevenueHeader = props => (
+  <PortfolioTile>
+    <PortfolioTileImg src={BarChart} alt="Bar chart" />
+    <StyledChildDiv>
+      <RevenueP>Total Asset Revenue:</RevenueP>
+      <RevenueB>${props.totalRevenue}</RevenueB>
+    </StyledChildDiv>
+  </PortfolioTile>
+);
+
+RevenueHeader.propTypes = {
+  totalRevenue: PropTypes.string.isRequired,
+};
 
 const TotalPortfolioRevenue = ({
-    totalPortfolioRevenue,
-    portfolioRevenueAssets,
-}) => ( 
-    <Collapse onChange={callback}>
-    <Panel header={RevenueHeader(totalPortfolioRevenue)} key={"1"}>
-        {portfolioRevenueAssets.length === 0 && (
-            <EmptyP>
+  totalPortfolioRevenue,
+  portfolioRevenueAssets,
+}) => (
+  <Collapse onChange={callback}>
+    <Panel header={<RevenueHeader totalRevenue={totalPortfolioRevenue} />} key="1">
+      {portfolioRevenueAssets.length === 0 && (
+        <EmptyP>
                 You do not have any<br />
                 investments right now.
         </EmptyP>
