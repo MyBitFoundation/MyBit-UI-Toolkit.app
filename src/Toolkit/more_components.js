@@ -5,6 +5,8 @@ import {
   Address,
   AccountInfo,
   Logo,
+  MyBitGoHeader,
+  TotalPortfolioRevenue
 } from './documentedComponents';
 
 const MoreComponents = [
@@ -31,6 +33,14 @@ const MoreComponents = [
   {
     name: 'Logo',
     details: Logo,
+  },
+  {
+    name: 'MyBitGoHeader',
+    details: MyBitGoHeader,
+  },
+  {
+    name: 'TotalPortfolioRevenue',
+    details: TotalPortfolioRevenue,
   },
 ];
 

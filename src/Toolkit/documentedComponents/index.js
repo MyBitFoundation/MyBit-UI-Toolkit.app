@@ -18,6 +18,8 @@ export { default as PortfolioValueItem } from './portfolioValueItem';
 export { default as Address } from './address';
 export { default as AccountInfo } from './accountInfo';
 export { default as Logo } from './logo';
+export { default as MyBitGoHeader } from './myBitGoHeader';
+export { default as TotalPortfolioRevenue } from './totalPortfolioRevenue';
 
 export const NavBar = {
   component: (
