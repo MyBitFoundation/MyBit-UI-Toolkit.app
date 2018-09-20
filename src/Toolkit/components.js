@@ -1,4 +1,4 @@
-import { Button, Filter, Switch, Spin, Menu, Dropdown, Stats, StatCard, Pagination, Icon, ConnectionStatus, Input, Tooltip, Heading, NavBar, Header, Footer, Card } from './documentedComponents';
+import { Button, Filter, Alert, Switch, Spin, Menu, Dropdown, Stats, StatCard, Pagination, Icon, ConnectionStatus, Input, Tooltip, Heading, NavBar, Header, Footer, Card } from './documentedComponents';
 
 import MoreComponents from './more_components';
 
@@ -12,6 +12,9 @@ const Components = [...MoreComponents,
   }, {
     name: 'Switch',
     details: Switch,
+  }, {
+    name: 'Alert',
+    details: Alert,
   }, {
     name: 'Spin',
     details: Spin,

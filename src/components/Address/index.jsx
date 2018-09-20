@@ -12,7 +12,7 @@ const AddressWrapper = styled.div`
     justify-content: space-evenly;
     align-items: center;
     width: 120px;
-`
+`;
 const AddressLoader = styled.div`
     height: 39px;
     display: flex;
@@ -20,7 +20,7 @@ const AddressLoader = styled.div`
     justify-content: space-evenly;
     align-items: center;
     width: max-content;
-`
+`;
 const AddressText = styled.p`
     font-size: 14px;
     padding-left: 10px;
@@ -29,7 +29,7 @@ const AddressText = styled.p`
     white-space: nowrap;
     width: 70%;
     margin: 0px 0px;
-`
+`;
 
 const Address = ({ userName, className }) => (
   <div className={className}>
@@ -54,6 +54,10 @@ Address.defaultProps = {
 Address.propTypes = {
   userName: PropTypes.string,
   className: PropTypes.string,
+};
+
+Address.defaultProps = {
+  className: '',
 };
 
 export default Address;

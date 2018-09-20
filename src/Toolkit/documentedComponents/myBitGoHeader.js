@@ -1,47 +1,47 @@
 import { MyBitGoHeader } from '../../components/';
 
 const DocumentedMyBitGoHeader = {
-    component: (
-        <MyBitGoHeader
-            prices={{ mybitPrice: 0.05 }}
-            user={{
-                myBitBalance: "100",
+  component: (
+    <MyBitGoHeader
+      prices={{ mybitPrice: 0.05 }}
+      user={{
+                myBitBalance: '100',
                 ethBalance: 1000,
                 userName: '0xd12cd8a37f074e7eafae618c986ff825666198bd',
             }}
-        />
-    ),
-    examples: {
-        content: [
-            <MyBitGoHeader
-                prices={{ mybitPrice: 0.05 }}
-                user={{
-                    myBitBalance: "100",
+    />
+  ),
+  examples: {
+    content: [
+      <MyBitGoHeader
+        prices={{ mybitPrice: 0.05 }}
+        user={{
+                    myBitBalance: '100',
                     ethBalance: 1000,
                     userName: '0xd12cd8a37f074e7eafae618c986ff825666198bd',
                 }}
-            />,
-            <MyBitGoHeader
-                user={{
-                    myBitBalance: "100",
+      />,
+      <MyBitGoHeader
+        user={{
+                    myBitBalance: '100',
                     ethBalance: 1000,
                     userName: '0xd12cd8a37f074e7eafae618c986ff825666198bd',
                 }}
-            />,
-            <MyBitGoHeader
-                user={{
-                    myBitBalance: "100",
+      />,
+      <MyBitGoHeader
+        user={{
+                    myBitBalance: '100',
                     ethBalance: 1000,
                 }}
-            />,
-            <MyBitGoHeader
-                user={{
-                    myBitBalance: "100",
+      />,
+      <MyBitGoHeader
+        user={{
+                    myBitBalance: '100',
                 }}
-            />
-        ],
-    },
-    usage: `
+      />,
+    ],
+  },
+  usage: `
     <MyBitGoHeader 
         prices={{ mybitPrice: 0.05 }}
         user={{
@@ -51,18 +51,18 @@ const DocumentedMyBitGoHeader = {
         }} 
     />
     `,
-    theming: '',
-    props: `
+  theming: '',
+  props: `
     prices: PropTypes.shape({ params: PropTypes.object }).isRequired,
     user: PropTypes.shape({ params: PropTypes.object }).isRequired,
      `,
-    sources: [{
-        command: 'npm i --save @mybit-ui/myBitGoHeader',
-        name: 'npm',
-    }, {
-        command: 'bit i --save @mybit-ui/myBitGoHeader',
-        name: 'bitsrc',
-    }],
+  sources: [{
+    command: 'npm i --save @mybit-ui/myBitGoHeader',
+    name: 'npm',
+  }, {
+    command: 'bit i --save @mybit-ui/myBitGoHeader',
+    name: 'bitsrc',
+  }],
 };
 
 export default DocumentedMyBitGoHeader;
