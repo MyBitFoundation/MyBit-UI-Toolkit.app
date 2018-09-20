@@ -2,7 +2,7 @@ import { TotalPortfolioRevenue } from '../../components/';
 
 const DocumentedTotalPortfolioRevenue = {
   component: (
-    <TotalPortfolioRevenue totalPortfolioRevenue={"231231"} portfolioRevenueAssets={[]} />
+    <TotalPortfolioRevenue totalPortfolioRevenue="231231" portfolioRevenueAssets={[]} />
   ),
   examples: {
     content: [

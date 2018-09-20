@@ -6,7 +6,7 @@ import {
   AccountInfo,
   Logo,
   MyBitGoHeader,
-  TotalPortfolioRevenue
+  TotalPortfolioRevenue,
 } from './documentedComponents';
 
 const MoreComponents = [

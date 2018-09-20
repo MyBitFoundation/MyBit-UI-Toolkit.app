@@ -133,6 +133,7 @@ class Toolkit extends React.Component {
               key={name}
             >
               <StyledView>
+                {() => { console.log(details.component.propTypes); }}
                 {details.component}
               </StyledView>
               <div style={{ padding: '15px' }}>
