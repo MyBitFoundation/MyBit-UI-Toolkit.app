@@ -8,7 +8,9 @@ import {
   MyBitGoHeader,
   TotalPortfolioRevenue,
   ProgressBar,
-  TotalPortfolioValue
+  TotalPortfolioValue,
+  NavigationOption,
+  NavigationBar
 } from './documentedComponents';
 
 const MoreComponents = [
@@ -51,6 +53,14 @@ const MoreComponents = [
   {
     name: 'ProgressBar',
     details: ProgressBar
+  },
+  {
+    name: 'NavigationOption',
+    details: NavigationOption
+  },
+  {
+    name: 'NavigationBar',
+    details: NavigationBar
   }
 ];
 
