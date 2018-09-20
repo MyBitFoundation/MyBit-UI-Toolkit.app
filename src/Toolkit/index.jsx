@@ -9,6 +9,7 @@ import StyledDocumentation from './StyledDocumentation';
 import Sources from './Sources';
 import StyledMarkdown from './StyledMarkdown';
 import Components from './components';
+import 'antd/dist/antd.css';
 
 const StyledView = styled.div`
   display: flex;

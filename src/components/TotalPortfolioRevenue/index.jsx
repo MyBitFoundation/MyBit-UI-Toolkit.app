@@ -56,17 +56,15 @@ const RevenueHeader = (totalRevenue) => (
     </PortfolioTile>
 )
 
-
-
 const TotalPortfolioRevenue = ({
     totalPortfolioRevenue,
     portfolioRevenueAssets,
 }) => ( 
     <Collapse onChange={callback}>
-    <Panel header={RevenueHeader("312312312")} key={"1"}>
+    <Panel header={RevenueHeader(totalPortfolioRevenue)} key={"1"}>
         {portfolioRevenueAssets.length === 0 && (
             <EmptyP>
-                You don’t have any<br />
+                You do not have any<br />
                 investments right now.
             </EmptyP>
         )}

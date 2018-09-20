@@ -20,6 +20,8 @@ export { default as AccountInfo } from './accountInfo';
 export { default as Logo } from './logo';
 export { default as MyBitGoHeader } from './myBitGoHeader';
 export { default as TotalPortfolioRevenue } from './totalPortfolioRevenue';
+export { default as TotalPortfolioValue } from './totalPortfolioValue'
+export { default as ProgressBar } from './progressBar';
 
 export const NavBar = {
   component: (

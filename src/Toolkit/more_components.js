@@ -6,7 +6,9 @@ import {
   AccountInfo,
   Logo,
   MyBitGoHeader,
-  TotalPortfolioRevenue
+  TotalPortfolioRevenue,
+  ProgressBar,
+  TotalPortfolioValue
 } from './documentedComponents';
 
 const MoreComponents = [
@@ -42,6 +44,14 @@ const MoreComponents = [
     name: 'TotalPortfolioRevenue',
     details: TotalPortfolioRevenue,
   },
+  {
+    name: 'TotalPortfolioValue',
+    details: TotalPortfolioValue,
+  },
+  {
+    name: 'ProgressBar',
+    details: ProgressBar
+  }
 ];
 
 export default MoreComponents;

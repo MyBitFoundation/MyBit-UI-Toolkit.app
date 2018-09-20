@@ -6,8 +6,8 @@ const DocumentedExchangeRate = {
   ),
   examples: {
     content: [
-      <ExchangeRate mybitPrice={0.321} USD_MYB_SYMBOL="USD/MYB" />,
-      <ExchangeRate />,
+      <ExchangeRate mybitPrice={0.321} USD_MYB_SYMBOL="USD/MYB" key={"example1"}/>,
+      <ExchangeRate key={"example2"}/>,
     ],
   },
   usage: `

@@ -8,7 +8,7 @@ import Address from '../Address';
 const antIcon = <Icon type="loading" spin />;
 const IS_DAPP_VERSION_ONE = true;
 
-const AccountInfoDiv = styled.div`
+const StyledAccountInfo = styled.div`
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -31,24 +31,15 @@ padding-right: 10px;
 
 const AccountInfo = ({
   myBitBalance, ethBalance, userName, addressClassName,
-}) => {
-  const myBitBalanceToRender = myBitBalance.toString();
-  if (
-    !IS_DAPP_VERSION_ONE &&
-    (myBitBalance !== 0 || myBitBalance !== 'undefined')
-  ) {
-    // const myBitBalanceString = myBitBalance.toString();
-    // myBitBalanceToRender = Web3.utils.fromWei(myBitBalanceString, 'ether');
-  }
-  return (
-    <AccountInfoDiv>
+}) => (
+    <StyledAccountInfo>
       <Balance>
         <BalanceHeader>Balance</BalanceHeader>
-        {!ethBalance || !myBitBalanceToRender ? (
+        {!ethBalance || !myBitBalance ? (
           <Spin indicator={antIcon} />
         ) : (
           <BalanceInfo>
-            {myBitBalanceToRender}{' '}
+            {myBitBalance}{' '}
             <BalanceMYB>MYB</BalanceMYB>
             {Number(ethBalance).toFixed(4)}
             <b>ETH</b>
@@ -56,9 +47,8 @@ const AccountInfo = ({
         )}
       </Balance>
       <Address className={addressClassName} userName={userName} />
-    </AccountInfoDiv>
-  );
-};
+    </StyledAccountInfo>
+);
 
 AccountInfo.defaultProps = {
   myBitBalance: '0',
