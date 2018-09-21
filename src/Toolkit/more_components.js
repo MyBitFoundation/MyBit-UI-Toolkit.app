@@ -10,7 +10,7 @@ import {
   ProgressBar,
   TotalPortfolioValue,
   NavigationOption,
-  NavigationBar
+  NavigationBar,
 } from './documentedComponents';
 
 const MoreComponents = [
@@ -52,16 +52,16 @@ const MoreComponents = [
   },
   {
     name: 'ProgressBar',
-    details: ProgressBar
+    details: ProgressBar,
   },
   {
     name: 'NavigationOption',
-    details: NavigationOption
+    details: NavigationOption,
   },
   {
     name: 'NavigationBar',
-    details: NavigationBar
-  }
+    details: NavigationBar,
+  },
 ];
 
 export default MoreComponents;

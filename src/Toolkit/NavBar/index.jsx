@@ -43,20 +43,36 @@ const StyledNavBar = styled.div`
   }
 `;
 
-const NavBar = ({ title, examples, handleMobileMenu }) => (
-  <StyledNavBar>
-    <NavLink to="/"><h1>{title}</h1></NavLink>
-    <ul>
-      {examples.map(example => (
-        <li key={example.name}>
-          <NavLink to={`/${example.name}`} onClick={handleMobileMenu}>
-            {example.name}
-          </NavLink>
-        </li>
+const NavBar = ({ title, examples, handleMobileMenu }) => {
+  const categories = examples.reduce((acc, curr) => {
+    const category = curr.category || 'Generic';
+    acc[category] = acc[category] ? acc[category] : [];
+    acc[category].push(curr);
+    acc[category].sort((a, b) => {
+      if (a.name < b.name) return -1;
+      if (a.name > b.name) return 1;
+      return 0;
+    });
+    return acc;
+  }, {});
+  return (
+    <StyledNavBar>
+      <NavLink to="/"><h1>{title}</h1></NavLink>
+      {Object.keys(categories).sort().map(key => (
+        <ul key={key}>
+          <li><strong>{key}</strong></li>
+          {categories[key].map(example => (
+            <li key={example.name}>
+              <NavLink to={`/${example.name}`} onClick={handleMobileMenu}>
+                {example.name}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
       ))}
-    </ul>
-  </StyledNavBar>
-);
+    </StyledNavBar>
+  );
+};
 
 NavBar.propTypes = {
   examples: PropTypes.arrayOf(PropTypes.object).isRequired,

@@ -28,5 +28,5 @@ export { default as TotalPortfolioRevenue } from './TotalPortfolioRevenue';
 export { default as TotalPortfolioValue } from './TotalPortfolioValue';
 export { default as ProgressBar } from './ProgressBar';
 export { default as Alert } from './Alert';
-export { default as NavigationOption } from './NavigationOption'
-export { default as NavigationBar } from './NavigationBar'
+export { default as NavigationOption } from './NavigationOption';
+export { default as NavigationBar } from './NavigationBar';

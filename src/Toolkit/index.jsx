@@ -118,39 +118,41 @@ class Toolkit extends React.Component {
           title="UI Toolkit"
           renderSideNav={({
             title,
-            examples,
           }) => (
             <NavBar
-              examples={examples}
+              examples={Components}
               title={title}
               handleMobileMenu={() => this.setState({ mobileMenuOpen: false })}
             />
           )}
         >
           {
-          Components.map(({ name, details }) => (
-            <Example
-              name={name}
-              key={name}
-            >
-              <StyledView>
-                {details.component}
-              </StyledView>
-              <div style={{ padding: '15px' }}>
-                <StyledDocumentation
-                  menuOpen={this.state.mobileMenuOpen}
-                >
-                  <h1>{name}</h1>
-                  {getExamples(details)}
-                  {getInstall(details)}
-                  {getUsage(details)}
-                  {getTheming(details)}
-                  {getProps(details)}
-                  {/* {getReferences(details)} */}
-                </StyledDocumentation>
-              </div>
-            </Example>
-          ))
+          Components.map(({ name, details }) => {
+            console.log(name);
+            return (
+              <Example
+                name={name}
+                key={name}
+              >
+                <StyledView>
+                  {details.component}
+                </StyledView>
+                <div style={{ padding: '15px' }}>
+                  <StyledDocumentation
+                    menuOpen={this.state.mobileMenuOpen}
+                  >
+                    <h1>{name}</h1>
+                    {getExamples(details)}
+                    {getInstall(details)}
+                    {getUsage(details)}
+                    {getTheming(details)}
+                    {getProps(details)}
+                    {/* {getReferences(details)} */}
+                  </StyledDocumentation>
+                </div>
+              </Example>
+            );
+          })
         }
         </Library>
       </div>
