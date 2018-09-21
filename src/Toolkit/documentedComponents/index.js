@@ -25,6 +25,11 @@ export { default as TotalPortfolioValue } from './totalPortfolioValue';
 export { default as ProgressBar } from './progressBar';
 export { default as NavigationOption } from './navigationOption';
 export { default as NavigationBar } from './navigationBar';
+export { default as AssetTitle } from './assetTitle';
+export { default as AssetInvestmentStatus } from './assetInvestmentStatus';
+export { default as AssetDeadlineStatus } from './assetDeadlineStatus'
+export { default as CategoryCard } from './categoryCard'
+export { default as AssetCard } from './assetCard'
 
 export const NavBar = {
   component: (
