@@ -57,11 +57,11 @@ const MoreComponents = [
   },
   {
     name: 'ProgressBar',
-    details: ProgressBar
+    details: ProgressBar,
   },
   {
     name: 'NavigationOption',
-    details: NavigationOption
+    details: NavigationOption,
   },
   {
     name: 'NavigationBar',
