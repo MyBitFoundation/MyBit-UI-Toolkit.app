@@ -50,6 +50,6 @@ const MyBitGoHeader = ({ user, prices }) => (
 export default MyBitGoHeader;
 
 MyBitGoHeader.propTypes = {
-  prices: PropTypes.shape({ params: PropTypes.object }).isRequired,
+  prices: PropTypes.shape({ params: PropTypes.object }),
   user: PropTypes.shape({ params: PropTypes.object }).isRequired,
 };

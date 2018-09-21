@@ -14,6 +14,7 @@ const DocumentedMyBitGoHeader = {
   examples: {
     content: [
       <MyBitGoHeader
+        key={'example1'}
         prices={{ mybitPrice: 0.05 }}
         user={{
                     myBitBalance: '100',
@@ -22,6 +23,7 @@ const DocumentedMyBitGoHeader = {
                 }}
       />,
       <MyBitGoHeader
+        key={'example2'}
         user={{
                     myBitBalance: '100',
                     ethBalance: 1000,
@@ -29,12 +31,14 @@ const DocumentedMyBitGoHeader = {
                 }}
       />,
       <MyBitGoHeader
+        key={'example3'}
         user={{
                     myBitBalance: '100',
                     ethBalance: 1000,
                 }}
       />,
       <MyBitGoHeader
+        key={'example4'}
         user={{
                     myBitBalance: '100',
                 }}

@@ -14,6 +14,7 @@ const DocumentedAssetCard = {
         id={"#"}
         backgroundImage={demoImage}
         fundingStage={"3"}
+        pastDate={false}
     />
   ),
   examples: {
