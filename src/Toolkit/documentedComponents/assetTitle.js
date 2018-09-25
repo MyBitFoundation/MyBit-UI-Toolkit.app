@@ -2,19 +2,19 @@ import { AssetTitle } from '../../components/';
 
 const DocumentedAssetTitle = {
   component: (
-    <AssetTitle 
-        assetName={"Bitcoin ATM"}
-        city={"Sofia"}
-        country={"Bulgaria"}
+    <AssetTitle
+      assetName="Bitcoin ATM"
+      city="Sofia"
+      country="Bulgaria"
     />
   ),
   examples: {
     content: [
-        <AssetTitle 
-            assetName={"Bitcoin ATM"}
-            city={"Sofia"}
-            country={"Bulgaria"}
-        />
+      <AssetTitle
+        assetName="Bitcoin ATM"
+        city="Sofia"
+        country="Bulgaria"
+      />,
     ],
   },
   usage: `

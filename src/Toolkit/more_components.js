@@ -15,7 +15,7 @@ import {
   AssetInvestmentStatus,
   AssetDeadlineStatus,
   CategoryCard,
-  AssetCard
+  AssetCard,
 } from './documentedComponents';
 
 const MoreComponents = [
@@ -65,28 +65,28 @@ const MoreComponents = [
   },
   {
     name: 'NavigationBar',
-    details: NavigationBar
+    details: NavigationBar,
   },
   {
     name: 'AssetTitle',
-    details: AssetTitle
+    details: AssetTitle,
   },
   {
     name: 'AssetCard',
-    details: AssetCard
+    details: AssetCard,
   },
   {
     name: 'AssetInvestmentStatus',
-    details: AssetInvestmentStatus
+    details: AssetInvestmentStatus,
   },
   {
     name: 'AssetDeadlineStatus',
-    details: AssetDeadlineStatus
+    details: AssetDeadlineStatus,
   },
   {
     name: 'CategoryCard',
-    details: CategoryCard
-  }
+    details: CategoryCard,
+  },
 ];
 
 export default MoreComponents;

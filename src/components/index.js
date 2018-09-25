@@ -28,10 +28,10 @@ export { default as TotalPortfolioRevenue } from './TotalPortfolioRevenue';
 export { default as TotalPortfolioValue } from './TotalPortfolioValue';
 export { default as ProgressBar } from './ProgressBar';
 export { default as Alert } from './Alert';
-export { default as NavigationOption } from './NavigationOption'
-export { default as NavigationBar } from './NavigationBar'
-export { default as AssetTitle } from './AssetTitle'
-export { default as AssetInvestmentStatus } from './AssetInvestmentStatus'
-export { default as AssetDeadlineStatus } from './AssetDeadlineStatus'
-export { default as CategoryCard } from './CategoryCard'
-export { default as AssetCard } from './AssetCard'
+export { default as NavigationOption } from './NavigationOption';
+export { default as NavigationBar } from './NavigationBar';
+export { default as AssetTitle } from './AssetTitle';
+export { default as AssetInvestmentStatus } from './AssetInvestmentStatus';
+export { default as AssetDeadlineStatus } from './AssetDeadlineStatus';
+export { default as CategoryCard } from './CategoryCard';
+export { default as AssetCard } from './AssetCard';

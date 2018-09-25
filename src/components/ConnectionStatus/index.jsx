@@ -1,24 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 
-const StyledCircleIndicator = styled.div`
-  width: 6px;
-  height: 6px;
-  background-color: ${props => props.circleColor};
-  border-radius: 50%;
-  display: inline-block;
-`;
+import StyledCircleIndicator from './styledCircleIndicator';
+import StyledSpan from './styledSpan';
+import StyledConnectionStatus from './styledConnectionStatus';
 
-const StyledSpan = styled.span`
-  margin-left: 10px;
-`;
-
-const StyledConnectionStatus = styled.div`
-  text-align: center;
-  position: relative;
-  top: -17px;
-`;
 
 const ConnectionStatus = (props) => {
   let network;
@@ -27,15 +13,9 @@ const ConnectionStatus = (props) => {
   switch (props.network) {
     case 'main': { network = 'Mainnet'; circleColor = 'green'; break; }
     case 'ropsten': { network = 'Testnet'; circleColor = 'red'; break; }
-    default: break;
+    default: { network = 'unknown network'; circleColor = 'gray'; break; }
   }
-  if (props.loading) {
-    toRender = 'Loading network...';
-  } else if (network) {
-    toRender = `Connected to ${network}`;
-  } else {
-    toRender = 'Connected to unknown network';
-  }
+  toRender = props.loading ? 'Loading network...' : `Connected to ${network}`;
   return (
     <StyledConnectionStatus>
       <StyledCircleIndicator circleColor={circleColor} />

@@ -1,25 +1,16 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import styled, { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 import { Menu, Dropdown as DropdownAnt, Icon } from 'antd';
 import 'antd/lib/dropdown/style/css';
-import Theme from '../theme';
 
+import Theme from '../theme';
+import StyledDropdown from './styledDropdown';
 
 const GlobalStyle = createGlobalStyle`
   .ant-dropdown-menu-item:hover,
   .ant-dropdown-menu-submenu-title:hover{
     background-color: ${Theme.dropdown.submenu.colorHover};
-  }
-`;
-
-const StyledDropdown = styled.div`
-  .ant-dropdown-trigger{
-    color: ${props => props.styling.trigger.color};
-
-    &:hover{
-      color: ${props => props.styling.trigger.colorHover};
-    }
   }
 `;
 

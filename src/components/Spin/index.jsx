@@ -1,13 +1,9 @@
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 import SpinAnt from 'antd/lib/spin';
 import 'antd/lib/spin/style/css';
 
-const StyledSpin = styled.span`
-  .ant-spin-dot i{
-    background-color: ${props => props.styling.color};
-  }
-`;
+import StyledSpin from './styledSpin';
+
 
 const Spin = ({ size, styling }) => (
   <StyledSpin styling={styling}>

@@ -5,8 +5,8 @@ const DocumentedPortfolioValueItem = {
     <PortfolioValueItem
       assetID="bitcoin-atm-value"
       name="Bitcoin ATM"
-      ownership={'11.86'}
-      value={'196.68'}
+      ownership="11.86"
+      value="196.68"
     />
   ),
   examples: {
@@ -14,8 +14,8 @@ const DocumentedPortfolioValueItem = {
       <PortfolioValueItem
         assetID="asset-title-value"
         name="Asset Title"
-        ownership={'11.86'}
-        value={'196.68'}
+        ownership="11.86"
+        value="196.68"
       />,
     ],
   },

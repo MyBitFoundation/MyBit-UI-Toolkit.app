@@ -1,15 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 import Alert from 'antd/lib/alert';
 import 'antd/lib/alert/style/css';
+import StyledAlert from './styledAlert';
 
-const StyledAlert = styled.div`
-  .ant-alert{
-    width: 100%;
-    padding: 8px 35px 8px 37px;
-  }
-`;
 
 const AlertMessage = props => (
   <StyledAlert>

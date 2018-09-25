@@ -1,34 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 import { Menu as MenuAnt } from 'antd';
 import 'antd/lib/menu/style/css';
 import MenuItem from '../MenuItem';
 import Icon from '../Icon';
 import SubMenu from '../SubMenu';
-
-
-const StyledMenu = styled.div`
-  .ant-menu{
-    background-color: ${props => props.styling.backgroundColor};
-    border: none;
-    color: ${props => props.styling.color};
-  }
-
-  .ant-menu-item:hover{
-    color: ${props => props.styling.itemHoverColor};
-  }
-
-  .ant-menu-item-selected{
-    color: ${props => props.styling.itemSelectedColor};
-    border-bottom: ${props => props.styling.borderBottom};
-  }
-
-  .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected{
-    border-bottom: none;
-    background-color: ${props => props.styling.backgroundColorItem};
-  }
-`;
+import StyledMenu from './styledMenu';
 
 class Menu extends Component {
   getMenuItem = item => (

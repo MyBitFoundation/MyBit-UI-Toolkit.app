@@ -1,14 +1,14 @@
 import { AssetDeadlineStatus } from '../../components/';
 
-var future_date = new Date();
+const future_date = new Date();
 future_date.setDate(future_date.getDate() + 22);
 future_date.setHours(future_date.getHours() + 6);
 
 const DocumentedAssetDeadlineStatus = {
   component: (
-    <AssetDeadlineStatus 
-        status={'expired'}
-        deadline={new Date(2018, 11, 24, 10, 33, 30)}
+    <AssetDeadlineStatus
+      status="expired"
+      deadline={new Date(2018, 11, 24, 10, 33, 30)}
     />
   ),
   examples: {
@@ -18,21 +18,21 @@ const DocumentedAssetDeadlineStatus = {
         }
     `,
     content: [
-        <AssetDeadlineStatus 
-            status={'expired'}
-            deadline={new Date(2017, 7, 24, 10, 33, 30)}
-            key={"example1"}
-        />,
-        <AssetDeadlineStatus 
-            status={'active'}
-            deadline={future_date}
-            key={"example2"}
-        />, 
-        <AssetDeadlineStatus 
-            status={'funded'}
-            deadline={new Date()}
-            key={"example3"}
-        />,
+      <AssetDeadlineStatus
+        status="expired"
+        deadline={new Date(2017, 7, 24, 10, 33, 30)}
+        key="example1"
+      />,
+      <AssetDeadlineStatus
+        status="active"
+        deadline={future_date}
+        key="example2"
+      />,
+      <AssetDeadlineStatus
+        status="funded"
+        deadline={new Date()}
+        key="example3"
+      />,
     ],
   },
   usage: `

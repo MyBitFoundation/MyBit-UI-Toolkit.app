@@ -1,66 +1,66 @@
 import { AssetCard } from '../../components/';
-import demoImage from '../../images/category-cryptocurrency-atm.png'
+import demoImage from '../../images/category-cryptocurrency-atm.png';
 
 const DocumentedAssetCard = {
   component: (
-    <AssetCard 
-        funded={"1000"}
-        goal={"10000"} 
-        city={"Sofia"} 
-        country={"Bulgaria"} 
-        name={"Bitcoin ATM"} 
-        category={"#"} 
-        clickHandler={() => {}}
-        id={"#"}
-        backgroundImage={demoImage}
-        fundingStage={"3"}
-        pastDate={false}
+    <AssetCard
+      funded="1000"
+      goal="10000"
+      city="Sofia"
+      country="Bulgaria"
+      name="Bitcoin ATM"
+      category="#"
+      clickHandler={() => {}}
+      id="#"
+      backgroundImage={demoImage}
+      fundingStage="3"
+      pastDate={false}
     />
   ),
   examples: {
     content: [
-        <AssetCard 
-            funded={"6120"}
-            goal={"10000"} 
-            city={"Sofia"} 
-            country={"Bulgaria"} 
-            name={"Bitcoin ATM"} 
-            category={"#"} 
-            clickHandler={() => {}}
-            id={"#"}
-            backgroundImage={demoImage}
-            fundingStage={"2"}
-            pastDate={true}
-            key={'example1'}
-        />,
-        <AssetCard 
-            funded={"3223"}
-            goal={"10000"} 
-            city={"Sofia"} 
-            country={"Bulgaria"} 
-            name={"Bitcoin ATM"} 
-            category={"#"} 
-            clickHandler={() => {}}
-            id={"#"}
-            backgroundImage={demoImage}
-            fundingStage={"2"}
-            pastDate={false}
-            key={'example2'}
-        />,
-        <AssetCard 
-            funded={"1000"}
-            goal={"10000"} 
-            city={"Sofia"} 
-            country={"Bulgaria"} 
-            name={"Bitcoin ATM"} 
-            category={"#"} 
-            clickHandler={() => {}}
-            id={"#"}
-            backgroundImage={demoImage}
-            fundingStage={"3"}
-            pastDate={false}
-            key={'example3'}
-        />,
+      <AssetCard
+        funded="6120"
+        goal="10000"
+        city="Sofia"
+        country="Bulgaria"
+        name="Bitcoin ATM"
+        category="#"
+        clickHandler={() => {}}
+        id="#"
+        backgroundImage={demoImage}
+        fundingStage="2"
+        pastDate
+        key="example1"
+      />,
+      <AssetCard
+        funded="3223"
+        goal="10000"
+        city="Sofia"
+        country="Bulgaria"
+        name="Bitcoin ATM"
+        category="#"
+        clickHandler={() => {}}
+        id="#"
+        backgroundImage={demoImage}
+        fundingStage="2"
+        pastDate={false}
+        key="example2"
+      />,
+      <AssetCard
+        funded="1000"
+        goal="10000"
+        city="Sofia"
+        country="Bulgaria"
+        name="Bitcoin ATM"
+        category="#"
+        clickHandler={() => {}}
+        id="#"
+        backgroundImage={demoImage}
+        fundingStage="3"
+        pastDate={false}
+        key="example3"
+      />,
     ],
   },
   usage: `

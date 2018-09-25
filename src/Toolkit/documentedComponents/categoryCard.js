@@ -1,13 +1,13 @@
 import { CategoryCard } from '../../components/';
-import demoImage from '../../images/category-cryptocurrency-atm.png'
+import demoImage from '../../images/category-cryptocurrency-atm.png';
 
 const DocumentedCategoryCard = {
   component: (
-    <CategoryCard image={demoImage} path={"#"} name={"Bitcoin ATM"} />
+    <CategoryCard image={demoImage} path="#" name="Bitcoin ATM" />
   ),
   examples: {
     content: [
-        <CategoryCard image={demoImage} path={"#"} name={"Bitcoin ATM"} />
+      <CategoryCard image={demoImage} path="#" name="Bitcoin ATM" />,
     ],
   },
   usage: `

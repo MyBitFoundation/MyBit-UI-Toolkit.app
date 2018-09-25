@@ -16,7 +16,7 @@ const DocumentedPortfolioRevenueItem = {
         name="Asset Title"
         totalRevenue={1392.54}
         monthlyRevenue={96.68}
-        key={'example1'}
+        key="example1"
       />,
     ],
   },

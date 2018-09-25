@@ -2,19 +2,19 @@ import { AssetInvestmentStatus } from '../../components/';
 
 const DocumentedAssetInvestmentStatus = {
   component: (
-    <AssetInvestmentStatus 
-        raised={"322.38 USD"}
-        goal={"$100,000.00"}
-        investors={3}
+    <AssetInvestmentStatus
+      raised="322.38 USD"
+      goal="$100,000.00"
+      investors={3}
     />
   ),
   examples: {
     content: [
-        <AssetInvestmentStatus 
-            raised={"322.38 USD"}
-            goal={"$100,000.00"}
-            investors={3}
-        />
+      <AssetInvestmentStatus
+        raised="322.38 USD"
+        goal="$100,000.00"
+        investors={3}
+      />,
     ],
   },
   usage: `
