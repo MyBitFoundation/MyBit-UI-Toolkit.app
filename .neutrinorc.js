@@ -9,6 +9,13 @@ module.exports = {
     }],
     '@neutrinojs/jest',
     ['@neutrinojs/react', {
+      minify: {
+        babel: {
+          minify: {
+            mangle: false
+          }
+        }
+      },
       html: {
         title: 'MyBit - UI Kit'
       },
