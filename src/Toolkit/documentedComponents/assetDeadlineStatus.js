@@ -1,8 +1,8 @@
 import { AssetDeadlineStatus } from '../../components/';
 
-const future_date = new Date();
-future_date.setDate(future_date.getDate() + 22);
-future_date.setHours(future_date.getHours() + 6);
+const futureDate = new Date();
+futureDate.setDate(futureDate.getDate() + 22);
+futureDate.setHours(futureDate.getHours() + 6);
 
 const DocumentedAssetDeadlineStatus = {
   component: (
@@ -25,7 +25,7 @@ const DocumentedAssetDeadlineStatus = {
       />,
       <AssetDeadlineStatus
         status="active"
-        deadline={future_date}
+        deadline={futureDate}
         key="example2"
       />,
       <AssetDeadlineStatus
