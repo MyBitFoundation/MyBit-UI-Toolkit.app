@@ -25,5 +25,6 @@ jobs:
             echo ${GIT_HASH} > version
             cp CONTRIBUTORS contributors
             npx now rm ui.mybit.io -t $NOW_DEVELOPMENT_TOKEN --yes || true
+            echo ${HOST}
             BUILD_URL=$(npx now --name ui.mybit.io -e HOST=$HOST -t $NOW_DEVELOPMENT_TOKEN --public)
             npx now alias ${BUILD_URL} ${HOST} -t $NOW_DEVELOPMENT_TOKEN
