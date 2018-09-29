@@ -21,7 +21,7 @@ jobs:
             GIT_HASH=$(git rev-parse --short HEAD)
             SANITIZED_BRANCH=$(tr "/" "-" <<<$CIRCLE_BRANCH)
             VERY_SANITIZED_BRANCH=$(tr "." "-" <<<$SANITIZED_BRANCH)
-            HOST=$(echo $VERY_SANITIZED_BRANCH-ui-mybit-io-dev)
+            HOST=$(echo $VERY_SANITIZED_BRANCH-ui-mybit-io-dev.now.sh)
             echo ${GIT_HASH} > version
             cp CONTRIBUTORS contributors
             npx now rm ui.mybit.io -t $NOW_DEVELOPMENT_TOKEN --yes || true
