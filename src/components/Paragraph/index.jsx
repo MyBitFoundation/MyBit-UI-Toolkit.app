@@ -1,11 +1,6 @@
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 
-const MyBitParagraphStyle = styled.p`
-  font-family: 'Roboto';
-  color: ${props => props.styling.color};
-  font-size: ${props => props.styling.fontSize};
-`;
+import MyBitParagraphStyle from './styledParagraph';
 
 const MyBitParagraph = ({
   children, styling,

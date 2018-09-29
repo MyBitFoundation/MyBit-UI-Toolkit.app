@@ -8,7 +8,14 @@ module.exports = {
       }
     }],
     '@neutrinojs/jest',
-    ['@neutrinojs/react', {
+    ['@neutrinojs/react-components', {
+      minify: {
+        babel: {
+          minify: {
+            mangle: false
+          }
+        }
+      },
       html: {
         title: 'MyBit - UI Kit'
       },

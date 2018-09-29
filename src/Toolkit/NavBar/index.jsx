@@ -13,8 +13,8 @@ const StyledNavBar = styled.div`
   h1 a{
     font-family: 'Roboto';
     font-weight: 600;
-    padding: 20px;
-    font-size: 25px;
+    padding: 10px;
+    font-size: 16px;
     color: rgba(0,0,0,.65);
     margin-top: 20px;
     display: block;
@@ -26,8 +26,8 @@ const StyledNavBar = styled.div`
 
   li{
     list-style-type: none;
-    font-size: 18px;
-    padding: 12px 0px;
+    font-size: 14px;
+    padding: 7px 0px;
     position: relative;
 
     & a{
@@ -36,29 +36,46 @@ const StyledNavBar = styled.div`
 
     .active{
       color: #1890ff;
+      padding-left: 5px;
+      border-left: 3px solid #1890ff;
       position: relative;
-      font-weight: bold;
     }
   }
 `;
 
-const NavBar = ({ title, examples, handleMobileMenu }) => (
-  <StyledNavBar>
-    <NavLink to="/"><h1>{title}</h1></NavLink>
-    <ul>
-      {examples.map(example => (
-        <li key={example.name}>
-          <NavLink to={`/${example.name}`} onClick={handleMobileMenu}>
-            {example.name}
-          </NavLink>
-        </li>
+const NavBar = ({ title, examples, handleMobileMenu }) => {
+  const categories = examples.reduce((acc, curr) => {
+    const category = curr.category || 'Generic';
+    acc[category] = acc[category] ? acc[category] : [];
+    acc[category].push(curr);
+    acc[category].sort((a, b) => {
+      if (a.name < b.name) return -1;
+      if (a.name > b.name) return 1;
+      return 0;
+    });
+    return acc;
+  }, {});
+  return (
+    <StyledNavBar>
+      <NavLink to="/"><h1>{title}</h1></NavLink>
+      {Object.keys(categories).sort().map(key => (
+        <ul key={key}>
+          <li><strong>{key}</strong></li>
+          {categories[key].map(example => (
+            <li key={example.name}>
+              <NavLink to={`/${example.name}`} onClick={handleMobileMenu}>
+                {example.name}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
       ))}
-    </ul>
-  </StyledNavBar>
-);
+    </StyledNavBar>
+  );
+};
 
 NavBar.propTypes = {
-  examples: PropTypes.node.isRequired,
+  examples: PropTypes.arrayOf(PropTypes.object).isRequired,
   title: PropTypes.string.isRequired,
   handleMobileMenu: PropTypes.func.isRequired,
 };

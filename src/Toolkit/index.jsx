@@ -1,8 +1,9 @@
 import React from 'react';
 import { Library, Example } from '@compositor/kit';
 import styled from 'styled-components';
+import 'antd/dist/antd.css';
 import NavBar from './NavBar';
-import References from './StyledReferences';
+// import References from './StyledReferences';
 import StyledMenuButton from './StyledMenuButton';
 import HandleMobile from './HandleMobile';
 import StyledDocumentation from './StyledDocumentation';
@@ -62,9 +63,16 @@ const getTheming = details => (
   </section>
 );
 
-const getProps = () => (
+const getProps = details => (
   <section>
     <h2>Props</h2>
+    <StyledMarkdown>
+      <pre>
+        <code>
+          {details.props}
+        </code>
+      </pre>
+    </StyledMarkdown>
   </section>
 );
 
@@ -75,18 +83,18 @@ const getInstall = details => (
   </section>
 );
 
-const getReferences = details => (
-  <section>
-    <h2
-      style={{ textAlign: 'right' }}
-    >
-      Ant References
-    </h2>
-    <References
-      references={details.antReferences}
-    />
-  </section>
-);
+// const getReferences = details => (
+//   <section>
+//     <h2
+//       style={{ textAlign: 'right' }}
+//     >
+//       Ant References
+//     </h2>
+//     <References
+//       references={details.antReferences}
+//     />
+//   </section>
+// );
 
 class Toolkit extends React.Component {
   constructor(props) {
@@ -107,20 +115,12 @@ class Toolkit extends React.Component {
           onClick={() => this.setState({ mobileMenuOpen: !this.state.mobileMenuOpen })}
         />
         <Library
-          title={
-            <a
-              href="/"
-              onClick={() => this.setState({ mobileMenuOpen: false })}
-            >
-             UI Toolkit
-            </a>
-          }
+          title="UI Toolkit"
           renderSideNav={({
             title,
-            examples,
           }) => (
             <NavBar
-              examples={examples}
+              examples={Components}
               title={title}
               handleMobileMenu={() => this.setState({ mobileMenuOpen: false })}
             />
@@ -145,7 +145,7 @@ class Toolkit extends React.Component {
                   {getUsage(details)}
                   {getTheming(details)}
                   {getProps(details)}
-                  {getReferences(details)}
+                  {/* {getReferences(details)} */}
                 </StyledDocumentation>
               </div>
             </Example>

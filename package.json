@@ -4,8 +4,9 @@
   "description": "MyBit UI Kit",
   "main": "build/index.js",
   "scripts": {
-    "start": "neutrino start --use @neutrinojs/react",
-    "build": "neutrino build --use @neutrinojs/react",
+    "start": "neutrino start",
+    "now-start": "echo $HOST; neutrino start --options.host $HOST",
+    "build": "neutrino build",
     "lint": "neutrino lint",
     "lint:fix": "neutrino lint --fix",
     "test": "neutrino test"
@@ -28,7 +29,6 @@
   "devDependencies": {
     "@neutrinojs/airbnb": "^8.3.0",
     "@neutrinojs/jest": "^8.3.0",
-    "@neutrinojs/react": "^8.3.0",
     "@neutrinojs/react-components": "^8.3.0",
     "enzyme": "^3.5.0",
     "enzyme-adapter-react-16": "^1.3.0",
@@ -42,8 +42,11 @@
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
     "react-hot-loader": "^4.3.7",
+    "react-jazzicon": "^0.1.2",
+    "react-placeholder": "^3.0.1",
     "react-router-dom": "^4.3.1",
     "react-syntax-highlighter": "^8.0.1",
-    "styled-components": "^4.0.0-beta.5"
+    "styled-components": "^4.0.0-beta.5",
+    "web3": "^1.0.0-beta2"
   }
 }
