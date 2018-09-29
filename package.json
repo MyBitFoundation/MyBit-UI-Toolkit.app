@@ -5,6 +5,7 @@
   "main": "build/index.js",
   "scripts": {
     "start": "neutrino start",
+    "now-start": "neutrino start --options.host $HOST",
     "build": "neutrino build",
     "lint": "neutrino lint",
     "lint:fix": "neutrino lint --fix",
