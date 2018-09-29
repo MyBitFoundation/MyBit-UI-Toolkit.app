@@ -13,8 +13,7 @@
   "files": [
     "LICENSE",
     "README.md",
-    "build/",
-    ".neutrinorc.js"
+    "build/"
   ],
   "repository": {
     "type": "git",

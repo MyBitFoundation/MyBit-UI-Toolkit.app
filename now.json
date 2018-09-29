@@ -1,0 +1,7 @@
+{
+    "files": [
+        "src",
+        ".neutrinorc.js",
+        "package.json"
+    ]
+}
