@@ -18,6 +18,6 @@ script:
   - echo "//registry.npmjs.org/:_authToken=$NPM_MYBIT_BOT_TOKEN" > ~/.npmrc
   - echo ${GIT_HASH} > build/version
   - cp CONTRIBUTORS build/contributors
-  - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then npx np patch --no-publish && npm publish --access=public; fi
+  - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then npm version patch && npm publish --access=public; fi
   - BUILD_URL=$(npx now --name $HOST -e HOST=$HOST -t $NOW_PROD_TOKEN)
   - npx now alias ${BUILD_URL} $HOST -t $NOW_PROD_TOKEN
