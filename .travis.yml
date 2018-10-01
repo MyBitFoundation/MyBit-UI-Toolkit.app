@@ -10,9 +10,10 @@ before_script:
   - yarn build
 script:
   - GIT_HASH=$(git rev-parse --short HEAD)
+  - if [ "$TRAVIS_BRANCH" = "develop" -a ! "$TRAVIS_PULL_REQUEST" = "false" ]; then HOST=$(echo ui-develop.mybit.io); fi
+  - if [ "$TRAVIS_BRANCH" = "develop" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then HOST=$(echo ui-staging.mybit.io); fi
+  - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then HOST=$(echo ui.mybit.io); fi
   - echo ${GIT_HASH} > build/version
   - cp CONTRIBUTORS build/contributors
-  - BUILD_URL=$(npx now --name ui.mybit.io build -t $NOW_PROD_TOKEN)
-  - if [ "$TRAVIS_BRANCH" = "develop" -a ! "$TRAVIS_PULL_REQUEST" = "false" ]; then npx now alias ${BUILD_URL} ui-develop.mybit.io -t $NOW_PROD_TOKEN; fi
-  - if [ "$TRAVIS_BRANCH" = "develop" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then npx now alias ${BUILD_URL} ui-staging.mybit.io -t $NOW_PROD_TOKEN; fi
-  - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then npx now alias ${BUILD_URL} ui.mybit.io -t $NOW_PROD_TOKEN; fi
+  - BUILD_URL=$(npx now --name $HOST -e HOST=$HOST -t $NOW_PROD_TOKEN)
+  - npx now alias ${BUILD_URL} $HOST -t $NOW_PROD_TOKEN
