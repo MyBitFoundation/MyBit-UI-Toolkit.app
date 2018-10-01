@@ -13,7 +13,11 @@ script:
   - if [ "$TRAVIS_BRANCH" = "develop" -a ! "$TRAVIS_PULL_REQUEST" = "false" ]; then HOST=$(echo ui-develop.mybit.io); fi
   - if [ "$TRAVIS_BRANCH" = "develop" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then HOST=$(echo ui-staging.mybit.io); fi
   - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then HOST=$(echo ui.mybit.io); fi
+  - npm set init.author.name "MyBit AG"
+  - npm set init.author.email "mybit.development@gmail.com"
+  - echo "//registry.npmjs.org/:_authToken=$NPM_MYBIT_BOT_TOKEN" > ~/.npmrc
   - echo ${GIT_HASH} > build/version
   - cp CONTRIBUTORS build/contributors
+  - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then npm version patch && npm publish --access=public; fi
   - BUILD_URL=$(npx now --name $HOST -e HOST=$HOST -t $NOW_PROD_TOKEN)
   - npx now alias ${BUILD_URL} $HOST -t $NOW_PROD_TOKEN
