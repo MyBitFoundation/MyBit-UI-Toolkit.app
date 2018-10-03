@@ -8,6 +8,7 @@ const DocumentedBancorWidgetButton = {
     content: [
       <BancorWidgetButton key="example-bancor-button-widget" />,
       <BancorWidgetButton key="example-bancor-button-widget-custom-title">Button Title</BancorWidgetButton>,
+      <BancorWidgetButton key="example-bancor-button-widget-custom-title" operation="sell">Sell MYB</BancorWidgetButton>,
     ],
   },
   usage: `
@@ -21,6 +22,7 @@ const DocumentedBancorWidgetButton = {
     pairCurrencyId="5937d635231e97001f744267"
     primaryColor="#1890ff"
     displayCurrency="ETH"
+    operation="buy"
   >
   Button Title
   </BancorWidgetButton>
@@ -34,7 +36,8 @@ const DocumentedBancorWidgetButton = {
   baseCurrencyId: PropTypes.string,
   pairCurrencyId: PropTypes.string,
   primaryColor: PropTypes.string,
-  displayCurrency: PropTypes.string
+  displayCurrency: PropTypes.string,
+  operation: PropTypes.oneOf(['buy', 'sell'])
   `,
   sources: [{
     command: 'npm i --save @mybit-ui/bancorWidgetButton',

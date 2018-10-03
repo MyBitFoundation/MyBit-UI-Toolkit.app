@@ -59,7 +59,7 @@ class BancorWidgetButton extends Component {
           size="default"
           onClick={() => {
             if (window.BancorConvertWidget) {
-              window.BancorConvertWidget.showConvertPopup('buy');
+              window.BancorConvertWidget.showConvertPopup(this.props.operation);
             }
           }}
         >
@@ -77,6 +77,7 @@ BancorWidgetButton.propTypes = {
   pairCurrencyId: PropTypes.string,
   primaryColor: PropTypes.string,
   displayCurrency: PropTypes.string,
+  operation: PropTypes.oneOf(['buy', 'sell']),
 };
 
 BancorWidgetButton.defaultProps = {
@@ -86,6 +87,7 @@ BancorWidgetButton.defaultProps = {
   pairCurrencyId: '5937d635231e97001f744267',
   primaryColor: '#1890ff',
   displayCurrency: 'ETH',
+  operation: 'buy',
 };
 
 
