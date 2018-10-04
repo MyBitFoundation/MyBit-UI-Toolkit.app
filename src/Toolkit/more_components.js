@@ -1,5 +1,6 @@
 import {
   ExchangeRate,
+  BancorWidgetButton,
   PortfolioRevenueItem,
   PortfolioValueItem,
   Address,
@@ -22,6 +23,10 @@ const MoreComponents = [
   {
     name: 'ExchangeRate',
     details: ExchangeRate,
+  },
+  {
+    name: 'BancorWidgetButton',
+    details: BancorWidgetButton,
   },
   {
     name: 'PortfolioRevenueItem',
