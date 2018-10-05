@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import locationIcon from '../../images/Location-icon.svg';
 import ProgressBar from '../ProgressBar';
 import AssetWrapper from './styledAssetWrapper';
+import locationIcon from './Location-icon.svg';
 
 const AssetCard = ({
   // clickHandler,

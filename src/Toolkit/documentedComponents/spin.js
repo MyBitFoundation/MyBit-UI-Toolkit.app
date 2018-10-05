@@ -25,6 +25,7 @@ const DocumentedSpin = {
     command: 'bit i --save @mybit-ui/spin',
     name: 'bitsrc',
   }],
+  antReferences: [],
 };
 
 export default DocumentedSpin;

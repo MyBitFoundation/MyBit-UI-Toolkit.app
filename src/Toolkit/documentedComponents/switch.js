@@ -25,6 +25,7 @@ const DocumentedSwitch = {
     command: 'bit i --save @mybit-ui/switch',
     name: 'bitsrc',
   }],
+  antReferences: [],
 };
 
 export default DocumentedSwitch;

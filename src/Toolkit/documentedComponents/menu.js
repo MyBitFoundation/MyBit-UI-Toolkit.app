@@ -74,7 +74,7 @@ const DocumentedMenu = {
   usage: `<Menu
     onClick={() => {}}
     selectedKeys={['Developer']}
-    mode="horizontal" 
+    mode="horizontal"
   />`,
   theming: '',
   sources: [{
@@ -84,6 +84,7 @@ const DocumentedMenu = {
     command: 'bit i --save @mybit-ui/Menu',
     name: 'bitsrc',
   }],
+  antReferences: [],
 };
 
 export default DocumentedMenu;

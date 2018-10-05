@@ -18,7 +18,7 @@ const DocumentedAssetInvestmentStatus = {
     ],
   },
   usage: `
-    <AssetInvestmentStatus 
+    <AssetInvestmentStatus
         raised={"322.38 USD"}
         goal={"$100,000.00"}
         investors={3}
@@ -38,6 +38,7 @@ const DocumentedAssetInvestmentStatus = {
     command: 'bit i --save @mybit-ui/assetInvestmentStatus',
     name: 'bitsrc',
   }],
+  antReferences: [],
 };
 
 export default DocumentedAssetInvestmentStatus;

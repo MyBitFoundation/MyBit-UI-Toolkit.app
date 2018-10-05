@@ -25,6 +25,7 @@ const DocumentedTooltip = {
     command: 'bit i --save @mybit-ui/connection-status',
     name: 'bitsrc',
   }],
+  antReferences: [],
 };
 
 export default DocumentedTooltip;

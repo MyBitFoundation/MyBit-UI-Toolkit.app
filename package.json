@@ -38,6 +38,7 @@
     "@compositor/kit": "^1.0.47",
     "@neutrinojs/style-loader": "^8.3.0",
     "antd": "^3.8.4",
+    "dayjs": "^1.7.7",
     "prop-types": "^15.6.2",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",

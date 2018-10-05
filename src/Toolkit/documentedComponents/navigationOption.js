@@ -77,6 +77,7 @@ const DocumentedNavigationOption = {
     command: 'bit i --save @mybit-ui/navigationOption',
     name: 'bitsrc',
   }],
+  antReferences: [],
 };
 
 export default DocumentedNavigationOption;

@@ -18,11 +18,16 @@ import {
   Stats,
   Switch,
   Tooltip,
+  PortfolioDropdown,
+  Bounties,
+  Bounty,
 } from './documentedComponents';
 
 import MoreComponents from './more_components';
 
 const Components = [...MoreComponents,
+  { name: 'Bounties', details: Bounties, category: 'Others' },
+  { name: 'Bounty', details: Bounty, category: 'Others' },
   { name: 'Button', details: Button, category: 'Forms' },
   { name: 'Alert', details: Alert, category: 'Feedback' },
   { name: 'Card', details: Card, category: 'Layout' },
@@ -42,6 +47,7 @@ const Components = [...MoreComponents,
   { name: 'Stats', details: Stats, category: 'Layout' },
   { name: 'Switch', details: Switch, category: 'Forms' },
   { name: 'Tooltip', details: Tooltip, category: 'Feedback' },
+  { name: 'PortfolioDropdown', details: PortfolioDropdown, category: 'Layout' },
 ];
 
 export default Components;

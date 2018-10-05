@@ -12,7 +12,7 @@ const DocumentedLogo = {
   usage: `
   White SVG:
   <Logo className="classname" />
-  
+
   With a background:
   <div style={{backgroundColor: 'black', width: '200px'}}>
     <Logo className="classname" />
@@ -29,6 +29,7 @@ const DocumentedLogo = {
     command: 'bit i --save @mybit-ui/logo',
     name: 'bitsrc',
   }],
+  antReferences: [],
 };
 
 export default DocumentedLogo;

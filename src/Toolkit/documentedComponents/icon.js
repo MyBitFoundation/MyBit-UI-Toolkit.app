@@ -27,6 +27,7 @@ const DocumentedIcon = {
     command: 'bit i --save @mybit-ui/icon',
     name: 'bitsrc',
   }],
+  antReferences: [],
 };
 
 export default DocumentedIcon;

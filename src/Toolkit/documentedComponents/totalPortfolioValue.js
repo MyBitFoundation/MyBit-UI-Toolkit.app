@@ -71,6 +71,7 @@ const DocumentedTotalPortfolioValue = {
     command: 'bit i --save @mybit-ui/Filter',
     name: 'bitsrc',
   }],
+  antReferences: [],
 };
 
 export default DocumentedTotalPortfolioValue;

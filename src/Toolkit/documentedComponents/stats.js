@@ -23,6 +23,7 @@ const DocumentedStats = {
     command: 'bit i --save @mybit-ui/stats',
     name: 'bitsrc',
   }],
+  antReferences: [],
 };
 
 export default DocumentedStats;

@@ -16,13 +16,13 @@ const DocumentedDropdown = {
     ],
   },
   usage: `
-    <Dropdown 
-      menu={["Option 1", "Option 2", "Option 3"]} 
-      selected="Option 1" 
-      styling={Theme.dropdown} 
-      placement="bottomRight" 
-      trigger="hover" 
-      handleClick={() => {}} 
+    <Dropdown
+      menu={["Option 1", "Option 2", "Option 3"]}
+      selected="Option 1"
+      styling={Theme.dropdown}
+      placement="bottomRight"
+      trigger="hover"
+      handleClick={() => {}}
     />`,
   theming: '',
   sources: [{
@@ -32,6 +32,20 @@ const DocumentedDropdown = {
     command: 'bit i --save @mybit-ui/dropdown',
     name: 'bitsrc',
   }],
+  antReferences: [
+    {
+      name: 'Dropdown',
+      url: 'https://ant.design/components/dropdown/',
+    },
+    {
+      name: 'Menu',
+      url: 'https://ant.design/components/menu/',
+    },
+    {
+      name: 'Icon',
+      url: 'https://ant.design/components/icon/',
+    },
+  ],
 };
 
 export default DocumentedDropdown;

@@ -27,6 +27,7 @@ const DocumentedCategoryCard = {
     command: 'bit i --save @mybit-ui/categoryCard',
     name: 'bitsrc',
   }],
+  antReferences: [],
 };
 
 export default DocumentedCategoryCard;

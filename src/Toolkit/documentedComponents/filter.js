@@ -26,6 +26,7 @@ const DocumentedFilter = {
     command: 'bit i --save @mybit-ui/Filter',
     name: 'bitsrc',
   }],
+  antReferences: [],
 };
 
 export default DocumentedFilter;

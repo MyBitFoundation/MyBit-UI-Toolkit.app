@@ -37,6 +37,7 @@ const DocumentedProgressBar = {
     command: 'bit i --save @mybit-ui/spin',
     name: 'bitsrc',
   }],
+  antReferences: [],
 };
 
 export default DocumentedProgressBar;

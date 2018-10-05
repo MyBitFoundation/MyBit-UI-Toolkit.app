@@ -37,7 +37,7 @@ const DocumentedAssetDeadlineStatus = {
   },
   usage: `
     //past date
-    <AssetDeadlineStatus 
+    <AssetDeadlineStatus
         status={'expired'}
         deadline={new Date(2017, 7, 24, 10, 33, 30)}
     />,
@@ -45,12 +45,12 @@ const DocumentedAssetDeadlineStatus = {
     var future_date = new Date();
     future_date.setDate(future_date.getDate() + 22);
     future_date.setHours(future_date.getHours() + 6);
-    <AssetDeadlineStatus 
+    <AssetDeadlineStatus
         status={'active'}
         deadline={future_date}
     />,
     //no date required if the asset is fully funded
-    <AssetDeadlineStatus 
+    <AssetDeadlineStatus
         status={'funded'}
         deadline={new Date()}
     />
@@ -67,6 +67,7 @@ const DocumentedAssetDeadlineStatus = {
     command: 'bit i --save @mybit-ui/assetDeadlineStatus',
     name: 'bitsrc',
   }],
+  antReferences: [],
 };
 
 export default DocumentedAssetDeadlineStatus;

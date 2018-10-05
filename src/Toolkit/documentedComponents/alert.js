@@ -72,6 +72,7 @@ const DocumentedAlert = {
     command: 'bit i --save @mybit-ui/alert',
     name: 'bitsrc',
   }],
+  antReferences: [],
 };
 
 export default DocumentedAlert;

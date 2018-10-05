@@ -85,10 +85,10 @@ const DocumentedNavigationBar = {
           url: '/help',
         },
     ];
-    <NavigationBar 
-        menuOptions={menuOptions} 
-        clickHandler={() => {}} 
-        currentPath={"/portfolio"} 
+    <NavigationBar
+        menuOptions={menuOptions}
+        clickHandler={() => {}}
+        currentPath={"/portfolio"}
     />
   `,
   theming: '',
@@ -104,6 +104,7 @@ const DocumentedNavigationBar = {
     command: 'bit i --save @mybit-ui/navigationBar',
     name: 'bitsrc',
   }],
+  antReferences: [],
 };
 
 export default DocumentedNavigationBar;
