@@ -6,6 +6,7 @@ import MenuItem from '../MenuItem';
 import Icon from '../Icon';
 import SubMenu from '../SubMenu';
 import StyledMenu from './styledMenu';
+import Theme from '../theme';
 
 class Menu extends Component {
   getMenuItem = item => (
@@ -39,7 +40,7 @@ class Menu extends Component {
       onClick, items, selectedKeys, mode, className, styling,
     } = this.props;
     return (
-      <StyledMenu styling={styling}>
+      <StyledMenu styling={{ ...Theme.menu, ...styling }}>
         <MenuAnt
           onClick={onClick}
           selectedKeys={selectedKeys}
@@ -54,7 +55,7 @@ class Menu extends Component {
 }
 
 Menu.propTypes = {
-  styling: PropTypes.object.isRequired, // eslint-disable-line
+  styling: PropTypes.object, // eslint-disable-line
   onClick: PropTypes.func.isRequired,
   selectedKeys: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
   mode: PropTypes.string.isRequired,
@@ -63,6 +64,7 @@ Menu.propTypes = {
 };
 
 Menu.defaultProps = {
+  styling: {},
   className: '',
 };
 

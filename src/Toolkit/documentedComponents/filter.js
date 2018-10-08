@@ -1,24 +1,28 @@
-import { Theme, Filter } from '../../components/';
+import { Filter } from '../../components/';
 
 const DocumentedFilter = {
   component: (
-    <Filter checked styling={Theme.filters}> Sample Filter </Filter>
+    <Filter checked > Sample Filter </Filter>
   ),
   examples: {
     styling: `
-      >div{
+      > div{
         margin: 5px;
       }
     `,
     content: [
-      <Filter key="Filter-example-1" checked styling={Theme.filters}> Checked tag</Filter>,
-      <Filter key="Filter-example-2" styling={Theme.filters}> Unchecked tag</Filter>,
+      <Filter key="Filter-example-1" checked > Checked tag</Filter>,
+      <Filter key="Filter-example-2" > Unchecked tag</Filter>,
     ],
   },
   usage: `
-    <Filter checked styling={Theme.filters}> Checked tag</Filter>
+    <Filter checked > Checked tag</Filter>
   `,
-  theming: '',
+  props: `
+    checked: PropTypes.bool,
+    onChange: PropTypes.func,
+    styling: PropTypes.object,
+  `,
   sources: [{
     command: 'npm i --save @mybit-ui/Filter',
     name: 'npm',
@@ -26,7 +30,12 @@ const DocumentedFilter = {
     command: 'bit i --save @mybit-ui/Filter',
     name: 'bitsrc',
   }],
-  antReferences: [],
+  antReferences: [
+    {
+      name: 'Tag.CheckableTag',
+      url: 'https://ant.design/components/tag/',
+    },
+  ],
 };
 
 export default DocumentedFilter;

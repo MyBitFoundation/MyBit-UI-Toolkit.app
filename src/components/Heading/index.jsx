@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-
+import Theme from '../theme';
 import StyledHeading from './styledHeading';
 
 const MyBitHeading = ({
@@ -23,9 +23,7 @@ MyBitHeading.propTypes = {
 };
 
 MyBitHeading.defaultProps = {
-  styling: {
-    color: '#ffffff',
-  },
+  styling: Theme.heading,
 };
 
 export default MyBitHeading;

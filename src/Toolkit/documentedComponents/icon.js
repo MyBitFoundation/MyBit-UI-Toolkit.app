@@ -19,7 +19,10 @@ const DocumentedIcon = {
     ],
   },
   usage: '<Icon type="close" />',
-  theming: '',
+  props: `
+  isRight: PropTypes.bool,
+  type: PropTypes.string.isRequired,
+  `,
   sources: [{
     command: 'npm i --save @mybit-ui/icon',
     name: 'npm',
@@ -27,7 +30,10 @@ const DocumentedIcon = {
     command: 'bit i --save @mybit-ui/icon',
     name: 'bitsrc',
   }],
-  antReferences: [],
+  antReferences: [{
+    name: 'Icon',
+    url: 'https://ant.design/components/icon/',
+  }],
 };
 
 export default DocumentedIcon;
