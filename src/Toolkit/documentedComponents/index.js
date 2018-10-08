@@ -30,6 +30,7 @@ export { default as AssetInvestmentStatus } from './assetInvestmentStatus';
 export { default as AssetDeadlineStatus } from './assetDeadlineStatus';
 export { default as CategoryCard } from './categoryCard';
 export { default as AssetCard } from './assetCard';
+export { default as BancorWidgetButton } from './bancorWidgetButton';
 
 export const NavBar = {
   component: (

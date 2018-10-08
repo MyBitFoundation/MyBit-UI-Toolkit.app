@@ -35,3 +35,5 @@ export { default as AssetInvestmentStatus } from './AssetInvestmentStatus';
 export { default as AssetDeadlineStatus } from './AssetDeadlineStatus';
 export { default as CategoryCard } from './CategoryCard';
 export { default as AssetCard } from './AssetCard';
+export { default as BancorWidgetButton } from './BancorWidgetButton';
+
