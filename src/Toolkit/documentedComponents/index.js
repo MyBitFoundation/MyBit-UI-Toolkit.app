@@ -33,6 +33,7 @@ export { default as AssetCard } from './assetCard';
 export { default as PortfolioDropdown } from './portfolioDropdown';
 export { default as Bounties } from './bounties';
 export { default as Bounty } from './bounty';
+export { default as BancorWidgetButton } from './bancorWidgetButton';
 
 export const NavBar = {
   component: (

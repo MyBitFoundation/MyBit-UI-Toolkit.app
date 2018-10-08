@@ -82,8 +82,8 @@ const DocumentedPortfolioDropdown = {
             value: '14081.25'
         }
     ]
-    <PortfolioDropdown PortfolioDropdown={"0"} portfolioData={[]} />,
-    <PortfolioDropdown PortfolioDropdown={"12234"} portfolioData={valueAssets} />
+    <PortfolioDropdown total={"0"} portfolioData={[]} />,
+    <PortfolioDropdown total={"12234"} portfolioData={valueAssets} />
   `,
   theming: '',
   props: `

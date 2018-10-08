@@ -27,9 +27,10 @@ const PortfolioDropdown = ({
           investments right now.
         </EmptyP>
       )}
-      {portfolioData.map(asset => (
+      {portfolioData.length > 0 && portfolioData.map(asset => (
         <PortfolioValueItem
           key={asset.assetID}
+          id={`${asset.assetID}`}
           color={color}
           icon={icon}
           assetID={asset.assetID}

@@ -38,3 +38,4 @@ export { default as AssetCard } from './AssetCard';
 export { default as PortfolioDropdown } from './PortfolioDropdown';
 export { default as Bounties } from './Bounties';
 export { default as Bounty } from './Bounty';
+export { default as BancorWidgetButton } from './BancorWidgetButton';
