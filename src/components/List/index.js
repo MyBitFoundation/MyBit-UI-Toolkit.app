@@ -27,7 +27,11 @@ function List(props) {
 
 List.propTypes = {
   component: PropTypes.func.isRequired,
-  items: PropTypes.array,
+  items: PropTypes.array, //eslint-disable-line
+};
+
+List.defaultProps = {
+  items: [],
 };
 
 export default List;

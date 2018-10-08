@@ -15,21 +15,15 @@ describe('<List />', () => {
 
     const component = ({ item }) => <ListItem>{item.name}</ListItem>; // eslint-disable-line
 
-    const renderedComponent = shallow(
-      <List items={items} component={component} />,
-    );
+    const renderedComponent = shallow(<List items={items} component={component} />);
     expect(renderedComponent.find(component)).toHaveLength(2);
-    expect(
-      renderedComponent
-        .find(component)
-        .at(0)
-        .prop('item'),
-    ).toBe(items[0]);
-    expect(
-      renderedComponent
-        .find(component)
-        .at(1)
-        .prop('item'),
-    ).toBe(items[1]);
+    expect(renderedComponent
+      .find(component)
+      .at(0)
+      .prop('item')).toBe(items[0]);
+    expect(renderedComponent
+      .find(component)
+      .at(1)
+      .prop('item')).toBe(items[1]);
   });
 });

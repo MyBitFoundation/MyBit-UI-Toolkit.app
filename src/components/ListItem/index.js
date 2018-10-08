@@ -13,7 +13,7 @@ function ListItem(props) {
 }
 
 ListItem.propTypes = {
-  item: PropTypes.any,
+  item: PropTypes.any, //eslint-disable-line
 };
 
 export default ListItem;
