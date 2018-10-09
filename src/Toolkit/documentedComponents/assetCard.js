@@ -65,13 +65,13 @@ const DocumentedAssetCard = {
   },
   usage: `
     //expired asses (red progress bar)
-    <AssetCard 
+    <AssetCard
         funded={"6120"}
-        goal={"10000"} 
-        city={"Sofia"} 
-        country={"Bulgaria"} 
-        name={"Bitcoin ATM"} 
-        category={"#"} 
+        goal={"10000"}
+        city={"Sofia"}
+        country={"Bulgaria"}
+        name={"Bitcoin ATM"}
+        category={"#"}
         clickHandler={() => {}}
         id={"#"}
         backgroundImage={demoImage}
@@ -79,13 +79,13 @@ const DocumentedAssetCard = {
         pastDate={true}
     />,
     //active asset (blue progress bar)
-    <AssetCard 
+    <AssetCard
         funded={"3223"}
-        goal={"10000"} 
-        city={"Sofia"} 
-        country={"Bulgaria"} 
-        name={"Bitcoin ATM"} 
-        category={"#"} 
+        goal={"10000"}
+        city={"Sofia"}
+        country={"Bulgaria"}
+        name={"Bitcoin ATM"}
+        category={"#"}
         clickHandler={() => {}}
         id={"#"}
         backgroundImage={demoImage}
@@ -93,13 +93,13 @@ const DocumentedAssetCard = {
         pastDate={false}
     />,
     //funded asset (green progress bar)
-    <AssetCard 
+    <AssetCard
         funded={"1000"}
-        goal={"10000"} 
-        city={"Sofia"} 
-        country={"Bulgaria"} 
-        name={"Bitcoin ATM"} 
-        category={"#"} 
+        goal={"10000"}
+        city={"Sofia"}
+        country={"Bulgaria"}
+        name={"Bitcoin ATM"}
+        category={"#"}
         clickHandler={() => {}}
         id={"#"}
         backgroundImage={demoImage}
@@ -127,6 +127,7 @@ const DocumentedAssetCard = {
     command: 'bit i --save @mybit-ui/address',
     name: 'bitsrc',
   }],
+  antReferences: [],
 };
 
 export default DocumentedAssetCard;

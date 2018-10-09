@@ -29,7 +29,7 @@ const Dropdown = ({
 }) => (
   <Fragment>
     <GlobalStyle />
-    <StyledDropdown styling={styling}>
+    <StyledDropdown styling={{ ...Theme.dropdown, ...styling }}>
       <DropdownAnt
         overlay={getMenu(menu, handleClick)}
         placement={placement}
@@ -45,11 +45,15 @@ const Dropdown = ({
 
 Dropdown.propTypes = {
   menu: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
-  styling: PropTypes.object.isRequired, // eslint-disable-line
+  styling: PropTypes.object, // eslint-disable-line
   selected: PropTypes.string.isRequired,
   handleClick: PropTypes.func.isRequired,
   placement: PropTypes.string.isRequired,
   trigger: PropTypes.string.isRequired,
+};
+
+Dropdown.defaultProps = {
+  styling: {},
 };
 
 export default Dropdown;

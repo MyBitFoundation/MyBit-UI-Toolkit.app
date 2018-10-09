@@ -24,6 +24,7 @@ const DocumentedStatCard = {
     command: 'bit i --save @mybit-ui/statCard',
     name: 'bitsrc',
   }],
+  antReferences: [],
 };
 
 export default DocumentedStatCard;

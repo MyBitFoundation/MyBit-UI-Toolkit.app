@@ -24,6 +24,7 @@ const DocumentedMyBitGoHeader = {
       />,
       <MyBitGoHeader
         key="example2"
+        prices={{ mybitPrice: 0.05 }}
         user={{
                     myBitBalance: '100',
                     ethBalance: 1000,
@@ -32,6 +33,7 @@ const DocumentedMyBitGoHeader = {
       />,
       <MyBitGoHeader
         key="example3"
+        prices={{ mybitPrice: 0.05 }}
         user={{
                     myBitBalance: '100',
                     ethBalance: 1000,
@@ -39,6 +41,7 @@ const DocumentedMyBitGoHeader = {
       />,
       <MyBitGoHeader
         key="example4"
+        prices={{ mybitPrice: 0.05 }}
         user={{
                     myBitBalance: '100',
                 }}
@@ -46,13 +49,13 @@ const DocumentedMyBitGoHeader = {
     ],
   },
   usage: `
-    <MyBitGoHeader 
+    <MyBitGoHeader
         prices={{ mybitPrice: 0.05 }}
         user={{
             myBitBalance: 100,
             ethBalance: 1000,
             userName: '0xd12cd8a37f074e7eafae618c986ff825666198bd',
-        }} 
+        }}
     />
     `,
   theming: '',
@@ -67,6 +70,7 @@ const DocumentedMyBitGoHeader = {
     command: 'bit i --save @mybit-ui/myBitGoHeader',
     name: 'bitsrc',
   }],
+  antReferences: [],
 };
 
 export default DocumentedMyBitGoHeader;

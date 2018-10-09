@@ -1,12 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { PortfolioTile, StyledChildDiv, PortfolioTileImg, RevenueB, RevenueP } from './styledComponents';
-import BarChart from '../../images/chart-bar.png';
+import { PortfolioTile, StyledChildDiv, RevenueB, RevenueP } from './styledComponents';
 
 const RevenueHeader = props => (
   <PortfolioTile>
-    <PortfolioTileImg src={BarChart} alt="Bar chart" />
     <StyledChildDiv>
       <RevenueP>Total Asset Revenue:</RevenueP>
       <RevenueB>${props.totalRevenue}</RevenueB>

@@ -25,6 +25,7 @@ const DocumentedAddress = {
     command: 'bit i --save @mybit-ui/address',
     name: 'bitsrc',
   }],
+  antReferences: [],
 };
 
 export default DocumentedAddress;

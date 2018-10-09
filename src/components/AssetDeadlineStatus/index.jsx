@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Calendar from '../../images/calendar.png';
+import { Icon as IconAnt } from 'antd';
 import { getStringFromDate, getRemainingTime } from './date_utils';
 import StyledWrapper from './styledWrapper';
+
+const CalendarIcon = <IconAnt type="calendar" style={{ color: '#7f7f7f', marginRight: '0.25em' }} width="20px" height="20px" />;
 
 const AssetDeadlineStatus = ({
   status, deadline,
@@ -12,7 +14,7 @@ const AssetDeadlineStatus = ({
       return (
         <StyledWrapper>
           <div className="title-wrapper">
-            <img alt="calendar" src={Calendar} className="calendar" />
+            {CalendarIcon}
             Funding period has ended
           </div>
           <div className="text">
@@ -24,7 +26,7 @@ const AssetDeadlineStatus = ({
       return (
         <StyledWrapper>
           <div className="title-wrapper">
-            <img alt="calendar" src={Calendar} className="calendar" />
+            {CalendarIcon}
             {getRemainingTime(deadline)}
           </div>
           <div className="text">
@@ -36,7 +38,7 @@ const AssetDeadlineStatus = ({
       return (
         <StyledWrapper>
           <div className="title-wrapper">
-            <img alt="calendar" src={Calendar} className="calendar" />
+            {CalendarIcon}
             Funding goal has been reached
           </div>
         </StyledWrapper>

@@ -30,6 +30,9 @@ export { default as AssetInvestmentStatus } from './assetInvestmentStatus';
 export { default as AssetDeadlineStatus } from './assetDeadlineStatus';
 export { default as CategoryCard } from './categoryCard';
 export { default as AssetCard } from './assetCard';
+export { default as PortfolioDropdown } from './portfolioDropdown';
+export { default as Bounties } from './bounties';
+export { default as Bounty } from './bounty';
 export { default as BancorWidgetButton } from './bancorWidgetButton';
 
 export const NavBar = {
@@ -53,7 +56,7 @@ export const NavBar = {
     url: 'https://ant.design/components/button/',
   }, {
     name: 'Dropdown',
-    url: 'https://ant.design/components/button/',
+    url: 'https://ant.design/components/dropdown/',
   }],
 };
 export const Header = NavBar;

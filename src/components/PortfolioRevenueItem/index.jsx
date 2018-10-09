@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import LineChart from '../../images/chart-line.png';
-import { PortfolioTile, PortfolioTileImg, StyledChildDiv, RevenueB, RevenueP } from './styledComponents';
+import { PortfolioTile, StyledChildDiv, RevenueB, RevenueP } from './styledComponents';
 
 const PortfolioRevenueItem = ({
   assetID,
@@ -10,7 +9,7 @@ const PortfolioRevenueItem = ({
   monthlyRevenue,
 }) => (
   <PortfolioTile key={assetID} >
-    <PortfolioTileImg src={LineChart} alt="Line chart" />
+    {/* <PortfolioTileImg src={LineChart} alt="Line chart" /> */}
     <StyledChildDiv>
       <RevenueP>{name}</RevenueP>
       <RevenueP>

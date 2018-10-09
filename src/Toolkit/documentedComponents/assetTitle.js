@@ -18,7 +18,7 @@ const DocumentedAssetTitle = {
     ],
   },
   usage: `
-    <AssetTitle 
+    <AssetTitle
         assetName={"Bitcoin ATM"}
         city={"Sofia"}
         country={"Bulgaria"}
@@ -38,6 +38,7 @@ const DocumentedAssetTitle = {
     command: 'bit i --save @mybit-ui/assetTitle',
     name: 'bitsrc',
   }],
+  antReferences: [],
 };
 
 export default DocumentedAssetTitle;

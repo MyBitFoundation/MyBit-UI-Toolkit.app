@@ -19,13 +19,20 @@ const DocumentedIcon = {
     ],
   },
   usage: '<Icon type="close" />',
-  theming: '',
+  props: `
+  isRight: PropTypes.bool,
+  type: PropTypes.string.isRequired,
+  `,
   sources: [{
     command: 'npm i --save @mybit-ui/icon',
     name: 'npm',
   }, {
     command: 'bit i --save @mybit-ui/icon',
     name: 'bitsrc',
+  }],
+  antReferences: [{
+    name: 'Icon',
+    url: 'https://ant.design/components/icon/',
   }],
 };
 

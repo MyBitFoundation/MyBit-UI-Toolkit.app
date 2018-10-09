@@ -39,6 +39,7 @@ const DocumentedAccountInfo = {
     command: 'bit i --save @mybit-ui/address',
     name: 'bitsrc',
   }],
+  antReferences: [],
 };
 
 export default DocumentedAccountInfo;

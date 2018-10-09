@@ -46,6 +46,7 @@ const DocumentedBancorWidgetButton = {
     command: 'bit i --save @mybit-ui/bancorWidgetButton',
     name: 'bitsrc',
   }],
+  antReferences: [],
 };
 
 export default DocumentedBancorWidgetButton;

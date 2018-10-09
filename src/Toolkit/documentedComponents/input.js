@@ -26,6 +26,17 @@ const DocumentedTooltip = {
   </Button>
   `,
   theming: '',
+  props: `
+  tooltipTitle: PropTypes.string,
+  hasTooltip: PropTypes.bool,
+  placeholder: PropTypes.string,
+  type: PropTypes.oneOf(['text', 'email', 'number']),
+  size: PropTypes.oneOf(['large', 'default', 'small']),
+  min: PropTypes.number,
+  value: PropTypes.string,
+  onChange: PropTypes.func,
+  onEnterPressed: PropTypes.func,
+  `,
   sources: [{
     command: 'npm i --save @mybit-ui/input',
     name: 'npm',

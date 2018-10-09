@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import LocationIcon from '../../images/location.png';
+import LocationIcon from './location.png';
 import { StyledWrapper, StyledAssetName, StyledLocationWrapper, StyledImg } from './styledComponents';
 
 const AssetTitle = ({

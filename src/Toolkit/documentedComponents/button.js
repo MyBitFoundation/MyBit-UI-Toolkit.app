@@ -1,11 +1,9 @@
-import { Theme, Button } from '../../components/';
+import { Button } from '../../components/';
 
 const DocumentedButton = {
   component: (
-    <Button
-      styling={Theme.buttons.primary.blue}
-    >
-      This is our button
+    <Button>
+      Sample button
     </Button>
   ),
   examples: {
@@ -16,36 +14,33 @@ const DocumentedButton = {
     `,
     content: [
       <Button
-        styling={Theme.buttons.primary.green}
+        type="solid"
+        color="green"
         size="small"
         key="button-example-1"
       >
-        Small button
+        Small primary green button
       </Button>,
       <Button
-        styling={Theme.buttons.primary.blue}
         size="large"
         key="button-example-2"
       >
-        Large button
+        Large secondary button
       </Button>,
       <Button
-        styling={Theme.buttons.secondary}
         disabled
         key="button-example-3"
       >
         Disabled button
       </Button>,
       <Button
-        styling={Theme.buttons.primary.blue}
         active
         key="button-example-4"
       >
         Active button
       </Button>,
       <Button
-        styling={Theme.buttons.primary.green}
-        type="primary"
+        type="solid"
         shape="circle"
         icon="search"
         key="button-example-5"
@@ -54,31 +49,36 @@ const DocumentedButton = {
   },
   usage:
     `
-  <Button
-    styling={Theme.buttons.primary.blue}
-    size="medium"
-  >
+  <Button type="solid" size="medium">
     This is our button
   </Button>
   `,
-  theming:
-  `
-  buttons: {
-    primary: {
-      green: {
-        color: #ffffff,
-        colorHover: #ffffff,
-        colorActive: #ffffff,
-        backgroundColor: blue,
-        backgroundColorHover: blueHover,
-        backgroundColorActive: blueActive,
-        borderColor: blue,
-        borderColorHover: blueHover,
-        borderColorActive: blueActive,
-      },
+  theming: `
+    buttons: {
+      primary: {
+        green: {
+          color: #ffffff,
+          colorHover: #ffffff,
+          colorActive: #ffffff,
+          backgroundColor: blue,
+          backgroundColorHover: blueHover,
+          backgroundColorActive: blueActive,
+          borderColor: blue,
+          borderColorHover: blueHover,
+          borderColorActive: blueActive,
+        },
+      }
     }
-  }
-`,
+  `,
+  props: `
+    styling: PropTypes.object,
+    shape: PropTypes.string,
+    size: PropTypes.oneOf(['small', 'default', 'large']),
+    color: PropTypes.oneOf(['blue', 'green']),
+    type: PropTypes.oneOf(['solid', 'outline']),
+    active: PropTypes.bool,
+    loading: PropTypes.bool
+  `,
   sources: [{
     command: 'npm i --save @mybit-ui/button',
     name: 'npm',

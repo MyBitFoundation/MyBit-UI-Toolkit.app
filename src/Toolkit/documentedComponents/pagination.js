@@ -24,6 +24,7 @@ const DocumentedPagination = {
     command: 'bit i --save @mybit-ui/pagination',
     name: 'bitsrc',
   }],
+  antReferences: [],
 };
 
 export default DocumentedPagination;

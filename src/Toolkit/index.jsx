@@ -3,7 +3,7 @@ import { Library, Example } from '@compositor/kit';
 import styled from 'styled-components';
 import 'antd/dist/antd.css';
 import NavBar from './NavBar';
-// import References from './StyledReferences';
+import References from './StyledReferences';
 import StyledMenuButton from './StyledMenuButton';
 import HandleMobile from './HandleMobile';
 import StyledDocumentation from './StyledDocumentation';
@@ -83,18 +83,18 @@ const getInstall = details => (
   </section>
 );
 
-// const getReferences = details => (
-//   <section>
-//     <h2
-//       style={{ textAlign: 'right' }}
-//     >
-//       Ant References
-//     </h2>
-//     <References
-//       references={details.antReferences}
-//     />
-//   </section>
-// );
+const getReferences = details => (
+  <section>
+    <h2
+      style={{ textAlign: 'right' }}
+    >
+      Ant References
+    </h2>
+    <References
+      references={details.antReferences}
+    />
+  </section>
+);
 
 class Toolkit extends React.Component {
   constructor(props) {
@@ -145,7 +145,7 @@ class Toolkit extends React.Component {
                   {getUsage(details)}
                   {getTheming(details)}
                   {getProps(details)}
-                  {/* {getReferences(details)} */}
+                  {getReferences(details)}
                 </StyledDocumentation>
               </div>
             </Example>

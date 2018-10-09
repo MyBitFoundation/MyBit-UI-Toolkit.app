@@ -41,6 +41,7 @@ const DocumentedPortfolioValueItem = {
     command: 'bit i --save @mybit-ui/exchangeRate',
     name: 'bitsrc',
   }],
+  antReferences: [],
 };
 
 export default DocumentedPortfolioValueItem;

@@ -73,10 +73,28 @@ const DocumentedMenu = {
   },
   usage: `<Menu
     onClick={() => {}}
-    selectedKeys={['Developer']}
-    mode="horizontal" 
+    items={[
+      {name: 'Home', linkTo: '', target: ''}
+      {
+        name: '', iconRight: 'down',
+        subNavigation: [
+          {name: '', linkTo: '', target: ''},
+          {name: '', linkTo: '', target: ''}
+        ]
+      }
+    ]}
+    selectedKeys={['Home']}
+    mode="horizontal"
   />`,
   theming: '',
+  props: `
+  styling: PropTypes.object,
+  onClick: PropTypes.func.isRequired,
+  selectedKeys: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+  mode: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  items: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,
+  `,
   sources: [{
     command: 'npm i --save @mybit-ui/Menu',
     name: 'npm',
@@ -84,6 +102,7 @@ const DocumentedMenu = {
     command: 'bit i --save @mybit-ui/Menu',
     name: 'bitsrc',
   }],
+  antReferences: [],
 };
 
 export default DocumentedMenu;
