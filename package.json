@@ -5,6 +5,7 @@
   "dependencies": {
     "antd": "^3.10.0",
     "dayjs": "^1.7.7",
+    "enzyme": "^3.7.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-jazzicon": "^0.1.3",
