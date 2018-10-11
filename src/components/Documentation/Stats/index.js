@@ -3,13 +3,12 @@ import { Row, Col } from 'antd';
 import { PropsTable, Showcase, EditPageLink, PlainCode } from '../../Common';
 import { Stats } from '../../../showcase'
 import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
-import { Helmet } from "react-helmet";
 
 const statsExample = {
     component: (
         <div>
             <div>
-                <Stats stats={[{ name: 'Sample1', value: 'Sample value1' }, { name: 'Sample2', value: 'Sample value2' }, { name: 'Sample3', value: 'Sample value3' }]} />
+                <Stats stats={[{ name: 'Sample1', value: 'Sample value1' }, { name: 'Undefined value' }, { name: 'Sample3', value: 'Sample value3' }]} />
             </div>
         </div>
     ),
@@ -34,11 +33,8 @@ const data = [
     }
  ];
 
-export default (props) => (
+export default () => (
     <div>
-        <Helmet>
-            <title>{props.pageTitle}</title>
-        </Helmet>
         <h1>Stats <EditPageLink /></h1>
         <p></p>
         <h1>Installation</h1>

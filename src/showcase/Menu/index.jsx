@@ -10,7 +10,7 @@ import Theme from '../theme';
 
 class Menu extends Component {
   getMenuItem = item => (
-    <MenuItem styling={this.props.styling} key={item.name}>
+    <MenuItem styling={{ ...Theme.menu, ...this.props.styling }} key={item.name}>
       {item.linkTo ? <a href={item.linkTo} target={item.target || '_blank'} key={item.name}>{item.name}</a>
       : item.name}
     </MenuItem>

@@ -3,13 +3,6 @@ import { shallow } from 'enzyme';
 
 import Wrapper from '../Wrapper';
 
-describe('dummy test suite', () => { 
-  it('1 should equal 1', () => {
-    expect(1).toEqual(1);
-  });
-})
-
-/*
 describe('<Wrapper />', () => {
   it('should render an <li> tag', () => {
     const renderedComponent = shallow(<Wrapper />);
@@ -32,4 +25,3 @@ describe('<Wrapper />', () => {
     expect(renderedComponent.prop('attribute')).toBeUndefined();
   });
 });
-*/

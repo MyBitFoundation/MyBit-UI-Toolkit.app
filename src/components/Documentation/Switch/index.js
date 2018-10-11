@@ -3,7 +3,6 @@ import { Row, Col } from 'antd';
 import { PropsTable, Showcase, EditPageLink, PlainCode } from '../../Common';
 import { Tooltip } from '../../../showcase'
 import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
-import { Helmet } from "react-helmet";
 
 const tooltipExample = {
     component: (
@@ -50,11 +49,8 @@ const data = [
     }
  ];
 
-export default (props) => (
+export default () => (
     <div>
-        <Helmet>
-            <title>{props.pageTitle}</title>
-        </Helmet>
         <h1>Tooltip <EditPageLink /></h1>
         <p></p>
         <h1>Installation</h1>

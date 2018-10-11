@@ -3,22 +3,39 @@ import { Row, Col } from 'antd';
 import { PropsTable, Showcase, EditPageLink, PlainCode } from '../../Common';
 import { Menu } from '../../../showcase'
 import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
-import { Helmet } from "react-helmet";
 
 const menuExample = {
     component: (
-        <div style={{background: '#555'}}>
-            <Menu 
-                onClick={() => {}}
-                selectedKeys={[]}
-                mode="horizontal" items={[
-                {name: 'Menu item 1', linkTo: "#", target: "_top"},
-                {name: 'Menu item 2', linkTo: "#", target: "_top"},
-                {name: 'Menu item 3 (with submenu)', subNavigation: [
-                    {name: 'subMenu item 1', linkTo: "#", target: "_top"},
-                    {name: 'subMenu item 2', linkTo: "#", target: "_top"},
-                ]},
-            ]} />
+        <div>
+            <div>
+                <Menu 
+                    styling={{color: 'black'}}
+                    onClick={() => {}}
+                    selectedKeys={[]}
+                    mode="horizontal" items={[
+                        {name: 'Menu item 1', linkTo: "#", target: "_top"},
+                        {name: 'Menu item 2', linkTo: "#", target: "_top"},
+                        {name: 'Menu item 3 (with submenu)', subNavigation: [
+                            {name: 'subMenu item 1', linkTo: "#", target: "_top"},
+                            {name: 'subMenu item 2', linkTo: "#", target: "_top"},
+                        ]},
+                    ]} 
+                />
+            </div>
+            <div style={{background: '#555'}}>
+                <Menu 
+                    onClick={() => {}}
+                    selectedKeys={[]}
+                    mode="horizontal" items={[
+                        {name: 'Menu item 1', linkTo: "#", target: "_top"},
+                        {name: 'Menu item 2', linkTo: "#", target: "_top"},
+                        {name: 'Menu item 3 (with submenu)', subNavigation: [
+                            {name: 'subMenu item 1', linkTo: "#", target: "_top"},
+                            {name: 'subMenu item 2', linkTo: "#", target: "_top"},
+                        ]},
+                    ]} 
+                />
+            </div>
         </div>
     ),
     description: (
@@ -76,11 +93,8 @@ const data = [{
 }
 ];
 
-export default (props) => (
+export default () => (
     <div>
-        <Helmet>
-            <title>{props.pageTitle}</title>
-        </Helmet>
         <h1>Menu <EditPageLink /></h1>
         <p></p>
         <h1>Installation</h1>

@@ -5,7 +5,6 @@ const StyledStats = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  top: -50px;
   max-width: 1200px;
   margin: 0 auto;
 
