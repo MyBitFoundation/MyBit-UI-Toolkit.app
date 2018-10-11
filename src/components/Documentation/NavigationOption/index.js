@@ -3,6 +3,7 @@ import { Showcase, EditPageLink, PlainCode, PropsTable } from '../../Common/';
 import { NavigationOption } from '../../../showcase'
 import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
 import { Row, Col } from 'antd'
+import { Helmet } from "react-helmet";
 
 import savedIcon from '../images/star.png'
 import portfolioIcon from '../images/chart-area.png'
@@ -10,8 +11,11 @@ import transactionsIcon from '../images/history.png'
 
 const EDIT_PAGE_LINK = "/"
 
-const NavigationOptionPage = () => (
+const NavigationOptionPage = (props) => (
     <div>
+        <Helmet>
+            <title>{props.pageTitle}</title>
+        </Helmet>
     <h1>NavigationOption <EditPageLink editLink={EDIT_PAGE_LINK} /></h1>
     <p>A single NavigationOption part of the Navigation component for MyBitGo</p>
 

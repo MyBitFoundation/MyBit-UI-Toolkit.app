@@ -3,11 +3,15 @@ import { Showcase, EditPageLink, PlainCode, PropsTable } from '../../Common/';
 import { CategoryCard } from '../../../showcase'
 import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
 import demoImage from '../images/category-cryptocurrency-atm.png';
+import { Helmet } from "react-helmet";
 
 const EDIT_PAGE_LINK = "/"
 
-const CategoryCardPage = () => (
+const CategoryCardPage = (props) => (
     <div>
+        <Helmet>
+            <title>{props.pageTitle}</title>
+        </Helmet>
     <h1>CategoryCard <EditPageLink editLink={EDIT_PAGE_LINK} /></h1>
     <p>A card for an Asset category (MyBit GO)</p>
 

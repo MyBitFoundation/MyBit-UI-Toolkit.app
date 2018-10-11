@@ -3,11 +3,15 @@ import { Showcase, EditPageLink, PlainCode, PropsTable } from '../../Common/';
 import { ExchangeRate } from '../../../showcase'
 import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
 import { Col, Row } from 'antd'
+import { Helmet } from "react-helmet";
 
 const EDIT_PAGE_LINK = "/"
 
-const ExchangeRatePage = () => (
+const ExchangeRatePage = (props) => (
     <div>
+        <Helmet>
+            <title>{props.pageTitle}</title>
+        </Helmet>
     <h1>ExchangeRate <EditPageLink editLink={EDIT_PAGE_LINK} /></h1>
     <p>Displays the price of MYB in USD</p>
 

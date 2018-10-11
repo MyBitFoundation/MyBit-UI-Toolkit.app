@@ -3,6 +3,7 @@ import { Row, Col } from 'antd';
 import { PropsTable, Showcase, EditPageLink, PlainCode } from '../../Common';
 import { Filter } from '../../../showcase'
 import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
+import { Helmet } from "react-helmet";
 
 const filterExample = {
     component: (
@@ -46,8 +47,11 @@ const data = [{
 }
 ];
 
-export default () => (
+export default (props) => (
     <div>
+        <Helmet>
+            <title>{props.pageTitle}</title>
+        </Helmet>
         <h1>Filter <EditPageLink /></h1>
         <p></p>
         <h1>Installation</h1>

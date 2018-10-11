@@ -1,9 +1,14 @@
 import React from 'react';
 import { Showcase, EditPageLink, CustomTag, PlainCode, PropsTable } from '../Common/';
 import { Row, Col } from 'antd'
+import { Helmet } from "react-helmet";
+import { CONTRIBUTE_TITLE } from './pageTitles'
 
 const ContributePage = () => (
     <div>
+        <Helmet>
+            <title>{CONTRIBUTE_TITLE}</title>
+        </Helmet>
         <h1>Contributing <EditPageLink /></h1>
         <p>
             Lorem Ipsum is <a href="/">simply dummy text</a> of the printing and typesetting industry. Lorem Ipsum <CustomTag>CustomTag 1</CustomTag>has been the industry's 

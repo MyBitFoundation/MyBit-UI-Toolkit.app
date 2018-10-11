@@ -2,11 +2,15 @@ import React from 'react';
 import { Showcase, EditPageLink, PlainCode, PropsTable } from '../../Common/';
 import { MyBitGoHeader } from '../../../showcase'
 import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
+import { Helmet } from "react-helmet";
 
 const EDIT_PAGE_LINK = "/"
 
-const MyBitGoHeaderPage = () => (
+const MyBitGoHeaderPage = (props) => (
     <div>
+        <Helmet>
+            <title>{props.pageTitle}</title>
+        </Helmet>
     <h1>MyBitGoHeader <EditPageLink editLink={EDIT_PAGE_LINK} /></h1>
     <p>MyBitGo header</p>
 

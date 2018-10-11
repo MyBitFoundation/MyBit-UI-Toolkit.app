@@ -2,11 +2,15 @@ import React from 'react';
 import { Showcase, EditPageLink, PlainCode, PropsTable } from '../../Common/';
 import { PortfolioRevenueItem } from '../../../showcase'
 import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
+import { Helmet } from "react-helmet";
 
 const EDIT_PAGE_LINK = "/"
 
-const PortfolioRevenueItemPage = () => (
+const PortfolioRevenueItemPage = (props) => (
     <div>
+        <Helmet>
+            <title>{props.pageTitle}</title>
+        </Helmet>
     <h1>PortfolioRevenueItem <EditPageLink editLink={EDIT_PAGE_LINK} /></h1>
     <p>A building block for TotalPortfolioRevenue on MyBit Go</p>
 

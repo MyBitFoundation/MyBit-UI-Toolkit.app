@@ -2,9 +2,13 @@ import React from 'react';
 import { Row, Col } from 'antd';
 import { PropsTable, Showcase, EditPageLink } from '../../Common/';
 import { Button as MyBitButton } from '../../../showcase'
+import { Helmet } from "react-helmet";
 
-const ButtonsPage = () => (
+const ButtonsPage = (props) => (
     <div>
+        <Helmet>
+            <title>{props.pageTitle}</title>
+        </Helmet>
         <h1>Button <EditPageLink /></h1>
         <p>Used to trigger actions I suppose</p>
 

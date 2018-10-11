@@ -7,11 +7,15 @@ import {
     CustomTag
 } from '../../Common/';
 import { Button, Alert } from 'antd'
+import { Helmet } from "react-helmet";
 
 const EXAMPLE_PAGE_EDIT_LINK = "/"
 
-const ShowcasePage = () => (
+const ShowcasePage = (props) => (
     <div>
+        <Helmet>
+            <title>{props.pageTitle}</title>
+        </Helmet>
         <Alert message="This component is NOT part of MyBitUI and is only used for building documentation!" type="warning" />
         <h1>Example <EditPageLink editLink={EXAMPLE_PAGE_EDIT_LINK} /></h1>
         <p>The showcase component.</p>

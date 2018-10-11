@@ -1,6 +1,8 @@
 import React from 'react';
 import { EditPageLink, ApplicationCard } from '../Common';
 import styled from 'styled-components'
+import { Helmet } from "react-helmet";
+import { APPLICATIONS_TITLE } from './pageTitles'
 
 const StyledGrid = styled.div`
     display: flex;
@@ -11,6 +13,9 @@ const StyledGrid = styled.div`
 
 const AppsPage = () => (
     <div>
+        <Helmet>
+            <title>{APPLICATIONS_TITLE}</title>
+        </Helmet>
         <h1>Applications <EditPageLink /></h1>
         <p>A showcase for all applications built with the MyBitUI library</p>
 

@@ -2,11 +2,15 @@ import React from 'react';
 import { Showcase, EditPageLink, PlainCode, PropsTable } from '../../Common/';
 import { AssetTitle } from '../../../showcase'
 import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
+import { Helmet } from "react-helmet";
 
 const EDIT_PAGE_LINK = "/"
 
-const AssetTitlePage = () => (
+const AssetTitlePage = (props) => (
     <div>
+        <Helmet>
+            <title>{props.pageTitle}</title>
+        </Helmet>
     <h1>AssetTitle <EditPageLink editLink={EDIT_PAGE_LINK} /></h1>
     <p>Asset title with location (MyBit GO)</p>
 

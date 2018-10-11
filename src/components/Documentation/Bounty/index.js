@@ -2,6 +2,7 @@ import React from 'react';
 import { PropsTable, Showcase, EditPageLink, PlainCode } from '../../Common/';
 import { Bounty } from '../../../showcase'
 import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
+import { Helmet } from "react-helmet";
 
 const firstExample = {
     component: (
@@ -111,8 +112,11 @@ const data = [{
 },
 ];
 
-const ButtonsPage = () => (
+const ButtonsPage = (props) => (
     <div>
+        <Helmet>
+            <title>{props.pageTitle}</title>
+        </Helmet>
         <h1>Bounty <EditPageLink /></h1>
         <p></p>
         <h1>Installation</h1>

@@ -2,11 +2,15 @@ import React from 'react';
 import { Showcase, EditPageLink, PlainCode, PropsTable } from '../../Common/';
 import { BancorWidgetButton } from '../../../showcase'
 import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
+import { Helmet } from "react-helmet";
 
 const EDIT_PAGE_LINK = "/"
 
-const BancorWidgetButtonPage = () => (
+const BancorWidgetButtonPage = (props) => (
     <div>
+        <Helmet>
+            <title>{props.pageTitle}</title>
+        </Helmet>
         <h1>Bancor Widget Button <EditPageLink editLink={EDIT_PAGE_LINK} /></h1>
         <p>Displays a modal which allows users to buy or sell MYB</p>
 

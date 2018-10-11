@@ -2,6 +2,8 @@ import React from 'react';
 import { Showcase, EditPageLink, PlainCode } from '../Common';
 import { Button, Icon } from 'antd'
 import styled from 'styled-components'
+import { Helmet } from "react-helmet";
+import { HOMEPAGE_TITLE } from './pageTitles'
 
 const AntdHeader = styled.div`
     margin: 15px 0;
@@ -21,6 +23,10 @@ const AntdHeader = styled.div`
 
 const HomePage = () => (
     <div>
+        <Helmet>
+            <title>{HOMEPAGE_TITLE}</title>
+        </Helmet>
+
         <AntdHeader>
             <h1>We <span><Icon type="heart" style={{ color: "pink" }} /></span> Ant Design</h1>
         </AntdHeader>

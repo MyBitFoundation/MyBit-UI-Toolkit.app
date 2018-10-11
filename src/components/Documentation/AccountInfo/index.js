@@ -3,34 +3,38 @@ import { AccountInfo } from '../../../showcase'
 import { Showcase, EditPageLink, CustomTag, PlainCode, PropsTable } from '../../Common/';
 import { Row, Col } from 'antd'
 import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
+import { Helmet } from "react-helmet";
 
-const AccountInfoPage = () => (
+const AccountInfoPage = (props) => (
     <div>
-    <h1>AccountInfo <EditPageLink editLink="/" /></h1>
-    <p>Displays the current MYB and ETH balance of the user.</p>
+        <Helmet>
+            <title>{props.pageTitle}</title>
+        </Helmet>
+        <h1>AccountInfo <EditPageLink editLink="/" /></h1>
+        <p>Displays the current MYB and ETH balance of the user.</p>
 
-    <h1>Installation</h1>
-    <PlainCode>{`$ yarn add ${MYBIT_UI_NAME}
-$ npm install ${MYBIT_UI_NAME}`
-}</PlainCode>
-    <PlainCode>{`import { AccountInfo } from '${MYBIT_UI_NAME_IMPORT}'`}</PlainCode>
+        <h1>Installation</h1>
+        <PlainCode>{`$ yarn add ${MYBIT_UI_NAME}
+    $ npm install ${MYBIT_UI_NAME}`
+    }</PlainCode>
+        <PlainCode>{`import { AccountInfo } from '${MYBIT_UI_NAME_IMPORT}'`}</PlainCode>
 
-    <h1>Examples</h1>
-    
-    <Row gutter={16}>
-        <Col xs={24} sm={24} md={12} lg={12} xl={12}>
-            <Showcase data={allProps} />
-            <Showcase data={withoutBalance} />
-        </Col>
-        <Col xs={24} sm={24} md={12} lg={12} xl={12}>
-            <Showcase data={withoutUsername} />
-            <Showcase data={withoutProps} />
-        </Col>
-    </Row >
+        <h1>Examples</h1>
+        
+        <Row gutter={16}>
+            <Col xs={24} sm={24} md={12} lg={12} xl={12}>
+                <Showcase data={allProps} />
+                <Showcase data={withoutBalance} />
+            </Col>
+            <Col xs={24} sm={24} md={12} lg={12} xl={12}>
+                <Showcase data={withoutUsername} />
+                <Showcase data={withoutProps} />
+            </Col>
+        </Row >
 
-    <h1>Props</h1>
-    <PropsTable data={AccountInfoPropsData} />
-</div>
+        <h1>Props</h1>
+        <PropsTable data={AccountInfoPropsData} />
+    </div>
 )
 
 export default AccountInfoPage

@@ -2,11 +2,15 @@ import React from 'react';
 import { Showcase, EditPageLink, PlainCode, PropsTable } from '../../Common/';
 import { AssetInvestmentStatus } from '../../../showcase'
 import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
+import { Helmet } from "react-helmet";
 
 const EDIT_PAGE_LINK = "/"
 
-const AssetInvestmentStatusPage = () => (
+const AssetInvestmentStatusPage = (props) => (
     <div>
+        <Helmet>
+            <title>{props.pageTitle}</title>
+        </Helmet>
     <h1>AssetInvestmentStatus <EditPageLink editLink={EDIT_PAGE_LINK} /></h1>
     <p>Shows the money raised, the money required to fully fund the asset and the number of investors</p>
 

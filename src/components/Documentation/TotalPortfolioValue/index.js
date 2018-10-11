@@ -3,11 +3,15 @@ import { Showcase, EditPageLink, PlainCode, PropsTable } from '../../Common/';
 import { TotalPortfolioValue } from '../../../showcase'
 import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
 import { Row, Col } from 'antd'
+import { Helmet } from "react-helmet";
 
 const EDIT_PAGE_LINK = "/"
 
-const PortfolioValueItemPage = () => (
+const PortfolioValueItemPage = (props) => (
     <div>
+        <Helmet>
+            <title>{props.pageTitle}</title>
+        </Helmet>
     <h1>TotalPortfolioValue <EditPageLink editLink={EDIT_PAGE_LINK} /></h1>
     <p>Displays the total value of a list of assets</p>
 
