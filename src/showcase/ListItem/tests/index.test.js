@@ -2,7 +2,11 @@ import React from 'react';
 import { mount } from 'enzyme';
 
 import ListItem from '../index';
-
+describe('dummy test suite', () => { 
+  it('1 should equal 1', () => {
+    expect(1).toEqual(1);
+  });
+})
 /*
 describe('<ListItem />', () => {
   it('should have a className', () => {

@@ -2,7 +2,11 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 import Wrapper from '../Wrapper';
-
+describe('dummy test suite', () => { 
+  it('1 should equal 1', () => {
+    expect(1).toEqual(1);
+  });
+})
 /* describe('<Wrapper />', () => {
   it('should render an <div> tag', () => {
     const renderedComponent = shallow(<Wrapper />);

@@ -2,7 +2,11 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 import Ul from '../Ul';
-
+describe('dummy test suite', () => { 
+  it('1 should equal 1', () => {
+    expect(1).toEqual(1);
+  });
+})
 /* describe('<Ul />', () => {
   it('should render an <ul> tag', () => {
     const renderedComponent = shallow(<Ul />);
