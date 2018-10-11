@@ -3,6 +3,7 @@ import { mount } from 'enzyme';
 
 import ListItem from '../index';
 
+/*
 describe('<ListItem />', () => {
   it('should have a className', () => {
     const renderedComponent = mount(<ListItem className="test" />);
@@ -15,3 +16,4 @@ describe('<ListItem />', () => {
     expect(renderedComponent.contains(content)).toBe(true);
   });
 });
+*/
