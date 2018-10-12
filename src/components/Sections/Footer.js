@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, Row, Col } from 'antd';
+import { Layout } from 'antd';
 import styled from 'styled-components'
 import { Logo } from '../../showcase'
 
