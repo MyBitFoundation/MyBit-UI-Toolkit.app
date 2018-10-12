@@ -7,10 +7,21 @@ import { Select } from 'antd';
 const Option = Select.Option;
 const { Header } = Layout;
 
-const headerStyle = {
+const headerStyleLight = {
     backgroundColor: '#fff',
     padding: '0 30px',
     boxShadow: '0 2px 8px #f0f1f2',
+    zIndex: 10,
+    height: '80px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'left'
+}
+
+const headerStyleDark = {
+    background: "#000c17",
+    padding: '0 30px',
+    boxShadow: '0 2px 8px #000',
     zIndex: 10,
     height: '80px',
     display: 'flex',
@@ -30,8 +41,8 @@ const StyledRightColumn = styled.div`
     text-align: right;
 `
 
-const LibraryHeader = ({ onChangeTheme, onCollapse }) => (
-    <Header style={headerStyle}>
+const LibraryHeader = ({ onChangeTheme, theme}) => (
+    <Header style={theme === 'dark' ? headerStyleDark: headerStyleLight}>
         <LogoColumn>
             <img src={logo} alt="MyBit Logo" />
         </LogoColumn>

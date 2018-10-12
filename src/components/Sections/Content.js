@@ -4,8 +4,8 @@ import { Route, Switch } from 'react-router-dom'
 import { HomePage, ContributePage, StyleguidesPage, AppsPage } from '../Pages'
 import documentationRoutes from '../Documentation'
 
-const LibraryContent = () => (
-    <Layout style={{ background: '#fff' }}>
+const LibraryContent = ({ theme }) => (
+    <Layout style={theme === 'dark' ? {background: "#000c17"} : {background: '#fff'}}>
         <Layout.Content style={{ margin: '24px 16px 0', background: '#fff' }}>
             <div style={{ padding: "15px 30px 50px 30px", background: '#fff', minHeight: 360 }}>
                 <Switch>
