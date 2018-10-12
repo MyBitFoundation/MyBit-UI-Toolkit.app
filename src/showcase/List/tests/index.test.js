@@ -3,12 +3,8 @@ import { shallow } from 'enzyme';
 
 import ListItem from '../../ListItem';
 import List from '../index';
-describe('dummy test suite', () => { 
-  it('1 should equal 1', () => {
-    expect(1).toEqual(1);
-  });
-})
-/* describe('<List />', () => {
+
+describe('<List />', () => {
   it('should render the component if no items are passed', () => {
     const renderedComponent = shallow(<List component={ListItem} />);
     expect(renderedComponent.find(ListItem)).toBeDefined();
@@ -31,4 +27,3 @@ describe('dummy test suite', () => {
       .prop('item')).toBe(items[1]);
   });
 });
-*/

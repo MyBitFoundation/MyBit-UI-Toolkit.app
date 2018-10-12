@@ -2,12 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Switch as SwitchAnt } from 'antd';
 import 'antd/lib/switch/style/css';
+import Theme from '../theme';
 
 import Icon from '../Icon';
 import StyledSwitch from './styledSwitch';
 
 const Switch = props => (
-  <StyledSwitch styling={props.styling}>
+  <StyledSwitch styling={{ ...Theme.switch, ...props.styling }}>
     <SwitchAnt
       checkedChildren={<Icon type="check" />}
       unCheckedChildren={<Icon type="cross" />}
@@ -19,7 +20,7 @@ const Switch = props => (
 );
 
 Switch.propTypes = {
-  styling: PropTypes.object.isRequired, //eslint-disable-line 
+  styling: PropTypes.object, //eslint-disable-line 
   checked: PropTypes.bool,
   onChange: PropTypes.func.isRequired,
   size: PropTypes.string,
@@ -28,6 +29,7 @@ Switch.propTypes = {
 Switch.defaultProps = {
   size: 'small',
   checked: false,
+  styling: {},
 };
 
 export default Switch;

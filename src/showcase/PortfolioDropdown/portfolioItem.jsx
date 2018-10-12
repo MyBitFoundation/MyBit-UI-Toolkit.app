@@ -11,7 +11,7 @@ const PortfolioItem = ({
     <StyledChildDiv>
       <ValueP>{name}</ValueP>
       {Object.keys(data).map(key => (
-        <ValueP>
+        <ValueP key={key}>
           {key}: <ValueB>{data[key]}</ValueB>
         </ValueP>
       ))}

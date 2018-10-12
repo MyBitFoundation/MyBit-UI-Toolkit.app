@@ -2,12 +2,8 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 import Ul from '../Ul';
-describe('dummy test suite', () => { 
-  it('1 should equal 1', () => {
-    expect(1).toEqual(1);
-  });
-})
-/* describe('<Ul />', () => {
+
+describe('<Ul />', () => {
   it('should render an <ul> tag', () => {
     const renderedComponent = shallow(<Ul />);
     expect(renderedComponent.type()).toEqual('ul');
@@ -28,4 +24,4 @@ describe('dummy test suite', () => {
     const renderedComponent = shallow(<Ul attribute="test" />);
     expect(renderedComponent.prop('attribute')).toBeUndefined();
   });
-}); */
+});

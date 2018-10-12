@@ -11,6 +11,7 @@ const StyledStatCard = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  vertical-align: middle;
   flex-grow: 1;
   flex-basis: 0;
 `;

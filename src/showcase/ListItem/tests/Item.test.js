@@ -2,12 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 import Item from '../Item';
-describe('dummy test suite', () => { 
-  it('1 should equal 1', () => {
-    expect(1).toEqual(1);
-  });
-})
-/*
+
 describe('<Item />', () => {
   it('should render an <div> tag', () => {
     const renderedComponent = shallow(<Item />);
@@ -30,4 +25,3 @@ describe('<Item />', () => {
     expect(renderedComponent.prop('attribute')).toBeUndefined();
   });
 });
-*/

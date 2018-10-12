@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ReactPlaceholder from 'react-placeholder';
+import { Skeleton } from 'antd';
 
 import StyledStatCard from './styledStatCard';
 import StyledTitle from './styledTitle';
@@ -11,9 +11,8 @@ const StatCard = ({ stat }) => (
   <StyledStatCard>
     <StyledTitle>{stat.name}</StyledTitle>
     <StyledLoadingPlaceholder>
-      <ReactPlaceholder type="textRow" ready={stat.value !== undefined} color="#E0E0E0" showLoadingAnimation style={{ width: `${stat.loadingSize}px`, height: '21px' }}>
-        <StyledValue>{stat.value}</StyledValue>
-      </ReactPlaceholder>
+      { (stat.value !== undefined) && <StyledValue>{stat.value}</StyledValue> }
+      { (stat.value === undefined) && <Skeleton active title={false} paragraph={{ rows: 1, width: '100%'}}/> }
     </StyledLoadingPlaceholder>
   </StyledStatCard>
 );

@@ -7,14 +7,10 @@ import DropdownHeader from './dropdownHeader';
 
 const { Panel } = Collapse;
 
-function callback(key) {
-  console.log(key); //eslint-disable-line
-}
-
 const PortfolioDropdown = ({
   name, total, icon, color, portfolioData,
 }) => (
-  <Collapse onChange={callback}>
+  <Collapse >
     <Panel
       key="1"
       header={
