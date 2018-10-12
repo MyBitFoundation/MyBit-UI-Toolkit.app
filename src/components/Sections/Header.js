@@ -1,13 +1,46 @@
 import React from 'react';
-import { Layout, Switch as AntdSwitch } from 'antd';
+import { Layout } from 'antd';
+import logo from './mybit-color.svg'
+import styled from 'styled-components'
+import { Select } from 'antd';
 
+const Option = Select.Option;
 const { Header } = Layout;
 
+const headerStyle = {
+    backgroundColor: '#fff',
+    padding: '0 30px',
+    boxShadow: '0 2px 8px #f0f1f2',
+    zIndex: 10,
+    height: '80px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'left'
+}
+
+const LogoColumn = styled.div`
+    flex: 0 1 180px;
+    > img {
+        width: 100%;
+    }
+`
+
+const StyledRightColumn = styled.div`
+    width: 100%;
+    text-align: right;
+`
+
 const LibraryHeader = ({ onChangeTheme, onCollapse }) => (
-    <Header style={{ background: '#fff', padding: "0 20", boxShadow: "0 2px 8px #f0f1f2", zIndex: 10 }}>
-        <b>MyBit UI Toolkit</b>
-        <span className="ant-divider" style={{ margin: '0 1em' }} />
-        <AntdSwitch onChange={onChangeTheme} /> Change theme
+    <Header style={headerStyle}>
+        <LogoColumn>
+            <img src={logo} alt="MyBit Logo" />
+        </LogoColumn>
+        <StyledRightColumn>
+            <Select defaultValue="light" style={{ width: 120 }} onChange={onChangeTheme}>
+                <Option value="light">Light theme</Option>
+                <Option value="dark">Dark theme</Option>
+            </Select>
+        </StyledRightColumn>
     </Header>
 );
 

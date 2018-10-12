@@ -9,9 +9,7 @@ class App extends Component {
   }
 
   changeTheme = (value) => {
-    this.setState({
-      theme: value ? 'dark' : 'light',
-    });
+    this.setState({theme: value});
   }
 
   toggleCollapsed = () => {
