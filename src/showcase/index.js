@@ -41,3 +41,4 @@ export { default as Bounty } from './Bounty';
 export { default as List } from './List';
 export { default as ListItem } from './ListItem';
 export { default as BancorWidgetButton } from './BancorWidgetButton';
+export { default as SectionHeader } from './SectionHeader'

@@ -37,6 +37,7 @@ import PortfolioValueItemPage from './PortfolioValueItem'
 import TotalPortfolioValuePage from './TotalPortfolioValue'
 import TotalPortfolioRevenuePage from './TotalPortfolioRevenue'
 import BancorWidgetButtonPage from './BancorWidgetButton'
+import SectionHeaderPage from './SectionHeader'
 
 import { 
     GENERAL,
@@ -68,6 +69,13 @@ const documentationRoutes = [
         component: TotalPortfolioValuePage,
         category: ASSETS,
         pageTitle: "Component: TotalPortfolioValue"
+    },
+    {
+        title: "SectionHeader",
+        url: "section-header",
+        component: SectionHeaderPage,
+        category: GENERAL,
+        pageTitle: "Component: SectionHeader"
     },
     {
         title: "TotalPortfolioRevenue",
