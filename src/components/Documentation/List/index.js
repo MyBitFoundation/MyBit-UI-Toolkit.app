@@ -36,8 +36,8 @@ export default () => (
         <p></p>
         <h1>Installation</h1>
         <PlainCode>{
-            `$ yarn add ${MYBIT_UI_NAME}/list
-$ npm install ${MYBIT_UI_NAME}/list`
+            `$ yarn add ${MYBIT_UI_NAME}
+$ npm install ${MYBIT_UI_NAME}`
         }</PlainCode>
         <PlainCode>{`import { List } from '${MYBIT_UI_NAME_IMPORT}'`}</PlainCode>
 

@@ -131,8 +131,8 @@ export default () => (
         <p></p>
         <h1>Installation</h1>
         <PlainCode>{
-            `$ yarn add ${MYBIT_UI_NAME}/portfolio-dropdown
-            $ npm install ${MYBIT_UI_NAME}/portfolio-dropdown`
+            `$ yarn add ${MYBIT_UI_NAME}
+            $ npm install ${MYBIT_UI_NAME}`
         }</PlainCode>
         <PlainCode>{`import { PortfolioDropdown } from '${MYBIT_UI_NAME_IMPORT}'`}</PlainCode>
 

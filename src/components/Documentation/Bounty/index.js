@@ -121,8 +121,8 @@ const ButtonsPage = (props) => (
         <p></p>
         <h1>Installation</h1>
         <PlainCode>{
-`$ yarn add ${MYBIT_UI_NAME}/bounty
-$ npm install ${MYBIT_UI_NAME}/bounty`
+`$ yarn add ${MYBIT_UI_NAME}
+$ npm install ${MYBIT_UI_NAME}`
         }</PlainCode>
         <PlainCode>{`import { Bounty } from '${MYBIT_UI_NAME_IMPORT}'`}</PlainCode>
 

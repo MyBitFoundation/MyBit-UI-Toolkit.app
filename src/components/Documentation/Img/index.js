@@ -54,8 +54,8 @@ export default (props) => (
         <p></p>
         <h1>Installation</h1>
         <PlainCode>{
-            `$ yarn add ${MYBIT_UI_NAME}/img
-$ npm install ${MYBIT_UI_NAME}/img`
+            `$ yarn add ${MYBIT_UI_NAME}
+$ npm install ${MYBIT_UI_NAME}`
         }</PlainCode>
         <PlainCode>{`import { Img } from '${MYBIT_UI_NAME_IMPORT}'`}</PlainCode>
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Layout } from 'antd';
+import { HashRouter as Router } from 'react-router-dom';
 import { LibraryFooter, LibraryHeader, LibrarySidebar, LibraryContent } from './Sections'
 
 class App extends Component {
@@ -22,6 +23,7 @@ class App extends Component {
 
   render() {
     return (
+      <Router>
       <Layout>
         <LibraryHeader onChangeTheme={this.changeTheme} onCollapse={this.toggleCollapsed} />
         <Layout>
@@ -30,6 +32,7 @@ class App extends Component {
         </Layout>
         <LibraryFooter />
       </Layout>
+      </Router>
     );
   }
 }

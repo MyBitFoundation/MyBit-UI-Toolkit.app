@@ -8,15 +8,7 @@ import { Helmet } from "react-helmet";
 const paginationExample = {
     component: (
         <div>
-            <Pagination styling={{
-                color: 'rgba(0, 0, 0, 0.65)',
-                borderColor: '#d9d9d9',
-                backgroundColor: '#ffffff',
-                itemActiveBorderColor: 'blue',
-                itemHoverBorderColor: 'blue',
-                disabledItemBorderColor: '#d9d9d9',
-                disabledItemColor: 'rgba(0, 0, 0, 0.25)',
-            }} defaultCurrent={6} total={500} />
+            <Pagination defaultCurrent={6} total={500} />
         </div>
     ),
     description: (
@@ -169,8 +161,8 @@ export default (props) => (
         <p></p>
         <h1>Installation</h1>
         <PlainCode>{
-            `$ yarn add ${MYBIT_UI_NAME}/pagination
-$ npm install ${MYBIT_UI_NAME}/pagination`
+            `$ yarn add ${MYBIT_UI_NAME}
+$ npm install ${MYBIT_UI_NAME}`
         }</PlainCode>
         <PlainCode>{`import { Pagination } from '${MYBIT_UI_NAME_IMPORT}'`}</PlainCode>
 

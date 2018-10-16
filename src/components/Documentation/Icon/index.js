@@ -48,8 +48,8 @@ export default (props) => (
         <h1>Icon <EditPageLink /></h1>
         <p></p>
         <h1>Installation</h1>
-        <PlainCode>{`$ yarn add ${MYBIT_UI_NAME}/icon
-$ npm install ${MYBIT_UI_NAME}/icon`
+        <PlainCode>{`$ yarn add ${MYBIT_UI_NAME}
+$ npm install ${MYBIT_UI_NAME}`
         }</PlainCode>
         <PlainCode>{`import { Icon } from '${MYBIT_UI_NAME_IMPORT}'`}</PlainCode>
 

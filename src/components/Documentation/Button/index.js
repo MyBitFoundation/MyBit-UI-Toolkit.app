@@ -1,6 +1,6 @@
 import React from 'react';
 import { Row, Col } from 'antd';
-import { PropsTable, Showcase, EditPageLink, PlainCode } from '../../Common';
+import { PropsTable, Showcase, EditPageLink, PlainCode, Playground } from '../../Common';
 import { Button } from '../../../showcase'
 import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
 
@@ -28,14 +28,24 @@ const colorsExample = {
             {['blue', 'green'].map((color, index) => (
                 <Button key={`btn-${color}-${index}`}  type="solid" color={color}>{color} button</Button>
             ))}
+            <Button styling={{
+                backgroundColor: 'maroon',
+                backgroundColorHover: 'red',
+                backgroundColorActive: 'pink' 
+            }} type="solid">Custom button</Button>
         </div>
     ),
     description: (
         <p>Solid buttons can be either blue or green</p>
     ),
     code: `
-    <Button type="solid" color="green">green button</Button>
-    <Button type="solid" color="blue">blue button</Button>
+        <Button type="solid" color="green">green button</Button>
+        <Button type="solid" color="blue">blue button</Button>
+        <Button styling={{
+            backgroundColor: 'maroon',
+            backgroundColorHover: 'red',
+            backgroundColorActive: 'pink' 
+        }} type="solid">Custom button</Button>
     `,
     display: 'inline-block'
 }
@@ -79,7 +89,8 @@ const shapesExample = {
     display: 'inline-block'
 }
 
-const data = [{
+
+const props = [{
     key: '1',
     property: 'styling',
     description: 'change the theme of the button',
@@ -121,14 +132,26 @@ export default () => (
     <div>
         <h1>Button <EditPageLink /></h1>
         <p></p>
-        <h1>Installation</h1>
+        <h2>Installation</h2>
         <PlainCode>{
-`$ yarn add ${MYBIT_UI_NAME}/button
-$ npm install ${MYBIT_UI_NAME}/button`
+`$ yarn add ${MYBIT_UI_NAME}
+$ npm install ${MYBIT_UI_NAME}`
         }</PlainCode>
         <PlainCode>{`import { Button } from '${MYBIT_UI_NAME_IMPORT}'`}</PlainCode>
 
-        <h1>Examples</h1>
+        <Playground component={Button} styling={{
+            color: 'white',
+            colorHover: '#40a9ff',
+            colorActive: '#096dd9',
+            backgroundColor: 'transparent',
+            backgroundColorHover: 'transparent',
+            backgroundColorActive: 'transparent',
+            borderColor: 'white',
+            borderColorHover: '#40a9ff',
+            borderColorActive: '#096dd9',
+        }}/>
+
+        <h2>Examples</h2>
         <Row gutter={16}>
             <Col span={12} xs={24} sm={24} md={24} lg={12} xl={12}>
                 <h3>Types</h3>
@@ -148,10 +171,8 @@ $ npm install ${MYBIT_UI_NAME}/button`
             </Col>
         </Row>
 
-
-        <h1>Props</h1>
-        <PropsTable data={data} />
-
+        <h2>Props</h2>
+        <PropsTable data={props} />
     </div>
 )
 

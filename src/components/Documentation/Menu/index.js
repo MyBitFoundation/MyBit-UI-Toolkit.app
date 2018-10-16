@@ -99,8 +99,8 @@ export default () => (
         <p></p>
         <h1>Installation</h1>
         <PlainCode>{
-            `$ yarn add ${MYBIT_UI_NAME}/menu
-$ npm install ${MYBIT_UI_NAME}/menu`
+            `$ yarn add ${MYBIT_UI_NAME}
+$ npm install ${MYBIT_UI_NAME}`
         }</PlainCode>
         <PlainCode>{`import { Menu } from '${MYBIT_UI_NAME_IMPORT}'`}</PlainCode>
 

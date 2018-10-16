@@ -44,8 +44,8 @@ export default () => (
         <p></p>
         <h1>Installation</h1>
         <PlainCode>{
-            `$ yarn add ${MYBIT_UI_NAME}/connection-status
-$ npm install ${MYBIT_UI_NAME}/connection-status`
+            `$ yarn add ${MYBIT_UI_NAME}
+$ npm install ${MYBIT_UI_NAME}`
         }</PlainCode>
         <PlainCode>{`import { ConnectionStatus } from '${MYBIT_UI_NAME_IMPORT}'`}</PlainCode>
 

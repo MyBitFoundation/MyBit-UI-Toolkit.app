@@ -80,8 +80,8 @@ export default (props) => (
         <p></p>
         <h1>Installation</h1>
         <PlainCode>{
-`$ yarn add ${MYBIT_UI_NAME}/alert
-$ npm install ${MYBIT_UI_NAME}/alert`
+`$ yarn add ${MYBIT_UI_NAME}
+$ npm install ${MYBIT_UI_NAME}`
         }</PlainCode>
         <PlainCode>{`import { Alert } from '${MYBIT_UI_NAME_IMPORT}'`}</PlainCode>
 
