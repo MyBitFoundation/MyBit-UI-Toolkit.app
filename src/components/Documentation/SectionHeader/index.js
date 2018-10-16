@@ -34,7 +34,7 @@ export default SectionHeaderPage
 const SectionHeaderExample = {
     component: (
         <div>
-            <SectionHeader size="60px">Cryptocurrency (60px)</SectionHeader>
+            <SectionHeader size="60px" squareSize="20px">Cryptocurrency (60px)</SectionHeader>
             <SectionHeader size="24px">Cryptocurrency (24px)</SectionHeader>
             <SectionHeader size={1} textColor="black" dividerColor="#125ac4">Cryptocurrency (h1)</SectionHeader>
             <SectionHeader size={2} textColor="black" dividerColor="#125ac4">Cryptocurrency (h2)</SectionHeader>
@@ -44,7 +44,7 @@ const SectionHeaderExample = {
     description: (
         <p>The SectionHeader is always centered.</p>
     ),
-    code: `<SectionHeader size="60px" textColor="#383838">Cryptocurrency (60px)</SectionHeader>
+    code: `<SectionHeader size="60px" squareSize="20px">Cryptocurrency (60px)</SectionHeader>
 <SectionHeader size="24px" textColor="#383838">Cryptocurrency (24px)</SectionHeader>
 <SectionHeader size={1} textColor="black" dividerColor="#125ac4">Cryptocurrency (h1)</SectionHeader>
 <SectionHeader size={2} textColor="black" dividerColor="#125ac4">Cryptocurrency (h2)</SectionHeader>
@@ -74,4 +74,11 @@ const SectionHeaderProps = [{
     type: 'string',
     required: 'false',
     default: "#383838"
+},{
+    key: '4',
+    property: 'squareSize',
+    description: `the size of the square beneath the heading`,
+    type: 'string',
+    required: 'false',
+    default: "10px"
 }];
