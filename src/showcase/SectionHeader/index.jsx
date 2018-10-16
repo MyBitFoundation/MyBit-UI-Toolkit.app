@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 
 const SectionHeader = ({
-    size, textColor, dividerColor, children, squareSize
+    size, textColor, dividerColor, children, squareSize, position
 }) => {
     const Heading = Number.isInteger(size) ? `h${size}` : `div`;
 
@@ -16,7 +16,7 @@ const SectionHeader = ({
         font-weight: 800;
         font-style: normal;
         position: relative;
-        text-align: center;
+        text-align: ${props => props.position};
         letter-spacing: 1px;
         color: ${props => props.textColor};
         &::after {
@@ -28,7 +28,10 @@ const SectionHeader = ({
             background-color:  ${props => props.dividerColor};
             -webkit-transform: translate(-50%, 0%) rotate(45deg);
             transform: translate(-50%, 0%) rotate(45deg);
-            left: 50%;
+            ${props => props.position === "right" ? `left: 99%;` : ''}
+            ${props => props.position === "center" ? `left: 50%;` : ''}
+            ${props => props.position === "left" ? `left: 0%; margin-left: 10px;` : ''}
+            margin-bottom: 10px;
         }
     `
     return (
@@ -37,6 +40,7 @@ const SectionHeader = ({
             textColor={textColor} 
             dividerColor={dividerColor}
             squareSize={squareSize}
+            position={position}
         >
             {children}
         </StyledHeading>
@@ -47,7 +51,8 @@ SectionHeader.propTypes = {
     size: PropTypes.any,
     dividerColor: PropTypes.string,
     textColor: PropTypes.string,
-    squareSize: PropTypes.string
+    squareSize: PropTypes.string,
+    position: PropTypes.string
 };
 
 SectionHeader.defaultProps = {
@@ -55,6 +60,7 @@ SectionHeader.defaultProps = {
     dividerColor: "#fb3448",
     textColor: "#383838",
     squareSize: "10px",
+    position: "right"
 };
 
 export default SectionHeader;
