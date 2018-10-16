@@ -34,12 +34,17 @@ const HomePage = () => (
             <h1>We <span><Icon type="heart" style={{ color: "pink" }} /></span> Ant Design</h1>
         </AntdHeader>
 
-        <SectionHeader position="left" size="32px">MyBit Community</SectionHeader>
+        <SectionHeader position="left" size="32px">About MyBit</SectionHeader>
+        <p style={{textAlign: "justified"}}>
+        MyBit was started by a team of industry veterans who spotted a massive problem with today’s financial systems. Third party agents such as lawyers, escrow agents, and brokers are required to establish trust and conduct transactions.
+This is inefficient, unsafe, and expensive. Our vision is to utilise smart contract technology to eliminate the need for these centralised sources and creating a more efficient, secure, and cost-effective wealth management environment.
+MyBit provides robust developer tools such as SDKs and UI Kits to give engineers the power to rapidly build, test and deploy wealth management applications on the Ethereum blockchain as well as funding mechanisms to support and scale disruptive projects.
+        </p>
         <p>
         MyBit believes in the concept of co-creation. Community members guide our development with their advice, dedication and active participation in 
         all aspects of the project. Join our community and get involved in our shared mission: to lead the way in the automated era. 
         </p>
-        <Button>Contribute</Button>
+        <Button>Join our Community? Maybe a list of social media profiles?</Button>
 
         <SectionHeader position="left" size="32px">Installation</SectionHeader>
         <h4>We recommend using npm or yarn to install</h4>

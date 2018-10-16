@@ -11,7 +11,7 @@ const SectionHeader = ({
     const StyledHeading = styled(Heading)`
         font-family: Roboto;
         line-height: 2.0;
-        margin: 0px;
+        margin: 15px 0px 0px 0px;
         ${props => Number.isInteger(props.size) ? `` : `font-size: ${props.size};`}
         font-weight: 800;
         font-style: normal;
@@ -30,7 +30,7 @@ const SectionHeader = ({
             transform: translate(-50%, 0%) rotate(45deg);
             ${props => props.position === "right" ? `left: 99%;` : ''}
             ${props => props.position === "center" ? `left: 50%;` : ''}
-            ${props => props.position === "left" ? `left: 0%; margin-left: 10px;` : ''}
+            ${props => props.position === "left" ? `left: 1%;` : ''}
             margin-bottom: 10px;
         }
     `
@@ -60,7 +60,7 @@ SectionHeader.defaultProps = {
     dividerColor: "#fb3448",
     textColor: "#383838",
     squareSize: "10px",
-    position: "right"
+    position: "center"
 };
 
 export default SectionHeader;
