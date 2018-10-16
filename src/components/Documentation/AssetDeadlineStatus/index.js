@@ -1,7 +1,6 @@
 import React from 'react';
 import { Showcase, EditPageLink, InstallationSection, PropsTable } from '../../Common/';
 import { AssetDeadlineStatus } from '../../../showcase'
-import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
 import { Row, Col } from 'antd'
 import { Helmet } from "react-helmet";
 

@@ -2,7 +2,6 @@ import React from 'react';
 import { Row, Col } from 'antd';
 import { PropsTable, Showcase, EditPageLink, InstallationSection } from '../../Common';
 import { List, ListItem } from '../../../showcase'
-import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
 
 const listExample = {
     component: (
