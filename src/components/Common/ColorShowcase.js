@@ -9,19 +9,29 @@ const Wrapper = styled.div`
     display: flex;
     align-items: center;
     padding-left: 30px;
+    position: relative;
     .text {
         background: ${props => props.textBackground};
         padding: 3px;
         color: ${props => props.textColor};
     }
+    .title {
+        position: absolute;
+        left: 30px;
+        transition: all 0.3s;
+        opacity: 1;
+    }
+    &:hover > .title {
+        opacity: 0;
+    }
     .color {
         opacity: 0;
-        margin-left: 0px;
+        position: absolute;
+        left: 10px;
         transition: all 1s;
-        overflow: auto;
     }
     &:hover > .color {
-        margin-left: 15px;
+        left: 30px;
         opacity: 1;
     }
 `
