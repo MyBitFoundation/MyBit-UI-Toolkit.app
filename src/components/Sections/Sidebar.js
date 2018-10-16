@@ -26,7 +26,7 @@ class LibrarySidebarNavigation extends Component {
                     <MenuItem key="/">
                         <Link to="/">
                             <Icon type="home" />
-                            <span className="nav-text">Home with icon</span>
+                            <span className="nav-text">Home</span>
                         </Link>
                     </MenuItem>
                     <MenuItem key="/contribute">
