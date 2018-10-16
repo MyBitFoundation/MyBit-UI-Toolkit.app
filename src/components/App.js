@@ -9,9 +9,7 @@ class App extends Component {
   }
 
   changeTheme = (value) => {
-    this.setState({
-      theme: value ? 'dark' : 'light',
-    });
+    this.setState({theme: value});
   }
 
   toggleCollapsed = () => {
@@ -23,12 +21,12 @@ class App extends Component {
   render() {
     return (
       <Layout>
-        <LibraryHeader onChangeTheme={this.changeTheme} onCollapse={this.toggleCollapsed} />
+        <LibraryHeader onChangeTheme={this.changeTheme} theme={this.state.theme} />
         <Layout>
           <LibrarySidebar theme={this.state.theme} collapsed={this.state.collapsed} />
-          <LibraryContent />
+          <LibraryContent theme={this.state.theme} />
         </Layout>
-        <LibraryFooter />
+        <LibraryFooter theme={this.state.theme} />
       </Layout>
     );
   }
