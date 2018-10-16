@@ -1,5 +1,5 @@
 import React from 'react';
-import { Showcase, EditPageLink, PlainCode, PropsTable } from '../../Common/';
+import { Showcase, EditPageLink, InstallationSection, PropsTable } from '../../Common/';
 import { AssetDeadlineStatus } from '../../../showcase'
 import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
 import { Row, Col } from 'antd'
@@ -15,11 +15,7 @@ const AssetDeadlineStatusPage = (props) => (
         <h1>AssetDeadlineStatus <EditPageLink editLink={EDIT_PAGE_LINK} /></h1>
         <p>Displays the deadline status of an Asset (MyBit GO)</p>
 
-        <h1>Installation</h1>
-        <PlainCode>{`$ yarn add ${MYBIT_UI_NAME}
-    $ npm install ${MYBIT_UI_NAME}`
-    }</PlainCode>
-        <PlainCode>{`import { AssetDeadlineStatus } from '${MYBIT_UI_NAME_IMPORT}'`}</PlainCode>
+        <InstallationSection name="AssetDeadlineStatus" />
 
         <h1>Examples</h1>
         <Row gutter={16}>

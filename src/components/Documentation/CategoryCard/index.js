@@ -1,7 +1,6 @@
 import React from 'react';
-import { Showcase, EditPageLink, PlainCode, PropsTable } from '../../Common/';
+import { Showcase, EditPageLink, InstallationSection, PropsTable } from '../../Common/';
 import { CategoryCard } from '../../../showcase'
-import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
 import demoImage from '../images/category-cryptocurrency-atm.png';
 import { Helmet } from "react-helmet";
 
@@ -15,11 +14,7 @@ const CategoryCardPage = (props) => (
     <h1>CategoryCard <EditPageLink editLink={EDIT_PAGE_LINK} /></h1>
     <p>A card for an Asset category (MyBit GO)</p>
 
-    <h1>Installation</h1>
-    <PlainCode>{`$ yarn add ${MYBIT_UI_NAME}
-$ npm install ${MYBIT_UI_NAME}`
-}</PlainCode>
-    <PlainCode>{`import { CategoryCard } from '${MYBIT_UI_NAME_IMPORT}'`}</PlainCode>
+    <InstallationSection name="CategoryCard" />
 
     <h1>Examples</h1>
     <Showcase data={assetTitleExample} />

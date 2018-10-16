@@ -1,8 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'antd';
-import { PropsTable, Showcase, EditPageLink, PlainCode } from '../../Common';
+import { PropsTable, Showcase, EditPageLink, InstallationSection } from '../../Common';
 import { Heading } from '../../../showcase'
-import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
 import { Helmet } from "react-helmet";
 
 const headingExample = {
@@ -40,11 +39,7 @@ export default (props) => (
         </Helmet>
         <h1>Heading <EditPageLink /></h1>
         <p></p>
-        <h1>Installation</h1>
-        <PlainCode>{`$ yarn add ${MYBIT_UI_NAME}
-$ npm install ${MYBIT_UI_NAME}`
-        }</PlainCode>
-        <PlainCode>{`import { Heading } from '${MYBIT_UI_NAME_IMPORT}'`}</PlainCode>
+        <InstallationSection name="Heading" />
 
         <h1>Examples</h1>
         <Row gutter={16}>

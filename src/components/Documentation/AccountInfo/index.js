@@ -1,8 +1,7 @@
 import React from 'react'
 import { AccountInfo } from '../../../showcase'
-import { Showcase, EditPageLink, CustomTag, PlainCode, PropsTable } from '../../Common/';
+import { Showcase, EditPageLink, CustomTag, PropsTable, InstallationSection } from '../../Common/';
 import { Row, Col } from 'antd'
-import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
 import { Helmet } from "react-helmet";
 
 const AccountInfoPage = (props) => (
@@ -13,11 +12,7 @@ const AccountInfoPage = (props) => (
         <h1>AccountInfo <EditPageLink editLink="/" /></h1>
         <p>Displays the current MYB and ETH balance of the user.</p>
 
-        <h1>Installation</h1>
-        <PlainCode>{`$ yarn add ${MYBIT_UI_NAME}
-    $ npm install ${MYBIT_UI_NAME}`
-    }</PlainCode>
-        <PlainCode>{`import { AccountInfo } from '${MYBIT_UI_NAME_IMPORT}'`}</PlainCode>
+        <InstallationSection name="AccountInfo" />
 
         <h1>Examples</h1>
         
