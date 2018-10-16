@@ -31,20 +31,23 @@ class LibrarySidebarNavigation extends Component {
                     </MenuItem>
                     <MenuItem key="/contribute">
                         <Link to="/contribute">
+                            <Icon type="github" theme="outlined" />
                             <span className="nav-text">Contribute</span>
                         </Link>
                     </MenuItem>
                     <MenuItem key="/styleguides">
                         <Link to="/styleguides">
+                            <Icon type="bg-colors" theme="outlined" />
                             <span className="nav-text">Styleguides</span>
                         </Link>
                     </MenuItem>
                     <MenuItem key="/applications">
                         <Link to="/applications">
+                            <Icon type="desktop" theme="outlined" />
                             <span className="nav-text">Applications</span>
                         </Link>
                     </MenuItem>
-                    <SubMenu key="sub1" title={<b>Components</b>}>
+                    <SubMenu key="sub1" title={<div><Icon type="layout" theme="outlined" /><b>Components</b></div>}>
                         {Categories.map(category => (
                             <MenuItemGroup key={category} title={category}>
                                 {
