@@ -54,6 +54,35 @@ MyBit provides robust developer tools such as SDKs and UI Kits to give engineers
         <PlainCode>{`import { --your-component-- } from '${MYBIT_UI_NAME_IMPORT}'`}</PlainCode>
         <p>Import the antd stylesheet manually.</p>
         <PlainCode>{`import 'antd/dist/antd.css';  // or 'antd/dist/antd.less'`}</PlainCode>
+        <h4>Project structure</h4>
+        <PlainCode>
+{`├── __tests__
+│   ├── *.test.js //test files
+├── public
+│   ├── favicon.png
+│   ├── index.html
+│   ├── manifest.json
+├── src
+│   ├── components
+│   │   ├── Common //components which build the library
+│   │   ├── Documentation 
+│   │   │   ├── * //a folder for each documentation page
+│   │   │   ├── categories.js //a list of component categories
+│   │   │   ├── index.js //export documentation routes
+│   │   ├── Pages //the content section for each static page (Home, Contribute, etc)
+│   │   ├── Sections
+│   │   │   ├── Footer.js Header.js Sidebar.js
+│   │   │   ├── Content.js //contains the Router switch 
+│   │   ├── App.js
+│   ├── showcase //folder to be publised as an NPM package
+│   │   ├── * //a folder for each isolated component
+│   │   │   ├── index.js //component's code
+│   │   │   ├── styled.js //styled-components
+│   ├── index.css //main styles
+│   ├── index.js
+├── package.json
+`}
+        </PlainCode>
 
         <SectionHeader position="left" size="32px">MyBit Foundation</SectionHeader>
         <p>MyBit Foundation. Dammstrasse 16, 6300 Zug, Switzerland.</p>
