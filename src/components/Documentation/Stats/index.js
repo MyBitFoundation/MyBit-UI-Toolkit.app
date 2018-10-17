@@ -32,11 +32,11 @@ const data = [
     }
  ];
 
-export default () => (
+export default (props) => (
     <div>
         <h1>Stats <EditPageLink /></h1>
         <p></p>
-        <InstallationSection name="Stats" />
+        <InstallationSection url="Stats" />
 
         <h1>Examples</h1>
         <Row gutter={16}>

@@ -1,7 +1,13 @@
 import React from 'react';
 import { Row, Col } from 'antd';
-import { PropsTable, Showcase, EditPageLink, InstallationSection } from '../../Common';
+import { PropsTable, Showcase, EditPageLink, InstallationSection, Playground } from '../../Common';
 import { Dropdown } from '../../../showcase'
+
+const styling = {
+    color: '#1890ff',
+    colorHover: '#40a9ff',
+    submenuColorHover: '#e6f7ff',
+}
 
 const placementExample = {
     component: (
@@ -82,13 +88,15 @@ const data = [{
 }
 ];
 
-export default () => (
+export default (props) => (
     <div>
         <h1>Dropdown <EditPageLink /></h1>
         <p></p>
-        <InstallationSection name="Alert" />
-
-        <h1>Examples</h1>
+        <InstallationSection url="Alert" />
+        <Playground component={(props) => (
+            <Dropdown styling={props.styling} menu={['bottomLeft', 'bottomCenter', 'bottomRight', 'topLeft', 'topCenter', 'topRight']} selected="bottomLeft" placement="bottomLeft" trigger="hover" handleClick={() => {}} />
+        )} styling={styling}/>
+        <h2>Examples</h2>
         <Row gutter={16}>
             <Col span={12}>
                 <h3>Placement</h3>
@@ -101,7 +109,7 @@ export default () => (
         </Row>
 
 
-        <h1>Props</h1>
+        <h2>Props</h2>
         <PropsTable data={data} />
 
     </div>

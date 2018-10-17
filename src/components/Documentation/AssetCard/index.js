@@ -15,7 +15,7 @@ const AssetCardPage = (props) => (
         <h1>AssetCard <EditPageLink editLink={EDIT_PAGE_LINK} /></h1>
         <p>A card with all important information about an Asset</p>
 
-        <InstallationSection name="Asset Card" />
+        <InstallationSection url="Asset Card" />
 
         <h1>Examples</h1>
         <Row gutter={16}>

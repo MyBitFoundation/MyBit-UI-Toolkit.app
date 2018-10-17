@@ -1,7 +1,18 @@
 import React from 'react';
 import { Row, Col } from 'antd';
-import { PropsTable, Showcase, EditPageLink, InstallationSection } from '../../Common';
+import { PropsTable, Showcase, EditPageLink, InstallationSection, Playground } from '../../Common';
 import { Filter } from '../../../showcase'
+
+
+const styling = {
+    checkedColor: '#1890ff',
+    checkedBackgroundColor: '#e6f7ff',
+    checkedBorderColor: '#91d5ff',
+    unCheckedBackgroundColor: 'transparent',
+    unCheckedBorderColor: 'transparent',
+    unCheckedColor: 'rgba(0, 0, 0, 0.65)',
+    hoverColor: '#1890ff'
+  }
 
 const filterExample = {
     component: (
@@ -45,13 +56,13 @@ const data = [{
 }
 ];
 
-export default () => (
+export default (props) => (
     <div>
-        <h1>Filter <EditPageLink /></h1>
+        <h1>{props.title} <EditPageLink /></h1>
         <p></p>
-        <InstallationSection name="Alert" />
-
-        <h1>Examples</h1>
+        <InstallationSection name={props.title} url={props.url} />
+        <Playground component={Filter} styling={styling}/>
+        <h2>Examples</h2>
         <Row gutter={16}>
             <Col span={24}>
                 <h3>Sample filters</h3>
@@ -60,7 +71,7 @@ export default () => (
         </Row>
 
 
-        <h1>Props</h1>
+        <h2>Props</h2>
         <PropsTable data={data} />
 
     </div>

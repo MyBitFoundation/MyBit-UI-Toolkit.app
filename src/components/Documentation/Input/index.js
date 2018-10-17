@@ -89,13 +89,13 @@ const data = [{
 }
 ];
 
-export default () => (
+export default (props) => (
     <div>
-        <h1>Input <EditPageLink /></h1>
+        <h1>{props.title} <EditPageLink /></h1>
         <p></p>
-        <InstallationSection name="Alert" />
+        <InstallationSection url={props.url} />
 
-        <h1>Examples</h1>
+        <h2>Examples</h2>
         <Row gutter={16}>
             <Col span={24}>
                 <h3>Input types</h3>
@@ -104,7 +104,7 @@ export default () => (
         </Row>
 
 
-        <h1>Props</h1>
+        <h2>Props</h2>
         <PropsTable data={data} />
 
     </div>

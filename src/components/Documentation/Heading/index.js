@@ -39,7 +39,7 @@ export default (props) => (
         </Helmet>
         <h1>Heading <EditPageLink /></h1>
         <p></p>
-        <InstallationSection name="Heading" />
+        <InstallationSection url="Heading" />
 
         <h1>Examples</h1>
         <Row gutter={16}>

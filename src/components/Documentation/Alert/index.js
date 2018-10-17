@@ -77,7 +77,7 @@ export default (props) => (
         </Helmet>
         <h1>Alert <EditPageLink /></h1>
         <p>--description--</p>
-        <InstallationSection name="Alert" />
+        <InstallationSection url="Alert" />
 
         <h1>Examples</h1>
         <h3>Types</h3>

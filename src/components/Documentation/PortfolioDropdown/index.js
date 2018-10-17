@@ -124,11 +124,11 @@ const data = [
     }
  ];
 
-export default () => (
+export default (props) => (
     <div>
         <h1>PortfolioDropdown <EditPageLink /></h1>
         <p></p>
-        <InstallationSection name="PortfolioDropdown" />
+        <InstallationSection url="PortfolioDropdown" />
 
         <h1>Examples</h1>
         <Row gutter={16}>

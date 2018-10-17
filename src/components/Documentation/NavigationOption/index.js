@@ -18,7 +18,7 @@ const NavigationOptionPage = (props) => (
     <h1>NavigationOption <EditPageLink editLink={EDIT_PAGE_LINK} /></h1>
     <p>A single NavigationOption part of the Navigation component for MyBitGo</p>
 
-    <InstallationSection name="NavigationOption" />
+    <InstallationSection url="NavigationOption" />
 
     <h1>Examples</h1>
     <Row gutter={16}>

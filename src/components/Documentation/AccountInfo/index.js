@@ -12,7 +12,7 @@ const AccountInfoPage = (props) => (
         <h1>AccountInfo <EditPageLink editLink="/" /></h1>
         <p>Displays the current MYB and ETH balance of the user.</p>
 
-        <InstallationSection name="AccountInfo" />
+        <InstallationSection url="AccountInfo" />
 
         <h1>Examples</h1>
         

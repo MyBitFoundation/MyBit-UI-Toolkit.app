@@ -13,7 +13,7 @@ const ProgressBarPage = (props) => (
     <h1>ProgressBar <EditPageLink editLink={EDIT_PAGE_LINK} /></h1>
     <p>MyBit Logo</p>
 
-    <InstallationSection name="Alert" />
+    <InstallationSection url="Alert" />
 
     <h1>Examples</h1>
     <Showcase data={progressExample} />

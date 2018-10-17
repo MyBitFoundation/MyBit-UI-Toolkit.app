@@ -118,7 +118,7 @@ const ButtonsPage = (props) => (
         </Helmet>
         <h1>Bounty <EditPageLink /></h1>
         <p></p>
-        <InstallationSection name="Bounty" />
+        <InstallationSection url="Bounty" />
 
         <h1>Examples</h1>
 

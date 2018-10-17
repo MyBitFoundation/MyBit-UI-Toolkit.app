@@ -52,28 +52,18 @@ const Theme = {
     backgroundColorItem: lightBlue,
   },
   dropdown: {
-    submenu: {
-      colorHover: lightBlue,
-    },
-    trigger: {
-      color: blue,
-      colorHover: blueHover,
-    },
+    color: blue,
+    colorHover: blueHover,
+    submenuColorHover: lightBlue,
   },
-  filters: {
-    checkedState: {
-      color: blue,
-      backgroundColor: lightBlue,
-      borderColor: '#91d5ff',
-    },
-    uncheckedState: {
-      backgroundColor: 'transparent',
-      borderColor: 'transparent',
-      color: 'rgba(0, 0, 0, 0.65)',
-    },
-    hoverState: {
-      color: blue,
-    },
+  filter: {
+    checkedColor: blue,
+    checkedBackgroundColor: lightBlue,
+    checkedBorderColor: '#91d5ff',
+    unCheckedBackgroundColor: 'transparent',
+    unCheckedBorderColor: 'transparent',
+    unCheckedColor: 'rgba(0, 0, 0, 0.65)',
+    hoverColor: blue
   },
   switch: {
     checked: {

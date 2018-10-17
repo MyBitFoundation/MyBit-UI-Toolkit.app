@@ -10,15 +10,15 @@ const LogoPage = (props) => (
         <Helmet>
             <title>{props.pageTitle}</title>
         </Helmet>
-    <h1>Logo <EditPageLink editLink={EDIT_PAGE_LINK} /></h1>
+    <h1>{props.title} <EditPageLink editLink={EDIT_PAGE_LINK} /></h1>
     <p>MyBit Logo</p>
 
-    <InstallationSection name="Logo" />
+    <InstallationSection url={props.url} />
 
-    <h1>Examples</h1>
+    <h2>Examples</h2>
     <Showcase data={logoExample} />
 
-    <h1>Props</h1>
+    <h2>Props</h2>
     <PropsTable data={logoProps} />
 </div>
 )

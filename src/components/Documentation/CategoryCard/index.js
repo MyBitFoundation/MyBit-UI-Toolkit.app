@@ -14,7 +14,7 @@ const CategoryCardPage = (props) => (
     <h1>CategoryCard <EditPageLink editLink={EDIT_PAGE_LINK} /></h1>
     <p>A card for an Asset category (MyBit GO)</p>
 
-    <InstallationSection name="CategoryCard" />
+    <InstallationSection url="CategoryCard" />
 
     <h1>Examples</h1>
     <Showcase data={assetTitleExample} />

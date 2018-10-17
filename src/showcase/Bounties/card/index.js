@@ -66,7 +66,7 @@ const Card = ({
   mybitInUsd,
   createdAt,
   url,
-  styling,
+  theme,
   merged,
   tokenSymbol,
   showAmountInCrypto,
@@ -101,7 +101,7 @@ const Card = ({
       {!merged &&
         <StyledButtonChallenge>
           <Button
-            styling={styling.primary.blue}
+            theme={theme.primary.blue}
             size="large"
             href={url}
           >
@@ -114,7 +114,7 @@ const Card = ({
 );
 
 Card.propTypes = {
-  styling: PropTypes.object.isRequired, //eslint-disable-line
+  theme: PropTypes.object.isRequired, //eslint-disable-line
   title: PropTypes.string.isRequired,
   repoName: PropTypes.string.isRequired,
   repoUrl: PropTypes.string.isRequired,

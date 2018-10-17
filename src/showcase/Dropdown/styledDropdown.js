@@ -2,9 +2,9 @@ import styled from 'styled-components';
 
 const StyledDropdown = styled.div`
   .ant-dropdown-trigger{
-    color: ${props => props.styling.trigger.color};
+    color: ${props => props.theme.color};
     &:hover{
-      color: ${props => props.styling.trigger.colorHover};
+      color: ${props => props.theme.colorHover};
     }
   }
 `;

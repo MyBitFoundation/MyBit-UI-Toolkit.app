@@ -34,11 +34,11 @@ const data = [
     }
  ];
 
-export default () => (
+export default (props) => (
     <div>
         <h1>StatCard <EditPageLink /></h1>
         <p></p>
-        <InstallationSection name="StatCard" />
+        <InstallationSection url="StatCard" />
 
         <h1>Examples</h1>
         <Row gutter={16}>

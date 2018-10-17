@@ -1,6 +1,6 @@
 import React from 'react';
 import { Row, Col } from 'antd';
-import { PropsTable, Showcase, EditPageLink, InstallationSection } from '../../Common';
+import { PropsTable, Showcase, EditPageLink, InstallationSection, Playground } from '../../Common';
 import { Pagination } from '../../../showcase'
 import { Helmet } from "react-helmet";
 
@@ -151,16 +151,28 @@ const data = [
     }
  ];
 
+const styling = {
+    color: 'rgba(0, 0, 0, 0.65)',
+    borderColor: '#d9d9d9',
+    backgroundColor: '#ffffff',
+    itemActiveBorderColor: '#1890ff',
+    itemHoverBorderColor: '#1890ff',
+    disabledItemBorderColor: '#d9d9d9',
+    disabledItemColor: 'rgba(0, 0, 0, 0.25)',
+}
+
 export default (props) => (
     <div>
         <Helmet>
             <title>{props.pageTitle}</title>
         </Helmet>
-        <h1>Pagination <EditPageLink /></h1>
+        <h1>{props.title} <EditPageLink /></h1>
         <p></p>
-        <InstallationSection name="Pagination" />
-
-        <h1>Examples</h1>
+        <InstallationSection url={props.url} />
+        <Playground component={(props) => (
+            <Pagination {...props} defaultCurrent={6} total={500} /> 
+        )} styling={styling} />
+        <h2>Examples</h2>
         <Row gutter={16}>
             <Col span={24}>
                 <h3>Pagination example</h3>
@@ -169,7 +181,7 @@ export default (props) => (
         </Row>
 
 
-        <h1>Props</h1>
+        <h2>Props</h2>
         <PropsTable data={data} />
 
     </div>

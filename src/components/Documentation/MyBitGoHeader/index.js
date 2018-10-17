@@ -13,7 +13,7 @@ const MyBitGoHeaderPage = (props) => (
     <h1>MyBitGoHeader <EditPageLink editLink={EDIT_PAGE_LINK} /></h1>
     <p>MyBitGo header</p>
 
-    <InstallationSection name="MyBitGoHeader" />
+    <InstallationSection url="MyBitGoHeader" />
 
     <h1>Examples</h1>
     <Showcase data={headerExample} />

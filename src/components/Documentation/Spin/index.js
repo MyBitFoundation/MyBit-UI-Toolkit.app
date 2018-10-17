@@ -49,11 +49,11 @@ const data = [
      }
  ];
 
-export default () => (
+export default (props) => (
     <div>
         <h1>Spin <EditPageLink /></h1>
         <p></p>
-        <InstallationSection name="Spin" />>
+        <InstallationSection url="Spin" />>
 
         <Playground component={Spin} styling={{
             color: 'blue'

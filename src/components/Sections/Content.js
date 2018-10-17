@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Layout } from 'antd';
 import { Route, Switch } from 'react-router-dom'
 import { HomePage, ContributePage, StyleguidesPage, AppsPage } from '../Pages'
 import documentationRoutes from '../Documentation'
+
+class PageComponent extends Component {
+    componentDidMount() {
+        document.title = this.props.pageTitle + ' | MyBit UI kit'
+    }
+    render() {
+        return this.props.children
+    }
+}
 
 const LibraryContent = ({ theme }) => (
     <Layout style={theme === 'dark' ? {background: "#000c17"} : {background: '#fff'}}>
@@ -18,7 +27,11 @@ const LibraryContent = ({ theme }) => (
                             key={route.url}
                             exact
                             path={`/${route.url}`}
-                            render={(props) => <route.component {...{...props, ...route }} pageTitle={route.pageTitle} />}
+                            render={(props) => (
+                                <PageComponent {...route}>
+                                    <route.component {...{...props, ...route }} pageTitle={route.pageTitle} />
+                                </PageComponent>
+                            )}
                         />
                     ))
                     }

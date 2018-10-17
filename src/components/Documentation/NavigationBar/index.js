@@ -53,7 +53,7 @@ const NavigationBarPage = (props) => (
     <h1>NavigationBar <EditPageLink editLink={EDIT_PAGE_LINK} /></h1>
     <p>The navigation used on MyBit Go</p>
 
-   <InstallationSection name="NavigationOption" />
+   <InstallationSection url="NavigationOption" />
 
     <h1>Examples</h1>
     <Showcase data={navExample} />
