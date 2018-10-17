@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Progress } from 'antd';
+import 'antd/lib/style/css';
 
 const ProgressBar = ({
   size, percent, status, showInfo,

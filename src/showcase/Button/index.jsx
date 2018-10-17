@@ -19,6 +19,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import AntButton from 'antd/lib/button';
 import { withTheme } from 'styled-components';
+import 'antd/lib/style/css';
 import ButtonStyle from './styledButton';
 import Theme from '../theme';
 

@@ -25,7 +25,9 @@ const StyledPlaygroundWrapper = styled.div`
         flex: 1 0 320px;
         overflow: auto;
         background: ${ props => props.showgrid ? `url("data:image/svg+xml,%3Csvg%20fill%3D%22%23999%22%20viewBox%3D%220%200%202%202%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22m0%200h1v1h1v1h-1v-1h-1z%22%2F%3E%0A%3C%2Fsvg%3E") repeat` : '#f2f4f5'} ;
-        background-size: 10px 10px;
+        background-size: 18px;
+        background-attachment: fixed;
+        border: 1px solid #ccc;
         transition: .2s;
         display: flex;
         align-items: center;

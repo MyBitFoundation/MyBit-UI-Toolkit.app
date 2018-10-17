@@ -18,7 +18,7 @@ const LibraryContent = ({ theme }) => (
                             key={route.url}
                             exact
                             path={`/${route.url}`}
-                            render={(props) => <route.component {...props} pageTitle={route.pageTitle} />}
+                            render={(props) => <route.component {...{...props, ...route }} pageTitle={route.pageTitle} />}
                         />
                     ))
                     }

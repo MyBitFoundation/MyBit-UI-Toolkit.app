@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Tag as TagAnt } from 'antd';
-import 'antd/lib/tag/style/css';
+import 'antd/lib/style/css';
 
 import Theme from '../theme';
 import StyledFilter from './styledFilter';

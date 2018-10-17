@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import 'antd/lib/style/css';
 import Header from './header';
 import Card from './card';
 import StyledCards from './StyledCards';

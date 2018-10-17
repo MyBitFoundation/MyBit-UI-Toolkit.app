@@ -1,5 +1,5 @@
-import React from 'react';
-import { Row, Col } from 'antd';
+import React, { Component } from 'react';
+import { Row, Col, Tabs } from 'antd';
 import { PropsTable, Showcase, EditPageLink, PlainCode, Playground } from '../../Common';
 import { Button } from '../../../showcase'
 import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
@@ -90,7 +90,7 @@ const shapesExample = {
 }
 
 
-const props = [{
+const propsData = [{
     key: '1',
     property: 'styling',
     description: 'change the theme of the button',
@@ -128,55 +128,68 @@ const props = [{
 }
 ];
 
-export default () => (
-    <div>
-        <h1>Button <EditPageLink /></h1>
-        <p></p>
-        <h2>Installation</h2>
-        <PlainCode>{
-`$ yarn add ${MYBIT_UI_NAME}
-$ npm install ${MYBIT_UI_NAME}`
-        }</PlainCode>
-        <PlainCode>{`import { Button } from '${MYBIT_UI_NAME_IMPORT}'`}</PlainCode>
+export default class Page extends Component {
+    componentDidMount() {
+        document.title = this.props.pageTitle
+    }
+    render() {
+        return (
+            <div>
+                <h1>Button <EditPageLink /></h1>
+                <p></p>
+                <h2>Installation</h2>
+                <Tabs defaultActiveKey="npm">
+                    <Tabs.TabPane tab="NPM" key="npm">
+                        <PlainCode>{`$ npm install ${MYBIT_UI_NAME}`}</PlainCode>
+                    </Tabs.TabPane>
+                    <Tabs.TabPane tab="Yarn" key="yarn">
+                        <PlainCode>{`$ yarn add ${MYBIT_UI_NAME}`}</PlainCode>
+                    </Tabs.TabPane>
+                    <Tabs.TabPane tab="BitSrc" key="bit">
+                        <PlainCode>{`$ bit add ${MYBIT_UI_NAME}`}</PlainCode>
+                    </Tabs.TabPane>
+                </Tabs>
+                <PlainCode>{
+        `$ yarn add ${MYBIT_UI_NAME}
+        $ npm install ${MYBIT_UI_NAME}`
+                }</PlainCode>
+                <PlainCode>{`import { Button } from '${MYBIT_UI_NAME_IMPORT}'`}</PlainCode>
 
-        <Playground component={Button} styling={{
-            color: 'white',
-            colorHover: '#40a9ff',
-            colorActive: '#096dd9',
-            backgroundColor: 'transparent',
-            backgroundColorHover: 'transparent',
-            backgroundColorActive: 'transparent',
-            borderColor: 'white',
-            borderColorHover: '#40a9ff',
-            borderColorActive: '#096dd9',
-        }}/>
+                <Playground component={Button} styling={{
+                    color: 'white',
+                    colorHover: '#40a9ff',
+                    colorActive: '#096dd9',
+                    backgroundColor: 'transparent',
+                    backgroundColorHover: 'transparent',
+                    backgroundColorActive: 'transparent',
+                    borderColor: 'white',
+                    borderColorHover: '#40a9ff',
+                    borderColorActive: '#096dd9',
+                }}/>
 
-        <h2>Examples</h2>
-        <Row gutter={16}>
-            <Col span={12} xs={24} sm={24} md={24} lg={12} xl={12}>
-                <h3>Types</h3>
-                <Showcase data={typesExample} />
-            </Col>
-            <Col span={12} xs={24} sm={24} md={24} lg={12} xl={12}>
-                <h3>Colors</h3>
-                <Showcase data={colorsExample} />
-            </Col>
-            <Col span={12} xs={24} sm={24} md={24} lg={12} xl={12}>
-                <h3>Sizes</h3>
-                <Showcase data={sizesExample} />
-            </Col>
-            <Col span={12} xs={24} sm={24} md={24} lg={12} xl={12}>
-                <h3>Shapes</h3>
-                <Showcase data={shapesExample} />
-            </Col>
-        </Row>
+                <h2>Examples</h2>
+                <Row gutter={16}>
+                    <Col span={12} xs={24} sm={24} md={24} lg={12} xl={12}>
+                        <h3>Types</h3>
+                        <Showcase data={typesExample} />
+                    </Col>
+                    <Col span={12} xs={24} sm={24} md={24} lg={12} xl={12}>
+                        <h3>Colors</h3>
+                        <Showcase data={colorsExample} />
+                    </Col>
+                    <Col span={12} xs={24} sm={24} md={24} lg={12} xl={12}>
+                        <h3>Sizes</h3>
+                        <Showcase data={sizesExample} />
+                    </Col>
+                    <Col span={12} xs={24} sm={24} md={24} lg={12} xl={12}>
+                        <h3>Shapes</h3>
+                        <Showcase data={shapesExample} />
+                    </Col>
+                </Row>
 
-        <h2>Props</h2>
-        <PropsTable data={props} />
-    </div>
-)
-
-
-
-
-
+                <h2>Props</h2>
+                <PropsTable data={propsData} />
+            </div>
+        );
+    }
+}

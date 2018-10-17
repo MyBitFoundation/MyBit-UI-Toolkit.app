@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Skeleton } from 'antd';
-
+import 'antd/lib/style/css';
 import StyledStatCard from './styledStatCard';
 import StyledTitle from './styledTitle';
 import StyledValue from './styledValue';
