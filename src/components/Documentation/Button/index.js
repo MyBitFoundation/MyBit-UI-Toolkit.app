@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { Row, Col, Tabs } from 'antd';
-import { PropsTable, Showcase, EditPageLink, PlainCode, Playground } from '../../Common';
+import { Row, Col } from 'antd';
+import { PropsTable, Showcase, EditPageLink, InstallationSection, Playground } from '../../Common';
 import { Button } from '../../../showcase'
-import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
 
 const typesExample = {
     component: (
@@ -137,24 +136,7 @@ export default class Page extends Component {
             <div>
                 <h1>Button <EditPageLink /></h1>
                 <p></p>
-                <h2>Installation</h2>
-                <Tabs defaultActiveKey="npm">
-                    <Tabs.TabPane tab="NPM" key="npm">
-                        <PlainCode>{`$ npm install ${MYBIT_UI_NAME}`}</PlainCode>
-                    </Tabs.TabPane>
-                    <Tabs.TabPane tab="Yarn" key="yarn">
-                        <PlainCode>{`$ yarn add ${MYBIT_UI_NAME}`}</PlainCode>
-                    </Tabs.TabPane>
-                    <Tabs.TabPane tab="BitSrc" key="bit">
-                        <PlainCode>{`$ bit add ${MYBIT_UI_NAME}`}</PlainCode>
-                    </Tabs.TabPane>
-                </Tabs>
-                <PlainCode>{
-        `$ yarn add ${MYBIT_UI_NAME}
-        $ npm install ${MYBIT_UI_NAME}`
-                }</PlainCode>
-                <PlainCode>{`import { Button } from '${MYBIT_UI_NAME_IMPORT}'`}</PlainCode>
-
+                <InstallationSection name="Button" url="button"/>
                 <Playground component={Button} styling={{
                     color: 'white',
                     colorHover: '#40a9ff',

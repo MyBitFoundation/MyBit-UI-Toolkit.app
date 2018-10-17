@@ -87,6 +87,8 @@ class Playground extends Component {
         const { component: Component } = this.props
         
         return (
+            <React.Fragment>
+            <h2>Styling playground</h2>
             <StyledPlaygroundWrapper showgrid={this.state.showTransparencyGrid}>
                 <div className="playground-demo">
                     <Component {...this.state}>Sample text</Component>
@@ -123,6 +125,7 @@ class Playground extends Component {
                     
                 </div>
             </StyledPlaygroundWrapper>
+            </React.Fragment>
         )
     }
 }

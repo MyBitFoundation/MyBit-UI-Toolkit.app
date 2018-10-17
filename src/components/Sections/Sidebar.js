@@ -26,12 +26,12 @@ class LibrarySidebarNavigation extends Component {
                     <MenuItem key="/">
                         <Link to="/">
                             <Icon type="home" />
-                            <span className="nav-text">Home with icon</span>
+                            <span className="nav-text">Home</span>
                         </Link>
                     </MenuItem>
                     <MenuItem key="/contribute">
                         <Link to="/contribute">
-                            <Icon type="github" theme="outlined" />
+                            <Icon type="deployment-unit" theme="outlined" />
                             <span className="nav-text">Contribute</span>
                         </Link>
                     </MenuItem>

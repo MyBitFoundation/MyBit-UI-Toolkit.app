@@ -1,8 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'antd';
-import { PropsTable, Showcase, EditPageLink, PlainCode, Playground } from '../../Common';
+import { PropsTable, Showcase, EditPageLink, InstallationSection, Playground } from '../../Common';
 import { Spin } from '../../../showcase'
-import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
 
 const spinExample = {
     component: (
@@ -54,13 +53,7 @@ export default () => (
     <div>
         <h1>Spin <EditPageLink /></h1>
         <p></p>
-        <h2>Installation</h2>
-        <PlainCode>{
-            `$ yarn add ${MYBIT_UI_NAME}
-$ npm install ${MYBIT_UI_NAME}`
-        }</PlainCode>
-
-        <PlainCode>{`import { Spin } from '${MYBIT_UI_NAME_IMPORT}'`}</PlainCode>
+        <InstallationSection name="Spin" />>
 
         <Playground component={Spin} styling={{
             color: 'blue'

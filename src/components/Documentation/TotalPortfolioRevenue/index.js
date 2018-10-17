@@ -1,7 +1,6 @@
 import React from 'react';
-import { Showcase, EditPageLink, PlainCode, PropsTable } from '../../Common/';
+import { Showcase, EditPageLink, InstallationSection, PropsTable } from '../../Common/';
 import { TotalPortfolioRevenue } from '../../../showcase'
-import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
 import { Row, Col } from 'antd'
 import { Helmet } from "react-helmet";
 
@@ -12,14 +11,10 @@ const PortfolioValueItemPage = (props) => (
         <Helmet>
             <title>{props.pageTitle}</title>
         </Helmet>
-    <h1>TotalPortfolioValue <EditPageLink editLink={EDIT_PAGE_LINK} /></h1>
+    <h1>TotalPortfolioRevenue <EditPageLink editLink={EDIT_PAGE_LINK} /></h1>
     <p>Displays the total value of a list of assets</p>
 
-    <h1>Installation</h1>
-    <PlainCode>{`$ yarn add ${MYBIT_UI_NAME}
-$ npm install ${MYBIT_UI_NAME}`
-}</PlainCode>
-    <PlainCode>{`import { TotalPortfolioValue } from '${MYBIT_UI_NAME_IMPORT}'`}</PlainCode>
+    <InstallationSection name="TotalPortfolioRevenue" />
 
     <h1>Examples</h1>
     <Row gutter={16}>

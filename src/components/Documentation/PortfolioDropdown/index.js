@@ -1,8 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'antd';
-import { PropsTable, Showcase, EditPageLink, PlainCode } from '../../Common';
+import { PropsTable, Showcase, EditPageLink, InstallationSection } from '../../Common';
 import { PortfolioDropdown } from '../../../showcase'
-import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
 
 const portfolioDropdownExample = {
     component: (
@@ -129,12 +128,7 @@ export default () => (
     <div>
         <h1>PortfolioDropdown <EditPageLink /></h1>
         <p></p>
-        <h1>Installation</h1>
-        <PlainCode>{
-            `$ yarn add ${MYBIT_UI_NAME}
-            $ npm install ${MYBIT_UI_NAME}`
-        }</PlainCode>
-        <PlainCode>{`import { PortfolioDropdown } from '${MYBIT_UI_NAME_IMPORT}'`}</PlainCode>
+        <InstallationSection name="PortfolioDropdown" />
 
         <h1>Examples</h1>
         <Row gutter={16}>

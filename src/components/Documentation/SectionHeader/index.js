@@ -1,7 +1,6 @@
 import React from 'react';
-import { Showcase, EditPageLink, PlainCode, PropsTable } from '../../Common/';
+import { Showcase, EditPageLink, InstallationSection, PropsTable } from '../../Common/';
 import { SectionHeader } from '../../../showcase'
-import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
 import { Helmet } from "react-helmet";
 
 const EDIT_PAGE_LINK = "/"
@@ -14,11 +13,7 @@ const SectionHeaderPage = (props) => (
     <h1>SectionHeader <EditPageLink editLink={EDIT_PAGE_LINK} /></h1>
     <p>A heading tag with a custom divider</p>
 
-    <h1>Installation</h1>
-    <PlainCode>{`$ yarn add ${MYBIT_UI_NAME}
-$ npm install ${MYBIT_UI_NAME}`
-}</PlainCode>
-    <PlainCode>{`import { SectionHeader } from '${MYBIT_UI_NAME_IMPORT}'`}</PlainCode>
+    <InstallationSection name="SectionHeader" />
 
     <h1>Examples</h1>
     <Showcase data={SectionHeaderExample} />

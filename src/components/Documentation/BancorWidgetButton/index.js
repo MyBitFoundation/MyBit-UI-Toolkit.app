@@ -1,7 +1,6 @@
 import React from 'react';
-import { Showcase, EditPageLink, PlainCode, PropsTable } from '../../Common/';
+import { Showcase, EditPageLink, InstallationSection, PropsTable } from '../../Common/';
 import { BancorWidgetButton } from '../../../showcase'
-import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
 import { Helmet } from "react-helmet";
 
 const EDIT_PAGE_LINK = "/"
@@ -14,11 +13,7 @@ const BancorWidgetButtonPage = (props) => (
         <h1>Bancor Widget Button <EditPageLink editLink={EDIT_PAGE_LINK} /></h1>
         <p>Displays a modal which allows users to buy or sell MYB</p>
 
-        <h1>Installation</h1>
-        <PlainCode>{`$ yarn add ${MYBIT_UI_NAME}
-$ npm install ${MYBIT_UI_NAME}`
-        }</PlainCode>
-        <PlainCode>{`import { BancorWidgetButton } from '${MYBIT_UI_NAME_IMPORT}'`}</PlainCode>
+        <InstallationSection name="BancorWidgetButton" />
 
         <h1>Examples</h1>
         <Showcase data={logoExample} />

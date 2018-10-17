@@ -1,7 +1,6 @@
 import React from 'react';
-import { Showcase, EditPageLink, PlainCode, PropsTable } from '../../Common/';
+import { Showcase, EditPageLink, InstallationSection, PropsTable } from '../../Common/';
 import { NavigationBar } from '../../../showcase'
-import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
 import { Helmet } from "react-helmet";
 
 import exploreIcon from '../images/search.png';
@@ -54,11 +53,7 @@ const NavigationBarPage = (props) => (
     <h1>NavigationBar <EditPageLink editLink={EDIT_PAGE_LINK} /></h1>
     <p>The navigation used on MyBit Go</p>
 
-    <h1>Installation</h1>
-    <PlainCode>{`$ yarn add ${MYBIT_UI_NAME}
-$ npm install ${MYBIT_UI_NAME}`
-}</PlainCode>
-    <PlainCode>{`import { NavigationBar } from '${MYBIT_UI_NAME_IMPORT}'`}</PlainCode>
+   <InstallationSection name="NavigationOption" />
 
     <h1>Examples</h1>
     <Showcase data={navExample} />

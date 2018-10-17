@@ -1,7 +1,6 @@
 import React from 'react';
-import { Showcase, EditPageLink, PlainCode, PropsTable } from '../../Common/';
+import { Showcase, EditPageLink, InstallationSection, PropsTable } from '../../Common/';
 import { NavigationOption } from '../../../showcase'
-import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
 import { Row, Col } from 'antd'
 import { Helmet } from "react-helmet";
 
@@ -19,11 +18,7 @@ const NavigationOptionPage = (props) => (
     <h1>NavigationOption <EditPageLink editLink={EDIT_PAGE_LINK} /></h1>
     <p>A single NavigationOption part of the Navigation component for MyBitGo</p>
 
-    <h1>Installation</h1>
-    <PlainCode>{`$ yarn add ${MYBIT_UI_NAME}
-$ npm install ${MYBIT_UI_NAME}`
-}</PlainCode>
-    <PlainCode>{`import { NavigationOption } from '${MYBIT_UI_NAME_IMPORT}'`}</PlainCode>
+    <InstallationSection name="NavigationOption" />
 
     <h1>Examples</h1>
     <Row gutter={16}>
