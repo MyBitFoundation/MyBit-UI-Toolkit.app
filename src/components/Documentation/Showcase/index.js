@@ -17,7 +17,7 @@ const ShowcasePage = (props) => (
             <title>{props.pageTitle}</title>
         </Helmet>
         <Alert message="This component is NOT part of MyBitUI and is only used for building documentation!" type="warning" />
-        <h1>Example <EditPageLink editLink={EXAMPLE_PAGE_EDIT_LINK} /></h1>
+        <h1>Showcase <EditPageLink editLink={EXAMPLE_PAGE_EDIT_LINK} /></h1>
         <p>The showcase component.</p>
 
         <h1>Import</h1>

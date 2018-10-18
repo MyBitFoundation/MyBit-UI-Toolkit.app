@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import { message } from 'antd';
 
 const Wrapper = styled.div`
     margin: 3px 0;
@@ -12,7 +13,7 @@ const Wrapper = styled.div`
     position: relative;
     .text {
         background: ${props => props.textBackground};
-        padding: 3px;
+        padding: 10px;
         color: ${props => props.textColor};
     }
     .title {
@@ -37,14 +38,27 @@ const Wrapper = styled.div`
 `
 
 class ColorShowcase extends Component {
+    copyToClipboard = str => {
+        const el = document.createElement('textarea');
+        el.value = str;
+        el.setAttribute('readonly', '');
+        el.style.position = 'absolute';
+        el.style.left = '-9999px';
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+        message.info(`You copied ${str}`);
+    };
+
     render() {
         const { color, title, textBackground, textColor } = this.props
         return (
-            <Wrapper color={color} textBackground={textBackground} textColor={textColor}>
+            <Wrapper color={color} textBackground={textBackground} textColor={textColor} onClick={() => this.copyToClipboard(color)}>
                 <div className="text title">
                     {title}
                 </div>
-                <div className="text color">
+                <div className="text color" >
                     {color}
                 </div>
             </Wrapper>

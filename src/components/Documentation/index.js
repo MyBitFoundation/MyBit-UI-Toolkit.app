@@ -30,6 +30,9 @@ import PortfolioRevenueItemPage from './PortfolioRevenueItem'
 import PortfolioValueItemPage from './PortfolioValueItem'
 import ProgressBarPage from './ProgressBar'
 import SectionHeaderPage from './SectionHeader'
+import PlainCodePage from './PlainCode'
+import CodeHighlighterPage from './CodeHighlighter'
+import InstallationSectionPage from './InstallationSection'
 import ShowcasePage from './Showcase'
 import SpinPage from './Spin'
 import StatCardPage from './StatCard'
@@ -39,7 +42,7 @@ import TooltipPage from './Tooltip'
 import TotalPortfolioRevenuePage from './TotalPortfolioRevenue'
 import TotalPortfolioValuePage from './TotalPortfolioValue'
 
-import { 
+import {
     GENERAL,
     FEEDBACK,
     NAVIGATION,
@@ -62,6 +65,27 @@ const documentationRoutes = [
         component: ShowcasePage,
         category: LIBRARY_COMPONENTS,
         pageTitle: "Component: Showcase"
+    },
+    {
+        title: "InstallationSection",
+        url: "installation-section",
+        component: InstallationSectionPage,
+        category: LIBRARY_COMPONENTS,
+        pageTitle: "Component: InstallationSection"
+    },
+    {
+        title: "CodeHighlighter",
+        url: "code-highlighter",
+        component: CodeHighlighterPage,
+        category: LIBRARY_COMPONENTS,
+        pageTitle: "Component: CodeHighlighter"
+    },
+    {
+        title: "PlainCode",
+        url: "plain-code",
+        component: PlainCodePage,
+        category: LIBRARY_COMPONENTS,
+        pageTitle: "Component: PlainCode"
     },
     {
         title: "TotalPortfolioValue",

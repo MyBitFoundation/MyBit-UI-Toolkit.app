@@ -10,6 +10,7 @@ const StyleguidesPage = () => (
             <title>{STYLEGUIDE_TITLE}</title>
         </Helmet>
         <h1>Colors <EditPageLink /></h1>
+        <h4>Click on the color to copy it.</h4>
         <h3>Background</h3>
         <ColorShowcase color="linear-gradient(136deg, #001358, #125ac4)" title="Primary Blue Gradient" />
         <ColorShowcase color="#dfe3e6" title="Primary Card Background" textColor="#383838" />

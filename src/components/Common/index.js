@@ -1,4 +1,4 @@
-export { default as CodeHighlihter } from './CodeHighlighter'
+export { default as CodeHighlighter } from './CodeHighlighter'
 export { default as EditPageLink } from './EditPageLink'
 export { default as Showcase } from './Showcase'
 export { default as PlainCode } from './PlainCode'
