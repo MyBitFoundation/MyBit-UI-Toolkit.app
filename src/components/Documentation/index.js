@@ -38,8 +38,11 @@ import TotalPortfolioValuePage from './TotalPortfolioValue'
 import TotalPortfolioRevenuePage from './TotalPortfolioRevenue'
 import BancorWidgetButtonPage from './BancorWidgetButton'
 import SectionHeaderPage from './SectionHeader'
+import PlainCodePage from './PlainCode'
+import CodeHighlighterPage from './CodeHighlighter'
+import InstallationSectionPage from './InstallationSection'
 
-import { 
+import {
     GENERAL,
     FEEDBACK,
     NAVIGATION,
@@ -62,6 +65,27 @@ const documentationRoutes = [
         component: ShowcasePage,
         category: LIBRARY_COMPONENTS,
         pageTitle: "Component: Showcase"
+    },
+    {
+        title: "InstallationSection",
+        url: "installation-section",
+        component: InstallationSectionPage,
+        category: LIBRARY_COMPONENTS,
+        pageTitle: "Component: InstallationSection"
+    },
+    {
+        title: "CodeHighlighter",
+        url: "code-highlighter",
+        component: CodeHighlighterPage,
+        category: LIBRARY_COMPONENTS,
+        pageTitle: "Component: CodeHighlighter"
+    },
+    {
+        title: "PlainCode",
+        url: "plain-code",
+        component: PlainCodePage,
+        category: LIBRARY_COMPONENTS,
+        pageTitle: "Component: PlainCode"
     },
     {
         title: "TotalPortfolioValue",

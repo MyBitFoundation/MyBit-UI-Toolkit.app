@@ -136,7 +136,7 @@ export default class Page extends Component {
             <div>
                 <h1>Button <EditPageLink /></h1>
                 <p></p>
-                <InstallationSection url="Button" url="button"/>
+                <InstallationSection url="Button" />
                 <Playground component={Button} styling={{
                     color: 'white',
                     colorHover: '#40a9ff',
