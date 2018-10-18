@@ -1,5 +1,5 @@
 import React from 'react';
-import { Showcase, EditPageLink, InstallationSection, PropsTable } from '../../Common/';
+import { Showcase, EditPageLink, InstallationSection, PropsTable, Playground } from '../../Common/';
 import { ProgressBar } from '../../../showcase'
 import { Helmet } from "react-helmet";
 
@@ -14,7 +14,14 @@ const ProgressBarPage = (props) => (
     <p>MyBit Logo</p>
 
     <InstallationSection url="Alert" />
-
+    <Playground styling={styling} component={props => (
+        <div style={{width: '90%'}}>
+            <ProgressBar {...props} percent={100} status={"success"}  />
+            <ProgressBar {...props} percent={32} status={"exception"}  />
+            <ProgressBar {...props} percent={80} status={"active"}  />
+            <ProgressBar {...props} percent={100} status={"success"} showInfo={false} />
+        </div>
+    )} />
     <h1>Examples</h1>
     <Showcase data={progressExample} />
 
@@ -24,6 +31,14 @@ const ProgressBarPage = (props) => (
 )
 
 export default ProgressBarPage
+
+// styling data
+const styling = {
+    color: '#ccc',
+    exceptionColor: '#f5222d',
+    successColor: '#00F281',
+    progressColor: '#1890ff'
+}
 
 //example data
 const progressExample = {

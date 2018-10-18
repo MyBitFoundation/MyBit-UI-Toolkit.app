@@ -54,7 +54,8 @@ const Theme = {
   dropdown: {
     color: blue,
     colorHover: blueHover,
-    submenuColorHover: lightBlue,
+    submenuColorHover: blue,
+    submenuBackgroundColorHover: lightBlue,
   },
   filter: {
     checkedColor: blue,
@@ -64,6 +65,12 @@ const Theme = {
     unCheckedBorderColor: 'transparent',
     unCheckedColor: 'rgba(0, 0, 0, 0.65)',
     hoverColor: blue
+  },
+  progressbar: {
+    color: '#ccc',
+    exceptionColor: '#f5222d',
+    successColor: green,
+    progressColor: blue
   },
   statCard: {
     color: '#4a4a4a',

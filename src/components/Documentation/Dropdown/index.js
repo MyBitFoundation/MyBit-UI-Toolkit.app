@@ -6,7 +6,8 @@ import { Dropdown } from '../../../showcase'
 const styling = {
     color: '#1890ff',
     colorHover: '#40a9ff',
-    submenuColorHover: '#e6f7ff',
+    submenuColorHover: '#1890ff',
+    submenuBackgroundColorHover: '#e6f7ff',
 }
 
 const placementExample = {
