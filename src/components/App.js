@@ -34,10 +34,8 @@ class App extends Component {
   };
   
   handleScroll(event) {
-    console.log("dasdasds")
     if(window.pageYOffset > 400) {
       this.setState({ showScrollTopButton: true});
-      console.log('dasdasfasfgasvas')
     } else {
       this.setState({ showScrollTopButton: false});
     }
