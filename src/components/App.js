@@ -1,53 +1,35 @@
 import React, { Component } from 'react';
-import { Layout, Button } from 'antd';
+import { Layout, BackTop, Icon } from 'antd';
 import { LibraryFooter, LibraryHeader, LibrarySidebar, LibraryContent } from './Sections'
 import styled from 'styled-components'
 
-const StyledTopButton = styled.div`
-  position: fixed;
-  right: 50px;
-  bottom: 50px;
-  > button {
-    font-size: 32px;
-    height: 50px;
-    width: 50px;
+const StyledButton = styled.button`
+  width: 50px;
+  height: 50px;
+  border: 3px solid white;
+  background: linear-gradient(to left, #24F281, #0083FF);
+  transition: all 0.5s;
+  > i {
+    font-size: 28px;
+    color: white;
+  }
+  &:hover {
+    border: 3px solid rgb(24, 144, 255);
+    transition: all 0.5s;
   }
 `
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      theme: 'light',
-      collapsed: false,
-      showScrollTopButton: true,
-    }
-    this.handleScroll = this.handleScroll.bind(this);
+  state = {
+    theme: 'light',
+    collapsed: false,
+    showScrollTopButton: true,
   }
-  
-  componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
-  };
-  
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
-  };
-  
-  handleScroll(event) {
-    if(window.pageYOffset > 400) {
-      this.setState({ showScrollTopButton: true});
-    } else {
-      this.setState({ showScrollTopButton: false});
-    }
-  };
 
   changeTheme = (value) => {
     this.setState({theme: value});
   }
 
-  scrollTop = () => {
-    window.scrollTo(0,0);
-  }
 
   toggleCollapsed = () => {
     this.setState({
@@ -64,9 +46,9 @@ class App extends Component {
           <LibraryContent theme={this.state.theme} />
         </Layout>
         <LibraryFooter theme={this.state.theme} />
-        {this.state.showScrollTopButton && 
-          <StyledTopButton><Button type="primary" icon="up" size="large" onClick={this.scrollTop}/></StyledTopButton>
-        }
+        <BackTop>
+          <StyledButton><Icon type="up-circle" theme="outlined" /></StyledButton>
+        </BackTop>
       </Layout>
     );
   }
