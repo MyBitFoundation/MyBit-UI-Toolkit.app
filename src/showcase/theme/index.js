@@ -65,13 +65,13 @@ const Theme = {
     unCheckedColor: 'rgba(0, 0, 0, 0.65)',
     hoverColor: blue
   },
+  statCard: {
+    color: '#4a4a4a',
+    backgroundColor: '#fff'
+  },
   switch: {
-    checked: {
-      backgroundColor: blue,
-    },
-    unchecked: {
-      backgroundColor: 'rgba(0, 0, 0, 0.25)',
-    },
+    checkedBackgroundColor: blue,
+    uncheckedBackgroundColor: 'rgba(0, 0, 0, 0.25)',
   },
   heading: {
     color: 'black',

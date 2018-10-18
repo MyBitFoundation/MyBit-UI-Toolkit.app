@@ -1,43 +1,43 @@
-import ButtonsPage from './Buttons'
-import ShowcasePage from './Showcase'
-import AddressPage from './Address';
 import AccountInfoPage from './AccountInfo'
-import BountyPage from './Bounty'
+import AddressPage from './Address';
 import AlertPage from './Alert'
+import AssetCardPage from './AssetCard' 
+import AssetDeadlineStatusPage from './AssetDeadlineStatus'
+import AssetInvestmentStatusPage from './AssetInvestmentStatus' 
+import AssetTitlePage from './AssetTitle'
+import BancorWidgetButtonPage from './BancorWidgetButton'
+import BountyPage from './Bounty'
 import ButtonPage from './Button'
+import ButtonsPage from './Buttons'
+import CategoryCardPage from './CategoryCard'
 import ConnectionStatusPage from './ConnectionStatus'
 import DropdownPage from './Dropdown'
+import ExchangeRatePage from './ExchangeRate'
 import FilterPage from './Filter'
-import HeadingPage from './Heading'
 import IconPage from './Icon'
 import ImgPage from './Img'
 import InputPage from './Input'
-import ListPage from './List'
 import ListItemPage from './ListItem'
-import MenuPage from './Menu'
-import PaginationPage from './Pagination'
-import SpinPage from './Spin'
-import StatsPage from './Stats'
-import StatCardPage from './StatCard'
-import SwitchPage from './Switch'
-import PortfolioDropdownPage from './PortfolioDropdown'
-import AssetTitlePage from './AssetTitle'
-import AssetDeadlineStatusPage from './AssetDeadlineStatus'
-import AssetInvestmentStatusPage from './AssetInvestmentStatus' 
-import AssetCardPage from './AssetCard' 
-import CategoryCardPage from './CategoryCard'
-import ExchangeRatePage from './ExchangeRate'
+import ListPage from './List'
 import LogoPage from './Logo'
+import MenuPage from './Menu'
 import MyBitGoHeaderPage from './MyBitGoHeader'
-import ProgressBarPage from './ProgressBar'
-import NavigationOptionPage from './NavigationOption'
 import NavigationBarPage from './NavigationBar'
+import NavigationOptionPage from './NavigationOption'
+import PaginationPage from './Pagination'
+import PortfolioDropdownPage from './PortfolioDropdown'
 import PortfolioRevenueItemPage from './PortfolioRevenueItem'
 import PortfolioValueItemPage from './PortfolioValueItem'
-import TotalPortfolioValuePage from './TotalPortfolioValue'
-import TotalPortfolioRevenuePage from './TotalPortfolioRevenue'
-import BancorWidgetButtonPage from './BancorWidgetButton'
+import ProgressBarPage from './ProgressBar'
 import SectionHeaderPage from './SectionHeader'
+import ShowcasePage from './Showcase'
+import SpinPage from './Spin'
+import StatCardPage from './StatCard'
+import StatsPage from './Stats'
+import SwitchPage from './Switch'
+import TooltipPage from './Tooltip'
+import TotalPortfolioRevenuePage from './TotalPortfolioRevenue'
+import TotalPortfolioValuePage from './TotalPortfolioValue'
 
 import { 
     GENERAL,
@@ -232,13 +232,6 @@ const documentationRoutes = [
         pageTitle: "Component: Filter"
     },
     {
-        title: "Heading",
-        url: "heading",
-        component: HeadingPage,
-        category: GENERAL,
-        pageTitle: "Component: Heading"
-    },
-    {
         title: "Icon",
         url: "icon",
         component: IconPage,
@@ -321,6 +314,13 @@ const documentationRoutes = [
         component: SwitchPage,
         category: FORMS,
         pageTitle: "Component: Switch"
+    },
+    {
+        title: "Tooltip",
+        url: "tooltip",
+        component: TooltipPage,
+        category: FEEDBACK,
+        pageTitle: "Component: Tooltip"
     },
     {
         title: "Bancor Button",

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Row, Col } from 'antd';
-import { PropsTable, Showcase, EditPageLink, InstallationSection } from '../../Common';
+import { PropsTable, Showcase, EditPageLink, InstallationSection, Playground } from '../../Common';
 import { StatCard } from '../../../showcase'
 
 const statCardExample = {
@@ -34,12 +34,22 @@ const data = [
     }
  ];
 
+const styling = {
+    color: '#4a4a4a',
+    backgroundColor: '#fff'
+}
+
 export default (props) => (
     <div>
         <h1>StatCard <EditPageLink /></h1>
         <p></p>
         <InstallationSection url="StatCard" />
-
+        <Playground styling={styling} component={(props) => (
+            <div>
+                <StatCard {...props} key="StatCard-example-1" stat={{ name: 'Statistic...', value: '...with value' }} />
+                <StatCard {...props} key="StatCard-example-2" stat={{ name: 'Stat without value' }} />
+            </div>
+        )} />
         <h1>Examples</h1>
         <Row gutter={16}>
             <Col span={24}>
