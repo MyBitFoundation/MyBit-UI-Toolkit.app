@@ -8,7 +8,7 @@ import Icon from '../Icon';
 import StyledSwitch from './styledSwitch';
 
 const Switch = props => (
-  <StyledSwitch styling={{ ...Theme.switch, ...props.styling }}>
+  <StyledSwitch theme={{ ...Theme.switch, ...props.styling }}>
     <SwitchAnt
       checkedChildren={<Icon type="check" />}
       unCheckedChildren={<Icon type="cross" />}

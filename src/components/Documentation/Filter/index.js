@@ -8,9 +8,9 @@ const styling = {
     checkedColor: '#1890ff',
     checkedBackgroundColor: '#e6f7ff',
     checkedBorderColor: '#91d5ff',
-    unCheckedBackgroundColor: 'transparent',
-    unCheckedBorderColor: 'transparent',
-    unCheckedColor: 'rgba(0, 0, 0, 0.65)',
+    uncheckedBackgroundColor: 'transparent',
+    uncheckedBorderColor: 'transparent',
+    uncheckedColor: 'rgba(0, 0, 0, 0.65)',
     hoverColor: '#1890ff'
   }
 
@@ -61,7 +61,12 @@ export default (props) => (
         <h1>{props.title} <EditPageLink /></h1>
         <p></p>
         <InstallationSection name={props.title} url={props.url} />
-        <Playground component={Filter} styling={styling}/>
+        <Playground component={(props) => (
+            <React.Fragment>
+                <Filter {...props} checked={true}>Checked filter</Filter>
+                <Filter {...props} checked={false}>Unchecked filter</Filter>
+            </React.Fragment>
+        )} styling={styling}/>
         <h2>Examples</h2>
         <Row gutter={16}>
             <Col span={24}>

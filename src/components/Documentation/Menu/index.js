@@ -1,6 +1,6 @@
 import React from 'react';
 import { Row, Col } from 'antd';
-import { PropsTable, Showcase, EditPageLink, InstallationSection } from '../../Common';
+import { PropsTable, Showcase, EditPageLink, InstallationSection, Playground } from '../../Common';
 import { Menu } from '../../../showcase'
 
 const menuExample = {
@@ -53,6 +53,14 @@ const menuExample = {
     display: 'inline-block'
 }
 
+const styling = {
+    backgroundColor: 'transparent',
+    color: '#ffffff',
+    itemHoverColor: '#1890ff',
+    itemSelectedColor: '#1890ff',
+    borderBottom: `2px solid #1890ff`,
+    backgroundColorItem: '#e6f7ff',
+}
 
 const data = [{
     key: '1',
@@ -97,7 +105,21 @@ export default (props) => (
         <h1>{props.title} <EditPageLink /></h1>
         <p></p>
         <InstallationSection url={props.url} />
-
+        <Playground styling={styling} component={(props) => (
+            <Menu 
+                {...props}
+                onClick={(e) => {alert('you clicked ' + e.key + ' (keyPath: ' + e.keyPath + ')')}}
+                selectedKeys={[]}
+                mode="horizontal" items={[
+                    {name: 'Menu item 1', linkTo: "#", target: "_top"},
+                    {name: 'Menu item 2', linkTo: "#", target: "_top"},
+                    {name: 'Menu item 3 (with submenu)', subNavigation: [
+                        {name: 'subMenu item 1', linkTo: "#", target: "_top"},
+                        {name: 'subMenu item 2', linkTo: "#", target: "_top"},
+                    ]},
+                ]} 
+            />
+        )}/>
         <h2>Examples</h2>
         <Row gutter={16}>
             <Col span={24}>

@@ -1,49 +1,23 @@
 import React from 'react';
 import { Row, Col } from 'antd';
 import { PropsTable, Showcase, EditPageLink, InstallationSection } from '../../Common';
-import { Switch } from '../../../showcase'
+import { Tooltip } from '../../../showcase'
 
-const switchExample = {
+const tooltipExample = {
     component: (
         <div>
-            <Switch key="switch-example-1" styling={{
-                checked: {
-                    backgroundColor: 'blue',
-                },
-                unchecked: {
-                    backgroundColor: 'rgba(0, 0, 0, 0.25)',
-                },
-            }} checked onChange={() => {}} />
-             <Switch key="switch-example-2" styling={{
-                checked: {
-                    backgroundColor: 'blue',
-                },
-                unchecked: {
-                    backgroundColor: 'rgba(0, 0, 0, 0.25)',
-                },
-            }} onChange={() => {}} />
+            <Tooltip title="prompt text">
+              <span>Tooltip will show when mouse enter.</span>
+            </Tooltip>
         </div>
     ),
     description: (
-        <p>Switch example</p>
+        <p>Tooltip example</p>
     ),
     code: `
-    <Switch key="switch-example-1" styling={{
-        checked: {
-            backgroundColor: 'blue',
-        },
-        unchecked: {
-            backgroundColor: 'rgba(0, 0, 0, 0.25)',
-        },
-    }} checked onChange={() => {}} />
-     <Switch key="switch-example-2" styling={{
-        checked: {
-            backgroundColor: 'blue',
-        },
-        unchecked: {
-            backgroundColor: 'rgba(0, 0, 0, 0.25)',
-        },
-    }} onChange={() => {}} />
+    <Tooltip title="prompt text">
+      <span>Tooltip will show when mouse enter.</span>
+    </Tooltip>
     `,
     display: 'inline-block'
 }
@@ -52,51 +26,44 @@ const switchExample = {
 const data = [
     {
        "key": 1,
-       "property": "styling",
-       "description": "Styling of the switch",
-       "type": "object",
-       "required": "True",
+       "property": "title",
+       "description": "Tooltip text",
+       "type": "string",
+       "required": "False",
        "default": "-"
     }, {
         "key": 2,
-        "property": "checked",
-        "description": "determine whether the Switch is checked",
+        "property": "arrowPointAtCenter",
+        "description": "Whether the arrow is pointed at the center of target",
         "type": "boolean",
         "required": "False",
         "default": "false"
     }, {
         "key": 3,
-        "property": "onChange",
-        "description": "a callback function, can be executed when the checked state is changing",
-        "type": "Function(checked:Boolean)",
-        "required": "True",
-        "default": ""
-    }, {
-        "key": 4,
-        "property": "size",
-        "description": "the size of the Switch",
+        "property": "placement",
+        "description": "The position of the tooltip relative to the target, which can be one of top left right bottom topLeft topRight bottomLeft bottomRight leftTop leftBottom rightTop rightBottom",
         "type": "string",
         "required": "False",
-        "default": "small"
+        "default": "top"
     }
  ];
 
+
 export default (props) => (
     <div>
-        <h1>Switch <EditPageLink /></h1>
+        <h1>Tooltip <EditPageLink /></h1>
         <p></p>
-        <InstallationSection url="Switch" />
-
-        <h1>Examples</h1>
+        <InstallationSection url="Tooltip" />
+        <h2>Examples</h2>
         <Row gutter={16}>
             <Col span={24}>
-                <h3>Switch example</h3>
-                <Showcase data={switchExample} />
+                <h3>Tooltip example</h3>
+                <Showcase data={tooltipExample} />
             </Col>
         </Row>
 
 
-        <h1>Props</h1>
+        <h2>Props</h2>
         <PropsTable data={data} />
 
     </div>
