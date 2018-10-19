@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Layout } from 'antd';
 import { Route, Switch } from 'react-router-dom'
 import { HomePage, ContributePage, StyleguidesPage, AppsPage } from '../Pages'
 import documentationRoutes from '../Documentation'
 
-const LibraryContent = () => (
-    <Layout style={{ background: '#fff' }}>
+class PageComponent extends Component {
+    componentDidMount() {
+        document.title = this.props.pageTitle + ' | MyBit UI kit'
+    }
+    render() {
+        return this.props.children
+    }
+}
+
+const LibraryContent = ({ theme }) => (
+    <Layout style={theme === 'dark' ? {background: "#000c17"} : {background: '#fff'}}>
         <Layout.Content style={{ margin: '24px 16px 0', background: '#fff' }}>
             <div style={{ padding: "15px 30px 50px 30px", background: '#fff', minHeight: 360 }}>
                 <Switch>
@@ -18,7 +27,11 @@ const LibraryContent = () => (
                             key={route.url}
                             exact
                             path={`/${route.url}`}
-                            render={(props) => <route.component {...props} pageTitle={route.pageTitle} />}
+                            render={(props) => (
+                                <PageComponent {...route}>
+                                    <route.component {...{...props, ...route }} pageTitle={route.pageTitle} />
+                                </PageComponent>
+                            )}
                         />
                     ))
                     }

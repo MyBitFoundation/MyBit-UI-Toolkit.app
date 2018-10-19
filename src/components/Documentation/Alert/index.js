@@ -1,7 +1,6 @@
 import React from 'react';
-import { PropsTable, Showcase, EditPageLink, PlainCode } from '../../Common/';
+import { PropsTable, Showcase, EditPageLink, InstallationSection } from '../../Common/';
 import { Alert } from '../../../showcase'
-import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
 import { Helmet } from "react-helmet";
 
 const typesExample = {
@@ -77,13 +76,8 @@ export default (props) => (
             <title>{props.pageTitle}</title>
         </Helmet>
         <h1>Alert <EditPageLink /></h1>
-        <p></p>
-        <h1>Installation</h1>
-        <PlainCode>{
-`$ yarn add ${MYBIT_UI_NAME}/alert
-$ npm install ${MYBIT_UI_NAME}/alert`
-        }</PlainCode>
-        <PlainCode>{`import { Alert } from '${MYBIT_UI_NAME_IMPORT}'`}</PlainCode>
+        <p>--description--</p>
+        <InstallationSection url="Alert" />
 
         <h1>Examples</h1>
         <h3>Types</h3>

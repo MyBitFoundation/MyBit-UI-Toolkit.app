@@ -1,7 +1,6 @@
 import React from 'react';
-import { Showcase, EditPageLink, PlainCode, PropsTable } from '../../Common/';
+import { Showcase, EditPageLink, InstallationSection, PropsTable, Playground } from '../../Common/';
 import { ProgressBar } from '../../../showcase'
-import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
 import { Helmet } from "react-helmet";
 
 const EDIT_PAGE_LINK = "/"
@@ -14,12 +13,15 @@ const ProgressBarPage = (props) => (
     <h1>ProgressBar <EditPageLink editLink={EDIT_PAGE_LINK} /></h1>
     <p>MyBit Logo</p>
 
-    <h1>Installation</h1>
-    <PlainCode>{`$ yarn add ${MYBIT_UI_NAME}
-$ npm install ${MYBIT_UI_NAME}`
-}</PlainCode>
-    <PlainCode>{`import { ProgressBar } from '${MYBIT_UI_NAME_IMPORT}'`}</PlainCode>
-
+    <InstallationSection url="Alert" />
+    <Playground styling={styling} component={props => (
+        <div style={{width: '90%'}}>
+            <ProgressBar {...props} percent={100} status={"success"}  />
+            <ProgressBar {...props} percent={32} status={"exception"}  />
+            <ProgressBar {...props} percent={80} status={"active"}  />
+            <ProgressBar {...props} percent={100} status={"success"} showInfo={false} />
+        </div>
+    )} />
     <h1>Examples</h1>
     <Showcase data={progressExample} />
 
@@ -29,6 +31,14 @@ $ npm install ${MYBIT_UI_NAME}`
 )
 
 export default ProgressBarPage
+
+// styling data
+const styling = {
+    color: '#ccc',
+    exceptionColor: '#f5222d',
+    successColor: '#00F281',
+    progressColor: '#1890ff'
+}
 
 //example data
 const progressExample = {

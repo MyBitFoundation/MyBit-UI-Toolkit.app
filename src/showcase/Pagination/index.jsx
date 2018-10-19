@@ -1,17 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { withTheme } from 'styled-components';
 import PaginationAnt from 'antd/lib/pagination';
-import 'antd/lib/pagination/style/css';
+import 'antd/lib/style/css';
 import StyledPagination from './styledPagination';
+import Theme from '../theme';
 
 const Pagination = props => (
-  <StyledPagination styling={props.styling}>
+  <StyledPagination theme={{ ...props.theme.pagination, ...props.styling }}>
     <PaginationAnt {...props} />
   </StyledPagination>
 );
 
 Pagination.propTypes = {
-  styling: PropTypes.object.isRequired, // eslint-disable-line
+  theme: PropTypes.object, // eslint-disable-line
+  styling: PropTypes.object, // eslint-disable-line
 };
 
-export default Pagination;
+Pagination.defaultProps = {
+  theme: Theme,
+  styling: {}
+}
+
+export default withTheme(Pagination);

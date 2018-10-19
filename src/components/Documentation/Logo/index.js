@@ -1,7 +1,6 @@
 import React from 'react';
-import { Showcase, EditPageLink, PlainCode, PropsTable } from '../../Common/';
+import { Showcase, EditPageLink, InstallationSection, PropsTable } from '../../Common/';
 import { Logo } from '../../../showcase'
-import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
 import { Helmet } from "react-helmet";
 
 const EDIT_PAGE_LINK = "/"
@@ -11,19 +10,15 @@ const LogoPage = (props) => (
         <Helmet>
             <title>{props.pageTitle}</title>
         </Helmet>
-    <h1>Logo <EditPageLink editLink={EDIT_PAGE_LINK} /></h1>
+    <h1>{props.title} <EditPageLink editLink={EDIT_PAGE_LINK} /></h1>
     <p>MyBit Logo</p>
 
-    <h1>Installation</h1>
-    <PlainCode>{`$ yarn add ${MYBIT_UI_NAME}
-$ npm install ${MYBIT_UI_NAME}`
-}</PlainCode>
-    <PlainCode>{`import { Logo } from '${MYBIT_UI_NAME_IMPORT}'`}</PlainCode>
+    <InstallationSection url={props.url} />
 
-    <h1>Examples</h1>
+    <h2>Examples</h2>
     <Showcase data={logoExample} />
 
-    <h1>Props</h1>
+    <h2>Props</h2>
     <PropsTable data={logoProps} />
 </div>
 )

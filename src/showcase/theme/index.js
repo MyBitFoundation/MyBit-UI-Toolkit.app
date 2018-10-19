@@ -10,6 +10,13 @@ const Theme = {
   colors: {
     backgroundGradientHorizontal: 'linear-gradient(62deg, #001358, #125ac4);',
     backgroundGradientVertical: 'linear-gradient(to top, #001358, #125ac4);',
+    blue: '#1890ff',
+    lightBlue: '#e6f7ff',
+    blueHover: '#40a9ff',
+    blueActive: '#096dd9',
+    green: '#00F281',
+    greenHover: '#55EAA5',
+    greenActive: '#00C368',
   },
   spin: {
     color: blue,
@@ -45,36 +52,33 @@ const Theme = {
     backgroundColorItem: lightBlue,
   },
   dropdown: {
-    submenu: {
-      colorHover: lightBlue,
-    },
-    trigger: {
-      color: blue,
-      colorHover: blueHover,
-    },
+    color: blue,
+    colorHover: blueHover,
+    submenuColorHover: blue,
+    submenuBackgroundColorHover: lightBlue,
   },
-  filters: {
-    checkedState: {
-      color: blue,
-      backgroundColor: lightBlue,
-      borderColor: '#91d5ff',
-    },
-    uncheckedState: {
-      backgroundColor: 'transparent',
-      borderColor: 'transparent',
-      color: 'rgba(0, 0, 0, 0.65)',
-    },
-    hoverState: {
-      color: blue,
-    },
+  filter: {
+    checkedColor: blue,
+    checkedBackgroundColor: lightBlue,
+    checkedBorderColor: '#91d5ff',
+    unCheckedBackgroundColor: 'transparent',
+    unCheckedBorderColor: 'transparent',
+    unCheckedColor: 'rgba(0, 0, 0, 0.65)',
+    hoverColor: blue
+  },
+  progressbar: {
+    color: '#ccc',
+    exceptionColor: '#f5222d',
+    successColor: green,
+    progressColor: blue
+  },
+  statCard: {
+    color: '#4a4a4a',
+    backgroundColor: '#fff'
   },
   switch: {
-    checked: {
-      backgroundColor: blue,
-    },
-    unchecked: {
-      backgroundColor: 'rgba(0, 0, 0, 0.25)',
-    },
+    checkedBackgroundColor: blue,
+    uncheckedBackgroundColor: 'rgba(0, 0, 0, 0.25)',
   },
   heading: {
     color: 'black',

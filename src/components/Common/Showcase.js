@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Divider } from 'antd';
+import { Button, Divider, message  } from 'antd';
 import CodeHighlighter from './CodeHighlighter';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -38,6 +38,19 @@ class Showcase extends Component {
         });
     }
 
+    copyToClipboard = str => {
+        const el = document.createElement('textarea');
+        el.value = str;
+        el.setAttribute('readonly', '');
+        el.style.position = 'absolute';
+        el.style.left = '-9999px';
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+        message.info(`You have successfully copied a code snippet!`);
+    };
+
     render() {
         const { data } = this.props
         return (
@@ -54,7 +67,7 @@ class Showcase extends Component {
                     {data.description}
                 </div>
                 {this.state.showCode &&
-                    <div className="showcase-code-container">
+                    <div className="showcase-code-container" onClick={() => this.copyToClipboard(data.code)}>
                         <Divider dashed={true} />
                         <CodeHighlighter code={data.code} />
                     </div>

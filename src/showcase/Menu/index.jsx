@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Menu as MenuAnt } from 'antd';
-import 'antd/lib/menu/style/css';
+import 'antd/lib/style/css';
 import MenuItem from '../MenuItem';
 import Icon from '../Icon';
 import SubMenu from '../SubMenu';

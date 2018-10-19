@@ -1,8 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'antd';
-import { PropsTable, Showcase, EditPageLink, PlainCode } from '../../Common';
+import { PropsTable, Showcase, EditPageLink, InstallationSection } from '../../Common';
 import { Img } from '../../../showcase'
-import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
 import { Helmet } from "react-helmet";
 
 const imgExample = {
@@ -52,12 +51,7 @@ export default (props) => (
         </Helmet>
         <h1>Img <EditPageLink /></h1>
         <p></p>
-        <h1>Installation</h1>
-        <PlainCode>{
-            `$ yarn add ${MYBIT_UI_NAME}/img
-$ npm install ${MYBIT_UI_NAME}/img`
-        }</PlainCode>
-        <PlainCode>{`import { Img } from '${MYBIT_UI_NAME_IMPORT}'`}</PlainCode>
+        <InstallationSection url="Img" />
 
         <h1>Examples</h1>
         <Row gutter={16}>

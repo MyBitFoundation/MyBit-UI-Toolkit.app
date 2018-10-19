@@ -1,8 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'antd';
-import { PropsTable, Showcase, EditPageLink, PlainCode } from '../../Common';
+import { PropsTable, Showcase, EditPageLink, InstallationSection } from '../../Common';
 import { Input } from '../../../showcase'
-import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
 
 const typesExample = {
     component: (
@@ -90,18 +89,13 @@ const data = [{
 }
 ];
 
-export default () => (
+export default (props) => (
     <div>
-        <h1>Input <EditPageLink /></h1>
+        <h1>{props.title} <EditPageLink /></h1>
         <p></p>
-        <h1>Installation</h1>
-        <PlainCode>{
-            `$ yarn add ${MYBIT_UI_NAME}/input
-$ npm install ${MYBIT_UI_NAME}/input`
-        }</PlainCode>
-        <PlainCode>{`import { Input } from '${MYBIT_UI_NAME_IMPORT}'`}</PlainCode>
+        <InstallationSection url={props.url} />
 
-        <h1>Examples</h1>
+        <h2>Examples</h2>
         <Row gutter={16}>
             <Col span={24}>
                 <h3>Input types</h3>
@@ -110,7 +104,7 @@ $ npm install ${MYBIT_UI_NAME}/input`
         </Row>
 
 
-        <h1>Props</h1>
+        <h2>Props</h2>
         <PropsTable data={data} />
 
     </div>

@@ -3,13 +3,13 @@ import styled from 'styled-components';
 const StyledSwitch = styled.div`
   display: inline-block;
   .ant-switch{
-    background-color: ${props => props.styling.unchecked.backgroundColor};
+    background-color: ${props => props.theme.uncheckedBackgroundColor};
   }
   .ant-switch-checked{
-    background-color: ${props => props.styling.checked.backgroundColor};
+    background-color: ${props => props.theme.checkedBackgroundColor};
   }
   .ant-btn-clicked:after{
-    border: 0 solid ${props => props.styling.checked.backgroundColor};
+    border: 0 solid ${props => props.theme.checkedBackgroundColor};
   }
 `;
 

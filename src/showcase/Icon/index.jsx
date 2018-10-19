@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Icon as IconAnt } from 'antd';
+import 'antd/lib/style/css';
 import styled from 'styled-components';
 
 const StyledIconRight = styled(IconAnt)`

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const StyledStatCard = styled.div`
   border-radius: 4px;
-  background-color: #ffffff;
+  background-color: ${props => props.theme.backgroundColor};
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.1);
   padding: 10px;
   margin: 5px;

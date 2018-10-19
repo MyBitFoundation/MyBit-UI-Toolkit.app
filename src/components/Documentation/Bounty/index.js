@@ -1,7 +1,6 @@
 import React from 'react';
-import { PropsTable, Showcase, EditPageLink, PlainCode } from '../../Common/';
+import { PropsTable, Showcase, EditPageLink, InstallationSection } from '../../Common/';
 import { Bounty } from '../../../showcase'
-import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
 import { Helmet } from "react-helmet";
 
 const firstExample = {
@@ -119,12 +118,7 @@ const ButtonsPage = (props) => (
         </Helmet>
         <h1>Bounty <EditPageLink /></h1>
         <p></p>
-        <h1>Installation</h1>
-        <PlainCode>{
-`$ yarn add ${MYBIT_UI_NAME}/bounty
-$ npm install ${MYBIT_UI_NAME}/bounty`
-        }</PlainCode>
-        <PlainCode>{`import { Bounty } from '${MYBIT_UI_NAME_IMPORT}'`}</PlainCode>
+        <InstallationSection url="Bounty" />
 
         <h1>Examples</h1>
 

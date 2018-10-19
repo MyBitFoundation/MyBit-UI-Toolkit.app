@@ -1,8 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'antd';
-import { PropsTable, Showcase, EditPageLink, PlainCode } from '../../Common';
+import { PropsTable, Showcase, EditPageLink, InstallationSection } from '../../Common';
 import { ConnectionStatus } from '../../../showcase'
-import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
 
 const networkExample = {
     component: (
@@ -38,16 +37,11 @@ const data = [{
 }
 ];
 
-export default () => (
+export default (props) => (
     <div>
         <h1>ConnectionStatus <EditPageLink /></h1>
         <p></p>
-        <h1>Installation</h1>
-        <PlainCode>{
-            `$ yarn add ${MYBIT_UI_NAME}/connection-status
-$ npm install ${MYBIT_UI_NAME}/connection-status`
-        }</PlainCode>
-        <PlainCode>{`import { ConnectionStatus } from '${MYBIT_UI_NAME_IMPORT}'`}</PlainCode>
+        <InstallationSection url="ConnectionStatus" />
 
         <h1>Examples</h1>
         <Row gutter={16}>

@@ -1,8 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'antd';
-import { PropsTable, Showcase, EditPageLink, PlainCode } from '../../Common';
+import { PropsTable, Showcase, EditPageLink, InstallationSection } from '../../Common';
 import { List, ListItem } from '../../../showcase'
-import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
 
 const listExample = {
     component: (
@@ -30,18 +29,13 @@ const data = [{
 }
 ];
 
-export default () => (
+export default (props) => (
     <div>
-        <h1>List <EditPageLink /></h1>
+        <h1>{props.title} <EditPageLink /></h1>
         <p></p>
-        <h1>Installation</h1>
-        <PlainCode>{
-            `$ yarn add ${MYBIT_UI_NAME}/list
-$ npm install ${MYBIT_UI_NAME}/list`
-        }</PlainCode>
-        <PlainCode>{`import { List } from '${MYBIT_UI_NAME_IMPORT}'`}</PlainCode>
+        <InstallationSection url={props.url} />
 
-        <h1>Examples</h1>
+        <h2>Examples</h2>
         <Row gutter={16}>
             <Col span={24}>
                 <h3>List example</h3>
@@ -50,7 +44,7 @@ $ npm install ${MYBIT_UI_NAME}/list`
         </Row>
 
 
-        <h1>Props</h1>
+        <h2>Props</h2>
         <PropsTable data={data} />
 
     </div>

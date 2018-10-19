@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const StyledValue = styled.p`
   font-size: 24px;
   font-weight: 500;
-  color: #4a4a4a;
+  color: ${props => props.theme.color};
   margin: 0px;
 `;
 

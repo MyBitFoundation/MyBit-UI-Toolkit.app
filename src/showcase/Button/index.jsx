@@ -18,13 +18,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import AntButton from 'antd/lib/button';
+import { withTheme } from 'styled-components';
+import 'antd/lib/style/css';
 import ButtonStyle from './styledButton';
 import Theme from '../theme';
 
 const Button = props => (
   <div>
     <ButtonStyle
-      styling={
+      theme={
         props.type === 'solid' ?
           { ...Theme.buttons.primary[props.color], ...props.styling } :
           { ...Theme.buttons.secondary.back, ...props.styling }
@@ -59,4 +61,4 @@ Button.defaultProps = {
   children: '',
 };
 
-export default Button;
+export default withTheme(Button);

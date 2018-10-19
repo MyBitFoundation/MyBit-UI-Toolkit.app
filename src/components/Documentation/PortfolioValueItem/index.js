@@ -1,7 +1,6 @@
 import React from 'react';
-import { Showcase, EditPageLink, PlainCode, PropsTable } from '../../Common/';
+import { Showcase, EditPageLink, InstallationSection, PropsTable } from '../../Common/';
 import { PortfolioValueItem } from '../../../showcase'
-import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
 import { Helmet } from "react-helmet";
 
 const EDIT_PAGE_LINK = "/"
@@ -14,11 +13,7 @@ const PortfolioValueItemPage = (props) => (
     <h1>PortfolioValueItem <EditPageLink editLink={EDIT_PAGE_LINK} /></h1>
     <p>A building block for TotalPortfolioRevenue on MyBit Go</p>
 
-    <h1>Installation</h1>
-    <PlainCode>{`$ yarn add ${MYBIT_UI_NAME}
-$ npm install ${MYBIT_UI_NAME}`
-}</PlainCode>
-    <PlainCode>{`import { PortfolioValueItem } from '${MYBIT_UI_NAME_IMPORT}'`}</PlainCode>
+    <InstallationSection url="PortfolioValueItem" />
 
     <h1>Examples</h1>
     <Showcase data={revenueExample} />
