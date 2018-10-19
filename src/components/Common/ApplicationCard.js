@@ -99,7 +99,7 @@ const ApplicationCard = ({ data }) => (
             {data.description}
         </div>
         <a href={data.url} target="_blank" className="mybutton" rel="noopener noreferrer">
-            <button disabled={data.active}>{data.active ? 'Visit' : 'Coming soon'}</button>
+            <button disabled={!data.active}>{data.active ? 'Visit' : 'Coming soon'}</button>
         </a>
     </StyledWrapper>
 )

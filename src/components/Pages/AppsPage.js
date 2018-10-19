@@ -36,21 +36,21 @@ export default AppsPage
 const MyBitFoundation = [
 {
     logo: applogos.MyBitGo,
-    url: "/",
+    url: "https://go.mybit.io/",
     active: true,
     title: "MyBit Go",
     description: `IoT Investment Platform`
 },
 {
     logo: applogos.MyBitMobile,
-    url: "/",
+    url: "https://play.google.com/store/apps/details?id=io.mybit.app",
     active: true,
     title: "MyBit Mobile",
     description: `Android Mobile Wallet`
 },
 {
     logo: applogos.MyBitTrust,
-    url: "/",
+    url: "https://trust.mybit.io/",
     active: true,
     title: "MyBit Trust",
     description: `Trust fund for distributing Blockchain assets`
