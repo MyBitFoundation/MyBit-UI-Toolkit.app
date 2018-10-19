@@ -5,22 +5,22 @@ const StyledFilter = styled.div`
     margin-top: 10px;
 
     .ant-tag-checkable{
-      background-color: ${props => props.styling.uncheckedState.backgroundColor};
-      border-color: ${props => props.styling.uncheckedState.borderColor};
-      color: ${props => props.styling.uncheckedState.color};
+      background-color: ${props => props.theme.uncheckedBackgroundColor};
+      border-color: ${props => props.theme.uncheckedBorderColor};
+      color: ${props => props.theme.uncheckedColor};
 
       &:hover{
-        color: ${props => props.styling.hoverState.color};
+        color: ${props => props.theme.hoverColor};
       }
     }
 
     .ant-tag-checkable-checked{
-      background-color: ${props => props.styling.checkedState.backgroundColor};
-      color: ${props => props.styling.checkedState.color};
-      border-color: ${props => props.styling.checkedState.borderColor};
+      background-color: ${props => props.theme.checkedBackgroundColor};
+      color: ${props => props.theme.checkedColor};
+      border-color: ${props => props.theme.checkedBorderColor};
 
       &:hover{
-        color: ${props => props.styling.checkedState.color};
+        color: ${props => props.theme.checkedColor};
       }
     }
 `;

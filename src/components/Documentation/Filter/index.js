@@ -1,8 +1,19 @@
 import React from 'react';
 import { Row, Col } from 'antd';
-import { PropsTable, Showcase, EditPageLink, PlainCode } from '../../Common';
+import { PropsTable, Showcase, EditPageLink, InstallationSection, Playground } from '../../Common';
 import { Filter } from '../../../showcase'
-import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
+
+const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/Filter/index.js"
+
+const styling = {
+    checkedColor: '#1890ff',
+    checkedBackgroundColor: '#e6f7ff',
+    checkedBorderColor: '#91d5ff',
+    uncheckedBackgroundColor: 'transparent',
+    uncheckedBorderColor: 'transparent',
+    uncheckedColor: 'rgba(0, 0, 0, 0.65)',
+    hoverColor: '#1890ff'
+  }
 
 const filterExample = {
     component: (
@@ -15,9 +26,7 @@ const filterExample = {
     description: (
         <p>Sample filters</p>
     ),
-    code: `
-    <Filter>Filter one</Filter>
-    `,
+    code: `<Filter>Filter one</Filter>`,
     display: 'inline-block'
 }
 
@@ -46,18 +55,18 @@ const data = [{
 }
 ];
 
-export default () => (
+export default (props) => (
     <div>
-        <h1>Filter <EditPageLink /></h1>
+        <h1>{props.title} <EditPageLink editLink={EDIT_PAGE} /></h1>
         <p></p>
-        <h1>Installation</h1>
-        <PlainCode>
-        {`$ yarn add ${MYBIT_UI_NAME}/filter
-$ npm install ${MYBIT_UI_NAME}/filter`}
-        </PlainCode>
-        <PlainCode>{`import { Filter } from '${MYBIT_UI_NAME_IMPORT}'`}</PlainCode>
-
-        <h1>Examples</h1>
+        <InstallationSection name={props.title} url={props.url} />
+        <Playground component={(props) => (
+            <React.Fragment>
+                <Filter {...props} checked={true}>Checked filter</Filter>
+                <Filter {...props} checked={false}>Unchecked filter</Filter>
+            </React.Fragment>
+        )} styling={styling}/>
+        <h2>Examples</h2>
         <Row gutter={16}>
             <Col span={24}>
                 <h3>Sample filters</h3>
@@ -66,7 +75,7 @@ $ npm install ${MYBIT_UI_NAME}/filter`}
         </Row>
 
 
-        <h1>Props</h1>
+        <h2>Props</h2>
         <PropsTable data={data} />
 
     </div>

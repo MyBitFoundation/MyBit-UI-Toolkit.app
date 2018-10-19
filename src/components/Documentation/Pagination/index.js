@@ -1,37 +1,29 @@
 import React from 'react';
 import { Row, Col } from 'antd';
-import { PropsTable, Showcase, EditPageLink, PlainCode } from '../../Common';
+import { PropsTable, Showcase, EditPageLink, InstallationSection, Playground } from '../../Common';
 import { Pagination } from '../../../showcase'
-import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
 import { Helmet } from "react-helmet";
+
+const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/Pagination/index.js"
 
 const paginationExample = {
     component: (
         <div>
-            <Pagination styling={{
-                color: 'rgba(0, 0, 0, 0.65)',
-                borderColor: '#d9d9d9',
-                backgroundColor: '#ffffff',
-                itemActiveBorderColor: 'blue',
-                itemHoverBorderColor: 'blue',
-                disabledItemBorderColor: '#d9d9d9',
-                disabledItemColor: 'rgba(0, 0, 0, 0.25)',
-            }} defaultCurrent={6} total={500} />
+            <Pagination defaultCurrent={6} total={500} />
         </div>
     ),
     description: (
         <p>Pagination example</p>
     ),
-    code: `
-    <Pagination styling={{
-        color: 'rgba(0, 0, 0, 0.65)',
-        borderColor: '#d9d9d9',
-        backgroundColor: '#ffffff',
-        itemActiveBorderColor: 'blue',
-        itemHoverBorderColor: 'blue',
-        disabledItemBorderColor: '#d9d9d9',
-        disabledItemColor: 'rgba(0, 0, 0, 0.25)',
-    }} defaultCurrent={6} total={500} />
+    code: `<Pagination styling={{
+    color: 'rgba(0, 0, 0, 0.65)',
+    borderColor: '#d9d9d9',
+    backgroundColor: '#ffffff',
+    itemActiveBorderColor: 'blue',
+    itemHoverBorderColor: 'blue',
+    disabledItemBorderColor: '#d9d9d9',
+    disabledItemColor: 'rgba(0, 0, 0, 0.25)',
+}} defaultCurrent={6} total={500} />
     `,
     display: 'block'
 }
@@ -160,21 +152,28 @@ const data = [
     }
  ];
 
+const styling = {
+    color: 'rgba(0, 0, 0, 0.65)',
+    borderColor: '#d9d9d9',
+    backgroundColor: '#ffffff',
+    itemActiveBorderColor: '#1890ff',
+    itemHoverBorderColor: '#1890ff',
+    disabledItemBorderColor: '#d9d9d9',
+    disabledItemColor: 'rgba(0, 0, 0, 0.25)',
+}
+
 export default (props) => (
     <div>
         <Helmet>
             <title>{props.pageTitle}</title>
         </Helmet>
-        <h1>Pagination <EditPageLink /></h1>
+        <h1>{props.title} <EditPageLink editLink={EDIT_PAGE} /></h1>
         <p></p>
-        <h1>Installation</h1>
-        <PlainCode>{
-            `$ yarn add ${MYBIT_UI_NAME}/pagination
-$ npm install ${MYBIT_UI_NAME}/pagination`
-        }</PlainCode>
-        <PlainCode>{`import { Pagination } from '${MYBIT_UI_NAME_IMPORT}'`}</PlainCode>
-
-        <h1>Examples</h1>
+        <InstallationSection url={props.url} />
+        <Playground component={(props) => (
+            <Pagination {...props} defaultCurrent={6} total={500} /> 
+        )} styling={styling} />
+        <h2>Examples</h2>
         <Row gutter={16}>
             <Col span={24}>
                 <h3>Pagination example</h3>
@@ -183,7 +182,7 @@ $ npm install ${MYBIT_UI_NAME}/pagination`
         </Row>
 
 
-        <h1>Props</h1>
+        <h2>Props</h2>
         <PropsTable data={data} />
 
     </div>

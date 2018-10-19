@@ -1,23 +1,20 @@
 import React from 'react'
 import { Address } from '../../../showcase'
-import { Showcase, EditPageLink, CustomTag, PlainCode, PropsTable } from '../../Common/';
+import { Showcase, EditPageLink, CustomTag, PropsTable, InstallationSection } from '../../Common/';
 import { Row, Col } from 'antd'
-import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
 import { Helmet } from "react-helmet";
+
+const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/Address/index.js"
 
 const AddressPage = (props) => (
     <div>
         <Helmet>
             <title>{props.pageTitle}</title>
         </Helmet>
-        <h1>Address <EditPageLink editLink="/" /></h1>
+        <h1>Address <EditPageLink editLink={EDIT_PAGE} /></h1>
         <p>Used to display user's MetaMask address</p>
 
-        <h1>Installation</h1>
-        <PlainCode>{`$ yarn add ${MYBIT_UI_NAME}
-    $ npm install ${MYBIT_UI_NAME}`
-    }</PlainCode>
-        <PlainCode>{`import { Address } from '${MYBIT_UI_NAME_IMPORT}'`}</PlainCode>
+        <InstallationSection url="Address" />
 
         <h1>Examples</h1>
         <Row gutter={16}>

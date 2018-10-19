@@ -1,8 +1,16 @@
 import React from 'react';
 import { Row, Col } from 'antd';
-import { PropsTable, Showcase, EditPageLink, PlainCode } from '../../Common';
+import { PropsTable, Showcase, EditPageLink, InstallationSection, Playground } from '../../Common';
 import { Dropdown } from '../../../showcase'
-import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
+
+const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/Dropdown/index.js"
+
+const styling = {
+    color: '#1890ff',
+    colorHover: '#40a9ff',
+    submenuColorHover: '#1890ff',
+    submenuBackgroundColorHover: '#e6f7ff',
+}
 
 const placementExample = {
     component: (
@@ -15,9 +23,7 @@ const placementExample = {
     description: (
         <p>Position of the dropdown</p>
     ),
-    code: `
-    <Dropdown menu={['Option 1', 'Option 2', 'Option 3']} selected="Option 1" placement="bottomRight" trigger="hover" handleClick={() => {}} />
-    `,
+    code: `<Dropdown menu={['Option 1', 'Option 2', 'Option 3']} selected="Option 1" placement="bottomRight" trigger="hover" handleClick={() => {}} />`,
     display: 'inline-block'
 }
 
@@ -32,9 +38,7 @@ const triggerExample = {
     description: (
         <p>Show dropdown on hover or click</p>
     ),
-    code: `
-    <Dropdown menu={['Option 1', 'Option 2', 'Option 3']} selected="Option 1" placement="bottomRight" trigger="hover" handleClick={() => {}} />
-    `,
+    code: `<Dropdown menu={['Option 1', 'Option 2', 'Option 3']} selected="Option 1" placement="bottomRight" trigger="hover" handleClick={() => {}} />`,
     display: 'inline-block'
 }
 
@@ -83,18 +87,15 @@ const data = [{
 }
 ];
 
-export default () => (
+export default (props) => (
     <div>
-        <h1>Dropdown <EditPageLink /></h1>
+        <h1>Dropdown <EditPageLink editLink={EDIT_PAGE} /></h1>
         <p></p>
-        <h1>Installation</h1>
-        <PlainCode>{
-            `$ yarn add ${MYBIT_UI_NAME}/dropdown
-$ npm install ${MYBIT_UI_NAME}/dropdown`
-        }</PlainCode>
-        <PlainCode>{`import { Dropdown } from '${MYBIT_UI_NAME_IMPORT}'`}</PlainCode>
-
-        <h1>Examples</h1>
+        <InstallationSection url="Alert" />
+        <Playground component={(props) => (
+            <Dropdown styling={props.styling} menu={['bottomLeft', 'bottomCenter', 'bottomRight', 'topLeft', 'topCenter', 'topRight']} selected="bottomLeft" placement="bottomLeft" trigger="hover" handleClick={() => {}} />
+        )} styling={styling}/>
+        <h2>Examples</h2>
         <Row gutter={16}>
             <Col span={12}>
                 <h3>Placement</h3>
@@ -107,7 +108,7 @@ $ npm install ${MYBIT_UI_NAME}/dropdown`
         </Row>
 
 
-        <h1>Props</h1>
+        <h2>Props</h2>
         <PropsTable data={data} />
 
     </div>

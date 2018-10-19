@@ -1,9 +1,10 @@
 import React from 'react';
 import { Row, Col } from 'antd';
-import { PropsTable, Showcase, EditPageLink, PlainCode } from '../../Common';
+import { PropsTable, Showcase, EditPageLink, InstallationSection } from '../../Common';
 import { Img } from '../../../showcase'
-import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
 import { Helmet } from "react-helmet";
+
+const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/Img/index.js"
 
 const imgExample = {
     component: (
@@ -14,12 +15,9 @@ const imgExample = {
     description: (
         <p>Sample image</p>
     ),
-    code: `
-    <Img src="https://via.placeholder.com/350x150" alt="sample imag"/>
-    `,
+    code: `<Img src="https://via.placeholder.com/350x150" alt="sample imag"/>`,
     display: 'block'
 }
-
 
 const data = [{
     key: '1',
@@ -50,14 +48,9 @@ export default (props) => (
         <Helmet>
             <title>{props.pageTitle}</title>
         </Helmet>
-        <h1>Img <EditPageLink /></h1>
+        <h1>Img <EditPageLink editLink={EDIT_PAGE} /></h1>
         <p></p>
-        <h1>Installation</h1>
-        <PlainCode>{
-            `$ yarn add ${MYBIT_UI_NAME}/img
-$ npm install ${MYBIT_UI_NAME}/img`
-        }</PlainCode>
-        <PlainCode>{`import { Img } from '${MYBIT_UI_NAME_IMPORT}'`}</PlainCode>
+        <InstallationSection url="Img" />
 
         <h1>Examples</h1>
         <Row gutter={16}>

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Spin, Icon } from 'antd';
+import 'antd/lib/style/css';
 import Jazzicon, { jsNumberForAddress } from 'react-jazzicon';
 import AddressWrapper from './styledAddressWrapper';
 import AddressLoader from './styledAddressLoader';
@@ -17,7 +18,7 @@ const Address = ({ userName, className }) => (
       </AddressLoader>
     ) : (
       <AddressWrapper>
-        <Jazzicon diameter={39} seed={jsNumberForAddress('0x1111111111111111111111111111111111111111')} />
+        <Jazzicon diameter={39} seed={jsNumberForAddress(userName)} />
         <AddressText>{userName}</AddressText>
       </AddressWrapper>
     )}

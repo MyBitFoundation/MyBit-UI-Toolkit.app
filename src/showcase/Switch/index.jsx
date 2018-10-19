@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Switch as SwitchAnt } from 'antd';
-import 'antd/lib/switch/style/css';
+import 'antd/lib/style/css';
 import Theme from '../theme';
 
 import Icon from '../Icon';
 import StyledSwitch from './styledSwitch';
 
 const Switch = props => (
-  <StyledSwitch styling={{ ...Theme.switch, ...props.styling }}>
+  <StyledSwitch theme={{ ...Theme.switch, ...props.styling }}>
     <SwitchAnt
       checkedChildren={<Icon type="check" />}
       unCheckedChildren={<Icon type="cross" />}

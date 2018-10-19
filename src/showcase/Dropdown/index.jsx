@@ -1,37 +1,34 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import { createGlobalStyle } from 'styled-components';
+import { withTheme } from 'styled-components';
 import { Menu, Dropdown as DropdownAnt, Icon } from 'antd';
-import 'antd/lib/dropdown/style/css';
+import 'antd/lib/style/css';
 
 import Theme from '../theme';
 import StyledDropdown from './styledDropdown';
+import StyledDropdownMenu from './styledDropdownMenu';
 
-const GlobalStyle = createGlobalStyle`
-  .ant-dropdown-menu-item:hover,
-  .ant-dropdown-menu-submenu-title:hover{
-    background-color: ${Theme.dropdown.submenu.colorHover};
-  }
-`;
 
-const getMenu = (menu, handleClick) => (
-  <Menu>
-    {menu.map(item => (
-      <Menu.Item key={item} onClick={() => handleClick(item)}>
-        <span>{item}</span>
-      </Menu.Item>
-    ))}
-  </Menu>
+const getMenu = (menu, handleClick, theme, styling) => (
+  <StyledDropdownMenu theme={{...theme.dropdown, ...styling}}>
+    <Menu>
+      {menu.map(item => (
+        <Menu.Item key={item} onClick={() => handleClick(item)}>
+          <span>{item}</span>
+        </Menu.Item>
+      ))}
+    </Menu>
+  </StyledDropdownMenu>
 );
 
 const Dropdown = ({
-  selected, menu, handleClick, placement, styling, trigger,
+  selected, menu, handleClick, placement, styling, theme, trigger,
 }) => (
   <Fragment>
-    <GlobalStyle />
-    <StyledDropdown styling={{ ...Theme.dropdown, ...styling }}>
+    {/* <GlobalStyle theme={{ ...theme.dropdown, ...styling }}/> */}
+    <StyledDropdown theme={{ ...theme.dropdown, ...styling }}>
       <DropdownAnt
-        overlay={getMenu(menu, handleClick)}
+        overlay={getMenu(menu, handleClick, theme, styling)}
         placement={placement}
         trigger={[trigger]}
       >
@@ -50,10 +47,12 @@ Dropdown.propTypes = {
   handleClick: PropTypes.func.isRequired,
   placement: PropTypes.string.isRequired,
   trigger: PropTypes.string.isRequired,
+  theme: PropTypes.object,// eslint-disable-line
 };
 
 Dropdown.defaultProps = {
   styling: {},
+  theme: Theme,
 };
 
-export default Dropdown;
+export default withTheme(Dropdown);

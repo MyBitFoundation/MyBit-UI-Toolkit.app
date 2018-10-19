@@ -1,24 +1,19 @@
 import React from 'react';
-import { Showcase, EditPageLink, PlainCode, PropsTable } from '../../Common/';
+import { Showcase, EditPageLink, InstallationSection, PropsTable } from '../../Common/';
 import { MyBitGoHeader } from '../../../showcase'
-import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
 import { Helmet } from "react-helmet";
 
-const EDIT_PAGE_LINK = "/"
+const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/MyBitGoHeader/index.js"
 
 const MyBitGoHeaderPage = (props) => (
     <div>
         <Helmet>
             <title>{props.pageTitle}</title>
         </Helmet>
-    <h1>MyBitGoHeader <EditPageLink editLink={EDIT_PAGE_LINK} /></h1>
+    <h1>MyBitGoHeader <EditPageLink editLink={EDIT_PAGE} /></h1>
     <p>MyBitGo header</p>
 
-    <h1>Installation</h1>
-    <PlainCode>{`$ yarn add ${MYBIT_UI_NAME}
-$ npm install ${MYBIT_UI_NAME}`
-}</PlainCode>
-    <PlainCode>{`import { MyBitGoHeader } from '${MYBIT_UI_NAME_IMPORT}'`}</PlainCode>
+    <InstallationSection url="MyBitGoHeader" />
 
     <h1>Examples</h1>
     <Showcase data={headerExample} />
@@ -47,7 +42,7 @@ const headerExample = {
         </div>
     ),
     description: (
-        <p>dasdasd</p>
+        <p>The header of MyBit Go</p>
     ),
     code: `<MyBitGoHeader 
     prices={{ mybitPrice: 0.05 }}

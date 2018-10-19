@@ -1,8 +1,9 @@
 import React from 'react';
-import { PropsTable, Showcase, EditPageLink, PlainCode } from '../../Common/';
+import { PropsTable, Showcase, EditPageLink, InstallationSection } from '../../Common/';
 import { Bounty } from '../../../showcase'
-import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
 import { Helmet } from "react-helmet";
+
+const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/Bounty/index.js"
 
 const firstExample = {
     component: (
@@ -25,21 +26,19 @@ const firstExample = {
     description: (
         <p>Component to display active issues for a given github repository</p>
     ),
-    code: `
-    <Bounty
-        createdAt="2018-07-10T08:24:28Z"
-        labels={['Bounty']}
-        merged={false}
-        mybitInUsd="1.21"
-        repoName="MyBit-Go.website"
-        repoUrl="https://github.com/MyBitFoundation/MyBit-Go.website"
-        title="Reduce balance to only four decimals"
-        tokenSymbol="MYB"
-        url="https://github.com/MyBitFoundation/MyBit-Go.website/issues/48"
-        value={50}
-        showAmountInCrypto={false}
-    />
-    `,
+    code: `<Bounty
+    createdAt="2018-07-10T08:24:28Z"
+    labels={['Bounty']}
+    merged={false}
+    mybitInUsd="1.21"
+    repoName="MyBit-Go.website"
+    repoUrl="https://github.com/MyBitFoundation/MyBit-Go.website"
+    title="Reduce balance to only four decimals"
+    tokenSymbol="MYB"
+    url="https://github.com/MyBitFoundation/MyBit-Go.website/issues/48"
+    value={50}
+    showAmountInCrypto={false}
+/>`,
     display: 'inline-block'
 }
 
@@ -117,14 +116,9 @@ const ButtonsPage = (props) => (
         <Helmet>
             <title>{props.pageTitle}</title>
         </Helmet>
-        <h1>Bounty <EditPageLink /></h1>
+        <h1>Bounty <EditPageLink editLink={EDIT_PAGE}/></h1>
         <p></p>
-        <h1>Installation</h1>
-        <PlainCode>{
-`$ yarn add ${MYBIT_UI_NAME}/bounty
-$ npm install ${MYBIT_UI_NAME}/bounty`
-        }</PlainCode>
-        <PlainCode>{`import { Bounty } from '${MYBIT_UI_NAME_IMPORT}'`}</PlainCode>
+        <InstallationSection url="Bounty" />
 
         <h1>Examples</h1>
 

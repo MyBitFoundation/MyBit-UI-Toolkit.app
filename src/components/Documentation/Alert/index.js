@@ -1,7 +1,6 @@
 import React from 'react';
-import { PropsTable, Showcase, EditPageLink, PlainCode } from '../../Common/';
+import { PropsTable, Showcase, EditPageLink, InstallationSection } from '../../Common/';
 import { Alert } from '../../../showcase'
-import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
 import { Helmet } from "react-helmet";
 
 const typesExample = {
@@ -20,31 +19,30 @@ const typesExample = {
     description: (
         <p>Dismissable notification component</p>
     ),
-    code: `
-    <Alert
-        type="info"
-        message="Info message"
-        key="Alert-example-1"
-        handleAlertClosed={() => {}}
-    />
-    <Alert
-        type="success"
-        message="Success message"
-        key="Alert-example-2"
-        handleAlertClosed={() => {}}
-    />
-    <Alert
-        type="warning"
-        message="Warning message"
-        key="Alert-example-3"
-        handleAlertClosed={() => {}}
-    />
-    <Alert
-        type="error"
-        message="Error message"
-        key="Alert-example-4"
-        handleAlertClosed={() => {}}
-    />
+    code: `<Alert
+    type="info"
+    message="Info message"
+    key="Alert-example-1"
+    handleAlertClosed={() => {}}
+/>
+<Alert
+    type="success"
+    message="Success message"
+    key="Alert-example-2"
+    handleAlertClosed={() => {}}
+/>
+<Alert
+    type="warning"
+    message="Warning message"
+    key="Alert-example-3"
+    handleAlertClosed={() => {}}
+/>
+<Alert
+    type="error"
+    message="Error message"
+    key="Alert-example-4"
+    handleAlertClosed={() => {}}
+/>
     `,
     display: 'inline-block'
 }
@@ -71,19 +69,15 @@ const data = [{
 }
 ];
 
+const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/Alert/index.js"
+
 export default (props) => (
     <div>
         <Helmet>
             <title>{props.pageTitle}</title>
         </Helmet>
-        <h1>Alert <EditPageLink /></h1>
-        <p></p>
-        <h1>Installation</h1>
-        <PlainCode>{
-`$ yarn add ${MYBIT_UI_NAME}/alert
-$ npm install ${MYBIT_UI_NAME}/alert`
-        }</PlainCode>
-        <PlainCode>{`import { Alert } from '${MYBIT_UI_NAME_IMPORT}'`}</PlainCode>
+        <h1>Alert <EditPageLink editLink={EDIT_PAGE} /></h1>
+        <InstallationSection url="Alert" />
 
         <h1>Examples</h1>
         <h3>Types</h3>

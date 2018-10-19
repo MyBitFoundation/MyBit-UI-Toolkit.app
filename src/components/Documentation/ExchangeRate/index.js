@@ -1,25 +1,20 @@
 import React from 'react';
-import { Showcase, EditPageLink, PlainCode, PropsTable } from '../../Common/';
+import { Showcase, EditPageLink, InstallationSection, PropsTable } from '../../Common/';
 import { ExchangeRate } from '../../../showcase'
-import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
 import { Col, Row } from 'antd'
 import { Helmet } from "react-helmet";
 
-const EDIT_PAGE_LINK = "/"
+const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/ExchangeRate/index.js"
 
 const ExchangeRatePage = (props) => (
     <div>
         <Helmet>
             <title>{props.pageTitle}</title>
         </Helmet>
-    <h1>ExchangeRate <EditPageLink editLink={EDIT_PAGE_LINK} /></h1>
+    <h1>ExchangeRate <EditPageLink editLink={EDIT_PAGE} /></h1>
     <p>Displays the price of MYB in USD</p>
 
-    <h1>Installation</h1>
-    <PlainCode>{`$ yarn add ${MYBIT_UI_NAME}
-$ npm install ${MYBIT_UI_NAME}`
-}</PlainCode>
-    <PlainCode>{`import { ExchangeRate } from '${MYBIT_UI_NAME_IMPORT}'`}</PlainCode>
+    <InstallationSection url="Alert" />
 
     <h1>Examples</h1>
     <Row gutter={16}>

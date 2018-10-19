@@ -2,24 +2,30 @@ import styled from 'styled-components';
 
 const StyledPagination = styled.div`
   .ant-pagination-item a  {
-    color: ${props => props.styling.color}
+    color: ${props => props.theme.color}
   }
 
-  .ant-pagination-item{
-    border: ${props => props.styling.borderColor}
-    background-color: ${props => props.styling.backgroundColor}
+  .ant-pagination-item,
+  .ant-pagination-item a, 
+  .ant-pagination-prev a, 
+  .ant-pagination-next a {
+    color: ${props => props.theme.color};
+    border-color: ${props => props.theme.borderColor};
+    background-color: ${props => props.theme.backgroundColor};
   }
-  .ant-pagination-item-active{
-    border-color: ${props => props.styling.itemActiveBorderColor}
+  .ant-pagination-item-active {
+    border-color: ${props => props.theme.itemActiveBorderColor}
   }
 
-  .ant-pagination-item:hover{
-    border-color: ${props => props.styling.itemHoverBorderColor}
+  .ant-pagination-item:hover,
+  .ant-pagination-prev:hover a,
+  .ant-pagination-next:hover a {
+    border-color: ${props => props.theme.itemHoverBorderColor}
   }
 
-  .ant-pagination-disabled a{
-    border-color: ${props => props.styling.disabledItemBorderColor}
-    color: ${props => props.styling.disabledItemColor}
+  .ant-pagination-disabled a {
+    border-color: ${props => props.theme.disabledItemBorderColor};
+    color: ${props => props.theme.disabledItemColor}
   }
 `;
 

@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import 'antd/lib/style/css';
+import { withTheme } from 'styled-components';
 import Header from './header';
 import Card from './card';
 import StyledCards from './StyledCards';
@@ -8,6 +10,7 @@ import Spin from '../Spin';
 import StyledMessage from './StyledMessage';
 import StyledPagination from './StyledPagination';
 import Pagination from '../Pagination';
+import Theme from '../theme';
 
 const sortBy = (items, type) => {
   switch (type) {
@@ -22,7 +25,7 @@ const sortBy = (items, type) => {
 
 
 const Bounties = ({
-  styling, // eslint-disable-line
+  theme, // eslint-disable-line
   issues, // eslint-disable-line
   categories, // eslint-disable-line
   selectedCategory, // eslint-disable-line
@@ -71,7 +74,7 @@ const Bounties = ({
   let toReturn;
   const header = (
     <Header
-      styling={styling}
+      theme={theme}
       categories={categories}
       selectedCategory={selectedCategory}
       setCategory={setCategory}
@@ -96,7 +99,7 @@ const Bounties = ({
         <StyledSpinner>
           <Spin
             size="large"
-            styling={styling.spin}
+            theme={theme.spin}
           />
         </StyledSpinner>
         <p>Loading Bounties</p>
@@ -118,7 +121,7 @@ const Bounties = ({
             <Card
               {...bounty}
               key={`${bounty.title} ${bounty.createdAt}`}
-              styling={styling.buttons}
+              theme={theme.buttons}
               showAmountInCrypto={showAmountInCrypto}
             />
           ))}
@@ -130,7 +133,7 @@ const Bounties = ({
             current={currentPage + 1}
             pageSize={bountiesPerPage}
             defaultCurrent={1}
-            styling={styling.pagination}
+            theme={theme.pagination}
           />
         </StyledPagination>
       </div>
@@ -140,12 +143,13 @@ const Bounties = ({
 };
 
 Bounties.propTypes = {
-  styling: PropTypes.object.isRequired, // eslint-disable-line
+  theme: PropTypes.object, // eslint-disable-line
   issues: PropTypes.object, // eslint-disable-line
 };
 
 Bounties.defaultProps = {
+  theme: Theme,
   issues: undefined,
 };
 
-export default Bounties;
+export default withTheme(Bounties);

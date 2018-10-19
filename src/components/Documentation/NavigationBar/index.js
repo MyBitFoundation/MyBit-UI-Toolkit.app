@@ -1,7 +1,6 @@
 import React from 'react';
-import { Showcase, EditPageLink, PlainCode, PropsTable } from '../../Common/';
+import { Showcase, EditPageLink, InstallationSection, PropsTable } from '../../Common/';
 import { NavigationBar } from '../../../showcase'
-import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
 import { Helmet } from "react-helmet";
 
 import exploreIcon from '../images/search.png';
@@ -44,21 +43,17 @@ const menuOptions = [
   },
 ];
 
-const EDIT_PAGE_LINK = "/"
+const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/NavigationBar/index.js"
 
 const NavigationBarPage = (props) => (
     <div>
         <Helmet>
             <title>{props.pageTitle}</title>
         </Helmet>
-    <h1>NavigationBar <EditPageLink editLink={EDIT_PAGE_LINK} /></h1>
+    <h1>NavigationBar <EditPageLink editLink={EDIT_PAGE} /></h1>
     <p>The navigation used on MyBit Go</p>
 
-    <h1>Installation</h1>
-    <PlainCode>{`$ yarn add ${MYBIT_UI_NAME}
-$ npm install ${MYBIT_UI_NAME}`
-}</PlainCode>
-    <PlainCode>{`import { NavigationBar } from '${MYBIT_UI_NAME_IMPORT}'`}</PlainCode>
+   <InstallationSection url="NavigationOption" />
 
     <h1>Examples</h1>
     <Showcase data={navExample} />

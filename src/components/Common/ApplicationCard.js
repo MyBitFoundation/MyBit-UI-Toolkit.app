@@ -1,70 +1,111 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Icon } from 'antd';
 
 const StyledWrapper = styled.div`
     display: flex;
-    max-width: 31%;
-    width: calc(100% - 24px);
+    justify-content: center;
+    width: 320px;
     min-width: 320px;
-    height: 130px;
-    border: 1px solid #d9d9d9;
-    border-radius: 4px;
-    font-size: 12px;
+    max-width: 320px;
+    height: 220px;
     color: #777;
     margin: 0 24px 24px 0;
-    vertical-align: middle;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 5px 25px 0 rgba(15,53,90,.5);
+    background: linear-gradient(136deg, #001358, #125ac4);
+    border: 6px solid #125ac4;
     &:hover {
-        border: none;
-        box-shadow: 2px 6px 17px -5px rgba(158,144,158,1);
+        border: 6px solid #1890ff;;
     }
-    .icon {
+    .app-logo {
         display: flex;
-        align-items: center;
+        width: 200px;
         justify-content: center;
-        flex-shrink: 0;
-        width: 130px;
+        text-align: center;
     }
-    .icon > * {
-        margin: 30px 20px 30px 30px;
-        font-size: 54px;
-        width: 54px;
+    .app-logo > img {
+        transition: all 0.3s;
+        width: 120px;
     }
-    .content {
-        display: flex;
-        flex-flow: column;
-        justify-content: center;
+    &:hover .app-logo > img {
+        transform: scale(0) translateY(-200px);
+        opacity: 0;
+        transition: all 0.3s;
     }
     .title {
-        display: block;
-        font-size: 16px;
-        color: #314659;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        line-height: 1.2;
-        margin-bottom: 6px;
+        position: absolute;
+        color: white;
+        top: 15px;
+        font-size: 18px;
+        margin-bottom: 5px;
+        opacity: 0;
+        transform: translateX(200px);
+        transition: all 0.3s;
     }
     .description {
-        display: block;
-        color: #697b8c;
-        padding-right: 16px;
+        top: 45px;
+        color: white;
+        position: absolute;
+        text-align: center;
+        font-size: 12px;
+        padding: 0px 30px;
+        line-height: 22px;
+        margin-bottom: 5px;
+        opacity: 0;
+        transform: scale(0);
+        transition: all 0.3s;
+    }
+    .mybutton {
+        position: absolute;
+        bottom: 10px;
+    }
+    .mybutton > button {
+        background: linear-gradient(to left, #24F281, #0083FF);
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        opacity: 0;
+        transform: translateX(-200px);
+        transition: all 0.3s;
+        width: 120px;
+    }
+    &:hover > .title {
+        opacity: 1;
+        transition: all 0.6s;
+        transform: translate(0px, 0px);
+    }
+    &:hover > .description {
+        opacity: 1;
+        transition: all 0.6s;
+        transform: scale(1);
+    }
+    &:hover > .mybutton > button {
+        opacity: 1;
+        transition: all 0.6s;
+        transform: translate(0px, 0px);
+    }
+    &:hover > .mybutton > button[disabled] {
+        opacity: 0.5;
+        transition: all 0.6s;
+        transform: translate(0px, 0px);
     }
 `
 
 const ApplicationCard = ({ data }) => (
     <StyledWrapper>
-        <div className="icon">
-            <Icon type="up-square" theme="outlined" />
+        <div className="app-logo">
+            <img src={data.logo} alt={data.title} />
         </div>
-        <div className="content">
-            <span className="title">APP NAME</span>
-            <span className="description">a very important description  a very important description a very important description</span>
+        <div className="title">
+            {data.title}
         </div>
+        <div className="description">
+            {data.description}
+        </div>
+        <a href={data.url} target="_blank" className="mybutton" rel="noopener noreferrer">
+            <button disabled={!data.active}>{data.active ? 'Visit' : 'Coming soon'}</button>
+        </a>
     </StyledWrapper>
 )
 

@@ -1,25 +1,22 @@
 import React from 'react';
 import { Row, Col } from 'antd';
-import { PropsTable, Showcase, EditPageLink, PlainCode } from '../../Common';
-import { Tooltip } from '../../../showcase'
-import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
+import { PropsTable, Showcase, EditPageLink, InstallationSection, Playground } from '../../Common';
+import { Switch } from '../../../showcase'
 
-const tooltipExample = {
+const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/Switch/index.js"
+
+const switchExample = {
     component: (
         <div>
-            <Tooltip title="prompt text">
-              <span>Tooltip will show when mouse enter.</span>
-            </Tooltip>
+            <Switch key="switch-example-1" checked onChange={() => {}} />
+            <Switch key="switch-example-2" onChange={() => {}} />
         </div>
     ),
     description: (
-        <p>Tooltip example</p>
+        <p>Switch example</p>
     ),
-    code: `
-    <Tooltip title="prompt text">
-      <span>Tooltip will show when mouse enter.</span>
-    </Tooltip>
-    `,
+    code: `<Switch key="switch-example-1" checked onChange={() => {}} />
+<Switch key="switch-example-2" onChange={() => {}} />`,
     display: 'inline-block'
 }
 
@@ -27,49 +24,61 @@ const tooltipExample = {
 const data = [
     {
        "key": 1,
-       "property": "title",
-       "description": "Tooltip text",
-       "type": "string",
-       "required": "False",
+       "property": "styling",
+       "description": "Styling of the switch",
+       "type": "object",
+       "required": "True",
        "default": "-"
     }, {
         "key": 2,
-        "property": "arrowPointAtCenter",
-        "description": "Whether the arrow is pointed at the center of target",
+        "property": "checked",
+        "description": "determine whether the Switch is checked",
         "type": "boolean",
         "required": "False",
         "default": "false"
     }, {
         "key": 3,
-        "property": "placement",
-        "description": "The position of the tooltip relative to the target, which can be one of top left right bottom topLeft topRight bottomLeft bottomRight leftTop leftBottom rightTop rightBottom",
+        "property": "onChange",
+        "description": "a callback function, can be executed when the checked state is changing",
+        "type": "Function(checked:Boolean)",
+        "required": "True",
+        "default": ""
+    }, {
+        "key": 4,
+        "property": "size",
+        "description": "the size of the Switch",
         "type": "string",
         "required": "False",
-        "default": "top"
+        "default": "small"
     }
  ];
 
-export default () => (
-    <div>
-        <h1>Tooltip <EditPageLink /></h1>
-        <p></p>
-        <h1>Installation</h1>
-        <PlainCode>{
-            `$ yarn add ${MYBIT_UI_NAME}/tooltip
-$ npm install ${MYBIT_UI_NAME}/tooltip`
-        }</PlainCode>
-        <PlainCode>{`import { Tooltip } from '${MYBIT_UI_NAME_IMPORT}'`}</PlainCode>
+const styling = {
+    checkedBackgroundColor: '#1890ff',
+    uncheckedBackgroundColor: 'rgba(0, 0, 0, 0.25)',
+} 
 
-        <h1>Examples</h1>
+export default (props) => (
+    <div>
+        <h1>{props.title} <EditPageLink editLink={EDIT_PAGE} /></h1>
+        <p></p>
+        <InstallationSection url={props.url} />
+        <Playground styling={styling} component={(props) => (
+            <React.Fragment>
+                <Switch {...props} checked={true}/> Checked state
+                <Switch {...props} checked={false}/> Unchecked state
+            </React.Fragment>
+        )}/>
+        <h2>Examples</h2>
         <Row gutter={16}>
             <Col span={24}>
-                <h3>Tooltip example</h3>
-                <Showcase data={tooltipExample} />
+                <h3>Switch example</h3>
+                <Showcase data={switchExample} />
             </Col>
         </Row>
 
 
-        <h1>Props</h1>
+        <h2>Props</h2>
         <PropsTable data={data} />
 
     </div>
