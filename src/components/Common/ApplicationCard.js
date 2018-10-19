@@ -85,6 +85,11 @@ const StyledWrapper = styled.div`
         transition: all 0.6s;
         transform: translate(0px, 0px);
     }
+    &:hover > .mybutton > button[disabled] {
+        opacity: 0.5;
+        transition: all 0.6s;
+        transform: translate(0px, 0px);
+    }
 `
 
 const ApplicationCard = ({ data }) => (
