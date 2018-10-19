@@ -3,6 +3,8 @@ import { Row, Col } from 'antd';
 import { PropsTable, Showcase, EditPageLink, InstallationSection } from '../../Common';
 import { ConnectionStatus } from '../../../showcase'
 
+const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/ConnectionStatus/index.js"
+
 const networkExample = {
     component: (
         <div>
@@ -14,9 +16,7 @@ const networkExample = {
     description: (
         <p>Solid or outlined button</p>
     ),
-    code: `
-    <ConnectionStatus loading={false} network="ropsten" />
-    `,
+    code: `<ConnectionStatus loading={false} network="ropsten" />`,
     display: 'inline-block'
 }
 
@@ -39,7 +39,7 @@ const data = [{
 
 export default (props) => (
     <div>
-        <h1>ConnectionStatus <EditPageLink /></h1>
+        <h1>ConnectionStatus <EditPageLink editLink={EDIT_PAGE} /></h1>
         <p></p>
         <InstallationSection url="ConnectionStatus" />
 

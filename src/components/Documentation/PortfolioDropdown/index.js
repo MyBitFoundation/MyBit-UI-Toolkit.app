@@ -3,6 +3,8 @@ import { Row, Col } from 'antd';
 import { PropsTable, Showcase, EditPageLink, InstallationSection } from '../../Common';
 import { PortfolioDropdown } from '../../../showcase'
 
+const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/PortfolioDropdown/index.js"
+
 const portfolioDropdownExample = {
     component: (
         <div>
@@ -80,7 +82,6 @@ const portfolioDropdownExample = {
     display: 'block'
 }
 
-
 const data = [
     {
        "key": 1,
@@ -126,7 +127,7 @@ const data = [
 
 export default (props) => (
     <div>
-        <h1>PortfolioDropdown <EditPageLink /></h1>
+        <h1>PortfolioDropdown <EditPageLink editLink={EDIT_PAGE} /></h1>
         <p></p>
         <InstallationSection url="PortfolioDropdown" />
 

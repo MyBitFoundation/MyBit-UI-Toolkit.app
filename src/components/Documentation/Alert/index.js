@@ -19,31 +19,30 @@ const typesExample = {
     description: (
         <p>Dismissable notification component</p>
     ),
-    code: `
-    <Alert
-        type="info"
-        message="Info message"
-        key="Alert-example-1"
-        handleAlertClosed={() => {}}
-    />
-    <Alert
-        type="success"
-        message="Success message"
-        key="Alert-example-2"
-        handleAlertClosed={() => {}}
-    />
-    <Alert
-        type="warning"
-        message="Warning message"
-        key="Alert-example-3"
-        handleAlertClosed={() => {}}
-    />
-    <Alert
-        type="error"
-        message="Error message"
-        key="Alert-example-4"
-        handleAlertClosed={() => {}}
-    />
+    code: `<Alert
+    type="info"
+    message="Info message"
+    key="Alert-example-1"
+    handleAlertClosed={() => {}}
+/>
+<Alert
+    type="success"
+    message="Success message"
+    key="Alert-example-2"
+    handleAlertClosed={() => {}}
+/>
+<Alert
+    type="warning"
+    message="Warning message"
+    key="Alert-example-3"
+    handleAlertClosed={() => {}}
+/>
+<Alert
+    type="error"
+    message="Error message"
+    key="Alert-example-4"
+    handleAlertClosed={() => {}}
+/>
     `,
     display: 'inline-block'
 }
@@ -70,13 +69,14 @@ const data = [{
 }
 ];
 
+const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/Alert/index.js"
+
 export default (props) => (
     <div>
         <Helmet>
             <title>{props.pageTitle}</title>
         </Helmet>
-        <h1>Alert <EditPageLink /></h1>
-        <p>--description--</p>
+        <h1>Alert <EditPageLink editLink={EDIT_PAGE} /></h1>
         <InstallationSection url="Alert" />
 
         <h1>Examples</h1>

@@ -3,15 +3,14 @@ import { Showcase, EditPageLink, InstallationSection, PropsTable, Playground } f
 import { ProgressBar } from '../../../showcase'
 import { Helmet } from "react-helmet";
 
-const EDIT_PAGE_LINK = "/"
+const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/ProgressBar/index.js"
 
 const ProgressBarPage = (props) => (
     <div>
         <Helmet>
             <title>{props.pageTitle}</title>
         </Helmet>
-    <h1>ProgressBar <EditPageLink editLink={EDIT_PAGE_LINK} /></h1>
-    <p>MyBit Logo</p>
+    <h1>ProgressBar <EditPageLink editLink={EDIT_PAGE} /></h1>
 
     <InstallationSection url="Alert" />
     <Playground styling={styling} component={props => (

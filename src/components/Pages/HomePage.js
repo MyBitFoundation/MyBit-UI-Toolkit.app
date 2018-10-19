@@ -1,5 +1,5 @@
 import React from 'react';
-import { PlainCode} from '../Common';
+import { PlainCode, EditPageLink } from '../Common';
 import { Icon } from 'antd'
 import styled from 'styled-components'
 import { Helmet } from "react-helmet";
@@ -22,6 +22,7 @@ const AntdHeader = styled.div`
         padding: 0;
     }
 `
+const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Pages/HomePage.js"
 
 const HomePage = () => (
     <div>
@@ -33,7 +34,7 @@ const HomePage = () => (
             <h1>We <span><Icon type="heart" style={{ color: "pink" }} /></span> Ant Design {`&`} React</h1>
         </AntdHeader>
 
-        <SectionHeader position="left" size="32px">About MyBit</SectionHeader>
+        <SectionHeader position="left" size="32px">About MyBit <EditPageLink editLink={EDIT_PAGE} /></SectionHeader>
         <p style={{textAlign: "justified"}}>
         MyBit was started by a team of industry veterans who spotted a massive problem with today’s financial systems. Third party agents such as lawyers, escrow agents, and brokers are required to establish trust and conduct transactions.
 This is inefficient, unsafe, and expensive. Our vision is to utilise smart contract technology to eliminate the need for these centralised sources and creating a more efficient, secure, and cost-effective wealth management environment.

@@ -4,12 +4,14 @@ import { Helmet } from "react-helmet";
 import { STYLEGUIDE_TITLE } from './pageTitles'
 import { ColorShowcase } from '../Common'
 
+const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Pages/StyleguidesPage.js"
+
 const StyleguidesPage = () => (
     <div>
         <Helmet>
             <title>{STYLEGUIDE_TITLE}</title>
         </Helmet>
-        <h1>Suggested Styleguide <EditPageLink /></h1>
+        <h1>Suggested Styleguide <EditPageLink editLink={EDIT_PAGE} /></h1>
         <p>Please note that the information below is just a reference to the MyBit brand. Third-party developers remain with the freedom to choose their own styleguides.</p>
         <h2>Colors</h2>
         <p>Click on the color to copy it.</p>

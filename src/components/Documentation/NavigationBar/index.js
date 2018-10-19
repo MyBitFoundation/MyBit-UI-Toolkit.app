@@ -43,14 +43,14 @@ const menuOptions = [
   },
 ];
 
-const EDIT_PAGE_LINK = "/"
+const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/NavigationBar/index.js"
 
 const NavigationBarPage = (props) => (
     <div>
         <Helmet>
             <title>{props.pageTitle}</title>
         </Helmet>
-    <h1>NavigationBar <EditPageLink editLink={EDIT_PAGE_LINK} /></h1>
+    <h1>NavigationBar <EditPageLink editLink={EDIT_PAGE} /></h1>
     <p>The navigation used on MyBit Go</p>
 
    <InstallationSection url="NavigationOption" />

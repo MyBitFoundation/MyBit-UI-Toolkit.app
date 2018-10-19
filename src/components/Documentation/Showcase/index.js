@@ -9,7 +9,7 @@ import {
 import { Button, Alert } from 'antd'
 import { Helmet } from "react-helmet";
 
-const EXAMPLE_PAGE_EDIT_LINK = "/"
+const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/Showcase/index.js"
 
 const ShowcasePage = (props) => (
     <div>
@@ -17,7 +17,7 @@ const ShowcasePage = (props) => (
             <title>{props.pageTitle}</title>
         </Helmet>
         <Alert message="This component is NOT part of MyBitUI and is only used for building documentation!" type="warning" />
-        <h1>Showcase <EditPageLink editLink={EXAMPLE_PAGE_EDIT_LINK} /></h1>
+        <h1>Showcase <EditPageLink editLink={EDIT_PAGE} /></h1>
         <p>The showcase component.</p>
 
         <h1>Import</h1>

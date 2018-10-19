@@ -6,6 +6,7 @@ import { CONTRIBUTE_TITLE } from './pageTitles'
 
 const GIT_REPO_LINK = "https://github.com/MyBitFoundation/MyBit-UI.website"
 const STYLED_COMPONENTS_LINK = "https://www.styled-components.com/docs"
+const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Pages/ContributePage.js"
 
 const ContributePage = () => (
     <div>
@@ -13,7 +14,7 @@ const ContributePage = () => (
             <title>{CONTRIBUTE_TITLE}</title>
         </Helmet>
 
-        <h1>How to contribute? <EditPageLink /></h1>
+        <h1>How to contribute? <EditPageLink editLink={EDIT_PAGE} /></h1>
         <h4>1. Fork the main repository on GitHub <a href={GIT_REPO_LINK}>here</a></h4>
         <h4>2. Clone the forked repository on your machine</h4>
         <PlainCode>git clone https://github.com/--your-username--/MyBit-UI.website</PlainCode>

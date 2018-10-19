@@ -3,6 +3,8 @@ import { Row, Col } from 'antd';
 import { PropsTable, Showcase, EditPageLink, InstallationSection } from '../../Common';
 import { Tooltip } from '../../../showcase'
 
+const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/Tooltip/index.js"
+
 const tooltipExample = {
     component: (
         <div>
@@ -14,11 +16,9 @@ const tooltipExample = {
     description: (
         <p>Tooltip example</p>
     ),
-    code: `
-    <Tooltip title="prompt text">
-      <span>Tooltip will show when mouse enter.</span>
-    </Tooltip>
-    `,
+    code: `<Tooltip title="prompt text">
+    <span>Tooltip will show when mouse enter.</span>
+</Tooltip>`,
     display: 'inline-block'
 }
 
@@ -51,7 +51,7 @@ const data = [
 
 export default (props) => (
     <div>
-        <h1>Tooltip <EditPageLink /></h1>
+        <h1>Tooltip <EditPageLink editLink={EDIT_PAGE} /></h1>
         <p></p>
         <InstallationSection url="Tooltip" />
         <h2>Examples</h2>

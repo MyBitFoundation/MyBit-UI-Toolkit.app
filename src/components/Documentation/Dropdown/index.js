@@ -3,6 +3,8 @@ import { Row, Col } from 'antd';
 import { PropsTable, Showcase, EditPageLink, InstallationSection, Playground } from '../../Common';
 import { Dropdown } from '../../../showcase'
 
+const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/Dropdown/index.js"
+
 const styling = {
     color: '#1890ff',
     colorHover: '#40a9ff',
@@ -21,9 +23,7 @@ const placementExample = {
     description: (
         <p>Position of the dropdown</p>
     ),
-    code: `
-    <Dropdown menu={['Option 1', 'Option 2', 'Option 3']} selected="Option 1" placement="bottomRight" trigger="hover" handleClick={() => {}} />
-    `,
+    code: `<Dropdown menu={['Option 1', 'Option 2', 'Option 3']} selected="Option 1" placement="bottomRight" trigger="hover" handleClick={() => {}} />`,
     display: 'inline-block'
 }
 
@@ -38,9 +38,7 @@ const triggerExample = {
     description: (
         <p>Show dropdown on hover or click</p>
     ),
-    code: `
-    <Dropdown menu={['Option 1', 'Option 2', 'Option 3']} selected="Option 1" placement="bottomRight" trigger="hover" handleClick={() => {}} />
-    `,
+    code: `<Dropdown menu={['Option 1', 'Option 2', 'Option 3']} selected="Option 1" placement="bottomRight" trigger="hover" handleClick={() => {}} />`,
     display: 'inline-block'
 }
 
@@ -91,7 +89,7 @@ const data = [{
 
 export default (props) => (
     <div>
-        <h1>Dropdown <EditPageLink /></h1>
+        <h1>Dropdown <EditPageLink editLink={EDIT_PAGE} /></h1>
         <p></p>
         <InstallationSection url="Alert" />
         <Playground component={(props) => (

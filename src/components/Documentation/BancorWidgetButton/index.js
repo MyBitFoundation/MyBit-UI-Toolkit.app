@@ -3,14 +3,14 @@ import { Showcase, EditPageLink, InstallationSection, PropsTable } from '../../C
 import { BancorWidgetButton } from '../../../showcase'
 import { Helmet } from "react-helmet";
 
-const EDIT_PAGE_LINK = "/"
+const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/BancorWidgetButton/index.js"
 
 const BancorWidgetButtonPage = (props) => (
     <div>
         <Helmet>
             <title>{props.pageTitle}</title>
         </Helmet>
-        <h1>Bancor Widget Button <EditPageLink editLink={EDIT_PAGE_LINK} /></h1>
+        <h1>Bancor Widget Button <EditPageLink editLink={EDIT_PAGE} /></h1>
         <p>Displays a modal which allows users to buy or sell MYB</p>
 
         <InstallationSection url="BancorWidgetButton" />
