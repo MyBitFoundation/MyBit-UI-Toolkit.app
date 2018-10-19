@@ -4,3 +4,5 @@
 
 ## MyBit UI Kit
 
+Currently, all the documentation for the MyBit UI Kit is living in it's own [website](https://ui.mybit.io/).
+
