@@ -4,7 +4,7 @@ import { Icon } from 'antd'
 import styled from 'styled-components'
 import { Helmet } from "react-helmet";
 import { HOMEPAGE_TITLE } from './pageTitles'
-import { SectionHeader, Button } from '../../showcase'
+import { SectionHeader } from '../../showcase'
 
 const AntdHeader = styled.div`
     margin: 15px 0px 30px 0px;
@@ -30,7 +30,7 @@ const HomePage = () => (
         </Helmet>
 
         <AntdHeader>
-            <h1>We <span><Icon type="heart" style={{ color: "pink" }} /></span> Ant Design</h1>
+            <h1>We <span><Icon type="heart" style={{ color: "pink" }} /></span> Ant Design {`&`} React</h1>
         </AntdHeader>
 
         <SectionHeader position="left" size="32px">About MyBit</SectionHeader>
@@ -43,7 +43,6 @@ MyBit provides robust developer tools such as SDKs and UI Kits to give engineers
         MyBit believes in the concept of co-creation. Community members guide our development with their advice, dedication and active participation in 
         all aspects of the project. Join our community and get involved in our shared mission: to lead the way in the automated era. 
         </p>
-        <Button>Join our Community? Maybe a list of social media profiles?</Button>
 
         <SectionHeader position="left" size="32px">Installation</SectionHeader>
         <h4>We recommend using npm or yarn to install</h4>

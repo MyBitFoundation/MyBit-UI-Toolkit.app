@@ -1,5 +1,5 @@
 import React from 'react';
-import { Showcase, EditPageLink, CustomTag, PlainCode, PropsTable } from '../Common/';
+import { Showcase, EditPageLink, CustomTag, PlainCode, PropsTable, InstallationSection } from '../Common/';
 import { Row, Col } from 'antd'
 import { Helmet } from "react-helmet";
 import { CONTRIBUTE_TITLE } from './pageTitles'
@@ -65,9 +65,8 @@ USER, WIDGETS, TEMPLATES, LIBRARY_COMPONENTS`
 
 const mycode = `
 import React from 'react';
-import { Showcase, EditPageLink, CustomTag, PlainCode, PropsTable } from '../../Common/';
+import { Showcase, EditPageLink, CustomTag, PlainCode, PropsTable, InstallationSection } from '../../Common/';
 import { component_to_document } from '../../../showcase'
-import { MYBIT_UI_NAME, MYBIT_UI_NAME_IMPORT } from '../config'
 import { Row, Col } from 'antd'
 
 const EDIT_PAGE_LINK = "/"
@@ -77,8 +76,7 @@ const PAGE = () => (
     <h1>Component <EditPageLink editLink={EDIT_PAGE_LINK} /></h1>
     <p>Where is this component used?</p>
 
-    <h1>Installation</h1>
-    <p>How to install and import the component?</p>
+    <InstallationSection url="demoComponentName" />
 
     <h1>Examples</h1>
     <h2>Full width</h2>
@@ -104,34 +102,7 @@ const PAGE = () => (
 
 export default PAGE
 
-//this is the structure of the object to be passed to an <Example> component
-const templateExample = {
-    component: (
-        <div>
-           <p>Simple paragraph</p>
-        </div>
-    ),
-    description: (
-        <p>Description</p>
-    ),
-    code: '//code',
-    display: 'inline-block'
-}
-
-//the array of objects to be passed to a <PropsTable> component
-const data = [{
-    key: '1',
-    property: 'prop name',
-    description: 'prop description',
-    type: 'type',
-    required: 'true/false',
-    default: '-'
-}];
-)
-
-export default TemplatePage
-
-//this is the structure of the object to be passed to an <Example> component
+//this is the structure of the object to be passed to an <Showcase> component
 const templateExample = {
     component: (
         <div>
@@ -178,13 +149,14 @@ const templateExample = {
     display: 'inline-block'
 }
 
+const EDIT_PAGE_LINK = "/"
+
 const TEMPLATE_PAGE = (
     <div style={{width: '90%'}}>
-        <h1>Component <EditPageLink editLink="/" /></h1>
+        <h1>Component <EditPageLink editLink={EDIT_PAGE_LINK} /></h1>
         <p>Where is this component used?</p>
 
-        <h1>Installation </h1>
-        <p>How to install and import the component?</p>
+        <InstallationSection url="demoComponentName" />
 
         <h1>Examples</h1>
         <h2>Full width</h2>
