@@ -3,7 +3,7 @@ import { Showcase, EditPageLink, PropsTable, PlainCode, CustomTag, InstallationS
 import { Helmet } from "react-helmet";
 import { Alert } from 'antd'
 
-const EDIT_PAGE_LINK = "/"
+const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/InstallationSection/index.js"
 
 const InstallationSectionPage = (props) => (
     <div>
@@ -11,7 +11,7 @@ const InstallationSectionPage = (props) => (
             <title>{props.pageTitle}</title>
         </Helmet>
     <Alert message="This component is NOT part of MyBitUI and is only used for building documentation!" type="warning" />
-    <h1>{props.title} <EditPageLink editLink={EDIT_PAGE_LINK} /></h1>
+    <h1>{props.title} <EditPageLink editLink={EDIT_PAGE} /></h1>
     <p>A section to contain install and import instructions for a MyBit component</p>
 
     <h1>Import</h1>

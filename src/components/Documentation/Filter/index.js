@@ -3,6 +3,7 @@ import { Row, Col } from 'antd';
 import { PropsTable, Showcase, EditPageLink, InstallationSection, Playground } from '../../Common';
 import { Filter } from '../../../showcase'
 
+const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/Filter/index.js"
 
 const styling = {
     checkedColor: '#1890ff',
@@ -25,9 +26,7 @@ const filterExample = {
     description: (
         <p>Sample filters</p>
     ),
-    code: `
-    <Filter>Filter one</Filter>
-    `,
+    code: `<Filter>Filter one</Filter>`,
     display: 'inline-block'
 }
 
@@ -58,7 +57,7 @@ const data = [{
 
 export default (props) => (
     <div>
-        <h1>{props.title} <EditPageLink /></h1>
+        <h1>{props.title} <EditPageLink editLink={EDIT_PAGE} /></h1>
         <p></p>
         <InstallationSection name={props.title} url={props.url} />
         <Playground component={(props) => (

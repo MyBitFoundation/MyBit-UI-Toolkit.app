@@ -1,6 +1,7 @@
 import React from 'react';
 import { Layout } from 'antd';
-import logo from './mybit-color.svg'
+import logoColor from './mybit-color.svg'
+import logoWhite from './mybit-white.svg'
 import styled from 'styled-components'
 import { Select } from 'antd';
 
@@ -44,7 +45,7 @@ const StyledRightColumn = styled.div`
 const LibraryHeader = ({ onChangeTheme, theme}) => (
     <Header style={theme === 'dark' ? headerStyleDark: headerStyleLight}>
         <LogoColumn>
-            <img src={logo} alt="MyBit Logo" />
+            <img src={theme === 'dark' ? logoWhite : logoColor} alt="MyBit Logo" />
         </LogoColumn>
         <StyledRightColumn>
             <Select defaultValue="light" style={{ width: 120 }} onChange={onChangeTheme}>

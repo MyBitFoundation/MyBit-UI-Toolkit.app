@@ -3,14 +3,14 @@ import { Showcase, EditPageLink, InstallationSection, PropsTable } from '../../C
 import { SectionHeader } from '../../../showcase'
 import { Helmet } from "react-helmet";
 
-const EDIT_PAGE_LINK = "/"
+const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/SectionHeader/index.js"
 
 const SectionHeaderPage = (props) => (
     <div>
         <Helmet>
             <title>{props.pageTitle}</title>
         </Helmet>
-    <h1>SectionHeader <EditPageLink editLink={EDIT_PAGE_LINK} /></h1>
+    <h1>SectionHeader <EditPageLink editLink={EDIT_PAGE} /></h1>
     <p>A heading tag with a custom divider</p>
 
     <InstallationSection url="SectionHeader" />
@@ -31,7 +31,7 @@ const SectionHeaderExample = {
         <div>
             <SectionHeader size="40px" squareSize={20}>Cryptocurrency (40px)</SectionHeader>
             <SectionHeader size="40px" squareSize={20} position="right">Cryptocurrency right(40px)</SectionHeader>
-            <SectionHeader size="40px" squareSize={20}position="left">Cryptocurrency left (40px)</SectionHeader>
+            <SectionHeader size="40px" squareSize={20} position="left">Cryptocurrency left (40px)</SectionHeader>
             <SectionHeader size="24px">Cryptocurrency (24px)</SectionHeader>
             <SectionHeader size={1} textColor="black" dividerColor="#125ac4">Cryptocurrency (h1)</SectionHeader>
             <SectionHeader size={2} textColor="black" dividerColor="#125ac4">Cryptocurrency (h2)</SectionHeader>
@@ -43,7 +43,7 @@ const SectionHeaderExample = {
     ),
     code: `<SectionHeader size="40px" squareSize={20}>Cryptocurrency (40px)</SectionHeader>
 <SectionHeader size="40px" squareSize={20} position="right">Cryptocurrency right(40px)</SectionHeader>
-<SectionHeader size="40px" squareSize={20}position="left">Cryptocurrency left (40px)</SectionHeader>
+<SectionHeader size="40px" squareSize={20} position="left">Cryptocurrency left (40px)</SectionHeader>
 <SectionHeader size="24px">Cryptocurrency (24px)</SectionHeader>
 <SectionHeader size={1} textColor="black" dividerColor="#125ac4">Cryptocurrency (h1)</SectionHeader>
 <SectionHeader size={2} textColor="black" dividerColor="#125ac4">Cryptocurrency (h2)</SectionHeader>

@@ -3,6 +3,8 @@ import { Row, Col } from 'antd';
 import { PropsTable, Showcase, EditPageLink, InstallationSection, Playground } from '../../Common';
 import { StatCard } from '../../../showcase'
 
+const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/StatCard/index.js"
+
 const statCardExample = {
     component: (
         <div>
@@ -15,10 +17,8 @@ const statCardExample = {
     description: (
         <p>StatCard example</p>
     ),
-    code: `
-    <StatCard key="StatCard-example-1" stat={{ name: 'Statistic...', value: '...with value' }} />
-    <StatCard key="StatCard-example-2" stat={{ name: 'Stat without value' }} />
-    `,
+    code: `<StatCard key="StatCard-example-1" stat={{ name: 'Statistic...', value: '...with value' }} />
+<StatCard key="StatCard-example-2" stat={{ name: 'Stat without value' }} />`,
     display: 'inline-block'
 }
 
@@ -41,7 +41,7 @@ const styling = {
 
 export default (props) => (
     <div>
-        <h1>StatCard <EditPageLink /></h1>
+        <h1>StatCard <EditPageLink editLink={EDIT_PAGE} /></h1>
         <p></p>
         <InstallationSection url="StatCard" />
         <Playground styling={styling} component={(props) => (

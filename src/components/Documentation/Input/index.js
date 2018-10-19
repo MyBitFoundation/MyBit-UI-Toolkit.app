@@ -3,6 +3,8 @@ import { Row, Col } from 'antd';
 import { PropsTable, Showcase, EditPageLink, InstallationSection } from '../../Common';
 import { Input } from '../../../showcase'
 
+const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/Input/index.js"
+
 const typesExample = {
     component: (
         <div>
@@ -14,14 +16,11 @@ const typesExample = {
     description: (
         <p>Input types</p>
     ),
-    code: `
-        <Input type="text"/>
-        <Input type="email"/>
-        <Input type="number"/>
-    `,
+    code: `<Input type="text"/>
+<Input type="email"/>
+<Input type="number"/>`,
     display: 'inline-block'
 }
-
 
 const data = [{
     key: '1',
@@ -91,7 +90,7 @@ const data = [{
 
 export default (props) => (
     <div>
-        <h1>{props.title} <EditPageLink /></h1>
+        <h1>{props.title} <EditPageLink editLink={EDIT_PAGE} /></h1>
         <p></p>
         <InstallationSection url={props.url} />
 

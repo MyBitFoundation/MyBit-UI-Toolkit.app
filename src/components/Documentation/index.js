@@ -17,7 +17,7 @@ import FilterPage from './Filter'
 import IconPage from './Icon'
 import ImgPage from './Img'
 import InputPage from './Input'
-import ListItemPage from './ListItem'
+//import ListItemPage from './ListItem'
 import ListPage from './List'
 import LogoPage from './Logo'
 import MenuPage from './Menu'
@@ -284,13 +284,6 @@ const documentationRoutes = [
         pageTitle: "Component: List"
     },
     {
-        title: "ListItem",
-        url: "list-item",
-        component: ListItemPage,
-        category: GENERAL,
-        pageTitle: "Component: ListItem"
-    },
-    {
         title: "Menu",
         url: "menu",
         component: MenuPage,
@@ -360,3 +353,13 @@ const documentationRoutes = [
 })
 
 export default documentationRoutes
+
+/*
+{
+title: "ListItem",
+url: "list-item",
+component: ListItemPage,
+category: GENERAL,
+pageTitle: "Component: ListItem"
+},
+*/

@@ -4,14 +4,14 @@ import { TotalPortfolioValue } from '../../../showcase'
 import { Row, Col } from 'antd'
 import { Helmet } from "react-helmet";
 
-const EDIT_PAGE_LINK = "/"
+const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/TotalPortfolioValue/index.js"
 
 const PortfolioValueItemPage = (props) => (
     <div>
         <Helmet>
             <title>{props.pageTitle}</title>
         </Helmet>
-    <h1>TotalPortfolioValue <EditPageLink editLink={EDIT_PAGE_LINK} /></h1>
+    <h1>TotalPortfolioValue <EditPageLink editLink={EDIT_PAGE} /></h1>
     <p>Displays the total value of a list of assets</p>
 
     <InstallationSection url="TotalPortfolioValue" />

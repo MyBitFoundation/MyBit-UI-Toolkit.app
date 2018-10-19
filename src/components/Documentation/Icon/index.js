@@ -4,6 +4,8 @@ import { PropsTable, Showcase, EditPageLink, InstallationSection } from '../../C
 import { Icon } from '../../../showcase'
 import { Helmet } from "react-helmet";
 
+const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/Icon/index.js"
+
 const iconExample = {
     component: (
         <div>
@@ -15,12 +17,9 @@ const iconExample = {
     description: (
         <p>Sample icons</p>
     ),
-    code: `
-    <Icon type="edit">Icon one</Icon>
-    `,
+    code: `<Icon type="edit">Icon one</Icon>`,
     display: 'inline-block'
 }
-
 
 const data = [{
     key: '1',
@@ -44,7 +43,7 @@ export default (props) => (
         <Helmet>
             <title>{props.pageTitle}</title>
         </Helmet>
-        <h1>Icon <EditPageLink /></h1>
+        <h1>Icon <EditPageLink editLink={EDIT_PAGE} /></h1>
         <p></p>
         <InstallationSection url="Icon" />
 

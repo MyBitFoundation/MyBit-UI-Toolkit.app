@@ -3,6 +3,8 @@ import { Row, Col } from 'antd';
 import { PropsTable, Showcase, EditPageLink, InstallationSection, Playground } from '../../Common';
 import { Switch } from '../../../showcase'
 
+const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/Switch/index.js"
+
 const switchExample = {
     component: (
         <div>
@@ -13,10 +15,8 @@ const switchExample = {
     description: (
         <p>Switch example</p>
     ),
-    code: `
-<Switch key="switch-example-1" checked onChange={() => {}} />
-<Switch key="switch-example-2" onChange={() => {}} />
-    `,
+    code: `<Switch key="switch-example-1" checked onChange={() => {}} />
+<Switch key="switch-example-2" onChange={() => {}} />`,
     display: 'inline-block'
 }
 
@@ -60,7 +60,7 @@ const styling = {
 
 export default (props) => (
     <div>
-        <h1>{props.title} <EditPageLink /></h1>
+        <h1>{props.title} <EditPageLink editLink={EDIT_PAGE} /></h1>
         <p></p>
         <InstallationSection url={props.url} />
         <Playground styling={styling} component={(props) => (

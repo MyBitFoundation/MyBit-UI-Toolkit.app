@@ -3,14 +3,14 @@ import { Showcase, EditPageLink, InstallationSection, PropsTable } from '../../C
 import { Logo } from '../../../showcase'
 import { Helmet } from "react-helmet";
 
-const EDIT_PAGE_LINK = "/"
+const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/Logo/index.js"
 
 const LogoPage = (props) => (
     <div>
         <Helmet>
             <title>{props.pageTitle}</title>
         </Helmet>
-    <h1>{props.title} <EditPageLink editLink={EDIT_PAGE_LINK} /></h1>
+    <h1>{props.title} <EditPageLink editLink={EDIT_PAGE} /></h1>
     <p>MyBit Logo</p>
 
     <InstallationSection url={props.url} />
