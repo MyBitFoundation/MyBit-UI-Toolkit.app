@@ -111,7 +111,7 @@ const data = [{
 },
 ];
 
-const ButtonsPage = (props) => (
+const BountyPage = (props) => (
     <div>
         <Helmet>
             <title>{props.pageTitle}</title>
@@ -130,7 +130,7 @@ const ButtonsPage = (props) => (
     </div>
 )
 
-export default ButtonsPage
+export default BountyPage
 
 
 

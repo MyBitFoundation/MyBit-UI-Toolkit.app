@@ -128,9 +128,6 @@ const propsData = [{
 ];
 
 export default class Page extends Component {
-    componentDidMount() {
-        document.title = this.props.pageTitle
-    }
     render() {
         return (
             <div>

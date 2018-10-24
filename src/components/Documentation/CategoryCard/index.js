@@ -11,17 +11,17 @@ const CategoryCardPage = (props) => (
         <Helmet>
             <title>{props.pageTitle}</title>
         </Helmet>
-    <h1>CategoryCard <EditPageLink editLink={EDIT_PAGE_LINK} /></h1>
-    <p>A card for an Asset category (MyBit GO)</p>
+        <h1>CategoryCard <EditPageLink editLink={EDIT_PAGE_LINK} /></h1>
+        <p>A card for an Asset category (MyBit GO)</p>
 
-    <InstallationSection url="CategoryCard" />
+        <InstallationSection url="CategoryCard" />
 
-    <h1>Examples</h1>
-    <Showcase data={assetTitleExample} />
+        <h1>Examples</h1>
+        <Showcase data={assetTitleExample} />
 
-    <h1>Props</h1>
-    <PropsTable data={assetTitleProps} />
-</div>
+        <h1>Props</h1>
+        <PropsTable data={assetTitleProps} />
+    </div>
 )
 
 export default CategoryCardPage

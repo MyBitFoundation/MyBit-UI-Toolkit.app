@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import TooltipAnt from 'antd/lib/tooltip';
-import 'antd/lib/style/css';
+import 'antd/lib/tooltip/style/css';
 
 import GlobalStyle from './globalStyles';
 

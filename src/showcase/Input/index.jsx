@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import InputAnt from 'antd/lib/input';
 import InputNumberAnt from 'antd/lib/input-number';
-import 'antd/lib/style/css';
+import 'antd/lib/input-number/style/css';
+import 'antd/lib/input/style/css';
 
 import Img from '../Img';
 import Tooltip from '../Tooltip';

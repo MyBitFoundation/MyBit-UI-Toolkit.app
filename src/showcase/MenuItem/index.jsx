@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Menu } from 'antd';
-import 'antd/lib/style/css';
+import 'antd/lib/menu/style/css';
 
 const MenuItem = styled(Menu.Item)`
   margin-right: 50px;

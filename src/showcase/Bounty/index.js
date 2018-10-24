@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Divider } from 'antd';
-import 'antd/lib/style/css';
+import 'antd/lib/divider/style/css';
 import StyledCard from './StyledCard';
 import StyledCardTime from './StyledCardTime';
 import StyledLabel from './StyledLabel';

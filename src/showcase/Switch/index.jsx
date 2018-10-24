@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Switch as SwitchAnt } from 'antd';
-import 'antd/lib/style/css';
+import 'antd/lib/switch/style/css';
 import Theme from '../theme';
 
 import Icon from '../Icon';
