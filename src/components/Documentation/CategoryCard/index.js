@@ -4,14 +4,14 @@ import { CategoryCard } from '../../../showcase'
 import demoImage from '../images/category-cryptocurrency-atm.png';
 import { Helmet } from "react-helmet";
 
-const EDIT_PAGE_LINK = "/"
+const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/CategoryCard/index.js"
 
 const CategoryCardPage = (props) => (
     <div>
         <Helmet>
             <title>{props.pageTitle}</title>
         </Helmet>
-        <h1>CategoryCard <EditPageLink editLink={EDIT_PAGE_LINK} /></h1>
+        <h1>CategoryCard <EditPageLink editLink={EDIT_PAGE} /></h1>
         <p>A card for an Asset category (MyBit GO)</p>
 
         <InstallationSection url="CategoryCard" />

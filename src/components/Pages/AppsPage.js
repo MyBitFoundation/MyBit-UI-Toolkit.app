@@ -11,12 +11,14 @@ const StyledGrid = styled.div`
     width: 100%;
 `
 
+const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Pages/AppsPage.js"
+
 const AppsPage = () => (
     <div>
         <Helmet>
             <title>{APPLICATIONS_TITLE}</title>
         </Helmet>
-        <h1>Applications <EditPageLink /></h1>
+        <h1>Applications <EditPageLink editLink={EDIT_PAGE}/></h1>
         <p>A showcase for all applications built with the MyBitUI library</p>
 
         <h2>MyBit Foundation</h2>
@@ -34,21 +36,21 @@ export default AppsPage
 const MyBitFoundation = [
 {
     logo: applogos.MyBitGo,
-    url: "/",
+    url: "https://go.mybit.io/",
     active: true,
     title: "MyBit Go",
     description: `IoT Investment Platform`
 },
 {
     logo: applogos.MyBitMobile,
-    url: "/",
+    url: "https://play.google.com/store/apps/details?id=io.mybit.app",
     active: true,
     title: "MyBit Mobile",
     description: `Android Mobile Wallet`
 },
 {
     logo: applogos.MyBitTrust,
-    url: "/",
+    url: "https://trust.mybit.io/",
     active: true,
     title: "MyBit Trust",
     description: `Trust fund for distributing Blockchain assets`

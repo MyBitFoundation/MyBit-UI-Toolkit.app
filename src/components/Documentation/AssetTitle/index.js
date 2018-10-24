@@ -3,14 +3,14 @@ import { Showcase, EditPageLink, InstallationSection, PropsTable } from '../../C
 import { AssetTitle } from '../../../showcase'
 import { Helmet } from "react-helmet";
 
-const EDIT_PAGE_LINK = "/"
+const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/AssetTitle/index.js"
 
 const AssetTitlePage = (props) => (
     <div>
         <Helmet>
             <title>{props.pageTitle}</title>
         </Helmet>
-    <h1>AssetTitle <EditPageLink editLink={EDIT_PAGE_LINK} /></h1>
+    <h1>AssetTitle <EditPageLink editLink={EDIT_PAGE} /></h1>
     <p>Asset title with location (MyBit GO)</p>
 
     <InstallationSection url="AssetTitle" />

@@ -4,12 +4,14 @@ import { Showcase, EditPageLink, CustomTag, PropsTable, InstallationSection } fr
 import { Row, Col } from 'antd'
 import { Helmet } from "react-helmet";
 
+const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/AccountInfo/index.js"
+
 const AccountInfoPage = (props) => (
     <div>
         <Helmet>
             <title>{props.pageTitle}</title>
         </Helmet>
-        <h1>AccountInfo <EditPageLink editLink="/" /></h1>
+        <h1>AccountInfo <EditPageLink editLink={EDIT_PAGE} /></h1>
         <p>Displays the current MYB and ETH balance of the user.</p>
 
         <InstallationSection url="AccountInfo" />

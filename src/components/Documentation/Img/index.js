@@ -4,6 +4,8 @@ import { PropsTable, Showcase, EditPageLink, InstallationSection } from '../../C
 import { Img } from '../../../showcase'
 import { Helmet } from "react-helmet";
 
+const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/Img/index.js"
+
 const imgExample = {
     component: (
         <div>
@@ -13,12 +15,9 @@ const imgExample = {
     description: (
         <p>Sample image</p>
     ),
-    code: `
-    <Img src="https://via.placeholder.com/350x150" alt="sample imag"/>
-    `,
+    code: `<Img src="https://via.placeholder.com/350x150" alt="sample imag"/>`,
     display: 'block'
 }
-
 
 const data = [{
     key: '1',
@@ -49,7 +48,7 @@ export default (props) => (
         <Helmet>
             <title>{props.pageTitle}</title>
         </Helmet>
-        <h1>Img <EditPageLink /></h1>
+        <h1>Img <EditPageLink editLink={EDIT_PAGE} /></h1>
         <p></p>
         <InstallationSection url="Img" />
 

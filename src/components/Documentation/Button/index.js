@@ -3,6 +3,8 @@ import { Row, Col } from 'antd';
 import { PropsTable, Showcase, EditPageLink, InstallationSection, Playground } from '../../Common';
 import { Button } from '../../../showcase'
 
+const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/Button/index.js"
+
 const typesExample = {
     component: (
         <div>
@@ -14,10 +16,8 @@ const typesExample = {
     description: (
         <p>Solid or outlined button</p>
     ),
-    code: `
-    <Button type="solid">solid button</Button>
-    <Button type="outline">outline button</Button>
-    `,
+    code: `<Button type="solid">solid button</Button>
+<Button type="outline">outline button</Button>`,
     display: 'inline-block'
 }
 
@@ -37,15 +37,13 @@ const colorsExample = {
     description: (
         <p>Solid buttons can be either blue or green</p>
     ),
-    code: `
-        <Button type="solid" color="green">green button</Button>
-        <Button type="solid" color="blue">blue button</Button>
-        <Button styling={{
-            backgroundColor: 'maroon',
-            backgroundColorHover: 'red',
-            backgroundColorActive: 'pink' 
-        }} type="solid">Custom button</Button>
-    `,
+    code: `<Button type="solid" color="green">green button</Button>
+<Button type="solid" color="blue">blue button</Button>
+<Button styling={{
+    backgroundColor: 'maroon',
+    backgroundColorHover: 'red',
+    backgroundColorActive: 'pink' 
+}} type="solid">Custom button</Button>`,
     display: 'inline-block'
 }
 
@@ -60,11 +58,9 @@ const sizesExample = {
     description: (
         <p>Buttons come in three sizes</p>
     ),
-    code: `
-    <Button type="outline" size="small">"small" button</Button>
-    <Button type="outline" size="default">"default" button</Button>
-    <Button type="outline" size="large">"large" button</Button>
-    `,
+    code: `<Button type="outline" size="small">"small" button</Button>
+<Button type="outline" size="default">"default" button</Button>
+<Button type="outline" size="large">"large" button</Button>`,
     display: 'inline-block'
 }
 
@@ -81,10 +77,8 @@ const shapesExample = {
     description: (
         <p>Solid buttons can be either blue or green</p>
     ),
-    code: `
-        <Button type="solid" shape="circle" loading></Button>
-        <Button type="outline" shape="circle" loading></Button>
-    `,
+    code: `<Button type="solid" shape="circle" loading></Button>
+<Button type="outline" shape="circle" loading></Button>`,
     display: 'inline-block'
 }
 
@@ -131,7 +125,7 @@ export default class Page extends Component {
     render() {
         return (
             <div>
-                <h1>Button <EditPageLink /></h1>
+                <h1>Button <EditPageLink editLink={EDIT_PAGE} /></h1>
                 <p></p>
                 <InstallationSection url="Button" />
                 <Playground component={Button} styling={{

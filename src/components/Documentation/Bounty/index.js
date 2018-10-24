@@ -3,6 +3,8 @@ import { PropsTable, Showcase, EditPageLink, InstallationSection } from '../../C
 import { Bounty } from '../../../showcase'
 import { Helmet } from "react-helmet";
 
+const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/Bounty/index.js"
+
 const firstExample = {
     component: (
         <div>
@@ -24,21 +26,19 @@ const firstExample = {
     description: (
         <p>Component to display active issues for a given github repository</p>
     ),
-    code: `
-    <Bounty
-        createdAt="2018-07-10T08:24:28Z"
-        labels={['Bounty']}
-        merged={false}
-        mybitInUsd="1.21"
-        repoName="MyBit-Go.website"
-        repoUrl="https://github.com/MyBitFoundation/MyBit-Go.website"
-        title="Reduce balance to only four decimals"
-        tokenSymbol="MYB"
-        url="https://github.com/MyBitFoundation/MyBit-Go.website/issues/48"
-        value={50}
-        showAmountInCrypto={false}
-    />
-    `,
+    code: `<Bounty
+    createdAt="2018-07-10T08:24:28Z"
+    labels={['Bounty']}
+    merged={false}
+    mybitInUsd="1.21"
+    repoName="MyBit-Go.website"
+    repoUrl="https://github.com/MyBitFoundation/MyBit-Go.website"
+    title="Reduce balance to only four decimals"
+    tokenSymbol="MYB"
+    url="https://github.com/MyBitFoundation/MyBit-Go.website/issues/48"
+    value={50}
+    showAmountInCrypto={false}
+/>`,
     display: 'inline-block'
 }
 
@@ -116,7 +116,7 @@ const BountyPage = (props) => (
         <Helmet>
             <title>{props.pageTitle}</title>
         </Helmet>
-        <h1>Bounty <EditPageLink /></h1>
+        <h1>Bounty <EditPageLink editLink={EDIT_PAGE}/></h1>
         <p></p>
         <InstallationSection url="Bounty" />
 

@@ -3,6 +3,8 @@ import { Row, Col } from 'antd';
 import { PropsTable, Showcase, EditPageLink, InstallationSection, Playground } from '../../Common';
 import { Menu } from '../../../showcase'
 
+const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/Menu/index.js"
+
 const menuExample = {
     component: (
         <div>
@@ -40,16 +42,14 @@ const menuExample = {
     description: (
         <p>Menu example</p>
     ),
-    code: `
-    <Menu mode="horizontal" items={[
-        {name: 'Menu item 1', linkTo: "#", target: "_top"},
-        {name: 'Menu item 2', linkTo: "#", target: "_top"},
-        {name: 'Menu item 3 (with submenu)', subNavigation: [
-            {name: 'subMenu item 1', linkTo: "#", target: "_top"},
-            {name: 'subMenu item 2', linkTo: "#", target: "_top"},
-        ]},
-    ]} />
-    `,
+    code: `<Menu mode="horizontal" items={[
+    {name: 'Menu item 1', linkTo: "#", target: "_top"},
+    {name: 'Menu item 2', linkTo: "#", target: "_top"},
+    {name: 'Menu item 3 (with submenu)', subNavigation: [
+        {name: 'subMenu item 1', linkTo: "#", target: "_top"},
+        {name: 'subMenu item 2', linkTo: "#", target: "_top"},
+    ]},
+]} />`,
     display: 'inline-block'
 }
 
@@ -102,7 +102,7 @@ const data = [{
 
 export default (props) => (
     <div>
-        <h1>{props.title} <EditPageLink /></h1>
+        <h1>{props.title} <EditPageLink editLink={EDIT_PAGE} /></h1>
         <p></p>
         <InstallationSection url={props.url} />
         <Playground styling={styling} component={(props) => (

@@ -3,14 +3,14 @@ import { Showcase, EditPageLink, InstallationSection, PropsTable } from '../../C
 import { AssetInvestmentStatus } from '../../../showcase'
 import { Helmet } from "react-helmet";
 
-const EDIT_PAGE_LINK = "/"
+const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/AssetInvestmentStatus/index.js"
 
 const AssetInvestmentStatusPage = (props) => (
     <div>
         <Helmet>
             <title>{props.pageTitle}</title>
         </Helmet>
-    <h1>AssetInvestmentStatus <EditPageLink editLink={EDIT_PAGE_LINK} /></h1>
+    <h1>AssetInvestmentStatus <EditPageLink editLink={EDIT_PAGE} /></h1>
     <p>Shows the money raised, the money required to fully fund the asset and the number of investors</p>
 
     <InstallationSection url="AssetInvestmentStatus" />

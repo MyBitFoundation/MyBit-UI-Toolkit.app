@@ -3,6 +3,8 @@ import { Row, Col } from 'antd';
 import { PropsTable, Showcase, EditPageLink, InstallationSection, Playground } from '../../Common';
 import { Spin } from '../../../showcase'
 
+const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/Spin/index.js"
+
 const spinExample = {
     component: (
         <div>
@@ -14,11 +16,9 @@ const spinExample = {
     description: (
         <p>Spin example</p>
     ),
-    code: `
-    <Spin styling={{color: 'red'}}size="small"/>
-    <Spin styling={{color: 'blue'}}size="default"/>
-    <Spin styling={{color: 'green'}}size="large"/>
-    `,
+    code: `<Spin styling={{color: 'red'}} size="small"/>
+<Spin styling={{color: 'blue'}} size="default"/>
+<Spin styling={{color: 'green'}} size="large"/>`,
     display: 'inline-block'
 }
 
@@ -51,7 +51,7 @@ const data = [
 
 export default (props) => (
     <div>
-        <h1>Spin <EditPageLink /></h1>
+        <h1>Spin <EditPageLink editLink={EDIT_PAGE} /></h1>
         <p></p>
         <InstallationSection url="Spin" />
 

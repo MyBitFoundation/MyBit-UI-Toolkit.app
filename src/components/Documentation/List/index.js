@@ -3,6 +3,8 @@ import { Row, Col } from 'antd';
 import { PropsTable, Showcase, EditPageLink, InstallationSection } from '../../Common';
 import { List, ListItem } from '../../../showcase'
 
+const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/List/index.js"
+
 const listExample = {
     component: (
         <div>
@@ -12,12 +14,9 @@ const listExample = {
     description: (
         <p>List example</p>
     ),
-    code: `
-        <List component={ListItem} items={['Item 1', 'Item2', 'Item3']} />
-    `,
+    code: `<List component={ListItem} items={['Item 1', 'Item2', 'Item3']} />`,
     display: 'inline-block'
 }
-
 
 const data = [{
     key: '1',
@@ -31,7 +30,7 @@ const data = [{
 
 export default (props) => (
     <div>
-        <h1>{props.title} <EditPageLink /></h1>
+        <h1>{props.title} <EditPageLink editLink={EDIT_PAGE} /></h1>
         <p></p>
         <InstallationSection url={props.url} />
 

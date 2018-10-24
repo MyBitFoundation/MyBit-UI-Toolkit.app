@@ -3,14 +3,14 @@ import { Showcase, EditPageLink, InstallationSection, PropsTable } from '../../C
 import { MyBitGoHeader } from '../../../showcase'
 import { Helmet } from "react-helmet";
 
-const EDIT_PAGE_LINK = "/"
+const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/MyBitGoHeader/index.js"
 
 const MyBitGoHeaderPage = (props) => (
     <div>
         <Helmet>
             <title>{props.pageTitle}</title>
         </Helmet>
-    <h1>MyBitGoHeader <EditPageLink editLink={EDIT_PAGE_LINK} /></h1>
+    <h1>MyBitGoHeader <EditPageLink editLink={EDIT_PAGE} /></h1>
     <p>MyBitGo header</p>
 
     <InstallationSection url="MyBitGoHeader" />
@@ -42,7 +42,7 @@ const headerExample = {
         </div>
     ),
     description: (
-        <p>dasdasd</p>
+        <p>The header of MyBit Go</p>
     ),
     code: `<MyBitGoHeader 
     prices={{ mybitPrice: 0.05 }}

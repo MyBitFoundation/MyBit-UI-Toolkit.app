@@ -85,6 +85,11 @@ const StyledWrapper = styled.div`
         transition: all 0.6s;
         transform: translate(0px, 0px);
     }
+    &:hover > .mybutton > button[disabled] {
+        opacity: 0.5;
+        transition: all 0.6s;
+        transform: translate(0px, 0px);
+    }
 `
 
 const ApplicationCard = ({ data }) => (
@@ -99,7 +104,7 @@ const ApplicationCard = ({ data }) => (
             {data.description}
         </div>
         <a href={data.url} target="_blank" className="mybutton" rel="noopener noreferrer">
-            <button disabled={data.active}>{data.active ? 'Visit' : 'Coming soon'}</button>
+            <button disabled={!data.active}>{data.active ? 'Visit' : 'Coming soon'}</button>
         </a>
     </StyledWrapper>
 )

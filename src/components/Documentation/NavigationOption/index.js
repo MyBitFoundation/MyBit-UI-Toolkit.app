@@ -8,14 +8,14 @@ import savedIcon from '../images/star.png'
 import portfolioIcon from '../images/chart-area.png'
 import transactionsIcon from '../images/history.png'
 
-const EDIT_PAGE_LINK = "/"
+const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/NavigationOption/index.js"
 
 const NavigationOptionPage = (props) => (
     <div>
         <Helmet>
             <title>{props.pageTitle}</title>
         </Helmet>
-    <h1>NavigationOption <EditPageLink editLink={EDIT_PAGE_LINK} /></h1>
+    <h1>NavigationOption <EditPageLink editLink={EDIT_PAGE} /></h1>
     <p>A single NavigationOption part of the Navigation component for MyBitGo</p>
 
     <InstallationSection url="NavigationOption" />

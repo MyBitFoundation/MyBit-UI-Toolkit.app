@@ -5,14 +5,14 @@ import { Row, Col } from 'antd'
 import demoImage from '../images/category-cryptocurrency-atm.png';
 import { Helmet } from "react-helmet";
 
-const EDIT_PAGE_LINK = "/"
+const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/AssetCard/index.js"
 
 const AssetCardPage = (props) => (
     <div>
         <Helmet>
             <title>{props.pageTitle}</title>
         </Helmet>
-        <h1>AssetCard <EditPageLink editLink={EDIT_PAGE_LINK} /></h1>
+        <h1>AssetCard <EditPageLink editLink={EDIT_PAGE} /></h1>
         <p>A card with all important information about an Asset</p>
 
         <InstallationSection url="Asset Card" />

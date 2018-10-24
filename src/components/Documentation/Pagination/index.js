@@ -4,6 +4,8 @@ import { PropsTable, Showcase, EditPageLink, InstallationSection, Playground } f
 import { Pagination } from '../../../showcase'
 import { Helmet } from "react-helmet";
 
+const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/Pagination/index.js"
+
 const paginationExample = {
     component: (
         <div>
@@ -13,16 +15,15 @@ const paginationExample = {
     description: (
         <p>Pagination example</p>
     ),
-    code: `
-    <Pagination styling={{
-        color: 'rgba(0, 0, 0, 0.65)',
-        borderColor: '#d9d9d9',
-        backgroundColor: '#ffffff',
-        itemActiveBorderColor: 'blue',
-        itemHoverBorderColor: 'blue',
-        disabledItemBorderColor: '#d9d9d9',
-        disabledItemColor: 'rgba(0, 0, 0, 0.25)',
-    }} defaultCurrent={6} total={500} />
+    code: `<Pagination styling={{
+    color: 'rgba(0, 0, 0, 0.65)',
+    borderColor: '#d9d9d9',
+    backgroundColor: '#ffffff',
+    itemActiveBorderColor: 'blue',
+    itemHoverBorderColor: 'blue',
+    disabledItemBorderColor: '#d9d9d9',
+    disabledItemColor: 'rgba(0, 0, 0, 0.25)',
+}} defaultCurrent={6} total={500} />
     `,
     display: 'block'
 }
@@ -166,7 +167,7 @@ export default (props) => (
         <Helmet>
             <title>{props.pageTitle}</title>
         </Helmet>
-        <h1>{props.title} <EditPageLink /></h1>
+        <h1>{props.title} <EditPageLink editLink={EDIT_PAGE} /></h1>
         <p></p>
         <InstallationSection url={props.url} />
         <Playground component={(props) => (

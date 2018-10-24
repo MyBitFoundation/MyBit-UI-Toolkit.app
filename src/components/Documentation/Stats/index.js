@@ -3,6 +3,8 @@ import { Row, Col } from 'antd';
 import { PropsTable, Showcase, EditPageLink, InstallationSection } from '../../Common';
 import { Stats } from '../../../showcase'
 
+const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/Stats/index.js"
+
 const statsExample = {
     component: (
         <div>
@@ -14,9 +16,7 @@ const statsExample = {
     description: (
         <p>Stats example</p>
     ),
-    code: `
-    <Stats stats={[{ name: 'Sample1', value: 'Sample value1' }, { name: 'Sample2', value: 'Sample value2' }, { name: 'Sample3', value: 'Sample value3' }]} />
-    `,
+    code: `<Stats stats={[{ name: 'Sample1', value: 'Sample value1' }, { name: 'Sample2', value: 'Sample value2' }, { name: 'Sample3', value: 'Sample value3' }]} />`,
     display: 'block'
 }
 
@@ -34,7 +34,7 @@ const data = [
 
 export default (props) => (
     <div>
-        <h1>Stats <EditPageLink /></h1>
+        <h1>Stats <EditPageLink editLink={EDIT_PAGE} /></h1>
         <p></p>
         <InstallationSection url="Stats" />
 
