@@ -14,7 +14,7 @@ const ExchangeRatePage = (props) => (
     <h1>ExchangeRate <EditPageLink editLink={EDIT_PAGE} /></h1>
     <p>Displays the price of MYB in USD</p>
 
-    <InstallationSection url="Alert" />
+    <InstallationSection url={props.url} />
 
     <h1>Examples</h1>
     <Row gutter={16}>

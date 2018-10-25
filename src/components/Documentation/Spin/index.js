@@ -53,7 +53,7 @@ export default (props) => (
     <div>
         <h1>Spin <EditPageLink editLink={EDIT_PAGE} /></h1>
         <p></p>
-        <InstallationSection url="Spin" />
+        <InstallationSection url={props.url} />
 
         <Playground component={Spin} styling={{
             color: 'blue'
