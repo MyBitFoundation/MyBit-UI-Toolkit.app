@@ -13,7 +13,7 @@ script:
   - if [ "$TRAVIS_BRANCH" = "develop" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then HOST=$(echo ui-staging.mybit.io); fi
   - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then HOST=$(echo ui.mybit.io); fi
   - eval $(ssh-agent -s)
-  - ssh-add <(echo "$SSH_PRIVATE_KEY") 
+  - ssh-add <(echo $SSH_PRIVATE_KEY) 
   - npm set init.author.name "MyBit AG"
   - npm set init.author.email "mybit.development@gmail.com"
   - echo "//registry.npmjs.org/:_authToken=$NPM_MYBIT_BOT_TOKEN" > ~/.npmrc
