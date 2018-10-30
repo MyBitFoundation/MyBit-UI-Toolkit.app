@@ -21,6 +21,7 @@ script:
   - cp CONTRIBUTORS build/contributors
   - BUILD_URL=$(npx now --name ui.mybit.io build -t $NOW_PROD_TOKEN)
   - npx now alias ${BUILD_URL} $HOST -t $NOW_PROD_TOKEN
+after_success:
   - npm config set @bit:registry = "https://node.bitsrc.io"
   - echo "//node.bitsrc.io/:_authToken=$registryStgToken" >> ~/.npmrc
   - npm link bit to global
