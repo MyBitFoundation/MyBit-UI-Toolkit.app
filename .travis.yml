@@ -19,3 +19,8 @@ script:
   - cp CONTRIBUTORS build/contributors
   - BUILD_URL=$(npx now --name ui.mybit.io build -t $NOW_PROD_TOKEN)
   - npx now alias ${BUILD_URL} $HOST -t $NOW_PROD_TOKEN
+  - bit init
+  - bit add src/showcase/*
+  - bit tag --all
+  - bit login
+  - bit export mybit.test
