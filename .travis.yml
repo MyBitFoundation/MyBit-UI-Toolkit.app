@@ -6,13 +6,21 @@ cache:
   - node_modules
 yarn: true
 before_script:
-  - yarn test
   - yarn build
 script:
   - GIT_HASH=$(git rev-parse --short HEAD)
+  - if [ "$TRAVIS_BRANCH" = "develop" -a ! "$TRAVIS_PULL_REQUEST" = "false" ]; then HOST=$(echo ui-develop.mybit.io); fi
+  - if [ "$TRAVIS_BRANCH" = "develop" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then HOST=$(echo ui-staging.mybit.io); fi
+  - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then HOST=$(echo ui.mybit.io); fi
+  - npm set init.author.name "MyBit AG"
+  - npm set init.author.email "mybit.development@gmail.com"
+  - echo "//registry.npmjs.org/:_authToken=$NPM_MYBIT_BOT_TOKEN" > ~/.npmrc
   - echo ${GIT_HASH} > build/version
   - cp CONTRIBUTORS build/contributors
   - BUILD_URL=$(npx now --name ui.mybit.io build -t $NOW_PROD_TOKEN)
-  - if [ "$TRAVIS_BRANCH" = "develop" -a ! "$TRAVIS_PULL_REQUEST" = "false" ]; then npx now alias ${BUILD_URL} ui-develop.mybit.io -t $NOW_PROD_TOKEN; fi
-  - if [ "$TRAVIS_BRANCH" = "develop" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then npx now alias ${BUILD_URL} ui-staging.mybit.io -t $NOW_PROD_TOKEN; fi
-  - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then npx now alias ${BUILD_URL} ui.mybit.io -t $NOW_PROD_TOKEN; fi
+  - npx now alias ${BUILD_URL} $HOST -t $NOW_PROD_TOKEN
+  - bit init
+  - bit add src/showcase/*
+  - bit tag --all
+  - bit login
+  - bit export mybit.test

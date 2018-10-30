@@ -1,52 +1,37 @@
 {
   "name": "@mybit/ui",
-  "version": "0.1.0",
+  "version": "0.1.5",
   "description": "MyBit UI Kit",
-  "main": "build/index.js",
-  "scripts": {
-    "start": "neutrino start",
-    "now-start": "echo $HOST; neutrino start --options.host $HOST",
-    "build": "neutrino build",
-    "lint": "neutrino lint",
-    "lint:fix": "neutrino lint --fix",
-    "test": "neutrino test"
-  },
-  "files": [
-    "LICENSE",
-    "README.md",
-    "build/"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MyBitFoundation/MyBit-UI.website.git"
-  },
-  "author": "MyBit Foundation <info@mybit.io>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/MyBitFoundation/MyBit-UI.website/issues"
-  },
-  "homepage": "https://github.com/MyBitFoundation/MyBit-UI.website#readme",
-  "devDependencies": {
-    "@neutrinojs/airbnb": "^8.3.0",
-    "@neutrinojs/jest": "^8.3.0",
-    "@neutrinojs/react-components": "^8.3.0",
-    "enzyme": "^3.5.0",
-    "enzyme-adapter-react-16": "^1.3.0",
-    "neutrino": "^8.3.0"
-  },
   "dependencies": {
-    "@compositor/kit": "^1.0.47",
-    "@neutrinojs/style-loader": "^8.3.0",
-    "antd": "^3.8.4",
-    "prop-types": "^15.6.2",
-    "react": "^16.5.1",
-    "react-dom": "^16.5.1",
-    "react-hot-loader": "^4.3.7",
-    "react-jazzicon": "^0.1.2",
-    "react-placeholder": "^3.0.1",
+    "antd": "^3.10.0",
+    "dayjs": "^1.7.7",
+    "enzyme": "^3.7.0",
+    "react": "^16.5.2",
+    "react-color": "^2.14.1",
+    "react-dom": "^16.5.2",
+    "react-helmet": "^5.2.0",
+    "react-jazzicon": "^0.1.3",
     "react-router-dom": "^4.3.1",
+    "react-scripts": "2.0.4",
     "react-syntax-highlighter": "^8.0.1",
-    "styled-components": "^4.0.0-beta.5",
-    "web3": "^1.0.0-beta2"
+    "styled-components": "^4.0.0-beta.10"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "bit-bin": "^13.0.4"
   }
 }
