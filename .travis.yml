@@ -36,6 +36,7 @@ after_success:
   - bit config set error_reporting false
   - bit config set user.name jjperezaguinaga
   - bit config set user.email me@jjperezaguinaga.com
+  - mkdir -p .bit && cp bit.json .bit/config.json
   - bit add src/showcase/*
   - bit tag --all
   - bit login
