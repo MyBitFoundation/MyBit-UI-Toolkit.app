@@ -11,8 +11,8 @@ before_script:
   # Run ssh-agent (inside the build environment)
   - eval $(ssh-agent -s)
   # Add the SSH key stored in SSH_PRIVATE_KEY variable to the agent store
-  - bash -c "ssh-add <(echo '$SSH_PRIVATE_KEY' | base64 -d)"
-  #buidl
+  - ssh-add <(echo "$SSH_PRIVATE_KEY" | base64 --decode)
+  # buidl
   - yarn build
 
 script:
