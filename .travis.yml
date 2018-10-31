@@ -41,5 +41,5 @@ after_success:
   - bit init
   - bit add src/showcase/*
   - bit tag --all
-  - bit login
+  - bit login --suppress-browser-launch
   - bit export mybit.test
