@@ -32,11 +32,11 @@ after_success:
   - npm config set @bit:registry = "https://node.bitsrc.io"
   - echo "//node.bitsrc.io/:_authToken=$NPM_MYBIT_BOT_TOKEN" >> ~/.npmrc
   - npm link bit to global
+  - bit init
   - bit config set analytics_reporting false
   - bit config set error_reporting false
   - bit config set user.name jjperezaguinaga
   - bit config set user.email me@jjperezaguinaga.com
-  - bit init
   - bit add src/showcase/*
   - bit tag --all
   - bit login
