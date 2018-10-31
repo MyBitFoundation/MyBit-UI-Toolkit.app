@@ -6,7 +6,18 @@ cache:
   - node_modules
 yarn: true
 before_script:
+  # Install ssh-agent if not already installed, it is required by Docker.
+  - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+  # Run ssh-agent (inside the build environment)
+  - eval $(ssh-agent -s)
+  # Add the SSH key stored in SSH_PRIVATE_KEY variable to the agent store
+  - ssh-add <(echo "$SSH_PRIVATE_KEY" | base64 --decode)
+  # Adding bit-bin for being able to use bit commands later
+  # @TODO: Alias dev dependency binary (i.e. ./node_modules/.bin/bit) instead of installing
+  - npm install bit-bin -g
+  # buidl
   - yarn build
+
 script:
   - GIT_HASH=$(git rev-parse --short HEAD)
   - if [ "$TRAVIS_BRANCH" = "develop" -a ! "$TRAVIS_PULL_REQUEST" = "false" ]; then HOST=$(echo ui-develop.mybit.io); fi
@@ -21,8 +32,16 @@ script:
   - cp CONTRIBUTORS build/contributors
   - BUILD_URL=$(npx now --name ui.mybit.io build -t $NOW_PROD_TOKEN)
   - npx now alias ${BUILD_URL} $HOST -t $NOW_PROD_TOKEN
+
+after_success:
+  - npm config set @bit:registry = "https://node.bitsrc.io"
+  - echo "//node.bitsrc.io/:_authToken=$NPM_MYBIT_BOT_TOKEN" >> ~/.npmrc
+  - bit config set analytics_reporting false
+  - bit config set error_reporting false
+  - bit config set user.name jjperezaguinaga
+  - bit config set user.email me@jjperezaguinaga.com
   - bit init
   - bit add src/showcase/*
   - bit tag --all
-  - bit login
+  - bit login --suppress-browser-launch
   - bit export mybit.test
