@@ -12,6 +12,9 @@ before_script:
   - eval $(ssh-agent -s)
   # Add the SSH key stored in SSH_PRIVATE_KEY variable to the agent store
   - ssh-add <(echo "$SSH_PRIVATE_KEY" | base64 --decode)
+  # Adding bit-bin for being able to use bit commands later
+  # @TODO: Alias dev dependency binary (i.e. ./node_modules/.bin/bit) instead of installing
+  - npm install bit-bin -g
   # buidl
   - yarn build
 
