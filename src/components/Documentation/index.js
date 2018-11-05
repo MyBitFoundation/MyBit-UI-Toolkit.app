@@ -37,6 +37,7 @@ import ShowcasePage from './Showcase'
 import SpinPage from './Spin'
 import StatCardPage from './StatCard'
 import StatsPage from './Stats'
+import SubscribeForm from './SubscribeForm'
 import SwitchPage from './Switch'
 import TooltipPage from './Tooltip'
 import TotalPortfolioRevenuePage from './TotalPortfolioRevenue'
@@ -345,6 +346,13 @@ const documentationRoutes = [
         component: BancorWidgetButtonPage,
         category: WIDGETS,
         pageTitle: "Component: Bancor Widget"
+    },
+    {
+        title: "Subscribe Form",
+        url: "subscribe-form",
+        component: SubscribeForm,
+        category: FORMS,
+        pageTitle: "Component: Subsribe Form"
     }
 ].sort(function(a, b) {
     if(a.title > b.title) return 1;
