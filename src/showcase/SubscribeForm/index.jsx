@@ -39,8 +39,9 @@ class SubscribeForm extends React.Component {
       });
     } else {
         var xhr = new XMLHttpRequest();
-        xhr.open("POST", 'https://cors-anywhere.herokuapp.com/https://mailchimp.mybit.io/api/member/', true);
-        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.open("POST", process.env.MAILCHIMP_API_URL, true);
+        xhr.setRequestHeader('Content-Type', 'application/json')
+        xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
         this.setState({isButtonDisabled: true});
         xhr.send(JSON.stringify({
           email: this.state.value, list: this.props.listId
