@@ -31,7 +31,6 @@ class SubscribeForm extends React.Component {
   }
 
   handleButtonClick(e){
-    console.log(this.state.value);
     if (!this.validateEmail(this.state.value)){
       this.setState({
         value: '',
