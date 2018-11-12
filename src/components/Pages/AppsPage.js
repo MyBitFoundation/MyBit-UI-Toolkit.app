@@ -109,7 +109,7 @@ const MyBitFoundation = [
     url: "/",
     active: false,
     title: "MyBit Cheque",
-    description: `Request payments in criptocurrency`
+    description: `Request payments in cryptocurrency`
 },
 {
     logo: applogos.MyBitSavings,
