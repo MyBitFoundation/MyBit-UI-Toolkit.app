@@ -42,4 +42,4 @@ after_success:
   - bit add src/showcase/*
   - bit tag --all
   - bit login --suppress-browser-launch
-  - bit export mybit.test
+  - bit export mybit.ui
