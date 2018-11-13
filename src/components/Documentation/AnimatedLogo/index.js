@@ -1,6 +1,6 @@
 import React from 'react'
 import { AnimatedLogo } from '../../../showcase'
-import { Showcase, EditPageLink, CustomTag, PropsTable, InstallationSection } from '../../Common/';
+import { Showcase, EditPageLink, PropsTable, InstallationSection } from '../../Common/';
 import { Row, Col } from 'antd'
 import { Helmet } from "react-helmet";
 
