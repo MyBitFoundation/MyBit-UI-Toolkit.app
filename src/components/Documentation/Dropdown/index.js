@@ -91,7 +91,7 @@ export default (props) => (
     <div>
         <h1>Dropdown <EditPageLink editLink={EDIT_PAGE} /></h1>
         <p></p>
-        <InstallationSection url="Alert" />
+        <InstallationSection url={props.url} />
         <Playground component={(props) => (
             <Dropdown styling={props.styling} menu={['bottomLeft', 'bottomCenter', 'bottomRight', 'topLeft', 'topCenter', 'topRight']} selected="bottomLeft" placement="bottomLeft" trigger="hover" handleClick={() => {}} />
         )} styling={styling}/>

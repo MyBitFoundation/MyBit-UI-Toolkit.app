@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withTheme } from 'styled-components';
 import PaginationAnt from 'antd/lib/pagination';
-import 'antd/lib/style/css';
+import 'antd/lib/pagination/style/css';
 import StyledPagination from './styledPagination';
 import Theme from '../theme';
 

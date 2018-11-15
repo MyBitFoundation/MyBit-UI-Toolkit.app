@@ -13,7 +13,7 @@ const PortfolioRevenueItemPage = (props) => (
     <h1>PortfolioRevenueItem <EditPageLink editLink={EDIT_PAGE} /></h1>
     <p>A building block for TotalPortfolioRevenue on MyBit Go</p>
 
-    <InstallationSection url="PortfolioRevenueItem" />
+    <InstallationSection url={props.url} />
 
     <h1>Examples</h1>
     <Showcase data={revenueExample} />

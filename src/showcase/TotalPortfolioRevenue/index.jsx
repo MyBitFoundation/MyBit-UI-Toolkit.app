@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Collapse } from 'antd';
-import 'antd/lib/style/css';
+import 'antd/lib/collapse/style/css';
 
 import PortfolioRevenueItem from '../PortfolioRevenueItem';
 import { EmptyP } from './styledComponents';

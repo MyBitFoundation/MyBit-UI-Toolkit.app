@@ -43,7 +43,7 @@ export default (props) => (
     <div>
         <h1>StatCard <EditPageLink editLink={EDIT_PAGE} /></h1>
         <p></p>
-        <InstallationSection url="StatCard" />
+        <InstallationSection url={props.url} />
         <Playground styling={styling} component={(props) => (
             <div>
                 <StatCard {...props} key="StatCard-example-1" stat={{ name: 'Statistic...', value: '...with value' }} />

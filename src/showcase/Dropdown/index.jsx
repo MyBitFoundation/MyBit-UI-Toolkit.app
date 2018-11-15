@@ -2,7 +2,9 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { withTheme } from 'styled-components';
 import { Menu, Dropdown as DropdownAnt, Icon } from 'antd';
-import 'antd/lib/style/css';
+import 'antd/lib/menu/style/css';
+import 'antd/lib/dropdown/style/css';
+import 'antd/lib/icon/style/css';
 
 import Theme from '../theme';
 import StyledDropdown from './styledDropdown';
