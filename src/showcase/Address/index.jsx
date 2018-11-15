@@ -14,7 +14,7 @@ const Address = ({ userName, className }) => (
   <div className={className}>
     {!userName ? (
       <AddressLoader>
-        <Spin indicator={antIcon} />
+        <Spin indicator={antIcon} />{' '}
         <span>Loading account</span>
       </AddressLoader>
     ) : (
