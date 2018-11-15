@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import 'antd/lib/style/css';
+import 'antd/lib/button/style/css';
 import Button from '../Button';
 import Theme from '../theme';
 

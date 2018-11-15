@@ -13,7 +13,7 @@ const AssetTitlePage = (props) => (
     <h1>AssetTitle <EditPageLink editLink={EDIT_PAGE} /></h1>
     <p>Asset title with location (MyBit GO)</p>
 
-    <InstallationSection url="AssetTitle" />
+    <InstallationSection url={props.url} />
 
     <h1>Examples</h1>
     <Showcase data={assetTitleExample} />

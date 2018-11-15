@@ -14,7 +14,7 @@ const AssetDeadlineStatusPage = (props) => (
         <h1>AssetDeadlineStatus <EditPageLink editLink={EDIT_PAGE} /></h1>
         <p>Displays the deadline status of an Asset (MyBit GO)</p>
 
-        <InstallationSection url="AssetDeadlineStatus" />
+        <InstallationSection url={props.url} />
 
         <h1>Examples</h1>
         <Row gutter={16}>

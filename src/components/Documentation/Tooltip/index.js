@@ -53,7 +53,7 @@ export default (props) => (
     <div>
         <h1>Tooltip <EditPageLink editLink={EDIT_PAGE} /></h1>
         <p></p>
-        <InstallationSection url="Tooltip" />
+        <InstallationSection url={props.url} />
         <h2>Examples</h2>
         <Row gutter={16}>
             <Col span={24}>

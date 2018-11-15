@@ -129,7 +129,7 @@ export default (props) => (
     <div>
         <h1>PortfolioDropdown <EditPageLink editLink={EDIT_PAGE} /></h1>
         <p></p>
-        <InstallationSection url="PortfolioDropdown" />
+        <InstallationSection url={props.url} />
 
         <h1>Examples</h1>
         <Row gutter={16}>

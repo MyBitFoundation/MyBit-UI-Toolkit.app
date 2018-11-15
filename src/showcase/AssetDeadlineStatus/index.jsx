@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Icon as IconAnt } from 'antd';
-import 'antd/lib/style/css';
+import 'antd/lib/icon/style/css';
 import { getStringFromDate, getRemainingTime } from './date_utils';
 import StyledWrapper from './styledWrapper';
 

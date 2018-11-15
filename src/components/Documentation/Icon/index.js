@@ -45,7 +45,7 @@ export default (props) => (
         </Helmet>
         <h1>Icon <EditPageLink editLink={EDIT_PAGE} /></h1>
         <p></p>
-        <InstallationSection url="Icon" />
+        <InstallationSection url={props.url} />
 
         <h1>Examples</h1>
         <Row gutter={16}>

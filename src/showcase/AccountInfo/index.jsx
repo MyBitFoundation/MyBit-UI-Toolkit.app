@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 // import Web3 from 'web3';
 import { Spin, Icon } from 'antd';
-import 'antd/lib/style/css';
+import 'antd/lib/spin/style/css';
+import 'antd/lib/icon/style/css';
 
 import Address from '../Address';
 import { StyledAccountInfo, Balance, BalanceHeader, BalanceInfo, BalanceMYB } from './styledComponents';

@@ -13,7 +13,7 @@ const SectionHeaderPage = (props) => (
     <h1>SectionHeader <EditPageLink editLink={EDIT_PAGE} /></h1>
     <p>A heading tag with a custom divider</p>
 
-    <InstallationSection url="SectionHeader" />
+    <InstallationSection url={props.url} />
 
     <h1>Examples</h1>
     <Showcase data={SectionHeaderExample} />
