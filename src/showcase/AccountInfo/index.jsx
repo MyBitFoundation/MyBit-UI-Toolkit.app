@@ -18,7 +18,7 @@ const AccountInfo = ({
     <Balance>
       <BalanceHeader>Balance</BalanceHeader>
       {!ethBalance || !myBitBalance ? (
-        <Spin indicator={antIcon} />
+        <div style={{textAlign: 'center'}}><Spin indicator={antIcon} /></div>
         ) : (
           <BalanceInfo>
             <div>

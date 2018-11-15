@@ -15,7 +15,7 @@ const Address = ({ userName, className }) => (
     {!userName ? (
       <AddressLoader>
         <Spin indicator={antIcon} />{' '}
-        <span>Loading account</span>
+        <span style={{marginLeft: 5}}>Loading account</span>
       </AddressLoader>
     ) : (
       <AddressWrapper>
