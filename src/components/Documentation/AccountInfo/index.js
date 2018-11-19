@@ -64,7 +64,7 @@ const AccountInfoPropsData = [{
 const allProps = {
     component: (
         <div>
-            <div><AccountInfo myBitBalance="20" ethBalance="8" userName="0xDA2F8123" /></div>
+            <div><AccountInfo myBitBalance="20000000" ethBalance="8" userName="0xDA2F8123" /></div>
         </div>
     ),
     description: (

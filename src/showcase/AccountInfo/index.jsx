@@ -6,7 +6,7 @@ import 'antd/lib/spin/style/css';
 import 'antd/lib/icon/style/css';
 
 import Address from '../Address';
-import { StyledAccountInfo, Balance, BalanceHeader, BalanceInfo, BalanceMYB } from './styledComponents';
+import { StyledAccountInfo, Balance, BalanceHeader, BalanceInfo } from './styledComponents';
 
 const antIcon = <Icon type="loading" spin />;
 // const IS_DAPP_VERSION_ONE = true;
@@ -18,13 +18,17 @@ const AccountInfo = ({
     <Balance>
       <BalanceHeader>Balance</BalanceHeader>
       {!ethBalance || !myBitBalance ? (
-        <Spin indicator={antIcon} />
+        <div style={{textAlign: 'center'}}><Spin indicator={antIcon} /></div>
         ) : (
           <BalanceInfo>
-            {myBitBalance}{' '}
-            <BalanceMYB>MYB</BalanceMYB>
-            {Number(ethBalance).toFixed(4)}
-            <b>ETH</b>
+            <div>
+              {myBitBalance}{' '}
+              <b>MYB</b>
+            </div>
+            <div> 
+              {Number(ethBalance).toFixed(4)}{' '}
+              <b>ETH</b>
+            </div>
           </BalanceInfo>
         )}
     </Balance>

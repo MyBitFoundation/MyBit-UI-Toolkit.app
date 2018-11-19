@@ -18,6 +18,3 @@ export const BalanceHeader = styled.div`
 export const BalanceInfo = styled.div`
 font-size: 14px;
 `;
-export const BalanceMYB = styled.b`
-padding-right: 10px;
-`;
