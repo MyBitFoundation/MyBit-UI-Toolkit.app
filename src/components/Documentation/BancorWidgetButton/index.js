@@ -13,7 +13,7 @@ const BancorWidgetButtonPage = (props) => (
         <h1>Bancor Widget Button <EditPageLink editLink={EDIT_PAGE} /></h1>
         <p>Displays a modal which allows users to buy or sell MYB</p>
 
-        <InstallationSection url="BancorWidgetButton" />
+        <InstallationSection url={props.url} />
 
         <h1>Examples</h1>
         <Showcase data={logoExample} />

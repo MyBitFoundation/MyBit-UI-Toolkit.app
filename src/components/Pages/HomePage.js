@@ -33,7 +33,6 @@ const HomePage = () => (
         <AntdHeader>
             <h1>We <span><Icon type="heart" style={{ color: "pink" }} /></span> Ant Design {`&`} React</h1>
         </AntdHeader>
-
         <SectionHeader position="left" size="32px">About MyBit <EditPageLink editLink={EDIT_PAGE} /></SectionHeader>
         <p style={{textAlign: "justified"}}>
         MyBit was started by a team of industry veterans who spotted a massive problem with today’s financial systems. Third party agents such as lawyers, escrow agents, and brokers are required to establish trust and conduct transactions.

@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Spin, Icon } from 'antd';
-import 'antd/lib/style/css';
+import 'antd/lib/spin/style/css';
+import 'antd/lib/icon/style/css';
 import Jazzicon, { jsNumberForAddress } from 'react-jazzicon';
 import AddressWrapper from './styledAddressWrapper';
 import AddressLoader from './styledAddressLoader';
@@ -13,8 +14,8 @@ const Address = ({ userName, className }) => (
   <div className={className}>
     {!userName ? (
       <AddressLoader>
-        <Spin indicator={antIcon} />
-        <span>Loading account</span>
+        <Spin indicator={antIcon} />{' '}
+        <span style={{marginLeft: 5}}>Loading account</span>
       </AddressLoader>
     ) : (
       <AddressWrapper>

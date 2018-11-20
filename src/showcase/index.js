@@ -1,6 +1,7 @@
 export { default as AccountInfo } from './AccountInfo';
 export { default as Address } from './Address';
 export { default as Alert } from './Alert';
+export { default as AnimatedLogo } from './AnimatedLogo';
 export { default as AssetCard } from './AssetCard';
 export { default as AssetDeadlineStatus } from './AssetDeadlineStatus';
 export { default as AssetInvestmentStatus } from './AssetInvestmentStatus';

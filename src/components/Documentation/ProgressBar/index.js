@@ -12,7 +12,7 @@ const ProgressBarPage = (props) => (
         </Helmet>
     <h1>ProgressBar <EditPageLink editLink={EDIT_PAGE} /></h1>
 
-    <InstallationSection url="Alert" />
+    <InstallationSection url={props.url} />
     <Playground styling={styling} component={props => (
         <div style={{width: '90%'}}>
             <ProgressBar {...props} percent={100} status={"success"}  />

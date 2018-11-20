@@ -36,7 +36,7 @@ export default (props) => (
     <div>
         <h1>Stats <EditPageLink editLink={EDIT_PAGE} /></h1>
         <p></p>
-        <InstallationSection url="Stats" />
+        <InstallationSection url={props.url} />
 
         <h1>Examples</h1>
         <Row gutter={16}>

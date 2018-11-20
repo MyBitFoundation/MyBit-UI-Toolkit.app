@@ -1,6 +1,7 @@
 import AccountInfoPage from './AccountInfo'
 import AddressPage from './Address';
 import AlertPage from './Alert'
+import AnimatedLogoPage from './AnimatedLogo'
 import AssetCardPage from './AssetCard' 
 import AssetDeadlineStatusPage from './AssetDeadlineStatus'
 import AssetInvestmentStatusPage from './AssetInvestmentStatus' 
@@ -353,6 +354,13 @@ const documentationRoutes = [
         component: SubscribeForm,
         category: FORMS,
         pageTitle: "Component: Subsribe Form"
+    },
+    {
+        title: "Animated Logo",
+        url: "animated-logo",
+        component: AnimatedLogoPage,
+        category: GENERAL,
+        pageTitle: "Component: AnimatedLogo"
     }
 ].sort(function(a, b) {
     if(a.title > b.title) return 1;

@@ -14,7 +14,7 @@ const PortfolioValueItemPage = (props) => (
     <h1>TotalPortfolioRevenue <EditPageLink editLink={EDIT_PAGE} /></h1>
     <p>Displays the total value of a list of assets</p>
 
-    <InstallationSection url="TotalPortfolioRevenue" />
+    <InstallationSection url={props.url} />
 
     <h1>Examples</h1>
     <Row gutter={16}>

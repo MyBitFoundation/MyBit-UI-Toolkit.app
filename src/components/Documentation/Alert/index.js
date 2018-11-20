@@ -77,7 +77,7 @@ export default (props) => (
             <title>{props.pageTitle}</title>
         </Helmet>
         <h1>Alert <EditPageLink editLink={EDIT_PAGE} /></h1>
-        <InstallationSection url="Alert" />
+        <InstallationSection url={props.url} />
 
         <h1>Examples</h1>
         <h3>Types</h3>

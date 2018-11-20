@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import SpinAnt from 'antd/lib/spin';
-import 'antd/lib/style/css';
+import 'antd/lib/spin/style/css';
 import { withTheme } from 'styled-components';
 import Theme from '../theme'
 

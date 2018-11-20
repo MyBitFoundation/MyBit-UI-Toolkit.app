@@ -14,7 +14,7 @@ const AddressPage = (props) => (
         <h1>Address <EditPageLink editLink={EDIT_PAGE} /></h1>
         <p>Used to display user's MetaMask address</p>
 
-        <InstallationSection url="Address" />
+        <InstallationSection url={props.url} />
 
         <h1>Examples</h1>
         <Row gutter={16}>

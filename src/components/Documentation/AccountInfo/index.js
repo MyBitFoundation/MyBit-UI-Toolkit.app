@@ -14,7 +14,7 @@ const AccountInfoPage = (props) => (
         <h1>AccountInfo <EditPageLink editLink={EDIT_PAGE} /></h1>
         <p>Displays the current MYB and ETH balance of the user.</p>
 
-        <InstallationSection url="AccountInfo" />
+        <InstallationSection url={props.url} />
 
         <h1>Examples</h1>
         
@@ -64,7 +64,7 @@ const AccountInfoPropsData = [{
 const allProps = {
     component: (
         <div>
-            <div><AccountInfo myBitBalance="20" ethBalance="8" userName="0xDA2F8123" /></div>
+            <div><AccountInfo myBitBalance="20000000" ethBalance="8" userName="0xDA2F8123" /></div>
         </div>
     ),
     description: (

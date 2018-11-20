@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Spin, Icon } from 'antd';
-import 'antd/lib/style/css';
+import 'antd/lib/spin/style/css';
+import 'antd/lib/icon/style/css';
 
 const antIcon = <Icon type="loading" spin />;
 
@@ -23,8 +24,8 @@ const StyledLoader = styled(Spin)`
 const ExchangeRate = ({ mybitPrice, USD_MYB_SYMBOL }) => (
   <div>
     {!mybitPrice && (
-    <StyledLoader indicator={antIcon} />
-        )}
+      <StyledLoader indicator={antIcon} />
+    )}
     <ExchangeRateSpan>
       {mybitPrice && `$${mybitPrice}`}{' '}
       <b>{USD_MYB_SYMBOL}</b>

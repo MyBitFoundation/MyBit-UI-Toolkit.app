@@ -13,7 +13,7 @@ const AssetInvestmentStatusPage = (props) => (
     <h1>AssetInvestmentStatus <EditPageLink editLink={EDIT_PAGE} /></h1>
     <p>Shows the money raised, the money required to fully fund the asset and the number of investors</p>
 
-    <InstallationSection url="AssetInvestmentStatus" />
+    <InstallationSection url={props.url} />
 
     <h1>Examples</h1>
     <Showcase data={assetInvestmentStatusExample} />
