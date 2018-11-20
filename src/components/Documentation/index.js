@@ -6,6 +6,7 @@ import AssetCardPage from './AssetCard'
 import AssetDeadlineStatusPage from './AssetDeadlineStatus'
 import AssetInvestmentStatusPage from './AssetInvestmentStatus' 
 import AssetTitlePage from './AssetTitle'
+import BancorContainerPage from './BancorContainer'
 import BancorWidgetButtonPage from './BancorWidgetButton'
 import BountyPage from './Bounty'
 import ButtonPage from './Button'
@@ -346,6 +347,13 @@ const documentationRoutes = [
         component: BancorWidgetButtonPage,
         category: WIDGETS,
         pageTitle: "Component: Bancor Widget"
+    },
+    {
+        title: "Bancor Container",
+        url: "bancor-container",
+        component: BancorContainerPage,
+        category: WIDGETS,
+        pageTitle: "Component: Bancor Container"
     },
     {
         title: "Animated Logo",
