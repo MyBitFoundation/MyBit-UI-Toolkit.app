@@ -1,13 +1,4 @@
 {
   "name": "ui.mybit.io",
-  "version": 2,
-  "builds": [
-    { 
-      "src": "package.json",
-      "use": "@now/static-build", 
-      "config": {
-         "maxLambdaSize": "500mb"
-      } 
-    }
-  ]
+  "version": 1
 }
