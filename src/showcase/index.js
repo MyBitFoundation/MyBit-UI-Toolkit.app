@@ -37,6 +37,7 @@ export { default as Spin } from './Spin';
 export { default as StatCard } from './StatCard';
 export { default as Stats } from './Stats';
 export { default as SubMenu } from './SubMenu';
+export { default as SubscribeForm } from './SubscribeForm';
 export { default as Switch } from './Switch';
 export { default as Theme } from './theme';
 export { default as Tooltip } from './Tooltip';

@@ -39,6 +39,7 @@ import ShowcasePage from './Showcase'
 import SpinPage from './Spin'
 import StatCardPage from './StatCard'
 import StatsPage from './Stats'
+import SubscribeForm from './SubscribeForm'
 import SwitchPage from './Switch'
 import TooltipPage from './Tooltip'
 import TotalPortfolioRevenuePage from './TotalPortfolioRevenue'
@@ -354,6 +355,13 @@ const documentationRoutes = [
         component: BancorContainerPage,
         category: WIDGETS,
         pageTitle: "Component: Bancor Container"
+    },
+    {
+        title: "Subscribe Form",
+        url: "subscribe-form",
+        component: SubscribeForm,
+        category: FORMS,
+        pageTitle: "Component: Subsribe Form"
     },
     {
         title: "Animated Logo",
