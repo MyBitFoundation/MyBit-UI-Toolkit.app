@@ -14,6 +14,6 @@ bit config set user.email me@jjperezaguinaga.com
 bit config set ssh_key_file bit_rsa
 bit init
 bit add src/showcase/*
-bit tag --all
+bit tag --all --scope --patch
 bit export mybit.ui
 
