@@ -6,6 +6,7 @@ export { default as AssetCard } from './AssetCard';
 export { default as AssetDeadlineStatus } from './AssetDeadlineStatus';
 export { default as AssetInvestmentStatus } from './AssetInvestmentStatus';
 export { default as AssetTitle } from './AssetTitle';
+export { default as BancorContainer, Provider as BancorProvider, Consumer as BancorConsumer } from './BancorContainer';
 export { default as BancorWidgetButton } from './BancorWidgetButton';
 export { default as Bounties } from './Bounties';
 export { default as Bounty } from './Bounty';

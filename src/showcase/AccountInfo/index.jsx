@@ -22,11 +22,11 @@ const AccountInfo = ({
         ) : (
           <BalanceInfo>
             <div>
-              {myBitBalance}{' '}
+              {Number(myBitBalance).toFixed(5)}{' '}
               <b>MYB</b>
             </div>
             <div> 
-              {Number(ethBalance).toFixed(4)}{' '}
+              {Number(ethBalance).toFixed(5)}{' '}
               <b>ETH</b>
             </div>
           </BalanceInfo>
