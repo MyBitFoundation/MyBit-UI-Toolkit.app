@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -e
-
 npm set init.author.name "MyBit AG"
 npm set init.author.email "mybit.development@gmail.com"
 npm config set @bit:registry = "https://node.bitsrc.io"
