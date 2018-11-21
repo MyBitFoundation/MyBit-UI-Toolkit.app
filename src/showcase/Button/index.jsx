@@ -13,6 +13,7 @@ import Theme from '../theme';
  * @example
  * <Button
  *    type="solid"
+ *    size="large"
  * > 
  *   Solid Button
  * </Button>

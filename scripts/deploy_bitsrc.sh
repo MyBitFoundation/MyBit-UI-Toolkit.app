@@ -10,7 +10,7 @@ bit config set error_reporting false
 bit config set user.name jjperezaguinaga
 bit config set user.email me@jjperezaguinaga.com
 bit config set ssh_key_file bit_rsa
-bit init
+bit import
 bit add src/showcase/*
 bit tag --all --patch
 bit export mybit.ui
