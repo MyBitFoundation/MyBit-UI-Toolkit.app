@@ -33,17 +33,4 @@ script:
   - npx now alias ${BUILD_URL} $HOST -t $NOW_PROD_TOKEN
 
 after_success:
-  - npm set init.author.name "MyBit AG"
-  - npm set init.author.email "mybit.development@gmail.com"
-  - npm config set @bit:registry = "https://node.bitsrc.io"
-  - echo "//registry.npmjs.org/:_authToken=$NPM_MYBIT_BOT_TOKEN" > ~/.npmrc
-  - echo "//node.bitsrc.io/:_authToken=$NPM_MYBIT_BOT_TOKEN" >> ~/.npmrc
-  - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then bit config set analytics_reporting; fi
-  - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then bit config set error_reporting; fi
-  - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then bit config set user.name jjperezaguinaga; fi
-  - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then bit config set user.email me@jjperezaguinaga.com; fi
-  - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then bit config set ssh_key_file bit_rsa; fi
-  - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then bit init; fi
-  - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then bit add src/showcase/*; fi
-  - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then bit tag --all; fi
-  - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then bit export mybit.ui; fi
+  - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then bash scripts/deploy_bitsrc.sh; fi
