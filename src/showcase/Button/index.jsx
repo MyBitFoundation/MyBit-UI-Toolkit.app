@@ -6,6 +6,19 @@ import 'antd/lib/button/style/css';
 import ButtonStyle from './styledButton';
 import Theme from '../theme';
 
+/**
+ * @render react
+ * @name Button
+ * @description Simple MyBit button
+ * @example
+ * <Button
+ *    type="solid"
+ *    size="large"
+ * > 
+ *   Solid Button
+ * </Button>
+ */
+
 const Button = props => (
   <div>
     <ButtonStyle
