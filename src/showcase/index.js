@@ -26,6 +26,7 @@ export { default as Menu } from './Menu';
 export { default as MenuItem } from './MenuItem';
 export { default as MyBitGoHeader } from './MyBitGoHeader';
 export { default as NavigationBar } from './NavigationBar';
+export { default as MyBitNavigationBar } from './MyBitNavigationBar';
 export { default as NavigationOption } from './NavigationOption';
 export { default as Pagination } from './Pagination';
 export { default as PortfolioDropdown } from './PortfolioDropdown';

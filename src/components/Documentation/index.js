@@ -24,6 +24,7 @@ import ListPage from './List'
 import LogoPage from './Logo'
 import MenuPage from './Menu'
 import MyBitGoHeaderPage from './MyBitGoHeader'
+import MyBitNavigationBarPage from './MyBitNavigationBar'
 import NavigationBarPage from './NavigationBar'
 import NavigationOptionPage from './NavigationOption'
 import PaginationPage from './Pagination'
@@ -124,6 +125,13 @@ const documentationRoutes = [
         component: PortfolioValueItemPage,
         category: ASSETS,
         pageTitle: "Component: PortfolioValueItem"
+    },
+    {
+        title: "MyBitNavigationBar",
+        url: "mybit-navigation-bar",
+        component: MyBitNavigationBarPage,
+        category: NAVIGATION,
+        pageTitle: "Component: MyBitNavigationBar"
     },
     {
         title: "NavigationBar",

@@ -791,306 +791,376 @@
         "trackDir": "src/showcase/NavigationOption",
         "origin": "AUTHORED"
     },
-    "mybit.ui/showcase/button@0.0.2": {
+    "mybit.ui/showcase/subscribe-form@0.0.3": {
         "files": [
             {
-                "relativePath": "src/showcase/Button/index.jsx",
-                "test": false,
-                "name": "index.jsx"
-            },
-            {
-                "relativePath": "src/showcase/Button/styledButton.js",
-                "test": false,
-                "name": "styledButton.js"
-            }
-        ],
-        "mainFile": "src/showcase/Button/index.jsx",
-        "trackDir": "src/showcase/Button",
-        "origin": "AUTHORED"
-    },
-    "mybit.ui/showcase/bancor-widget-button@0.0.2": {
-        "files": [
-            {
-                "relativePath": "src/showcase/BancorWidgetButton/index.jsx",
-                "test": false,
-                "name": "index.jsx"
-            }
-        ],
-        "mainFile": "src/showcase/BancorWidgetButton/index.jsx",
-        "trackDir": "src/showcase/BancorWidgetButton",
-        "origin": "AUTHORED"
-    },
-    "mybit.ui/showcase/subscribe-form@0.0.2": {
-        "files": [
-            {
+                "name": "index.jsx",
                 "relativePath": "src/showcase/SubscribeForm/index.jsx",
-                "test": false,
-                "name": "index.jsx"
+                "test": false
             },
             {
+                "name": "styledSubscribeForm.js",
                 "relativePath": "src/showcase/SubscribeForm/styledSubscribeForm.js",
-                "test": false,
-                "name": "styledSubscribeForm.js"
+                "test": false
             }
         ],
         "mainFile": "src/showcase/SubscribeForm/index.jsx",
-        "trackDir": "src/showcase/SubscribeForm",
-        "origin": "AUTHORED"
+        "origin": "AUTHORED",
+        "dependencies": [
+            "mybit.ui/showcase/button@0.0.3",
+            "mybit.ui/showcase/theme@0.0.1",
+            "mybit.ui/showcase/input@0.0.1",
+            "mybit.ui/showcase/img@0.0.1",
+            "mybit.ui/showcase/tooltip@0.0.1"
+        ]
     },
-    "mybit.ui/showcase/bounty@0.0.2": {
+    "mybit.ui/showcase/button@0.0.3": {
         "files": [
             {
+                "name": "index.jsx",
+                "relativePath": "src/showcase/Button/index.jsx",
+                "test": false
+            },
+            {
+                "name": "styledButton.js",
+                "relativePath": "src/showcase/Button/styledButton.js",
+                "test": false
+            }
+        ],
+        "mainFile": "src/showcase/Button/index.jsx",
+        "origin": "AUTHORED",
+        "dependencies": [
+            "mybit.ui/showcase/theme@0.0.1"
+        ]
+    },
+    "mybit.ui/showcase/bounty@0.0.3": {
+        "files": [
+            {
+                "name": "StyledButtonChallenge.js",
                 "relativePath": "src/showcase/Bounty/StyledButtonChallenge.js",
-                "test": false,
-                "name": "StyledButtonChallenge.js"
+                "test": false
             },
             {
+                "name": "StyledCard.js",
                 "relativePath": "src/showcase/Bounty/StyledCard.js",
-                "test": false,
-                "name": "StyledCard.js"
+                "test": false
             },
             {
+                "name": "StyledCardTime.js",
                 "relativePath": "src/showcase/Bounty/StyledCardTime.js",
-                "test": false,
-                "name": "StyledCardTime.js"
+                "test": false
             },
             {
+                "name": "StyledCardTitle.js",
                 "relativePath": "src/showcase/Bounty/StyledCardTitle.js",
-                "test": false,
-                "name": "StyledCardTitle.js"
+                "test": false
             },
             {
+                "name": "StyledCheckmark.js",
                 "relativePath": "src/showcase/Bounty/StyledCheckmark.js",
-                "test": false,
-                "name": "StyledCheckmark.js"
+                "test": false
             },
             {
+                "name": "StyledFooter.js",
                 "relativePath": "src/showcase/Bounty/StyledFooter.js",
-                "test": false,
-                "name": "StyledFooter.js"
+                "test": false
             },
             {
+                "name": "StyledHeader.js",
                 "relativePath": "src/showcase/Bounty/StyledHeader.js",
-                "test": false,
-                "name": "StyledHeader.js"
+                "test": false
             },
             {
+                "name": "StyledLabel.js",
                 "relativePath": "src/showcase/Bounty/StyledLabel.js",
-                "test": false,
-                "name": "StyledLabel.js"
+                "test": false
             },
             {
+                "name": "StyledLabels.js",
                 "relativePath": "src/showcase/Bounty/StyledLabels.js",
-                "test": false,
-                "name": "StyledLabels.js"
+                "test": false
             },
             {
+                "name": "StyledNotYetFunded.js",
                 "relativePath": "src/showcase/Bounty/StyledNotYetFunded.js",
-                "test": false,
-                "name": "StyledNotYetFunded.js"
+                "test": false
             },
             {
+                "name": "StyledRepoName.js",
                 "relativePath": "src/showcase/Bounty/StyledRepoName.js",
-                "test": false,
-                "name": "StyledRepoName.js"
+                "test": false
             },
             {
+                "name": "StyledValue.js",
                 "relativePath": "src/showcase/Bounty/StyledValue.js",
-                "test": false,
-                "name": "StyledValue.js"
+                "test": false
             },
             {
+                "name": "StyledValueLabel.js",
                 "relativePath": "src/showcase/Bounty/StyledValueLabel.js",
-                "test": false,
-                "name": "StyledValueLabel.js"
+                "test": false
             },
             {
+                "name": "index.js",
                 "relativePath": "src/showcase/Bounty/index.js",
-                "test": false,
-                "name": "index.js"
+                "test": false
             },
             {
+                "name": "timeago.js",
                 "relativePath": "src/showcase/Bounty/timeago.js",
-                "test": false,
-                "name": "timeago.js"
+                "test": false
             }
         ],
         "mainFile": "src/showcase/Bounty/index.js",
-        "trackDir": "src/showcase/Bounty",
-        "origin": "AUTHORED"
+        "origin": "AUTHORED",
+        "dependencies": [
+            "mybit.ui/showcase/button@0.0.3",
+            "mybit.ui/showcase/theme@0.0.1",
+            "mybit.ui/showcase/icon@0.0.1"
+        ]
     },
-    "mybit.ui/showcase/index@0.0.2": {
+    "mybit.ui/showcase/bancor-widget-button@0.0.3": {
         "files": [
             {
-                "relativePath": "src/showcase/index.js",
-                "test": false,
-                "name": "index.js"
+                "name": "index.jsx",
+                "relativePath": "src/showcase/BancorWidgetButton/index.jsx",
+                "test": false
             }
         ],
-        "mainFile": "src/showcase/index.js",
-        "origin": "AUTHORED"
+        "mainFile": "src/showcase/BancorWidgetButton/index.jsx",
+        "origin": "AUTHORED",
+        "dependencies": [
+            "mybit.ui/showcase/button@0.0.3",
+            "mybit.ui/showcase/theme@0.0.1"
+        ]
     },
-    "mybit.ui/showcase/bounties@0.0.2": {
+    "mybit.ui/showcase/bounties@0.0.3": {
         "files": [
             {
+                "name": "StyledCards.js",
                 "relativePath": "src/showcase/Bounties/StyledCards.js",
-                "test": false,
-                "name": "StyledCards.js"
+                "test": false
             },
             {
+                "name": "StyledMessage.js",
                 "relativePath": "src/showcase/Bounties/StyledMessage.js",
-                "test": false,
-                "name": "StyledMessage.js"
+                "test": false
             },
             {
+                "name": "StyledPagination.js",
                 "relativePath": "src/showcase/Bounties/StyledPagination.js",
-                "test": false,
-                "name": "StyledPagination.js"
+                "test": false
             },
             {
+                "name": "StyledButtonChallenge.js",
                 "relativePath": "src/showcase/Bounties/card/StyledButtonChallenge.js",
-                "test": false,
-                "name": "StyledButtonChallenge.js"
+                "test": false
             },
             {
+                "name": "StyledCard.js",
                 "relativePath": "src/showcase/Bounties/card/StyledCard.js",
-                "test": false,
-                "name": "StyledCard.js"
+                "test": false
             },
             {
+                "name": "StyledCardTime.js",
                 "relativePath": "src/showcase/Bounties/card/StyledCardTime.js",
-                "test": false,
-                "name": "StyledCardTime.js"
+                "test": false
             },
             {
+                "name": "StyledCardTitle.js",
                 "relativePath": "src/showcase/Bounties/card/StyledCardTitle.js",
-                "test": false,
-                "name": "StyledCardTitle.js"
+                "test": false
             },
             {
+                "name": "StyledCheckmark.js",
                 "relativePath": "src/showcase/Bounties/card/StyledCheckmark.js",
-                "test": false,
-                "name": "StyledCheckmark.js"
+                "test": false
             },
             {
+                "name": "StyledFooter.js",
                 "relativePath": "src/showcase/Bounties/card/StyledFooter.js",
-                "test": false,
-                "name": "StyledFooter.js"
+                "test": false
             },
             {
+                "name": "StyledHeader.js",
                 "relativePath": "src/showcase/Bounties/card/StyledHeader.js",
-                "test": false,
-                "name": "StyledHeader.js"
+                "test": false
             },
             {
+                "name": "StyledLabel.js",
                 "relativePath": "src/showcase/Bounties/card/StyledLabel.js",
-                "test": false,
-                "name": "StyledLabel.js"
+                "test": false
             },
             {
+                "name": "StyledLabels.js",
                 "relativePath": "src/showcase/Bounties/card/StyledLabels.js",
-                "test": false,
-                "name": "StyledLabels.js"
+                "test": false
             },
             {
+                "name": "StyledNotYetFunded.js",
                 "relativePath": "src/showcase/Bounties/card/StyledNotYetFunded.js",
-                "test": false,
-                "name": "StyledNotYetFunded.js"
+                "test": false
             },
             {
+                "name": "StyledRepoName.js",
                 "relativePath": "src/showcase/Bounties/card/StyledRepoName.js",
-                "test": false,
-                "name": "StyledRepoName.js"
+                "test": false
             },
             {
+                "name": "StyledValue.js",
                 "relativePath": "src/showcase/Bounties/card/StyledValue.js",
-                "test": false,
-                "name": "StyledValue.js"
+                "test": false
             },
             {
+                "name": "StyledValueLabel.js",
                 "relativePath": "src/showcase/Bounties/card/StyledValueLabel.js",
-                "test": false,
-                "name": "StyledValueLabel.js"
+                "test": false
             },
             {
+                "name": "index.js",
                 "relativePath": "src/showcase/Bounties/card/index.js",
-                "test": false,
-                "name": "index.js"
+                "test": false
             },
             {
+                "name": "timeago.js",
                 "relativePath": "src/showcase/Bounties/card/timeago.js",
-                "test": false,
-                "name": "timeago.js"
+                "test": false
             },
             {
+                "name": "StyledCategories.js",
                 "relativePath": "src/showcase/Bounties/header/StyledCategories.js",
-                "test": false,
-                "name": "StyledCategories.js"
+                "test": false
             },
             {
+                "name": "StyledFilters.js",
                 "relativePath": "src/showcase/Bounties/header/StyledFilters.js",
-                "test": false,
-                "name": "StyledFilters.js"
+                "test": false
             },
             {
+                "name": "StyledItemsCounter.js",
                 "relativePath": "src/showcase/Bounties/header/StyledItemsCounter.js",
-                "test": false,
-                "name": "StyledItemsCounter.js"
+                "test": false
             },
             {
+                "name": "StyledLabelForSwitch.js",
                 "relativePath": "src/showcase/Bounties/header/StyledLabelForSwitch.js",
-                "test": false,
-                "name": "StyledLabelForSwitch.js"
+                "test": false
             },
             {
+                "name": "StyledListHeader.js",
                 "relativePath": "src/showcase/Bounties/header/StyledListHeader.js",
-                "test": false,
-                "name": "StyledListHeader.js"
+                "test": false
             },
             {
+                "name": "StyledListHeaderLeft.js",
                 "relativePath": "src/showcase/Bounties/header/StyledListHeaderLeft.js",
-                "test": false,
-                "name": "StyledListHeaderLeft.js"
+                "test": false
             },
             {
+                "name": "StyledSubHeader.js",
                 "relativePath": "src/showcase/Bounties/header/StyledSubHeader.js",
-                "test": false,
-                "name": "StyledSubHeader.js"
+                "test": false
             },
             {
+                "name": "StyledSwitchWithLabel.js",
                 "relativePath": "src/showcase/Bounties/header/StyledSwitchWithLabel.js",
-                "test": false,
-                "name": "StyledSwitchWithLabel.js"
+                "test": false
             },
             {
+                "name": "StyledTitle.js",
                 "relativePath": "src/showcase/Bounties/header/StyledTitle.js",
-                "test": false,
-                "name": "StyledTitle.js"
+                "test": false
             },
             {
+                "name": "SwitchWithLabel.js",
                 "relativePath": "src/showcase/Bounties/header/SwitchWithLabel.js",
-                "test": false,
-                "name": "SwitchWithLabel.js"
+                "test": false
             },
             {
+                "name": "index.js",
                 "relativePath": "src/showcase/Bounties/header/index.js",
-                "test": false,
-                "name": "index.js"
+                "test": false
             },
             {
+                "name": "index.js",
                 "relativePath": "src/showcase/Bounties/index.js",
-                "test": false,
-                "name": "index.js"
+                "test": false
             },
             {
+                "name": "StyledSpinner.js",
                 "relativePath": "src/showcase/Bounties/loading/StyledSpinner.js",
-                "test": false,
-                "name": "StyledSpinner.js"
+                "test": false
             }
         ],
         "mainFile": "src/showcase/Bounties/index.js",
-        "trackDir": "src/showcase/Bounties",
-        "origin": "AUTHORED"
+        "origin": "AUTHORED",
+        "dependencies": [
+            "mybit.ui/showcase/button@0.0.3",
+            "mybit.ui/showcase/theme@0.0.1",
+            "mybit.ui/showcase/icon@0.0.1",
+            "mybit.ui/showcase/switch@0.0.1",
+            "mybit.ui/showcase/dropdown@0.0.1",
+            "mybit.ui/showcase/filter@0.0.1",
+            "mybit.ui/showcase/menu@0.0.1",
+            "mybit.ui/showcase/menu-item@0.0.1",
+            "mybit.ui/showcase/sub-menu@0.0.1",
+            "mybit.ui/showcase/pagination@0.0.1",
+            "mybit.ui/showcase/spin@0.0.1"
+        ]
+    },
+    "mybit.ui/showcase/index@0.0.4": {
+        "files": [
+            {
+                "name": "index.js",
+                "relativePath": "src/showcase/index.js",
+                "test": false
+            }
+        ],
+        "mainFile": "src/showcase/index.js",
+        "origin": "AUTHORED",
+        "dependencies": [
+            "mybit.ui/showcase/address@0.0.1",
+            "mybit.ui/showcase/account-info@0.0.1",
+            "mybit.ui/showcase/alert@0.0.1",
+            "mybit.ui/showcase/animated-logo@0.0.1",
+            "mybit.ui/showcase/progress-bar@0.0.1",
+            "mybit.ui/showcase/theme@0.0.1",
+            "mybit.ui/showcase/asset-card@0.0.1",
+            "mybit.ui/showcase/asset-deadline-status@0.0.1",
+            "mybit.ui/showcase/asset-investment-status@0.0.1",
+            "mybit.ui/showcase/asset-title@0.0.1",
+            "mybit.ui/showcase/bancor-container@0.0.1",
+            "mybit.ui/showcase/icon@0.0.1",
+            "mybit.ui/showcase/switch@0.0.1",
+            "mybit.ui/showcase/dropdown@0.0.1",
+            "mybit.ui/showcase/filter@0.0.1",
+            "mybit.ui/showcase/menu@0.0.1",
+            "mybit.ui/showcase/menu-item@0.0.1",
+            "mybit.ui/showcase/sub-menu@0.0.1",
+            "mybit.ui/showcase/pagination@0.0.1",
+            "mybit.ui/showcase/spin@0.0.1",
+            "mybit.ui/showcase/button@0.0.3",
+            "mybit.ui/showcase/category-card@0.0.1",
+            "mybit.ui/showcase/connection-status@0.0.1",
+            "mybit.ui/showcase/exchange-rate@0.0.1",
+            "mybit.ui/showcase/img@0.0.1",
+            "mybit.ui/showcase/tooltip@0.0.1",
+            "mybit.ui/showcase/input@0.0.1",
+            "mybit.ui/showcase/list-item@0.0.1",
+            "mybit.ui/showcase/list@0.0.1",
+            "mybit.ui/showcase/logo@0.0.1",
+            "mybit.ui/showcase/my-bit-go-header@0.0.1",
+            "mybit.ui/showcase/navigation-option@0.0.1",
+            "mybit.ui/showcase/navigation-bar@0.0.1",
+            "mybit.ui/showcase/portfolio-dropdown@0.0.1",
+            "mybit.ui/showcase/portfolio-revenue-item@0.0.1",
+            "mybit.ui/showcase/portfolio-value-item@0.0.1",
+            "mybit.ui/showcase/section-header@0.0.1",
+            "mybit.ui/showcase/stat-card@0.0.1",
+            "mybit.ui/showcase/stats@0.0.1",
+            "mybit.ui/showcase/total-portfolio-revenue@0.0.1",
+            "mybit.ui/showcase/total-portfolio-value@0.0.1"
+        ]
     },
     "version": "13.0.4"
 }
