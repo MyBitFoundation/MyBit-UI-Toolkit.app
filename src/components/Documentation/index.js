@@ -16,6 +16,7 @@ import ConnectionStatusPage from './ConnectionStatus'
 import DropdownPage from './Dropdown'
 import ExchangeRatePage from './ExchangeRate'
 import FilterPage from './Filter'
+import Header from './Header'
 import IconPage from './Icon'
 import ImgPage from './Img'
 import InputPage from './Input'
@@ -257,6 +258,13 @@ const documentationRoutes = [
         component: FilterPage,
         category: GENERAL,
         pageTitle: "Component: Filter"
+    },
+    {
+        title: "Header",
+        url: "header",
+        component: Header,
+        category: NAVIGATION,
+        pageTitle: "Component: Header"
     },
     {
         title: "Icon",

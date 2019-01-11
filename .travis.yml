@@ -24,7 +24,6 @@ before_script:
 
 script:
   - GIT_HASH=$(git rev-parse --short HEAD)
-  - if [ "$TRAVIS_BRANCH" = "develop" -a ! "$TRAVIS_PULL_REQUEST" = "false" ]; then HOST=$(echo ui-develop.mybit.io); fi
   - if [ "$TRAVIS_BRANCH" = "develop" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then HOST=$(echo ui-staging.mybit.io); fi
   - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then HOST=$(echo ui.mybit.io); fi
   - echo ${GIT_HASH} > build/version

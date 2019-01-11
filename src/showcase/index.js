@@ -16,6 +16,7 @@ export { default as ConnectionStatus } from './ConnectionStatus';
 export { default as Dropdown } from './Dropdown';
 export { default as ExchangeRate } from './ExchangeRate';
 export { default as Filter } from './Filter';
+export { default as Header } from './Header';
 export { default as Icon } from './Icon';
 export { default as Img } from './Img';
 export { default as Input } from './Input';
