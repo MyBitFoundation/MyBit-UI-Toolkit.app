@@ -1,7 +1,17 @@
 {
-  "name": "@mybit/ui",
+  "name": "mybit-ui",
   "version": "0.1.5",
   "description": "MyBit UI Kit",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pbteja1998/mybit-ui-toolkit"
+  },
   "dependencies": {
     "antd": "^3.10.0",
     "dayjs": "^1.7.7",
@@ -20,7 +30,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build-package": "rimraf dist && NODE_ENV=production babel src/showcase --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -32,6 +43,13 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.2.3",
+    "@babel/plugin-transform-react-jsx": "^7.2.0",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-react": "^7.0.0",
+    "rimraf": "^2.6.3",
     "bit-bin": "^13.0.4"
   }
 }
