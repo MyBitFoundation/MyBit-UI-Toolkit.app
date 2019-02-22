@@ -43,3 +43,4 @@ export { default as Theme } from './theme';
 export { default as Tooltip } from './Tooltip';
 export { default as TotalPortfolioRevenue } from './TotalPortfolioRevenue';
 export { default as TotalPortfolioValue } from './TotalPortfolioValue';
+export { default as HomePageDisclaimer } from './HomePageDisclaimer';
