@@ -44,6 +44,7 @@ import SwitchPage from './Switch'
 import TooltipPage from './Tooltip'
 import TotalPortfolioRevenuePage from './TotalPortfolioRevenue'
 import TotalPortfolioValuePage from './TotalPortfolioValue'
+import HomePageDisclaimer from './HomePageDisclaimer';
 
 import {
     GENERAL,
@@ -369,7 +370,14 @@ const documentationRoutes = [
         component: AnimatedLogoPage,
         category: GENERAL,
         pageTitle: "Component: AnimatedLogo"
-    }
+    },
+    {
+        title: "Homepage Disclaimer",
+        url: "homepage-disclaimer",
+        component: HomePageDisclaimer,
+        category: GENERAL,
+        pageTitle: "Component: HomePageDisclaimer"
+    },
 ].sort(function(a, b) {
     if(a.title > b.title) return 1;
     if(a.title < b.title) return -1;
