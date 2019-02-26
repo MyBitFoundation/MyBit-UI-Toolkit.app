@@ -11,7 +11,9 @@ bit config set user.email me@jjperezaguinaga.com
 bit config set ssh_key_file bit_rsa
 bit init
 bit import
-bit status
+bit checkout latest --all
 bit tag --all --patch
 bit export mybit.ui
+# bit status because of travis logs
+bit status
 
