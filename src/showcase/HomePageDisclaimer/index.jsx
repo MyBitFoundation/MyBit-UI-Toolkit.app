@@ -15,14 +15,14 @@ const HomePageDisclaimer = ({ bugsReportLink, featureSubmitLink, communityLink }
       This is a community driven project. The internal MyBit team is not responsible for the development of this application.
     </StyledSpan>
     <StyledSpan>
-      To submit bugs click <a href={bugsReportLink}>here.</a>
+      To submit bugs click <a href={bugsReportLink} target="_blank" rel="noopener noreferrer">here.</a>
       To add a feature please fork the repo.
     </StyledSpan>
     <StyledSpan>
-      To suggest a feature click <a href={featureSubmitLink}>here.</a>
+      To suggest a feature click <a href={featureSubmitLink} target="_blank" rel="noopener noreferrer">here.</a>
     </StyledSpan>
     <StyledSpan>
-      To discuss this project with the community click <a href={communityLink}>here.</a>
+      To discuss this project with the community click <a href={communityLink} target="_blank" rel="noopener noreferrer">here.</a>
     </StyledSpan>
   </StyledDisclaimer>
 );
