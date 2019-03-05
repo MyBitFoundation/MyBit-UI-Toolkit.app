@@ -3,6 +3,8 @@
   "private": true,
   "devDependencies": {
     "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
     "@storybook/addon-actions": "^5.0.0",
     "@storybook/addon-backgrounds": "^5.0.0",
     "@storybook/addon-console": "^1.1.0",
@@ -14,15 +16,18 @@
     "@storybook/addon-storysource": "^5.0.0",
     "@storybook/addon-viewport": "^5.0.0",
     "@storybook/react": "^5.0.0",
+    "@storybook/theming": "^5.0.0",
     "babel-loader": "^8.0.5",
     "lerna": "^3.13.1",
     "react-test-renderer": "^16.8.3"
   },
   "dependencies": {
     "react": "^16.8.3",
-    "react-dom": "^16.8.3"
+    "react-dom": "^16.8.3",
+    "react-scripts": "^2.1.5"
   },
   "scripts": {
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "postinstall": "node postinstall.js"
   }
 }

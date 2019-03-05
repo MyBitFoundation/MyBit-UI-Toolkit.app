@@ -1,53 +1,24 @@
 import {addDecorator, addParameters, configure} from '@storybook/react';
 import '@storybook/addon-console';
 import {withInfo} from "@storybook/addon-info";
+import { create } from '@storybook/theming';
 
 function loadStories() {
-    require('../packages/index.js');
+    require('../packages/index');
     // You can require as many stories as you need.
 }
 
 addParameters({
     options: {
-        /**
-         * name to display in the top left corner
-         * @type {String}
-         */
-        name: 'Storybook',
-        /**
-         * URL for name in top left corner to link to
-         * @type {String}
-         */
-        url: 'http://localhost:9001',
-        /**
-         * show story component as full screen
-         * @type {Boolean}
-         */
-        goFullScreen: false,
-        /**
-         * display panel that shows a list of stories
-         * @type {Boolean}
-         */
-        showStoriesPanel: true,
-        /**
-         * display panel that shows addon configurations
-         * @type {Boolean}
-         */
-        showAddonPanel: true,
-        /**
-         * display floating search box to search through stories
-         * @type {Boolean}
-         */
-        showSearchBox: false,
-        /**
-         * show addon panel as a vertical panel on the right
-         * @type {Boolean}
-         */
-        addonPanelInRight: false,
-        /**
-         * sorts stories
-         * @type {Boolean}
-         */
+        theme: create({
+            base: 'light',
+            brandTitle: 'Storybook',
+            brandUrl: 'http://localhost:9001'
+        }),
+        isFullscreen: false,
+        panelPosition: 'right',
+        showNav: true,
+        showPanel: true,
         sortStoriesByKind: true,
         /**
          * regex for finding the hierarchy separator
@@ -82,9 +53,11 @@ addParameters({
          * @type {Boolean}
          */
         enableShortcuts: false, // true by default
-    },
+    }
 });
 
-addDecorator(withInfo);
+addDecorator(withInfo({
+    header: false
+}));
 
 configure(loadStories, module);
