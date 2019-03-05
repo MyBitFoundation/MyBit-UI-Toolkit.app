@@ -52,7 +52,7 @@ Button.propTypes = {
 Button.defaultProps = {
     styling: {},
     color: 'blue',
-    type: 'solid',
+    type: 'outline',
     active: 0,
     children: '',
 };

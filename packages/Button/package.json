@@ -14,6 +14,9 @@
   },
   "author": "",
   "license": "ISC",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@ant-design/icons": "^1.2.1",
     "antd": "^3.14.1",
@@ -34,5 +37,6 @@
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4",
     "eslint-watch": "^5.0.1"
-  }
+  },
+  "gitHead": "72d23f6ff611976540e327eb7878aa5b68f7967e"
 }
