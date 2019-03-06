@@ -56,8 +56,6 @@ addParameters({
     }
 });
 
-addDecorator(withInfo({
-    header: false
-}));
+addDecorator(withInfo);
 
 configure(loadStories, module);
