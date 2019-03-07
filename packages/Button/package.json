@@ -1,6 +1,6 @@
 {
   "name": "@pbteja-dev/ui.kit.button",
-  "version": "0.0.1-alpha.3",
+  "version": "0.0.1-alpha.4",
   "description": "",
   "main": "build/index.js",
   "directories": {
@@ -16,8 +16,6 @@
   "license": "ISC",
   "publishConfig": {
     "access": "public"
-  },
-  "dependencies": {
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
