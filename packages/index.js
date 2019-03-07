@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import { storiesOf } from '@storybook/react';
 import Button from './Button/build';
 import Img from './Img/build';
@@ -6,10 +7,32 @@ import Icon from './Icon/build';
 import Address from './Address/build';
 import Alert from './Alert/build';
 import AnimatedLogo from './AnimatedLogo/build';
-import AssetDeadlineStatus from './AssetDeadlineStatus';
-import AssetInvestmentStatus from './AssetInvestmentStatus';
+import AssetDeadlineStatus from './AssetDeadlineStatus/build';
+import AssetInvestmentStatus from './AssetInvestmentStatus/build';
+import Tooltip from './Tooltip/build';
+import StatCard from './StatCard/build';
+import Spin from './Spin/build';
+import SectionHeader from './SectionHeader/build';
+import ProgressBar from './ProgressBar/build';
+import PortfolioValueItem from './PortfolioValueItem/build';
+import PortfolioRevenueItem from './PortfolioRevenueItem/build';
+import PortfolioDropdown from './PortfolioDropdown/build';
+import Pagination from './Pagination/build';
+import NavigationOption from './NavigationOption/build';
+import Logo from './Logo/build';
+import ListItem from './ListItem/build';
+import List from './List/build';
+import Filter from './Filter/build';
+import ExchangeRate from './ExchangeRate/build';
+import Dropdown from './Dropdown/build';
+import ConnectionStatus from './ConnectionStatus/build';
+import CategoryCard from './CategoryCard/build';
+import BancorContainer, { Consumer as BancorConsumer } from './BancorContainer/build';
+import AssetTitle from './AssetTitle/build';
 
-import { withKnobs, text, boolean, number, color, select, object, date, optionsKnob as options, radios } from "@storybook/addon-knobs";
+import starIcon from '@ant-design/icons/svg/fill/star.svg';
+
+import { withKnobs, text, boolean, number, color, select, array, object, date, optionsKnob as options, radios } from "@storybook/addon-knobs";
 
 function myDateKnob(name, defaultValue) {
     const stringTimestamp = date(name, defaultValue);
@@ -56,14 +79,14 @@ stories
             block={boolean('Block', false)}
             icon={text('Icon', 'link')}
             styling={object('Styling Object', {
-                "color": "black",
-                "colorHover": "#40a9ff",
-                "colorActive": "#096dd9",
-                "backgroundColorHover": "transparent",
-                "backgroundColorActive": "transparent",
-                "borderColor": "black",
-                "borderColorHover": "#40a9ff",
-                "borderColorActive": "#096dd9"
+                "color": color('Text Color', "black"),
+                "colorHover": color('Color Hover', "#40a9ff"),
+                "colorActive": color('Color Active', "#096dd9"),
+                "backgroundColorHover": color('Background Color Hover', "transparent"),
+                "backgroundColorActive": color('Background Color Active', "transparent"),
+                "borderColor": color('Border Color', "black"),
+                "borderColorHover": color('Border Color Hover', "#40a9ff"),
+                "borderColorActive": color('Border Color Active', "#096dd9")
             })}
         >
             {text('Label', 'Button')}
@@ -141,6 +164,327 @@ stories
             raised={text('Raised', "322.38 USD")}
             goal={text('Goal', "$100,000.00")}
             investors={number('Number of Investors', 3)}
+        />
+    ))
+
+    .add('Tooltip', () => (
+        <div>
+            <Tooltip
+                title={text('Title', 'prompt text')}
+                arrowPointAtCenter={boolean('Arrow Point At Center', false)}
+                placement={options('Placement', {
+                    Left: 'left',
+                    Right: 'right',
+                    Top: 'top',
+                    Bottom: 'bottom',
+                    TopLeft: 'topLeft',
+                    TopRight: 'topRight',
+                    BottomLeft: 'bottomLeft',
+                    BottomRight: 'bottomRight',
+                    LeftTop: 'leftTop',
+                    LeftBottom: 'leftBottom',
+                    RightTop: 'rightTop'
+                }, 'top', {
+                    display: 'select'
+                })}
+            >
+                <Button>Button</Button>
+            </Tooltip>
+        </div>
+    ))
+
+    .add('Stat Card', () => (
+        <StatCard
+            key="StatCard-example-1"
+            stat={object('Stat', {
+                name: text('Name', 'Statistic...'),
+                value: text('Value', '...with value')
+            })}
+        />
+    ))
+
+    .add('Spin', () => (
+        <Spin
+            styling={object('Styling Object', {
+                color: color('Color', 'red')
+            })}
+            size={options('Size', {
+                Small: 'small',
+                Default: 'default',
+                Large: 'large'
+            }, 'small', {
+                display: 'select'
+            })}
+        />
+    ))
+
+    .add('Section Header with size as number', () => (
+        <SectionHeader
+            size={number('Size', 1, {
+                range: true,
+                min: 1,
+                max: 6,
+                step: 1,
+            })}
+            dividerColor={color('Divider Color', '#fb3448')}
+            textColor={color('Text Color', '#383838')}
+            squareSize={number('Square Size', 10)}
+            position={options('Position', {
+                Left: 'left',
+                Center: 'center',
+                Right: 'right',
+            }, 'center', {
+                display: 'select'
+            })}
+        >
+            {text('Label', 'Crypto Currency')}
+        </SectionHeader>
+    ))
+
+    .add('Section Header with size as string', () => (
+        <SectionHeader
+            size={text('Size', '64px')}
+            dividerColor={color('Divider Color', '#fb3448')}
+            textColor={color('Text Color', '#383838')}
+            squareSize={number('Square Size', 10)}
+            position={options('Position', {
+                Left: 'left',
+                Center: 'center',
+                Right: 'right',
+            }, 'center', {
+                display: 'select'
+            })}
+        >
+            {text('Label', 'Crypto Currency')}
+        </SectionHeader>
+    ))
+
+    .add('Progress Bar', () => (
+        <ProgressBar
+            percent={number('Percent', 50, {
+                range: true,
+                min: 0,
+                max: 100,
+                step: 1,
+            })}
+            status={options('Status', {
+                Success: 'success',
+                Exception: 'exception',
+                Active: 'active'
+            }, 'exception', {
+                display: 'select'
+            })}
+            showInfo={boolean('Show Info', false)}
+            styling={object('Styling Object', {
+                "color": color('Color', "#ccc"),
+                "exceptionColor": color('Exception Color', "#f5222d"),
+                "successColor": color('Success Color', "#00F281"),
+                "progressColor": color('Progress Color', "#1890ff")
+            })}
+        />
+    ))
+
+    .add('Portfolio Value Item', () => (
+        <PortfolioValueItem
+            assetID={text('Asset ID', "asset-title-value")}
+            name={text('name', "Asset Title")}
+            ownership={text('Percentage of asset owned', "11.86")}
+            value={text('Value of ownership percentage', '196.68')}
+        />
+    ))
+
+    .add('Portfolio Revenue Item', () => (
+        <PortfolioRevenueItem
+            assetID={text('Asset ID', "asset-title-value")}
+            name={text('name', "Asset Title")}
+            monthlyRevenue={number('Monthly Revenue', 1392.54)}
+            totalRevenue={number('Total Revenue', 96.68)}
+        />
+    ))
+
+    .add('Portfolio Dropdown', () => (
+        <PortfolioDropdown
+            name={text('Name', "Sample")}
+            icon={text('Icon', "line-chart")}
+            color={color('Color', "blue")}
+            portfolioData={array('Portfolio Data', [
+                object('Asset 1', {
+                    assetID: 'asset-id-1',
+                    name: 'Example Asset',
+                    data: {
+                        ownership: '22',
+                        value: '14081.25',
+                    },
+                }),
+                object('Asset 2', {
+                    assetID: 'asset-id-2',
+                    name: 'Example Asset 2',
+                    data: {
+                        ownership: '22',
+                        value: '14081.25',
+                    },
+                }),
+                object('Asset 3', {
+                    assetID: 'asset-id-3',
+                    name: 'Example Asset 3',
+                    data: {
+                        ownership: '22',
+                        value: '14081.25',
+                    },
+                },),
+            ])}
+            total={text('Total', "42243.75")}
+        />
+    ))
+
+    .add('Pagination', () => (
+        <Pagination
+            styling={object('Styling', {
+                color: color('Color', 'rgba(0, 0, 0, 0.65)'),
+                borderColor: color('Border Color', '#d9d9d9'),
+                backgroundColor: color('Background Color', '#ffffff'),
+                itemActiveBorderColor: color('Item Active Border Color', 'blue'),
+                itemHoverBorderColor: color('Item Hover Border Color', 'blue'),
+                disabledItemBorderColor: color('Disabled Item Border Color', '#d9d9d9'),
+                disabledItemColor: color('Disabled Item Color', 'rgba(0, 0, 0, 0.25)'),
+            })}
+            current={number('Current Page Number', 1)}
+            defaultCurrent={number('Default Initial Page Number', 1)}
+            defaultPageSize={number('Default Page Size', 10)}
+            hideOnSinglePage={boolean('Hide on Single Page', false)}
+            pageSize={number('Page Size', 10)}
+            pageSizeOptions={array('Page Size Options', ['10', '20', '30', '40'])}
+            showQuickJumper={boolean('Show Quick Jumper', false)}
+            showSizeChanger={boolean('Show Size Changer', false)}
+            simple={boolean('Simple Mode', false)}
+            size={text('Size of Pagination', "small")}
+            total={number('Total Data Items', 100)}
+        />
+    ))
+
+    .add('Navigation Option', () => (
+        <BrowserRouter>
+            <NavigationOption
+                name={text('Name', "Not Selectable")}
+                icon={starIcon}
+                selectable={boolean('Selectable', false)}
+                selected={boolean('Selected', false)}
+                url={text('URL', "#")}
+            />
+        </BrowserRouter>
+    ))
+
+    .add('Logo', () => (
+        <div style={{backgroundColor: '#2e58db', width: '200px'}}>
+            <Logo
+                className={text('Class Name', "classname")}
+            />
+        </div>
+    ))
+
+    .add('List', () => (
+        <List
+            component={ListItem}
+            items={array('Items', ['Item 1', 'Item2', 'Item3'])}
+        />
+    ))
+
+    .add('Filter', () => (
+        <Filter
+            checked={boolean('Checked', false)}
+            styling={object('Styling', {
+                "checkedColor": color('Checked Color', "#1890ff"),
+                "checkedBackgroundColor": color('Checked Background Color', "#e6f7ff"),
+                "checkedBorderColor": color('Checked Border Color', "#91d5ff"),
+                "uncheckedBackgroundColor": color('UnChecked Background Color', "transparent"),
+                "uncheckedBorderColor": color('UnChecked Border Color', "transparent"),
+                "uncheckedColor": color('Unchecked Color', "rgba(0, 0, 0, 0.65)"),
+                "hoverColor": color('Hover Color', "#1890ff")
+            })}
+        >
+            Filter one
+        </Filter>
+    ))
+
+    .add('Exchange Rate', () => (
+        <ExchangeRate
+            mybitPrice={number('price of MYB in USD', 0.321)}
+            USD_MYB_SYMBOL={text('Symbol to represent the price ratio', "USD/MYB")}
+        />
+    ))
+
+    .add('Dropdown', () => (
+        <Dropdown
+            styling={object('Styling Object', {
+                "color": color('Color', "#1890ff"),
+                "colorHover": color('Color Hover', "#40a9ff"),
+                "submenuColorHover": color('Submenu Color Hover', "#1890ff"),
+                "submenuBackgroundColorHover": color('Submenu Background Color Hover', "#e6f7ff")
+            })}
+            menu={array('Menu', ['Option 1', 'Option 2', 'Option 3'])}
+            selected={text('Selected Item from Menu', "Option 1")}
+            placement={options('Placement', {
+                TopLeft: 'topLeft',
+                TopRight: 'topRight',
+                TopCenter: 'topCenter',
+                BottomLeft: 'bottomLeft',
+                BottomRight: 'bottomRight',
+                BottomCenter: 'bottomCenter'
+            }, 'topCenter', {
+                display: 'select'
+            })}
+            trigger={options('Trigger', {
+                Click: 'click',
+                Hover: 'hover',
+                ContextMenu: 'contextMenu'
+            }, 'hover', {
+                display: 'select'
+            })}
+            handleClick={() => {}}
+        />
+    ))
+
+    .add('Connection Status', () => (
+        <ConnectionStatus
+            loading={boolean('Loading', false)}
+            network={text('Network', "ropsten")}
+        />
+    ))
+
+    .add('Category Card', () => (
+        <BrowserRouter>
+            <CategoryCard
+                image={starIcon}
+                path={text('Path', "/path")}
+                name={text('Name', "Bitcoin ATM")}
+            />
+        </BrowserRouter>
+    ))
+
+    .add('Bancor Container', () => (
+        <BancorContainer>
+            <BancorConsumer>
+                {bancor => (
+                    <React.Fragment>
+                        <Button onClick={() => bancor.initBancor()}>GET MYB</Button>
+                        <Button onClick={() => bancor.initBancor({
+                            baseCurrencyId: "5937d635231e97001f744267",
+                            pairCurrencyId: "5937d635231e97001f744267",
+                            displayCurrency: "ETH",
+                            operation: "buy",
+                        })}>GET ETH</Button>
+                    </React.Fragment>
+                )}
+            </BancorConsumer>
+        </BancorContainer>
+    ))
+
+    .add('Asset Title', () => (
+        <AssetTitle
+            assetName={text('Asset Name', "Bitcoin ATM")}
+            city={text('City', "Sofia")}
+            country={text('Country', "Bulgaria")}
+            className={text('Class', '')}
         />
     ))
 ;

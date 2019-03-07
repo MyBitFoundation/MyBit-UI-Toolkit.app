@@ -18,11 +18,8 @@
     "access": "public"
   },
   "dependencies": {
-    "@ant-design/icons": "^1.2.1",
-    "antd": "^3.14.1"
   },
   "devDependencies": {
-    "@ant-design/icons": "^1.2.1",
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
