@@ -1,6 +1,6 @@
 {
   "name": "@pbteja-dev/ui.kit.subscribe-form",
-  "version": "0.0.0",
+  "version": "0.0.1-alpha.0",
   "description": "",
   "main": "build/index.js",
   "directories": {
@@ -32,6 +32,6 @@
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.3.4",
     "@pbteja-dev/ui.kit.button": "^0.0.1-alpha.5",
-    "@pbteja-dev/ui.kit.input": "^0.0.0"
+    "@pbteja-dev/ui.kit.input": "^0.0.1-alpha.0"
   }
 }
