@@ -35,8 +35,21 @@ import BancorWidgetButton from './BancorWidgetButton';
 import Bounty from './Bounty';
 import Menu from './Menu';
 import Switch from './Switch';
+import Input from './Input';
+import MyBitGoHeader from './MyBitGoHeader';
+import NavigationBar from './NavigationBar';
+import Stats from './Stats';
 
 import starIcon from '@ant-design/icons/svg/fill/star.svg';
+import exploreIcon from '@ant-design/icons/svg/outline/search.svg';
+import portfolioIcon from '@ant-design/icons/svg/outline/bar-chart.svg';
+import transactionsIcon from '@ant-design/icons/svg/outline/bars.svg';
+import savedIcon from '@ant-design/icons/svg/fill/star.svg';
+import listAssetIcon from '@ant-design/icons/svg/fill/plus-circle.svg';
+import stakingIcon from '@ant-design/icons/svg/outline/appstore.svg';
+import exchangeIcon from '@ant-design/icons/svg/outline/arrows-alt.svg';
+import knowledgeBaseIcon from '@ant-design/icons/svg/fill/question-circle.svg';
+
 
 import { withKnobs, text, boolean, number, color, select, array, object, date, optionsKnob as options, radios } from "@storybook/addon-knobs";
 
@@ -624,6 +637,105 @@ stories
             }, "default", {
                 display: 'select'
             })}
+        />
+    ))
+
+    .add('Input', () => (
+        <div style={{padding: "40px"}}>
+            <Input
+                type={options('Type', {
+                    Text: 'text',
+                    Email: 'email',
+                    Number: 'number'
+                }, "text", {
+                    display: 'select'
+                })}
+                size={options('Size', {
+                    Small: "small",
+                    Default: "default",
+                    Large: "large"
+                }, "default", {
+                    display: 'select'
+                })}
+                min={number('Min input value(when type is number)')}
+                value={text('Value of input')}
+                placeholder={text('Placeholder', 'sample placeholder')}
+                hasTooltip={boolean('Has Tooltip?', false)}
+                tooltipTitle={text('Input Tooltip Text', 'Sample Tooltip Text')}
+            />
+        </div>
+    ))
+
+    .add('MyBit Go Header', () => (
+        <MyBitGoHeader
+            prices={object('Prices', {
+                mybitPrice: number('MyBit Price', 0.05)
+            })}
+            user={object('User', {
+                myBitBalance: number('MyBit Balance', 100),
+                ethBalance: number('Eth Balance', 1000),
+                userName: text('User Name', '0xd12cd8a37f074e7eafae618c986ff825666198bd')
+            })}
+        />
+    ))
+
+    .add('Navigation Bar', () => (
+        <div style={{width: '90%'}}>
+            <BrowserRouter>
+                <NavigationBar
+                    menuOptions={array('Menu Options', [
+                        object('Item1', {
+                            name: 'Explore',
+                            icon: exploreIcon,
+                            selectable: true,
+                            url: '/',
+                        }),
+                        object('Item2', {
+                            name: 'Portfolio',
+                            icon: portfolioIcon,
+                            selectable: true,
+                            url: '/portfolio',
+                        }),
+                        object('Item3', {
+                            name: 'Transactions',
+                            icon: transactionsIcon,
+                            selectable: true,
+                            url: '/transaction-history',
+                        }),
+                        object('Item4', { name: 'Saved', icon: savedIcon }),
+                        object('Item5', { name: 'List Asset', icon: listAssetIcon }),
+                        object('Item6', { name: 'Staking', icon: stakingIcon }),
+                        object('Item7', { name: 'Exchange', icon: exchangeIcon }),
+                        object('Item8', {
+                            name: 'Help',
+                            icon: knowledgeBaseIcon,
+                            selectable: true,
+                            url: '/help',
+                        }),
+                    ])}
+                    clickHandler={() => {}}
+                    currentPath="/portfolio"
+                />
+            </BrowserRouter>
+        </div>
+    ))
+
+    .add('Stats', () => (
+        <Stats
+            stats={array('Stats', [
+                object('Stat 1', {
+                    name: text('Stat1 Name', 'Sample1'),
+                    value: text('Stat1 Value', 'Sample value1')
+                }),
+                object('Stat 2', {
+                    name: text('Stat2 Name', 'Sample2'),
+                    value: text('Stat2 Value', 'Sample value2')
+                }),
+                object('Stat 3', {
+                    name: text('Stat3 Name', 'Sample3'),
+                    value: text('Stat3 Value', 'Sample value3')
+                }),
+            ])}
         />
     ))
 ;
