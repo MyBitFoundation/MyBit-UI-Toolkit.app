@@ -4,7 +4,7 @@ const blueHover = '#40a9ff';
 const blueActive = '#096dd9';
 const green = '#00F281';
 const greenHover = '#55EAA5';
-const greenActive = '#00C368'
+const greenActive = '#00C368';
 
 const Theme = {
     colors: {
