@@ -7,7 +7,7 @@ import StyledFilters from './StyledFilters';
 import StyledListHeader from './StyledListHeader';
 import StyledItemsCounter from './StyledItemsCounter';
 import StyledListHeaderLeft from './StyledListHeaderLeft';
-import Menu from '../../Menu';
+import Menu from '@pbteja-dev/ui.kit.menu';
 import SwitchWithLabel from './SwitchWithLabel';
 import Filter from '@pbteja-dev/ui.kit.filter';
 import Dropdown from '@pbteja-dev/ui.kit.dropdown';

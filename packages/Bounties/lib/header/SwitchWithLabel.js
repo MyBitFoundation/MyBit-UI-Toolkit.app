@@ -1,6 +1,6 @@
 import React from 'react';
 import StyledSwitchWithLabel from './StyledSwitchWithLabel';
-import Switch from '../../Switch';
+import Switch from '@pbteja-dev/ui.kit.switch';
 import StyledLabelForSwitch from './StyledLabelForSwitch';
 
 const SwitchWithLabel = ({
