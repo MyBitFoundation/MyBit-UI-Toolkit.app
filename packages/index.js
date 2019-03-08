@@ -1,34 +1,38 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { storiesOf } from '@storybook/react';
-import Button from './Button/build';
-import Img from './Img/build';
-import Icon from './Icon/build';
-import Address from './Address/build';
-import Alert from './Alert/build';
-import AnimatedLogo from './AnimatedLogo/build';
-import AssetDeadlineStatus from './AssetDeadlineStatus/build';
-import AssetInvestmentStatus from './AssetInvestmentStatus/build';
-import Tooltip from './Tooltip/build';
-import StatCard from './StatCard/build';
-import Spin from './Spin/build';
-import SectionHeader from './SectionHeader/build';
-import ProgressBar from './ProgressBar/build';
-import PortfolioValueItem from './PortfolioValueItem/build';
-import PortfolioRevenueItem from './PortfolioRevenueItem/build';
-import PortfolioDropdown from './PortfolioDropdown/build';
-import Pagination from './Pagination/build';
-import NavigationOption from './NavigationOption/build';
-import Logo from './Logo/build';
-import ListItem from './ListItem/build';
-import List from './List/build';
-import Filter from './Filter/build';
-import ExchangeRate from './ExchangeRate/build';
-import Dropdown from './Dropdown/build';
-import ConnectionStatus from './ConnectionStatus/build';
-import CategoryCard from './CategoryCard/build';
-import BancorContainer, { Consumer as BancorConsumer } from './BancorContainer/build';
-import AssetTitle from './AssetTitle/build';
+import Button from './Button';
+import Img from './Img';
+import Icon from './Icon';
+import Address from './Address';
+import Alert from './Alert';
+import AnimatedLogo from './AnimatedLogo';
+import AssetDeadlineStatus from './AssetDeadlineStatus';
+import AssetInvestmentStatus from './AssetInvestmentStatus';
+import Tooltip from './Tooltip';
+import StatCard from './StatCard';
+import Spin from './Spin';
+import SectionHeader from './SectionHeader';
+import ProgressBar from './ProgressBar';
+import PortfolioValueItem from './PortfolioValueItem';
+import PortfolioRevenueItem from './PortfolioRevenueItem';
+import PortfolioDropdown from './PortfolioDropdown';
+import Pagination from './Pagination';
+import NavigationOption from './NavigationOption';
+import Logo from './Logo';
+import ListItem from './ListItem';
+import List from './List';
+import Filter from './Filter';
+import ExchangeRate from './ExchangeRate';
+import Dropdown from './Dropdown';
+import ConnectionStatus from './ConnectionStatus';
+import CategoryCard from './CategoryCard';
+import BancorContainer, { Consumer as BancorConsumer } from './BancorContainer';
+import AssetTitle from './AssetTitle';
+import AccountInfo from './AccountInfo';
+import AssetCard from './AssetCard';
+import BancorWidgetButton from './BancorWidgetButton';
+import Bounty from './Bounty';
 
 import starIcon from '@ant-design/icons/svg/fill/star.svg';
 
@@ -485,6 +489,73 @@ stories
             city={text('City', "Sofia")}
             country={text('Country', "Bulgaria")}
             className={text('Class', '')}
+        />
+    ))
+
+    .add('Account Info', () => (
+        <AccountInfo
+            myBitBalance={text('MyBit Balance', "20")}
+            ethBalance={text('Eth Balance', "8")}
+            userName={text('Username', "0xDA2F8123")}
+        />
+    ))
+
+    .add('Asset Card', () => (
+        <BrowserRouter>
+            <AssetCard
+                funded={text('Funded', "6120")}
+                goal={text('Goal', "10000")}
+                city={text('City', "Sofia")}
+                country={text('Country', "Bulgaria")}
+                name={text('Name', "Bitcoin ATM")}
+                category={text('Category', "#")}
+                clickHandler={() => {}}
+                id={text('ID', "#")}
+                backgroundImage={starIcon}
+                fundingStage={options('Funding Stage', {
+                    One: "1",
+                    Two: "2",
+                    Three: "3",
+                    Four: "4"
+                }, '1', {
+                    display: 'select'
+                })}
+                pastDate={boolean('Past Date', true)}
+            />
+        </BrowserRouter>
+    ))
+
+    .add('Bancor Widget Button', () => (
+        <BancorWidgetButton
+            type={number('Type', 1)}
+            baseCurrencyId={text('Base Currency ID', "5b164627ae2482321708eb93")}
+            pairCurrencyId={text('Pair Currency ID', "5937d635231e97001f744267")}
+            primaryColor={color('Primary Color', "#1890ff")}
+            displayCurrency={text('Display Currency', "ETH")}
+            operation={options('Operation', {
+                Buy: "buy",
+                Sell: "sell"
+            }, "buy", {
+                display: 'select'
+            })}
+        >
+            {text('Title', 'Custom Title')}
+        </BancorWidgetButton>
+    ))
+
+    .add('Bounty', () => (
+        <Bounty
+            createdAt={date('Created At', new Date('Jan 20 2017'))}
+            labels={array('Labels', ['Bounty'])}
+            merged={boolean('Merged', false)}
+            mybitInUsd={text('MyBit In USD', "1.21")}
+            repoName={text('Repo Name', "MyBit-Go.website")}
+            repoUrl={text('Repo URL', "https://github.com/MyBitFoundation/MyBit-Go.website")}
+            title={text('Issue Description', "Reduce balance to only four decimals")}
+            tokenSymbol={text('Token Symbol', "MYB")}
+            url={text('Issue URL', "https://github.com/MyBitFoundation/MyBit-Go.website/issues/48")}
+            value={text('Prize Value', 50)}
+            showAmountInCrypto={boolean('Show Amount In Crypto', false)}
         />
     ))
 ;
