@@ -33,6 +33,8 @@ import AccountInfo from './AccountInfo';
 import AssetCard from './AssetCard';
 import BancorWidgetButton from './BancorWidgetButton';
 import Bounty from './Bounty';
+import Menu from './Menu';
+import Switch from './Switch';
 
 import starIcon from '@ant-design/icons/svg/fill/star.svg';
 
@@ -556,6 +558,72 @@ stories
             url={text('Issue URL', "https://github.com/MyBitFoundation/MyBit-Go.website/issues/48")}
             value={text('Prize Value', 50)}
             showAmountInCrypto={boolean('Show Amount In Crypto', false)}
+        />
+    ))
+
+    .add('Menu', () => (
+        <Menu
+            mode={options('Mode', {
+                Vertical: "vertical",
+                Horizontal: "horizontal",
+                Inline: "inline"
+            }, "horizontal", {
+                display: 'select'
+            })}
+            items={array('Items', [
+                object('Item1', {
+                    name: text('Item1 Name', 'Menu item 1'),
+                    linkTo: text('Item1 LinkTo', "#"),
+                    target: text('Item1 Target', "_top")
+                }),
+                object('Item2', {
+                    name: text('Item2 Name', 'Menu item 2'),
+                    linkTo: text('Item2 LinkTo', "#"),
+                    target: text('Item2 Target', "_top")
+                }),
+                object('Item3 (with submenu)', {
+                    name: text('Item3 Name', 'Menu item 3 (with submenu)'),
+                    subNavigation: array('Item3 Sub-Navigation', [
+                        object('Item3 > SubItem 1', {
+                            name: text('Item3 > SubItem 1 Name', 'subMenu item 1'),
+                            linkTo: text('Item3 > SubItem 1 LinkTo', "#"),
+                            target: text('Item3 > SubItem 1 Target', "_top")
+                        }),
+                        object('Item3 > SubItem 2', {
+                            name: text('Item3 > SubItem 2 Name', 'subMenu item 2'),
+                            linkTo: text('Item3 > SubItem 2 LinkTo', "#"),
+                            target: text('Item3 > SubItem 2 Target', "_top")
+                        }),
+                    ])
+                })
+            ])}
+            selectedKeys={array('Selected Items', ['Menu item 1'])}
+            styling={object('Styling Object', {
+                "backgroundColor": color('Background Color', "transparent"),
+                "color": color('Color', "rgba(0,0,0,1)"),
+                "itemHoverColor": color('Item Hover Color', "#1890ff"),
+                "itemSelectedColor": color('Item Selected Color', "#1890ff"),
+                "borderBottom": text("Border Bottom Size", "2px") + " " + text('Border Bottom Style', "solid") + " " + color('Border Bottom Color',"#1890ff"),
+                "backgroundColorItem": color("Background Color Item", "#e6f7ff")
+            })}
+        />
+    ))
+
+    .add('Switch', () => (
+        <Switch
+            styling={object('Styling Object', {
+                "checkedBackgroundColor": color('Checked Background Color', "#1890ff"),
+                "uncheckedBackgroundColor": color('Unchecked Background Color', "rgba(0, 0, 0, 0.25)")
+            })}
+            key={text('Key', "switch-example-1")}
+            checked={boolean('Checked', false)}
+            onChange={() => {}}
+            size={options('Size', {
+                Default: "default",
+                Small: "small"
+            }, "default", {
+                display: 'select'
+            })}
         />
     ))
 ;
