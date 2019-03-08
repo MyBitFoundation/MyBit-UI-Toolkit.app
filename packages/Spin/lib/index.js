@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import SpinAnt from 'antd/lib/spin';
 import 'antd/lib/spin/style/css';
 import { withTheme } from 'styled-components';
-import Theme from './theme'
+import Theme from '@pbteja-dev/ui.kit.theme/build'
 
 import StyledSpin from './styledSpin';
 

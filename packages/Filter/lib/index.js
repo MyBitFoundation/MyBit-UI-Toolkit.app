@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { Tag as TagAnt } from 'antd';
 import 'antd/lib/tag/style/css';
 import { withTheme } from 'styled-components';
+import Theme from '@pbteja-dev/ui.kit.theme/build';
 
-import Theme from './theme';
 import StyledFilter from './styledFilter';
 
 const { CheckableTag } = TagAnt;

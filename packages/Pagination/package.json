@@ -28,5 +28,8 @@
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4",
     "eslint-watch": "^5.0.1"
+  },
+  "dependencies": {
+    "@pbteja-dev/ui.kit.theme": "^0.0.1-alpha.4"
   }
 }
