@@ -4,7 +4,7 @@ import {withInfo} from "@storybook/addon-info";
 import { create } from '@storybook/theming';
 
 function loadStories() {
-    require('../packages/index');
+    require('../packages/index.stories');
     // You can require as many stories as you need.
 }
 

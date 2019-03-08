@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withTheme } from 'styled-components';
-import Input from '../Input';
-import Button from '../Button';
+import Input from '@pbteja-dev/ui.kit.input';
+import Button from '@pbteja-dev/ui.kit.button';
 
 class SubscribeForm extends React.Component {
 

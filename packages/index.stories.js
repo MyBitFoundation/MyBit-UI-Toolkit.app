@@ -39,6 +39,9 @@ import Input from './Input';
 import MyBitGoHeader from './MyBitGoHeader';
 import NavigationBar from './NavigationBar';
 import Stats from './Stats';
+import SubscribeForm from './SubscribeForm';
+import TotalPortfolioRevenue from './TotalPortfolioRevenue';
+import TotalPortfolioValue from './TotalPortfolioValue';
 
 import starIcon from '@ant-design/icons/svg/fill/star.svg';
 import exploreIcon from '@ant-design/icons/svg/outline/search.svg';
@@ -735,6 +738,65 @@ stories
                     name: text('Stat3 Name', 'Sample3'),
                     value: text('Stat3 Value', 'Sample value3')
                 }),
+            ])}
+        />
+    ))
+
+    .add('Subscribe Form', () => (
+        <SubscribeForm
+            listId={text('List ID', "general")}
+            size={number("Size", 50)}
+        />
+    ))
+
+    .add('Total Portfolio Revenue', () => (
+        <TotalPortfolioRevenue
+            totalPortfolioRevenue={text('Total Portfolio Revenue', "12234")}
+            portfolioRevenueAssets={array('Portfolio Revenue Assets', [
+                object('Asset 1', {
+                    assetID: text('Asset1 ID', 'asset-id-1'),
+                    name: text('Asset1 Name', 'Example Asset'),
+                    monthlyRevenue: text('Asset1 Monthly Revenue', '500.92'),
+                    totalRevenue: text('Asset1 Total Revenue', '14081.25')
+                }),
+                object('Asset 2', {
+                    assetID: text('Asset2 ID', 'asset-id-2'),
+                    name: text('Asset2 Name', 'Example Asset 2'),
+                    monthlyRevenue: text('Asset2 Monthly Revenue', '10.92'),
+                    totalRevenue: text('Asset2 Total Revenue', '181.36')
+                }),
+                object('Asset 3', {
+                    assetID: text('Asset3 ID', 'asset-id-3'),
+                    name: text('Asset3 Name', 'Example Asset 3'),
+                    monthlyRevenue: text('Asset3 Monthly Revenue', '12.42'),
+                    totalRevenue: text('Asset3 Total Revenue', '81.16')
+                })
+            ])}
+        />
+    ))
+
+    .add('Total Portfolio Value', () => (
+        <TotalPortfolioValue
+            totalPortfolioValue={text('Total Portfolio Value', "12234")}
+            portfolioValueAssets={array('Portfolio Value Assets', [
+                object('Asset1', {
+                    assetID: text('Asset1 ID', 'asset-id-1'),
+                    name: text('Asset1 Name', 'Example Asset'),
+                    ownership: text('Asset1 Ownership', '22'),
+                    value: text('Asset1 Value', '14081.25')
+                }),
+                object('Asset2', {
+                    assetID: text('Asset2 ID', 'asset-id-2'),
+                    name: text('Asset2 Name', 'Example Asset 2'),
+                    ownership: text('Asset2 Ownership', '22'),
+                    value: text('Asset2 Value', '14081.25')
+                }),
+                object('Asset3', {
+                    assetID: text('Asset3 ID', 'asset-id-3'),
+                    name: text('Asset3 Name', 'Example Asset 3'),
+                    ownership: text('Asset3 Ownership', '22'),
+                    value: text('Asset3 Value', '14081.25')
+                })
             ])}
         />
     ))
