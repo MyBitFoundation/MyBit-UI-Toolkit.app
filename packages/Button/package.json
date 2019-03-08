@@ -29,5 +29,8 @@
     "eslint-plugin-react": "^7.12.4",
     "eslint-watch": "^5.0.1"
   },
-  "gitHead": "72d23f6ff611976540e327eb7878aa5b68f7967e"
+  "gitHead": "72d23f6ff611976540e327eb7878aa5b68f7967e",
+  "dependencies": {
+    "@pbteja-dev/ui.kit.theme": "^0.0.1-alpha.4"
+  }
 }
