@@ -68,3 +68,5 @@ typings/
 *.swp
 
 .idea/
+storybook-static/
+.netlify/
