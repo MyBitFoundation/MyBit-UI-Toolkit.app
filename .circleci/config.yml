@@ -25,6 +25,8 @@ jobs:
             BUILD_URL=$(npx now --name ui.mybit.io packages/App/build -t $NOW_DEVELOPMENT_TOKEN --public)
             npx now alias ${BUILD_URL} ${GIT_HOST} -t $NOW_DEVELOPMENT_TOKEN
             npx now alias ${BUILD_URL} ${PR_HOST} -t $NOW_DEVELOPMENT_TOKEN
+            PR_STORYBOOK_HOST=$(echo $VERY_SANITIZED_BRANCH-ui-storybook-mybit-io-dev.now.sh)
+            GIT_STORYBOOK_HOST=$(echo $GIT_HASH-ui-storybook-mybit-io-dev.now.sh)
             STORYBOOK_BUILD_URL=$(npx now --name ui.storybook.mybit.io storybook-static -t $NOW_DEVELOPMENT_TOKEN --public)
-            npx now alias ${STORYBOOK_BUILD_URL} ${GIT_HOST} -t $NOW_DEVELOPMENT_TOKEN
-            npx now alias ${STORYBOOK_BUILD_URL} ${PR_HOST} -t $NOW_DEVELOPMENT_TOKEN
+            npx now alias ${STORYBOOK_BUILD_URL} ${GIT_STORYBOOK_HOST} -t $NOW_DEVELOPMENT_TOKEN
+            npx now alias ${STORYBOOK_BUILD_URL} ${PR_STORYBOOK_HOST} -t $NOW_DEVELOPMENT_TOKEN
