@@ -10,6 +10,7 @@ jobs:
       - checkout
       - run: yarn install
       - run: npm run bootstrap
+      - run: npm run build-storybook
 
       - deploy:
           name: Deploy to Now
@@ -24,3 +25,6 @@ jobs:
             BUILD_URL=$(npx now --name ui.mybit.io packages/App/build -t $NOW_DEVELOPMENT_TOKEN --public)
             npx now alias ${BUILD_URL} ${GIT_HOST} -t $NOW_DEVELOPMENT_TOKEN
             npx now alias ${BUILD_URL} ${PR_HOST} -t $NOW_DEVELOPMENT_TOKEN
+            STORYBOOK_BUILD_URL=$(npx now --name ui.storybook.mybit.io storybook-static -t $NOW_DEVELOPMENT_TOKEN --public)
+            npx now alias ${STORYBOOK_BUILD_URL} ${GIT_HOST} -t $NOW_DEVELOPMENT_TOKEN
+            npx now alias ${STORYBOOK_BUILD_URL} ${PR_HOST} -t $NOW_DEVELOPMENT_TOKEN

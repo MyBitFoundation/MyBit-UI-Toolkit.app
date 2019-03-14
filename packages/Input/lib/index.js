@@ -7,7 +7,7 @@ import 'antd/lib/input/style/css';
 
 import Img from '@pbteja-dev/ui.kit.img';
 import Tooltip from '@pbteja-dev/ui.kit.tooltip';
-import QuestionMark from './questionMark.svg';
+import QuestionMark from './images/questionMark.svg';
 import StyledInput from './styledInput';
 import StyledImage from './styledImage';
 

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import ProgressBar from '@pbteja-dev/ui.kit.progress-bar';
 import AssetWrapper from './styledAssetWrapper';
-import locationIcon from './Location-icon.svg';
+import locationIcon from './images/Location-icon.svg';
 
 const AssetCard = ({
   // clickHandler,

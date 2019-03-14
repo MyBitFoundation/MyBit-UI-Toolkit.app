@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { PortfolioTile, StyledChildDiv, ValueB, ValueP, PortfolioTileImg } from './styledComponents';
-import PieChart from './chart-pie.png';
+import PieChart from './images/chart-pie.png';
 
 const PortfolioValueItem = ({
                                 assetID, name, ownership, value,

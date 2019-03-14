@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { PortfolioTile, StyledChildDiv, RevenueB, RevenueP, PortfolioTileImg } from './styledComponents';
-import LineChart from './chart-line.png';
+import LineChart from './images/chart-line.png';
 
 const PortfolioRevenueItem = ({
                                   assetID,
