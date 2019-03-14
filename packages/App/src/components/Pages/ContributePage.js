@@ -77,6 +77,7 @@ USER, WIDGETS, TEMPLATES, LIBRARY_COMPONENTS`
 
         <h4>8. Create a pull request to the main repository</h4>
 
+        <h1>Example code for a documentation page</h1>
         <Showcase data={contributeExample} />
     </div>
 );
