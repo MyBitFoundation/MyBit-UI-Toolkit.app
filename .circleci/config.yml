@@ -9,8 +9,6 @@ jobs:
     steps:
       - checkout
 
-      - run: yarn install
-
       - run: npm run bootstrap
 
       - deploy:
