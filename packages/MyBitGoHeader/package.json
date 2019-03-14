@@ -1,6 +1,6 @@
 {
   "name": "@pbteja-dev/ui.kit.my-bit-go-header",
-  "version": "0.0.1-alpha.0",
+  "version": "0.0.1-alpha.1",
   "description": "",
   "main": "build/index.js",
   "directories": {
@@ -31,8 +31,8 @@
     "eslint-watch": "^5.0.1"
   },
   "dependencies": {
-    "@pbteja-dev/ui.kit.account-info": "^0.0.1-alpha.0",
-    "@pbteja-dev/ui.kit.exchange-rate": "^0.0.1-alpha.0",
-    "@pbteja-dev/ui.kit.logo": "^0.0.1-alpha.0"
+    "@pbteja-dev/ui.kit.account-info": "^0.0.1-alpha.1",
+    "@pbteja-dev/ui.kit.exchange-rate": "^0.0.1-alpha.1",
+    "@pbteja-dev/ui.kit.logo": "^0.0.1-alpha.1"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@pbteja-dev/ui.kit.bancor-widget-button",
-  "version": "0.0.1-alpha.0",
+  "version": "0.0.1-alpha.1",
   "description": "",
   "main": "build/index.js",
   "directories": {
@@ -32,7 +32,7 @@
     "eslint-watch": "^5.0.1"
   },
   "dependencies": {
-    "@pbteja-dev/ui.kit.button": "^0.0.1-alpha.5",
-    "@pbteja-dev/ui.kit.theme": "^0.0.1-alpha.4"
+    "@pbteja-dev/ui.kit.button": "^0.0.1-alpha.6",
+    "@pbteja-dev/ui.kit.theme": "^0.0.1-alpha.5"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@pbteja-dev/ui.kit.switch",
-  "version": "0.0.1-alpha.0",
+  "version": "0.0.1-alpha.1",
   "description": "",
   "main": "build/index.js",
   "directories": {
@@ -31,7 +31,7 @@
     "eslint-watch": "^5.0.1"
   },
   "dependencies": {
-    "@pbteja-dev/ui.kit.icon": "^0.0.1-alpha.1",
-    "@pbteja-dev/ui.kit.theme": "^0.0.1-alpha.4"
+    "@pbteja-dev/ui.kit.icon": "^0.0.1-alpha.2",
+    "@pbteja-dev/ui.kit.theme": "^0.0.1-alpha.5"
   }
 }

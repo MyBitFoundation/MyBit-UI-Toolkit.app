@@ -1,6 +1,6 @@
 {
   "name": "@pbteja-dev/ui.kit.filter",
-  "version": "0.0.1-alpha.1",
+  "version": "0.0.1-alpha.2",
   "description": "",
   "main": "build/index.js",
   "directories": {
@@ -31,6 +31,6 @@
     "eslint-watch": "^5.0.1"
   },
   "dependencies": {
-    "@pbteja-dev/ui.kit.theme": "^0.0.1-alpha.4"
+    "@pbteja-dev/ui.kit.theme": "^0.0.1-alpha.5"
   }
 }

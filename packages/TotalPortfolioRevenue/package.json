@@ -1,6 +1,6 @@
 {
   "name": "@pbteja-dev/ui.kit.total-portfolio-revenue",
-  "version": "0.0.1-alpha.0",
+  "version": "0.0.1-alpha.1",
   "description": "",
   "main": "build/index.js",
   "directories": {
@@ -31,6 +31,6 @@
     "eslint-watch": "^5.0.1"
   },
   "dependencies": {
-    "@pbteja-dev/ui.kit.portfolio-revenue-item": "^0.0.1-alpha.0"
+    "@pbteja-dev/ui.kit.portfolio-revenue-item": "^0.0.1-alpha.1"
   }
 }
