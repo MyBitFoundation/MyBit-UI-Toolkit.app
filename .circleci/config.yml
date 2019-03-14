@@ -11,9 +11,7 @@ jobs:
 
       - run: yarn install
 
-      - run: lerna bootstrap
-
-      - run: lerna run build
+      - run: npm run bootstrap
 
       - deploy:
           name: Deploy to Now
