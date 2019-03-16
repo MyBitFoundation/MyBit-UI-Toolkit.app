@@ -3,6 +3,7 @@ import '@storybook/addon-console';
 import {withInfo} from "@storybook/addon-info";
 import { create } from '@storybook/theming';
 import { jsxDecorator } from 'storybook-addon-jsx';
+import { withActions } from "@storybook/addon-actions";
 
 function loadStories() {
     require('../packages/index.stories');
@@ -58,6 +59,7 @@ addParameters({
 });
 
 addDecorator(jsxDecorator);
-addDecorator(withInfo);
+// addDecorator(withInfo);
+addDecorator(withActions('click'));
 
 configure(loadStories, module);

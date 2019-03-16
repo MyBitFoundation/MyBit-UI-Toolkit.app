@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { storiesOf } from '@storybook/react';
+import centered from '@storybook/addon-centered/react';
 import Button from './Button';
 import Img from './Img';
 import Icon from './Icon';
@@ -65,14 +66,15 @@ const stories = storiesOf('Components', module);
 stories.addDecorator(withKnobs);
 
 stories
-    .addParameters({
-        info: {
-            inline: true,
-            header: false,
-            styles: {
-            },
-        },
-    })
+    .addDecorator(centered)
+    // .addParameters({
+    //     info: {
+    //         inline: true,
+    //         header: false,
+    //         styles: {
+    //         },
+    //     },
+    // })
     .add('Button', () => (
         <Button
             active={boolean('Active', false)}
