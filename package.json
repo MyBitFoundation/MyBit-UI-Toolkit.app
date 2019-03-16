@@ -19,7 +19,8 @@
     "@storybook/theming": "^5.0.0",
     "babel-loader": "^8.0.5",
     "lerna": "^3.13.1",
-    "react-test-renderer": "^16.8.3"
+    "react-test-renderer": "^16.8.3",
+    "storybook-addon-jsx": "^7.0.0"
   },
   "dependencies": {
     "@ant-design/icons": "^1.2.1",
@@ -35,6 +36,6 @@
     "storybook": "start-storybook -p 9001 -c .storybook",
     "build-storybook": "build-storybook -c .storybook",
     "postinstall": "node postinstall.js",
-    "bootstrap":  "lerna bootstrap"
+    "bootstrap": "lerna bootstrap"
   }
 }
