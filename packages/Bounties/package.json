@@ -1,6 +1,6 @@
 {
   "name": "@mybit/ui.bounties",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "build/index.js",
   "directories": {
@@ -31,14 +31,14 @@
     "eslint-watch": "^5.0.1"
   },
   "dependencies": {
-    "@mybit/ui.button": "^0.0.1",
-    "@mybit/ui.dropdown": "^0.0.1",
-    "@mybit/ui.filter": "^0.0.1",
+    "@mybit/ui.button": "^0.0.2",
+    "@mybit/ui.dropdown": "^0.0.2",
+    "@mybit/ui.filter": "^0.0.2",
     "@mybit/ui.icon": "^0.0.1",
-    "@mybit/ui.menu": "^0.0.1",
-    "@mybit/ui.pagination": "^0.0.1",
-    "@mybit/ui.spin": "^0.0.1",
-    "@mybit/ui.switch": "^0.0.1",
+    "@mybit/ui.menu": "^0.0.2",
+    "@mybit/ui.pagination": "^0.0.2",
+    "@mybit/ui.spin": "^0.0.2",
+    "@mybit/ui.switch": "^0.0.2",
     "@mybit/ui.theme": "^0.0.1",
     "dayjs": "^1.8.9"
   }

@@ -1,6 +1,6 @@
 {
   "name": "@mybit/ui.bounty",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "build/index.js",
   "directories": {
@@ -31,7 +31,7 @@
     "eslint-watch": "^5.0.1"
   },
   "dependencies": {
-    "@mybit/ui.button": "^0.0.1",
+    "@mybit/ui.button": "^0.0.2",
     "@mybit/ui.icon": "^0.0.1",
     "dayjs": "^1.8.5"
   }
