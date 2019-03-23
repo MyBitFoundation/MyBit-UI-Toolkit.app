@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'antd';
 import { PropsTable, Showcase, EditPageLink, InstallationSection } from '../../Common';
-import ConnectionStatus from '@pbteja-dev/ui.kit.connection-status';
+import ConnectionStatus from '@mybit/ui.connection-status';
 
 const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/ConnectionStatus/index.js"
 

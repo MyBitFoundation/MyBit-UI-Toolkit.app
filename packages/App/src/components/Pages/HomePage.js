@@ -4,7 +4,7 @@ import { Icon } from 'antd'
 import styled from 'styled-components'
 import { Helmet } from "react-helmet";
 import { HOMEPAGE_TITLE } from './pageTitles'
-import SectionHeader from '@pbteja-dev/ui.kit.section-header';
+import SectionHeader from '@mybit/ui.section-header';
 
 const AntdHeader = styled.div`
     margin: 15px 0px 30px 0px;

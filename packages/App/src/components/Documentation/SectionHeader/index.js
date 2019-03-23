@@ -1,6 +1,6 @@
 import React from 'react';
 import { Showcase, EditPageLink, InstallationSection, PropsTable } from '../../Common/';
-import SectionHeader from '@pbteja-dev/ui.kit.section-header';
+import SectionHeader from '@mybit/ui.section-header';
 import { Helmet } from "react-helmet";
 
 const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/SectionHeader/index.js"

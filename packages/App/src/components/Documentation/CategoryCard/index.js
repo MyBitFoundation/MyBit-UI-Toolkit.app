@@ -1,6 +1,6 @@
 import React from 'react';
 import { Showcase, EditPageLink, InstallationSection, PropsTable } from '../../Common/';
-import CategoryCard from '@pbteja-dev/ui.kit.category-card';
+import CategoryCard from '@mybit/ui.category-card';
 import demoImage from '../images/category-cryptocurrency-atm.png';
 import { Helmet } from "react-helmet";
 

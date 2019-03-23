@@ -1,6 +1,6 @@
 import React from 'react';
 import { Showcase, EditPageLink, InstallationSection, PropsTable } from '../../Common/';
-import TotalPortfolioValue from '@pbteja-dev/ui.kit.total-portfolio-value';
+import TotalPortfolioValue from '@mybit/ui.total-portfolio-value';
 import { Row, Col } from 'antd'
 import { Helmet } from "react-helmet";
 

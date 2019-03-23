@@ -1,7 +1,7 @@
 import React from 'react';
 import { Showcase, EditPageLink, InstallationSection, PropsTable } from '../../Common/';
-import BancorContainer, { Consumer as BancorConsumer } from '@pbteja-dev/ui.kit.bancor-container';
-import Button from '@pbteja-dev/ui.kit.button';
+import BancorContainer, { Consumer as BancorConsumer } from '@mybit/ui.bancor-container';
+import Button from '@mybit/ui.button';
 import { Helmet } from "react-helmet";
 
 const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/BancorContainer/index.js"

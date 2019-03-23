@@ -30,7 +30,7 @@ const ContributePage = () => (
 
         <h4>4. Change the package name of the new component</h4>
         <p>
-            Open <CustomTag>packages/--your-new-component-folder--/package.json</CustomTag> and change name to <CustomTag>{ORG_NAME + "/ui.kit.--new-component-name--"}</CustomTag>.
+            Open <CustomTag>packages/--your-new-component-folder--/package.json</CustomTag> and change name to <CustomTag>{ORG_NAME + "/ui.--new-component-name--"}</CustomTag>.
         </p>
 
         <p>Basic babel setup is made. If any more plugins are needed for babel, add them in <CustomTag>.babelrc</CustomTag> - <a href={BABEL_LINK}>read their documentation</a>.</p>
@@ -45,7 +45,7 @@ const ContributePage = () => (
         <p>Also checkout <a href={STORYBOOK_ADDONS_LINK}>official storybook addons</a> for advanced testing of component using storybook.</p>
 
         <h4>5. For adding a local component package as a dependency to the new package, run the following command</h4>
-        <PlainCode>lerna add {ORG_NAME}/ui.kit.old-component --scope={ORG_NAME}/ui.kit.--new-component-name-- </PlainCode>
+        <PlainCode>lerna add {ORG_NAME}/ui.old-component --scope={ORG_NAME}/ui.--new-component-name-- </PlainCode>
         <p>Remote npm packages can be added normally to the new package using <CustomTag>npm install --package-name--</CustomTag> after navigating to the new component folder.</p>
         <p>Any packages that are present in the root's <CustomTag>package.json</CustomTag> can be used by all the packages that are in <CustomTag>packages</CustomTag> folder.</p>
 

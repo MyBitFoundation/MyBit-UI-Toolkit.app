@@ -1,5 +1,5 @@
 import React from 'react'
-import AnimatedLogo from '@pbteja-dev/ui.kit.animated-logo';
+import AnimatedLogo from '@mybit/ui.animated-logo';
 import { Showcase, EditPageLink, PropsTable, InstallationSection } from '../../Common/';
 import { Row, Col } from 'antd'
 import { Helmet } from "react-helmet";

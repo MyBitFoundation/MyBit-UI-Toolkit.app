@@ -1,6 +1,6 @@
 import React from 'react';
 import { Showcase, EditPageLink, InstallationSection, PropsTable, Playground } from '../../Common/';
-import ProgressBar from '@pbteja-dev/ui.kit.progress-bar';
+import ProgressBar from '@mybit/ui.progress-bar';
 import { Helmet } from "react-helmet";
 
 const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/ProgressBar/index.js"

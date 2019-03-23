@@ -1,6 +1,6 @@
 import React from 'react';
 import { Showcase, EditPageLink, InstallationSection, PropsTable } from '../../Common/';
-import ExchangeRate from '@pbteja-dev/ui.kit.exchange-rate';
+import ExchangeRate from '@mybit/ui.exchange-rate';
 import { Col, Row } from 'antd'
 import { Helmet } from "react-helmet";
 

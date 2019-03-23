@@ -1,6 +1,6 @@
 import React from 'react';
 import { Showcase, EditPageLink, InstallationSection, PropsTable } from '../../Common/';
-import BancorWidgetButton from '@pbteja-dev/ui.kit.bancor-widget-button';
+import BancorWidgetButton from '@mybit/ui.bancor-widget-button';
 import { Helmet } from "react-helmet";
 
 const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/BancorWidgetButton/index.js"

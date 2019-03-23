@@ -1,5 +1,5 @@
 import React from 'react';
-import Address from '@pbteja-dev/ui.kit.address';
+import Address from '@mybit/ui.address';
 import { Showcase, EditPageLink, CustomTag, PropsTable, InstallationSection } from '../../Common/';
 import { Row, Col } from 'antd';
 import { Helmet } from "react-helmet";

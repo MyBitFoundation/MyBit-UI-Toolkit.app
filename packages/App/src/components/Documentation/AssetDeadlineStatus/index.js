@@ -1,6 +1,6 @@
 import React from 'react';
 import { Showcase, EditPageLink, InstallationSection, PropsTable } from '../../Common/';
-import AssetDeadlineStatus from '@pbteja-dev/ui.kit.asset-deadline-status';
+import AssetDeadlineStatus from '@mybit/ui.asset-deadline-status';
 import { Row, Col } from 'antd'
 import { Helmet } from "react-helmet";
 

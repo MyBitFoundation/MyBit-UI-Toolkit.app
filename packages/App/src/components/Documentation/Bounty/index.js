@@ -1,6 +1,6 @@
 import React from 'react';
 import { PropsTable, Showcase, EditPageLink, InstallationSection } from '../../Common/';
-import Bounty from '@pbteja-dev/ui.kit.bounty';
+import Bounty from '@mybit/ui.bounty';
 import { Helmet } from "react-helmet";
 
 const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/Bounty/index.js"
