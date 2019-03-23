@@ -35,6 +35,7 @@
   },
   "scripts": {
     "storybook": "start-storybook -p 9001 -c .storybook",
+    "postinstall": "node postinstall.js",
     "build-storybook": "build-storybook -c .storybook",
     "bootstrap": "lerna bootstrap"
   }
