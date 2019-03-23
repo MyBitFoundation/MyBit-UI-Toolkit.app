@@ -8,10 +8,9 @@ jobs:
 
     steps:
       - checkout
-
       - run: yarn install
-
-      - run: yarn build
+      - run: npm run bootstrap
+      - run: npm run build-storybook
 
       - deploy:
           name: Deploy to Now
@@ -21,8 +20,13 @@ jobs:
             VERY_SANITIZED_BRANCH=$(tr "." "-" <<<$SANITIZED_BRANCH)
             PR_HOST=$(echo $VERY_SANITIZED_BRANCH-ui-mybit-io-dev.now.sh)
             GIT_HOST=$(echo $GIT_HASH-ui-mybit-io-dev.now.sh)
-            echo ${GIT_HASH} > build/version
-            cp CONTRIBUTORS build/contributors
-            BUILD_URL=$(npx now --name ui.mybit.io build -t $NOW_DEVELOPMENT_TOKEN --public)
+            echo ${GIT_HASH} > packages/App/build/version
+            cp CONTRIBUTORS packages/App/build/contributors
+            BUILD_URL=$(npx now --name ui.mybit.io packages/App/build -t $NOW_DEVELOPMENT_TOKEN --public)
             npx now alias ${BUILD_URL} ${GIT_HOST} -t $NOW_DEVELOPMENT_TOKEN
             npx now alias ${BUILD_URL} ${PR_HOST} -t $NOW_DEVELOPMENT_TOKEN
+            PR_STORYBOOK_HOST=$(echo $VERY_SANITIZED_BRANCH-ui-storybook-mybit-io-dev.now.sh)
+            GIT_STORYBOOK_HOST=$(echo $GIT_HASH-ui-storybook-mybit-io-dev.now.sh)
+            STORYBOOK_BUILD_URL=$(npx now --name ui.storybook.mybit.io storybook-static -t $NOW_DEVELOPMENT_TOKEN --public)
+            npx now alias ${STORYBOOK_BUILD_URL} ${GIT_STORYBOOK_HOST} -t $NOW_DEVELOPMENT_TOKEN
+            npx now alias ${STORYBOOK_BUILD_URL} ${PR_STORYBOOK_HOST} -t $NOW_DEVELOPMENT_TOKEN
