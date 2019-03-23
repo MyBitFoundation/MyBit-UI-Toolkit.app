@@ -1,6 +1,6 @@
 {
   "name": "@mybit/ui.my-bit-go-header",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "main": "build/index.js",
   "directories": {
@@ -31,8 +31,8 @@
     "eslint-watch": "^5.0.1"
   },
   "dependencies": {
-    "@mybit/ui.account-info": "^0.0.2",
-    "@mybit/ui.exchange-rate": "^0.0.1",
-    "@mybit/ui.logo": "^0.0.1"
+    "@mybit/ui.account-info": "^0.0.3",
+    "@mybit/ui.exchange-rate": "^0.0.2",
+    "@mybit/ui.logo": "^0.0.2"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@mybit/ui.subscribe-form",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "main": "build/index.js",
   "directories": {
@@ -32,7 +32,7 @@
   },
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.3.4",
-    "@mybit/ui.button": "^0.0.2",
-    "@mybit/ui.input": "^0.0.2"
+    "@mybit/ui.button": "^0.0.3",
+    "@mybit/ui.input": "^0.0.3"
   }
 }

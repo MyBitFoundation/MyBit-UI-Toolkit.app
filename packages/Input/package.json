@@ -1,6 +1,6 @@
 {
   "name": "@mybit/ui.input",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "main": "build/index.js",
   "directories": {
@@ -31,7 +31,7 @@
     "eslint-watch": "^5.0.1"
   },
   "dependencies": {
-    "@mybit/ui.img": "^0.0.1",
-    "@mybit/ui.tooltip": "^0.0.1"
+    "@mybit/ui.img": "^0.0.2",
+    "@mybit/ui.tooltip": "^0.0.2"
   }
 }

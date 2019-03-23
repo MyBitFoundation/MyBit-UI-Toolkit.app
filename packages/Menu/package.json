@@ -1,6 +1,6 @@
 {
   "name": "@mybit/ui.menu",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "main": "build/index.js",
   "directories": {
@@ -32,9 +32,9 @@
   },
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.3.4",
-    "@mybit/ui.icon": "^0.0.1",
-    "@mybit/ui.menu-item": "^0.0.1",
-    "@mybit/ui.sub-menu": "^0.0.1",
-    "@mybit/ui.theme": "^0.0.1"
+    "@mybit/ui.icon": "^0.0.2",
+    "@mybit/ui.menu-item": "^0.0.2",
+    "@mybit/ui.sub-menu": "^0.0.2",
+    "@mybit/ui.theme": "^0.0.2"
   }
 }
