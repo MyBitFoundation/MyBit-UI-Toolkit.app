@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Switch as SwitchAnt } from 'antd';
 import 'antd/lib/switch/style/css';
-import Theme from '@pbteja-dev/ui.kit.theme';
+import Theme from '@mybit/ui.theme';
 
-import Icon from '@pbteja-dev/ui.kit.icon';
+import Icon from '@mybit/ui.icon';
 import StyledSwitch from './styledSwitch';
 
 const Switch = props => (

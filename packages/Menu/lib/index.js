@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Menu as MenuAnt } from 'antd';
 import 'antd/lib/menu/style/css';
-import MenuItem from '@pbteja-dev/ui.kit.menu-item';
-import Icon from '@pbteja-dev/ui.kit.icon';
-import SubMenu from '@pbteja-dev/ui.kit.sub-menu';
+import MenuItem from '@mybit/ui.menu-item';
+import Icon from '@mybit/ui.icon';
+import SubMenu from '@mybit/ui.sub-menu';
 import StyledMenu from './styledMenu';
-import Theme from '@pbteja-dev/ui.kit.theme';
+import Theme from '@mybit/ui.theme';
 
 class Menu extends Component {
   getMenuItem = item => (

@@ -5,11 +5,11 @@ import Header from './header';
 import Card from './card';
 import StyledCards from './StyledCards';
 import StyledSpinner from './loading/StyledSpinner';
-import Spin from '@pbteja-dev/ui.kit.spin';
+import Spin from '@mybit/ui.spin';
 import StyledMessage from './StyledMessage';
 import StyledPagination from './StyledPagination';
-import Pagination from '@pbteja-dev/ui.kit.pagination';
-import Theme from '@pbteja-dev/ui.kit.theme';
+import Pagination from '@mybit/ui.pagination';
+import Theme from '@mybit/ui.theme';
 
 const sortBy = (items, type) => {
   switch (type) {

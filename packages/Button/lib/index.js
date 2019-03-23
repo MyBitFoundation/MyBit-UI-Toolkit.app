@@ -4,7 +4,7 @@ import AntButton from 'antd/lib/button';
 import { withTheme } from 'styled-components';
 import 'antd/lib/button/style/css';
 import ButtonStyle from './styledButton';
-import Theme from '@pbteja-dev/ui.kit.theme/build';
+import Theme from '@mybit/ui.theme/build';
 
 /**
  * @render react

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Collapse } from 'antd';
 import 'antd/lib/collapse/style/css';
 
-import PortfolioRevenueItem from '@pbteja-dev/ui.kit.portfolio-revenue-item';
+import PortfolioRevenueItem from '@mybit/ui.portfolio-revenue-item';
 import { EmptyP } from './styledComponents';
 import RevenueHeader from './revenueHeader';
 

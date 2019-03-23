@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import 'antd/lib/button/style/css';
-import Button from '@pbteja-dev/ui.kit.button';
-import Theme from '@pbteja-dev/ui.kit.theme';
+import Button from '@mybit/ui.button';
+import Theme from '@mybit/ui.theme';
 
 const BancorWidgetSpan = styled.span`
     font-size: 14px;

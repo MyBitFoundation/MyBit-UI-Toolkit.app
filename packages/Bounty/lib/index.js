@@ -13,9 +13,9 @@ import StyledValueLabel from './StyledValueLabel';
 import StyledButtonChallenge from './StyledButtonChallenge';
 import StyledHeader from './StyledHeader';
 import StyledFooter from './StyledFooter';
-import Button from '@pbteja-dev/ui.kit.button';
+import Button from '@mybit/ui.button';
 import getTimeAgo from './timeago';
-import Icon from '@pbteja-dev/ui.kit.icon';
+import Icon from '@mybit/ui.icon';
 import StyledCheckmark from './StyledCheckmark';
 import StyledNotYetFunded from './StyledNotYetFunded';
 

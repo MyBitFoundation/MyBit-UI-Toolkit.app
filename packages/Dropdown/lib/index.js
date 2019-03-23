@@ -5,7 +5,7 @@ import { Menu, Dropdown as DropdownAnt, Icon } from 'antd';
 import 'antd/lib/menu/style/css';
 import 'antd/lib/dropdown/style/css';
 import 'antd/lib/icon/style/css';
-import Theme from '@pbteja-dev/ui.kit.theme/build';
+import Theme from '@mybit/ui.theme/build';
 
 import StyledDropdown from './styledDropdown';
 import StyledDropdownMenu from './styledDropdownMenu';

@@ -4,7 +4,7 @@ import { withTheme } from 'styled-components';
 import PaginationAnt from 'antd/lib/pagination';
 import 'antd/lib/pagination/style/css';
 import StyledPagination from './styledPagination';
-import Theme from '@pbteja-dev/ui.kit.theme/build';
+import Theme from '@mybit/ui.theme/build';
 
 const Pagination = props => (
   <StyledPagination theme={{ ...props.theme.pagination, ...props.styling }}>

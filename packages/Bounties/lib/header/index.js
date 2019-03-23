@@ -7,10 +7,10 @@ import StyledFilters from './StyledFilters';
 import StyledListHeader from './StyledListHeader';
 import StyledItemsCounter from './StyledItemsCounter';
 import StyledListHeaderLeft from './StyledListHeaderLeft';
-import Menu from '@pbteja-dev/ui.kit.menu';
+import Menu from '@mybit/ui.menu';
 import SwitchWithLabel from './SwitchWithLabel';
-import Filter from '@pbteja-dev/ui.kit.filter';
-import Dropdown from '@pbteja-dev/ui.kit.dropdown';
+import Filter from '@mybit/ui.filter';
+import Dropdown from '@mybit/ui.dropdown';
 
 const Header = ({
   styling,

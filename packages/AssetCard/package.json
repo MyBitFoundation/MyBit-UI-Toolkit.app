@@ -31,6 +31,6 @@
     "eslint-watch": "^5.0.1"
   },
   "dependencies": {
-    "@pbteja-dev/ui.kit.progress-bar": "^0.0.1-alpha.2"
+    "@mybit/ui.progress-bar": "^0.0.1"
   }
 }

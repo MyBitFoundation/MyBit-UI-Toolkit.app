@@ -5,8 +5,8 @@ import InputNumberAnt from 'antd/lib/input-number';
 import 'antd/lib/input-number/style/css';
 import 'antd/lib/input/style/css';
 
-import Img from '@pbteja-dev/ui.kit.img';
-import Tooltip from '@pbteja-dev/ui.kit.tooltip';
+import Img from '@mybit/ui.img';
+import Tooltip from '@mybit/ui.tooltip';
 import QuestionMark from './images/questionMark.svg';
 import StyledInput from './styledInput';
 import StyledImage from './styledImage';

@@ -4,7 +4,7 @@ import { Progress } from 'antd';
 import 'antd/lib/progress/style/css';
 import { withTheme } from 'styled-components';
 import StyledProgressBar from './styledProgressBar';
-import Theme from '@pbteja-dev/ui.kit.theme/build';
+import Theme from '@mybit/ui.theme/build';
 
 const ProgressBar = ({
                          size, percent, status, showInfo, styling, theme

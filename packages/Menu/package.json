@@ -32,9 +32,9 @@
   },
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.3.4",
-    "@pbteja-dev/ui.kit.icon": "^0.0.1-alpha.2",
-    "@pbteja-dev/ui.kit.menu-item": "^0.0.1-alpha.1",
-    "@pbteja-dev/ui.kit.sub-menu": "^0.0.1-alpha.1",
-    "@pbteja-dev/ui.kit.theme": "^0.0.1-alpha.5"
+    "@mybit/ui.icon": "^0.0.1",
+    "@mybit/ui.menu-item": "^0.0.1",
+    "@mybit/ui.sub-menu": "^0.0.1",
+    "@mybit/ui.theme": "^0.0.1"
   }
 }

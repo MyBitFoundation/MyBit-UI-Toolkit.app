@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import StyledStats from './styledStats';
-import StatCard from '@pbteja-dev/ui.kit.stat-card';
+import StatCard from '@mybit/ui.stat-card';
 
 const getStat = stat => <StatCard key={stat.name} stat={stat} />;
 
