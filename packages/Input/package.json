@@ -1,6 +1,6 @@
 {
-  "name": "@pbteja-dev/ui.kit.input",
-  "version": "0.0.1-alpha.1",
+  "name": "@mybit/ui.input",
+  "version": "0.0.0",
   "description": "",
   "main": "build/index.js",
   "directories": {

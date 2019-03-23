@@ -1,6 +1,6 @@
 {
-  "name": "@pbteja-dev/ui.kit.icon",
-  "version": "0.0.1-alpha.2",
+  "name": "@mybit/ui.icon",
+  "version": "0.0.0",
   "description": "",
   "main": "build/index.js",
   "directories": {
