@@ -16,6 +16,8 @@ before_script:
   - chmod 600 bit_rsa
   # Adding ssh key to agent
   - ssh-add bit_rsa
+  # Symlink together all Lerna packages that are dependencies of each other in the current Lerna repo.
+  - npx lerna link
   # Build Storybook
   - npm run build-storybook
 
