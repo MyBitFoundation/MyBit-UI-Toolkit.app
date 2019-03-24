@@ -16,8 +16,7 @@ before_script:
   - chmod 600 bit_rsa
   # Adding ssh key to agent
   - ssh-add bit_rsa
-  - npm install
-  - npm run bootstrap
+  # Build Storybook
   - npm run build-storybook
 
 script:
