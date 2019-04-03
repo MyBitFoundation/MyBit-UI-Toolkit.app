@@ -1,6 +1,6 @@
 import React from 'react';
 import { Showcase, EditPageLink, InstallationSection, PropsTable } from '../../Common/';
-import MyBitGoHeader from '@pbteja-dev/ui.kit.my-bit-go-header';
+import MyBitGoHeader from '@mybit/ui.my-bit-go-header';
 import { Helmet } from "react-helmet";
 
 const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/MyBitGoHeader/index.js"

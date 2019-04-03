@@ -1,6 +1,6 @@
 {
-  "name": "@pbteja-dev/ui.kit.stat-card",
-  "version": "0.0.1-alpha.2",
+  "name": "@mybit/ui.stat-card",
+  "version": "0.0.3",
   "description": "",
   "main": "build/index.js",
   "directories": {
@@ -31,6 +31,6 @@
     "eslint-watch": "^5.0.1"
   },
   "dependencies": {
-    "@pbteja-dev/ui.kit.theme": "^0.0.1-alpha.5"
+    "@mybit/ui.theme": "^0.0.2"
   }
 }

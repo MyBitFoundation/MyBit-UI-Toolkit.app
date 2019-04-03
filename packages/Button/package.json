@@ -1,6 +1,6 @@
 {
-  "name": "@pbteja-dev/ui.kit.button",
-  "version": "0.0.1-alpha.6",
+  "name": "@mybit/ui.button",
+  "version": "0.0.3",
   "description": "",
   "main": "build/index.js",
   "directories": {
@@ -32,6 +32,6 @@
   },
   "gitHead": "72d23f6ff611976540e327eb7878aa5b68f7967e",
   "dependencies": {
-    "@pbteja-dev/ui.kit.theme": "^0.0.1-alpha.5"
+    "@mybit/ui.theme": "^0.0.2"
   }
 }

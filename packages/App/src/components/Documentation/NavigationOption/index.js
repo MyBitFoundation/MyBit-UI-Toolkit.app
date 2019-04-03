@@ -1,6 +1,6 @@
 import React from 'react';
 import { Showcase, EditPageLink, InstallationSection, PropsTable } from '../../Common/';
-import NavigationOption from '@pbteja-dev/ui.kit.navigation-option';
+import NavigationOption from '@mybit/ui.navigation-option';
 import { Row, Col } from 'antd'
 import { Helmet } from "react-helmet";
 

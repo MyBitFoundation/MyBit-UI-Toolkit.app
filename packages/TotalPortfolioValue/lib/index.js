@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Collapse } from 'antd';
 import 'antd/lib/collapse/style/css';
-import PortfolioValueItem from '@pbteja-dev/ui.kit.portfolio-value-item';
+import PortfolioValueItem from '@mybit/ui.portfolio-value-item';
 import { EmptyP } from './styledComponents';
 import ValueHeader from './valueHeader';
 

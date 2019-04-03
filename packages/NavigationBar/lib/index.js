@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import NavigationOption from '@pbteja-dev/ui.kit.navigation-option';
+import NavigationOption from '@mybit/ui.navigation-option';
 import StyledWrapper from './styledWrapper';
 
 const NavigationBar = ({ clickHandler, currentPath, menuOptions }) => {

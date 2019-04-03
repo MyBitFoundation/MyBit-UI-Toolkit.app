@@ -1,8 +1,8 @@
 import React from 'react';
 import { Row, Col } from 'antd';
 import { PropsTable, Showcase, EditPageLink, InstallationSection } from '../../Common';
-import List from '@pbteja-dev/ui.kit.list';
-import ListItem from '@pbteja-dev/ui.kit.list-item';
+import List from '@mybit/ui.list';
+import ListItem from '@mybit/ui.list-item';
 
 const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/List/index.js"
 

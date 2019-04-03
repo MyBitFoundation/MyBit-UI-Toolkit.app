@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Logo from '@pbteja-dev/ui.kit.logo';
-import ExchangeRate from '@pbteja-dev/ui.kit.exchange-rate';
-import AccountInfo from '@pbteja-dev/ui.kit.account-info';
+import Logo from '@mybit/ui.logo';
+import ExchangeRate from '@mybit/ui.exchange-rate';
+import AccountInfo from '@mybit/ui.account-info';
 import { HeaderWrapper, LogoColumn, ExchangeRateColumn, AccountColumn } from './styledComponents';
 
 const MyBitGoHeader = ({ user, prices }) => (

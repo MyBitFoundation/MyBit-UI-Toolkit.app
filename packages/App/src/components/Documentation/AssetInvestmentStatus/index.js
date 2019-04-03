@@ -1,6 +1,6 @@
 import React from 'react';
 import { Showcase, EditPageLink, InstallationSection, PropsTable } from '../../Common/';
-import AssetInvestmentStatus from '@pbteja-dev/ui.kit.asset-investment-status';
+import AssetInvestmentStatus from '@mybit/ui.asset-investment-status';
 import { Helmet } from "react-helmet";
 
 const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/AssetInvestmentStatus/index.js"

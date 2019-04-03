@@ -7,7 +7,7 @@ import StyledStatCard from './styledStatCard';
 import StyledTitle from './styledTitle';
 import StyledValue from './styledValue';
 import StyledLoadingPlaceholder from './styledPlaceholder';
-import Theme from '@pbteja-dev/ui.kit.theme/build';
+import Theme from '@mybit/ui.theme/build';
 
 const StatCard = ({ stat, theme, styling }) => (
     <StyledStatCard theme={{...theme.statCard, ...styling}}>

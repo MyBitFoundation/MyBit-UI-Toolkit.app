@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'antd';
 import { PropsTable, Showcase, EditPageLink, InstallationSection } from '../../Common';
-import Icon from '@pbteja-dev/ui.kit.icon';
+import Icon from '@mybit/ui.icon';
 import { Helmet } from "react-helmet";
 
 const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/Icon/index.js"

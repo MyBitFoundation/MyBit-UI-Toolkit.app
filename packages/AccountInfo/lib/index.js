@@ -5,7 +5,7 @@ import { Spin, Icon } from 'antd';
 import 'antd/lib/spin/style/css';
 import 'antd/lib/icon/style/css';
 
-import Address from '@pbteja-dev/ui.kit.address';
+import Address from '@mybit/ui.address';
 import { StyledAccountInfo, Balance, BalanceHeader, BalanceInfo } from './styledComponents';
 
 const antIcon = <Icon type="loading" spin />;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'antd';
 import { PropsTable, Showcase, EditPageLink, InstallationSection, Playground } from '../../Common';
-import Menu from '@pbteja-dev/ui.kit.menu';
+import Menu from '@mybit/ui.menu';
 
 const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/Menu/index.js"
 

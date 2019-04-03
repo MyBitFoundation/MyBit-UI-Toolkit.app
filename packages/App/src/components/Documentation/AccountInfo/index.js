@@ -1,5 +1,5 @@
 import React from 'react'
-import AccountInfo from '@pbteja-dev/ui.kit.account-info'
+import AccountInfo from '@mybit/ui.account-info'
 import { Showcase, EditPageLink, CustomTag, PropsTable, InstallationSection } from '../../Common/';
 import { Row, Col } from 'antd'
 import { Helmet } from "react-helmet";

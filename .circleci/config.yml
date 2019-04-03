@@ -8,8 +8,8 @@ jobs:
 
     steps:
       - checkout
-      - run: yarn install
-      - run: npm run bootstrap
+      - run: npm install
+      - run: npx lerna link
       - run: npm run build-storybook
 
       - deploy:

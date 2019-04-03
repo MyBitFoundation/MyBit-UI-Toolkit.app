@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'antd';
 import { PropsTable, Showcase, EditPageLink, InstallationSection } from '../../Common';
-import SubscribeForm from '@pbteja-dev/ui.kit.subscribe-form';
+import SubscribeForm from '@mybit/ui.subscribe-form';
 
 const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/SubscribeForm/index.js"
 

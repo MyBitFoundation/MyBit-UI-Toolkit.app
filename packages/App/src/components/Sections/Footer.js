@@ -1,7 +1,7 @@
 import React from 'react';
 import { Layout } from 'antd';
 import styled from 'styled-components'
-import Logo from '@pbteja-dev/ui.kit.logo';
+import Logo from '@mybit/ui.logo';
 
 const { Footer } = Layout;
 

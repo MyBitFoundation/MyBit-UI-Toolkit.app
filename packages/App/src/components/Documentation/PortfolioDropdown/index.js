@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'antd';
 import { PropsTable, Showcase, EditPageLink, InstallationSection } from '../../Common';
-import PortfolioDropdown from '@pbteja-dev/ui.kit.portfolio-dropdown';
+import PortfolioDropdown from '@mybit/ui.portfolio-dropdown';
 
 const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/PortfolioDropdown/index.js"
 

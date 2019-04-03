@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from "react-helmet";
 import { Row, Col } from 'antd';
 import { PropsTable, Showcase, EditPageLink, InstallationSection } from '../../Common';
-import HomePageDisclaimer from '@pbteja-dev/ui.kit.home-page-disclaimer';
+import HomePageDisclaimer from '@mybit/ui.home-page-disclaimer';
 
 const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/HomePageDisclaimer/index.js"
 const DisclaimerExample = {

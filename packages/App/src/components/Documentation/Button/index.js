@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'antd';
 import { PropsTable, Showcase, EditPageLink, InstallationSection, Playground } from '../../Common';
-import Button from '@pbteja-dev/ui.kit.button';
+import Button from '@mybit/ui.button';
 
 const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/Button/index.js"
 

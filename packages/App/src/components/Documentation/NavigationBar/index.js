@@ -1,6 +1,6 @@
 import React from 'react';
 import { Showcase, EditPageLink, InstallationSection, PropsTable } from '../../Common/';
-import NavigationBar from '@pbteja-dev/ui.kit.navigation-bar';
+import NavigationBar from '@mybit/ui.navigation-bar';
 import { Helmet } from "react-helmet";
 
 import exploreIcon from '../images/search.png';

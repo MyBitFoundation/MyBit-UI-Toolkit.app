@@ -1,6 +1,6 @@
 import React from 'react';
 import { PropsTable, Showcase, EditPageLink, InstallationSection } from '../../Common/';
-import Alert from '@pbteja-dev/ui.kit.alert';
+import Alert from '@mybit/ui.alert';
 import { Helmet } from "react-helmet";
 
 const typesExample = {

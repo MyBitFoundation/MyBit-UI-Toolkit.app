@@ -1,6 +1,6 @@
 import React from 'react';
 import { Showcase, EditPageLink, InstallationSection, PropsTable } from '../../Common/';
-import AssetCard from '@pbteja-dev/ui.kit.asset-card';
+import AssetCard from '@mybit/ui.asset-card';
 import { Row, Col } from 'antd'
 import demoImage from '../images/category-cryptocurrency-atm.png';
 import { Helmet } from "react-helmet";

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'antd';
 import { PropsTable, Showcase, EditPageLink } from '../../Common/';
-import Button from '@pbteja-dev/ui.kit.button';
+import Button from '@mybit/ui.button';
 import { Helmet } from "react-helmet";
 
 const ButtonsPage = (props) => (

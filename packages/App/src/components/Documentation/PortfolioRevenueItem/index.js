@@ -1,6 +1,6 @@
 import React from 'react';
 import { Showcase, EditPageLink, InstallationSection, PropsTable } from '../../Common/';
-import PortfolioRevenueItem from '@pbteja-dev/ui.kit.portfolio-revenue-item';
+import PortfolioRevenueItem from '@mybit/ui.portfolio-revenue-item';
 import { Helmet } from "react-helmet";
 
 const EDIT_PAGE = "https://github.com/MyBitFoundation/MyBit-UI.website/blob/develop/src/components/Documentation/PortfolioRevenueItem/index.js"

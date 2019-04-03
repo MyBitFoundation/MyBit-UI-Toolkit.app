@@ -16,21 +16,22 @@ before_script:
   - chmod 600 bit_rsa
   # Adding ssh key to agent
   - ssh-add bit_rsa
-  # Adding bit-bin for being able to use bit commands later
-  # @TODO: Alias dev dependency binary (i.e. ./node_modules/.bin/bit) instead of installing
-  - npm install bit-bin -g
-  # buidl
-  - yarn build
+  # Symlink together all Lerna packages that are dependencies of each other in the current Lerna repo.
+  - npx lerna link
+  # Build Storybook
+  - npm run build-storybook
 
 script:
   - GIT_HASH=$(git rev-parse --short HEAD)
   - if [ "$TRAVIS_BRANCH" = "develop" -a ! "$TRAVIS_PULL_REQUEST" = "false" ]; then HOST=$(echo ui-develop.mybit.io); fi
   - if [ "$TRAVIS_BRANCH" = "develop" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then HOST=$(echo ui-staging.mybit.io); fi
   - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then HOST=$(echo ui.mybit.io); fi
-  - echo ${GIT_HASH} > build/version
-  - cp CONTRIBUTORS build/contributors
-  - BUILD_URL=$(npx now --name ui.mybit.io build -t $NOW_PROD_TOKEN)
+  - if [ "$TRAVIS_BRANCH" = "develop" -a ! "$TRAVIS_PULL_REQUEST" = "false" ]; then STORYBOOK_HOST=$(echo ui-develop.storybook.mybit.io); fi
+  - if [ "$TRAVIS_BRANCH" = "develop" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then STORYBOOK_HOST=$(echo ui-staging.storybook.mybit.io); fi
+  - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then STORYBOOK_HOST=$(echo ui.storybook.mybit.io); fi
+  - echo ${GIT_HASH} > packages/App/build/version
+  - cp CONTRIBUTORS packages/App/build/contributors
+  - BUILD_URL=$(npx now --name ui.mybit.io packages/App/build -t $NOW_PROD_TOKEN)
   - npx now alias ${BUILD_URL} $HOST -t $NOW_PROD_TOKEN
-
-after_success:
-  - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then bash scripts/deploy_bitsrc.sh; fi
+  - STORYBOOK_BUILD_URL=$(npx now --name ui.storybook.mybit.io storybook-static -t $NOW_PROD_TOKEN)
+  - npx now alias ${STORYBOOK_BUILD_URL} $STORYBOOK_HOST -t $NOW_PROD_TOKEN
