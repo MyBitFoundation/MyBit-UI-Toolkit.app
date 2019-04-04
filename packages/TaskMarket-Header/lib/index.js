@@ -12,6 +12,7 @@ const Header = styled.div`
     }
     svg {
         align-self: center;
+        margin: auto;
     }
 `
 
