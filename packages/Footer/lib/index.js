@@ -2,12 +2,12 @@ import React from 'react';
 import { Link } from '@reach/router';
 import styled from 'styled-components';
 
-import mybit from './images/logo.svg';
-import telegram from './images/telegram.svg';
-import reddit from './images/reddit.svg';
-import medium from './images/medium.svg';
-import twitter from './images/twitter.svg';
-import facebook from './images/facebook.svg';
+import MyBit from '../images/logo.svg';
+import Telegram from '../images/telegram.svg';
+import Reddit from '../images/reddit.svg';
+import Medium from '../images/medium.svg';
+import Twitter from '../images/twitter.svg';
+import Facebook from '../images/facebook.svg';
 
 import ThemeWebsite from '@mybit/ui.theme-website';
 
@@ -35,7 +35,7 @@ export default class Footer extends React.Component {
               className="pv1 pr1"
               href="https://t.me/mybitio"
             >
-              <img src={telegram} alt="telegram" />
+              <Telegram alt="telegram" />
             </a>
             <a
               target="_blank"
@@ -43,7 +43,7 @@ export default class Footer extends React.Component {
               className="pv1 pr1"
               href="https://www.reddit.com/user/MyBit_DApp/"
             >
-              <img src={reddit} alt="reddit" />
+              <Reddit alt="reddit" />
             </a>
             <a
               target="_blank"
@@ -51,7 +51,7 @@ export default class Footer extends React.Component {
               className="pv1 pr1"
               href="https://medium.com/mybit-dapp"
             >
-              <img src={medium} alt="medium" />
+              <Medium alt="medium" />
             </a>
             <a
               target="_blank"
@@ -59,7 +59,7 @@ export default class Footer extends React.Component {
               className="pv1 pr1"
               href="https://twitter.com/MyBit_DApp"
             >
-              <img src={twitter} alt="twitter" />
+              <Twitter alt="twitter" />
             </a>
             <a
               target="_blank"
@@ -67,11 +67,11 @@ export default class Footer extends React.Component {
               className="pv1 pr1"
               href="https://www.facebook.com/MyBitDApp/"
             >
-              <img src={facebook} alt="facebook" />
+              <Facebook alt="facebook" />
             </a>
           </div>
           <SAddress>
-            <img className="pb1" src={mybit} alt="mybit logo" />
+            <MyBit className="pb1" alt="mybit logo" />
             <div className="dib-ns">
               MyBit Foundation. Dammstrasse 16, 6300 Zug, Switzerland.
               Registration no. CHE-177.186.963

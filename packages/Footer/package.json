@@ -1,6 +1,6 @@
 {
   "name": "@mybit/ui.footer",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "",
   "main": "build/index.js",
   "directories": {
@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "babel lib -d build && npm run copy-files",
-    "copy-files": "babel lib --out-dir build --copy-files && cp -R images build",
+    "copy-files": "babel lib --out-dir build --copy-files",
     "build:watch": "babel lib -w -d build",
     "prepublish": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -24,6 +24,7 @@
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^10.0.1",
+    "babel-plugin-inline-react-svg": "^1.0.1",
     "eslint": "^5.15.1",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
@@ -31,8 +32,8 @@
     "eslint-watch": "^5.0.1"
   },
   "dependencies": {
+    "@mybit/ui.theme-website": "^0.0.3",
     "@reach/router": "^1.2.1",
-    "styled-components": "^4.2.0",
-    "@mybit/ui.theme-website": "^0.0.3"
+    "styled-components": "^4.2.0"
   }
 }
