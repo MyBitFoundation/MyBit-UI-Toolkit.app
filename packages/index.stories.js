@@ -43,6 +43,7 @@ import Stats from './Stats';
 import SubscribeForm from './SubscribeForm';
 import TotalPortfolioRevenue from './TotalPortfolioRevenue';
 import TotalPortfolioValue from './TotalPortfolioValue';
+import Footer from './Footer';
 
 import starIcon from '@ant-design/icons/svg/fill/star.svg';
 import exploreIcon from '@ant-design/icons/svg/outline/search.svg';
@@ -336,6 +337,10 @@ stories
         >
             Filter one
         </Filter>
+    ))
+
+    .add('Footer', () => (
+        <Footer />
     ))
 
     .add('Icon', () => (
