@@ -1,6 +1,6 @@
 {
   "name": "@mybit/ui.footer",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "main": "build/index.js",
   "directories": {
@@ -33,6 +33,6 @@
   "dependencies": {
     "@reach/router": "^1.2.1",
     "styled-components": "^4.2.0",
-    "@mybit/ui.theme-website": "^0.0.2"
+    "@mybit/ui.theme-website": "^0.0.3"
   }
 }
