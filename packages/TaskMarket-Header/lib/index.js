@@ -4,10 +4,24 @@ import styled from 'styled-components';
 import TaskMarketLogo from '../images/task-market-logo.svg';
 import TaskMarketHero from '../images/task-market-hero.svg';
 
+const size = {
+    mobileS: 320,
+    mobileM: 375,
+    mobileL: 425,
+    tablet: 768,
+    laptop: 1024,
+    laptopL: 1440,
+    desktop: 2560
+}
+    
+const device = Object.keys(size).reduce((acc, cur) => {
+    acc[cur] = `(min-width: ${size[cur]}px)`;
+    return acc;
+}, {});
+
 const Header = styled.div`
     & {
         width: 100%;
-        height: 674px;
         background: linear-gradient(180deg, #0B3F9C 0%, #2E58DB 100%);
         display: flex;
         flex-direction: column;
@@ -21,13 +35,19 @@ const Header = styled.div`
 `
 
 const TaskMarketTitle = styled.h1`
-    font-family: Gilroy;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 48px;
-    line-height: 48px;
-    text-align: center;
-    color: #FFFFFF;
+    & {
+        font-family: Gilroy;
+        font-style: normal;
+        font-weight: bold;
+        text-align: center;
+        font-size: 32px;
+        line-height: 32px;
+        color: #FFFFFF;
+        @media ${device.laptop} {
+            font-size: 48px;
+            line-height: 48px;
+        }
+    }
 `
 
 const TaskMarketParagaph = styled.p`
@@ -43,11 +63,33 @@ const TaskMarketParagaph = styled.p`
     margin:auto;
 `
 
+const TaskMarketImageWrapper = styled.div`
+    & {
+        display: block;
+        margin: auto;
+        max-width: 100%;
+    }
+    svg {
+        width: 80%;
+        display: block;
+        margin: auto;
+        max-width: 100%;
+        @media ${device.laptop} {
+            width: 488px;
+        }
+    }
+    
+`
+
 
 const TaskMarketHeader = () => (
     <Header>
-        <TaskMarketLogo />
-        <TaskMarketHero />
+        <TaskMarketImageWrapper>
+            <TaskMarketLogo />
+        </TaskMarketImageWrapper>
+        <TaskMarketImageWrapper>
+            <TaskMarketHero />
+        </TaskMarketImageWrapper>
         <TaskMarketTitle>Task.Market is on break</TaskMarketTitle>
         <TaskMarketParagaph>
             Task.Market is on break due to the recent Gitcoin developments where a 10% fee 

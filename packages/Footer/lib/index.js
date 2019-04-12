@@ -143,7 +143,7 @@ export default class Footer extends React.Component {
               <SLink to="/tools">Other dApps</SLink>
             </div>
             <div className="pb2 pb0-ns">
-              <STitle>resources</STitle>
+              <STitle>resources stuff</STitle>
               <SAnchor
                 target="_blank"
                 rel="noreferrer"
@@ -222,7 +222,7 @@ const SAnchor = styled.a.attrs({ className: 'pb1 db ttc no-underline underline-h
   font-size: 16px;
   
   color: #6c6c6c;
-7`
+`
 
 const SLink = styled(Link).attrs({ className: 'pb1 db ttc no-underline underline-hover' })`
   font-family: Roboto;
