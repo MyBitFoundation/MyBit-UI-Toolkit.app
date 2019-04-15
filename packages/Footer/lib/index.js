@@ -1,16 +1,15 @@
-import React from 'react';
-import { Link } from '@reach/router';
-import styled from 'styled-components';
+import React from "react";
+import { Link } from "@reach/router";
+import styled from "styled-components";
 
-import MyBit from '../images/logo.svg';
-import Telegram from '../images/telegram.svg';
-import Reddit from '../images/reddit.svg';
-import Medium from '../images/medium.svg';
-import Twitter from '../images/twitter.svg';
-import Facebook from '../images/facebook.svg';
+import MyBit from "../images/logo.svg";
+import Telegram from "../images/telegram.svg";
+import Reddit from "../images/reddit.svg";
+import Medium from "../images/medium.svg";
+import Twitter from "../images/twitter.svg";
+import Facebook from "../images/facebook.svg";
 
-import ThemeWebsite from '@mybit/ui.theme-website';
-
+import ThemeWebsite from "@mybit/ui.theme-website";
 
 export default class Footer extends React.Component {
   render() {
@@ -19,14 +18,25 @@ export default class Footer extends React.Component {
         <ThemeWebsite />
         <div className="ph2 flex-ns flex-row-ns flex-wrap-m justify-between-ns">
           <div className="pv3 pv0-ns order-1-l">
-            <STitle>be part of mybit</STitle>
-            <SButton
-              target="_blank"
-              rel="noreferrer"
-              href="https://task.market/"
-            >
-              Get Involved
-            </SButton>
+            {this.props.isGo ? (
+              <>
+                <STitle>Go</STitle>
+                <SButton target="_top" href="https://app.mybit.io/">
+                  Launch MyBit Go
+                </SButton>
+              </>
+            ) : (
+              <>
+                <STitle>be part of mybit</STitle>
+                <SButton
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://task.market/"
+                >
+                  Get Involved
+                </SButton>
+              </>
+            )}
             <div className="pt5" />
             <STitle>Follow us</STitle>
             <a
@@ -87,63 +97,77 @@ export default class Footer extends React.Component {
             </div>
           </SAddress>
           <div className="flex-ns flex-row-ns justify-between-ns w-100 w-50-l pt3-m pt0-l order-0-l">
-            {' '}
+            {" "}
             <div className="pb3 pb0-ns">
-              <STitle>about mybit</STitle>
-              <SAnchor
-                target="_blank"
-                rel="noreferrer"
-                href="https://learn.mybit.io"
-              >
-                Content Portal
-              </SAnchor>
-              <SLink to="/about">company</SLink>
-              <SAnchor
-                target="_blank"
-                rel="noreferrer"
-                href="https://learn.mybit.io/learn/mybit-token-myb-1"
-              >
-                token
-              </SAnchor>
-              <SAnchor
-                target="_blank"
-                rel="noreferrer"
-                href="https://hq.mybit.io"
-              >
-                transparency portal
-              </SAnchor>
-              <SAnchor href="mailto:info@mybit.io">contact</SAnchor>
+              {this.props.isGo ? (
+                <>
+                  <STitle>MyBit Go</STitle>
+                  <SLink to="/about">about</SLink>
+                  <SLink to="/howitworks">how it works</SLink>
+                  <SLink to="/dao">DAO</SLink>
+                  <SAnchor href="mailto:info@mybit.io">contact</SAnchor>
+                </>
+              ) : (
+                <>
+                  <STitle>about mybit</STitle>
+                  <SAnchor
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://learn.mybit.io"
+                  >
+                    Content Portal
+                  </SAnchor>
+                  <SLink to="/about">company</SLink>
+                  <SAnchor
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://learn.mybit.io/learn/mybit-token-myb-1"
+                  >
+                    token
+                  </SAnchor>
+                  <SAnchor
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://hq.mybit.io"
+                  >
+                    transparency portal
+                  </SAnchor>
+                  <SAnchor href="mailto:info@mybit.io">contact</SAnchor>
+                </>
+              )}
             </div>
-            <div className="pb3 pb0-ns">
-              <STitle>products</STitle>
-              <SAnchor
-                target="_blank"
-                rel="noreferrer"
-                href="https://app.mybit.io/"
-              >
-                {' '}
-                MyBit Go
-              </SAnchor>
-              <SAnchor
-                target="_blank"
-                rel="noreferrer"
-                href="https://mydax.io/"
-              >
-                {' '}
-                MYDAX{' '}
-              </SAnchor>
-              <SAnchor
-                target="_blank"
-                rel="noreferrer"
-                href="https://task.market/"
-              >
-                {' '}
-                Task Market{' '}
-              </SAnchor>
-              <SLink to="/tools">Other dApps</SLink>
-            </div>
+            {!this.props.isGo && (
+              <div className="pb3 pb0-ns">
+                <STitle>products</STitle>
+                <SAnchor
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://app.mybit.io/"
+                >
+                  {" "}
+                  MyBit Go
+                </SAnchor>
+                <SAnchor
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://mydax.io/"
+                >
+                  {" "}
+                  MYDAX{" "}
+                </SAnchor>
+                <SAnchor
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://task.market/"
+                >
+                  {" "}
+                  Task Market{" "}
+                </SAnchor>
+                <SLink to="/tools">Other dApps</SLink>
+              </div>
+            )}
             <div className="pb2 pb0-ns">
-              <STitle>resources stuff</STitle>
+              <STitle>resources</STitle>
               <SAnchor
                 target="_blank"
                 rel="noreferrer"
@@ -180,17 +204,64 @@ export default class Footer extends React.Component {
                 whitepaper
               </SAnchor>
             </div>
+            {this.props.isGo && (
+              <div className="pb3 pb0-ns">
+                <STitle>social</STitle>
+                <SAnchor
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://t.me/mybitio"
+                >
+                  Telegram
+                </SAnchor>
+                <SAnchor
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://www.reddit.com/user/MyBit_DApp/"
+                >
+                  Reddit
+                </SAnchor>
+                <SAnchor
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://www.facebook.com/MyBitDApp/"
+                >
+                  Facebook
+                </SAnchor>
+                <SAnchor
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://twitter.com/MyBit_DApp"
+                >
+                  Twitter
+                </SAnchor>
+                <SAnchor
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://www.linkedin.com/company/mybit"
+                >
+                  LinkedIn
+                </SAnchor>
+                <SAnchor
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://www.youtube.com/channel/UCtLn7Vi-3VbsY5F9uF1RJYg"
+                >
+                  YouTube
+                </SAnchor>
+              </div>
+            )}
           </div>
         </div>
 
         <SCopyright>Copyright © MyBit 2019. All Rights Reserved.</SCopyright>
       </>
-    )
+    );
   }
 }
 
 const SButton = styled.a.attrs({
-  className: 'link no_underline tc center b pa1 bhover'
+  className: "link no_underline tc center b pa1 bhover"
 })`
   background: #ffffff;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
@@ -203,9 +274,9 @@ const SButton = styled.a.attrs({
   text-transform: uppercase;
 
   color: #1890ff;
-`
+`;
 
-const STitle = styled.div.attrs({ className: 'black b pb2' })`
+const STitle = styled.div.attrs({ className: "black b pb2" })`
   font-family: Gilroy;
   line-height: 12px;
   font-size: 12px;
@@ -213,18 +284,10 @@ const STitle = styled.div.attrs({ className: 'black b pb2' })`
   text-transform: uppercase;
 
   color: #111111;
-`
-const SAnchor = styled.a.attrs({ className: 'pb1 db ttc no-underline underline-hover' })`
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 24px;
-  font-size: 16px;
-  
-  color: #6c6c6c;
-`
-
-const SLink = styled(Link).attrs({ className: 'pb1 db ttc no-underline underline-hover' })`
+`;
+const SAnchor = styled.a.attrs({
+  className: "pb1 db ttc no-underline underline-hover"
+})`
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -232,9 +295,21 @@ const SLink = styled(Link).attrs({ className: 'pb1 db ttc no-underline underline
   font-size: 16px;
 
   color: #6c6c6c;
-`
+`;
+
+const SLink = styled(Link).attrs({
+  className: "pb1 db ttc no-underline underline-hover"
+})`
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 24px;
+  font-size: 16px;
+
+  color: #6c6c6c;
+`;
 const SAddress = styled.div.attrs({
-  className: 'mw5-ns ttc no-underline tr-ns  order-2-l'
+  className: "mw5-ns ttc no-underline tr-ns  order-2-l"
 })`
   font-family: Roboto;
   font-style: normal;
@@ -242,9 +317,9 @@ const SAddress = styled.div.attrs({
   line-height: 24px;
   font-size: 16px;
   color: #6c6c6c;
-`
+`;
 const SCopyright = styled.div.attrs({
-  className: 'pb1 db ttc pt2 no-underline tc center'
+  className: "pb1 db ttc pt2 no-underline tc center"
 })`
   font-family: Roboto;
   font-style: normal;
@@ -253,4 +328,4 @@ const SCopyright = styled.div.attrs({
   font-size: 16px;
   max-width: 50%;
   color: #6c6c6c;
-`
+`;
