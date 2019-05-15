@@ -1,8 +1,19 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import TaskMarketLogo from '../images/task-market-logo.svg';
 import TaskMarketHero from '../images/task-market-hero.svg';
+
+TaskMarketHeader.propTypes = {
+    title: PropTypes.string,
+    content: PropTypes.string,
+};
+  
+TaskMarketHeader.defaultProps = {
+    title: 'Title of the header',
+    content: 'Content of the header',
+};
 
 const size = {
     mobileS: 320,
@@ -82,7 +93,10 @@ const TaskMarketImageWrapper = styled.div`
 `
 
 
-const TaskMarketHeader = () => (
+const TaskMarketHeader = ({
+    title,
+    content,
+}) => (
     <Header>
         <TaskMarketImageWrapper>
             <TaskMarketLogo />
@@ -90,12 +104,8 @@ const TaskMarketHeader = () => (
         <TaskMarketImageWrapper>
             <TaskMarketHero />
         </TaskMarketImageWrapper>
-        <TaskMarketTitle>Task.Market is on break</TaskMarketTitle>
-        <TaskMarketParagaph>
-            Task.Market is on break due to the recent Gitcoin developments where a 10% fee 
-            on ALL bounties has been introduced.  We believe this fee is extorniate and directly violates 
-            everything that defines MyBit. 
-        </TaskMarketParagaph>
+        <TaskMarketTitle>{title}</TaskMarketTitle>
+        <TaskMarketParagaph>{content}</TaskMarketParagaph>
     </Header>
 );
 
