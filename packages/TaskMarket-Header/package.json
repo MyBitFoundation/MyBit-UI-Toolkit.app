@@ -1,6 +1,6 @@
 {
   "name": "@mybit/ui.task-market.header",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "",
   "main": "build/index.js",
   "directories": {
@@ -32,6 +32,7 @@
     "eslint-watch": "^5.0.1"
   },
   "dependencies": {
+    "prop-types": "^15.7.2",
     "styled-components": "^4.2.0"
   }
 }
