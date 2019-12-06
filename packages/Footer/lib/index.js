@@ -22,7 +22,7 @@ export default class Footer extends React.Component {
               <>
                 <STitle>Go</STitle>
                 <SButton target="_top" href="https://app.mybit.io/">
-                  Launch MyBit Go
+                  Launch MyBit
                 </SButton>
               </>
             ) : (
@@ -83,8 +83,15 @@ export default class Footer extends React.Component {
           <SAddress>
             <MyBit className="pb1" alt="mybit logo" />
             <div className="dib-ns">
-              MyBit Foundation. Dammstrasse 16, 6300 Zug, Switzerland.
-              Registration no. CHE-177.186.963
+              MyBit is operated and maintained by a DAO
+              <div>DAO address:</div>
+              <SAnchor
+                target="_blank"
+                rel="noreferrer"
+                href="https://mainnet.aragon.org/#/0xcD3d9b832BfF15E0a519610372c6AAC651872DdE/"
+              >
+                0xcD3d9b832BfF15E0a519610372c6AAC651872DdE
+              </SAnchor>
               <div className="pb2" />
               <SAnchor
                 target="_blank"
@@ -101,11 +108,11 @@ export default class Footer extends React.Component {
             <div className="pb3 pb0-ns">
               {this.props.isGo ? (
                 <>
-                  <STitle>MyBit Go</STitle>
+                  <STitle>MyBit</STitle>
                   <SLink to="/about">about</SLink>
                   <SLink to="/howitworks">how it works</SLink>
                   <SLink to="/dao">DAO</SLink>
-                  <SAnchor href="mailto:info@mybit.io">contact</SAnchor>
+                  <SAnchor href="https://t.me/mybitio">contact</SAnchor>
                 </>
               ) : (
                 <>
@@ -132,7 +139,7 @@ export default class Footer extends React.Component {
                   >
                     transparency portal
                   </SAnchor>
-                  <SAnchor href="mailto:info@mybit.io">contact</SAnchor>
+                  <SAnchor href="https://t.me/mybitio">contact</SAnchor>
                 </>
               )}
             </div>
@@ -145,7 +152,7 @@ export default class Footer extends React.Component {
                   href="https://app.mybit.io/"
                 >
                   {" "}
-                  MyBit Go
+                  MyBit
                 </SAnchor>
                 <SAnchor
                   target="_blank"
@@ -168,13 +175,6 @@ export default class Footer extends React.Component {
             )}
             <div className="pb2 pb0-ns">
               <STitle>resources</STitle>
-              <SAnchor
-                target="_blank"
-                rel="noreferrer"
-                href="https://td.mybit.io"
-              >
-                Token Distribution
-              </SAnchor>
               <SAnchor
                 target="_blank"
                 rel="noreferrer"
@@ -204,57 +204,8 @@ export default class Footer extends React.Component {
                 whitepaper
               </SAnchor>
             </div>
-            {this.props.isGo && (
-              <div className="pb3 pb0-ns">
-                <STitle>social</STitle>
-                <SAnchor
-                  target="_blank"
-                  rel="noreferrer"
-                  href="https://t.me/mybitio"
-                >
-                  Telegram
-                </SAnchor>
-                <SAnchor
-                  target="_blank"
-                  rel="noreferrer"
-                  href="https://www.reddit.com/user/MyBit_DApp/"
-                >
-                  Reddit
-                </SAnchor>
-                <SAnchor
-                  target="_blank"
-                  rel="noreferrer"
-                  href="https://www.facebook.com/MyBitDApp/"
-                >
-                  Facebook
-                </SAnchor>
-                <SAnchor
-                  target="_blank"
-                  rel="noreferrer"
-                  href="https://twitter.com/MyBit_DApp"
-                >
-                  Twitter
-                </SAnchor>
-                <SAnchor
-                  target="_blank"
-                  rel="noreferrer"
-                  href="https://www.linkedin.com/company/mybit"
-                >
-                  LinkedIn
-                </SAnchor>
-                <SAnchor
-                  target="_blank"
-                  rel="noreferrer"
-                  href="https://www.youtube.com/channel/UCtLn7Vi-3VbsY5F9uF1RJYg"
-                >
-                  YouTube
-                </SAnchor>
-              </div>
-            )}
           </div>
         </div>
-
-        <SCopyright>Copyright © MyBit 2019. All Rights Reserved.</SCopyright>
       </>
     );
   }
