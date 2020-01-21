@@ -66,3 +66,7 @@ typings/
 
 # vim swaps
 *.swp
+
+.idea/
+storybook-static/
+.netlify/
